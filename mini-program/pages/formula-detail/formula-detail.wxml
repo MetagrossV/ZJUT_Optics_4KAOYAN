@@ -1,0 +1,117 @@
+<!-- pages/formula-detail/formula-detail.wxml -->
+<view class="container">
+  <!-- 公式详情模式 -->
+  <block wx:if="{{mode === 'formula'}}">
+    <view class="detail-card card">
+      <view class="detail-header">
+        <view class="tag tag-geo" wx:if="{{formula.chapter === '几何光学'}}">几何光学</view>
+        <view class="tag tag-phy" wx:if="{{formula.chapter === '物理光学'}}">物理光学</view>
+        <view class="tag tag-medium">{{formula.topic}}</view>
+      </view>
+      <view class="title-lg">{{formula.name}}</view>
+      <view class="formula-box">
+        <rich-text class="formula-latex" nodes="{{formula.parsedLatex}}"></rich-text>
+      </view>
+      <view class="detail-section">
+        <view class="title-md">📋 含义</view>
+        <text class="detail-text">{{formula.description}}</text>
+      </view>
+      <view class="detail-section" wx:if="{{formula.variables && Object.keys(formula.variables).length > 0}}">
+        <view class="title-md">🔤 变量说明</view>
+        <view class="variables-list">
+          <block wx:for="{{variableList}}" wx:key="symbol">
+            <view class="variable-item">
+              <view class="variable-symbol">{{item.symbol}}</view>
+              <view class="variable-desc">{{item.desc}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class="detail-section" wx:if="{{relatedKnowledge.length > 0}}">
+        <view class="title-md">🔗 关联知识点</view>
+        <view class="related-list">
+          <block wx:for="{{relatedKnowledge}}" wx:key="id">
+            <view class="related-item" bindtap="goToKnowledge" data-id="{{item.id}}">
+              <text>{{item.title}}</text>
+              <text class="arrow">›</text>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class="action-bar">
+        <button class="btn-outline {{isFavorite ? 'favorited' : ''}}" bindtap="toggleFavorite">
+          {{isFavorite ? '❤️ 已收藏' : '🤍 收藏'}}
+        </button>
+      </view>
+    </view>
+  </block>
+
+  <!-- 知识点详情模式 -->
+  <block wx:if="{{mode === 'knowledge'}}">
+    <view class="detail-card card">
+      <view class="detail-header">
+        <view class="tag tag-geo" wx:if="{{knowledge.chapter === '几何光学'}}">几何光学</view>
+        <view class="tag tag-phy" wx:if="{{knowledge.chapter === '物理光学'}}">物理光学</view>
+        <view class="tag tag-medium">{{knowledge.topic}}</view>
+      </view>
+      <view class="title-lg">{{knowledge.title}}</view>
+      <view class="detail-section">
+        <view class="title-md">📋 内容</view>
+        <text class="detail-text">{{knowledge.content}}</text>
+      </view>
+      <view class="detail-section" wx:if="{{relatedFormulas.length > 0}}">
+        <view class="title-md">🔗 关联公式</view>
+        <view class="related-list">
+          <block wx:for="{{relatedFormulas}}" wx:key="id">
+            <view class="related-item" bindtap="goToFormula" data-id="{{item.id}}">
+              <text>{{item.name}}</text>
+              <view class="latex-mini"><rich-text nodes="{{item.parsedLatex}}"></rich-text></view>
+              <text class="arrow">›</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <!-- 高频公式模式 -->
+  <block wx:if="{{mode === 'highfreq'}}">
+    <view class="title-lg">🔥 高频公式</view>
+    <view class="highfreq-list">
+      <block wx:for="{{highFreqFormulas}}" wx:key="id">
+        <view class="formula-card card" bindtap="goToFormula" data-id="{{item.id}}">
+          <view class="formula-name">{{item.name}}</view>
+          <rich-text class="formula-latex" nodes="{{item.parsedLatex}}"></rich-text>
+          <view class="formula-reason">{{item.reason}}</view>
+        </view>
+      </block>
+    </view>
+  </block>
+
+  <!-- 易混淆对比模式 -->
+  <block wx:if="{{mode === 'confusions'}}">
+    <view class="title-lg">⚖️ 易混淆对比</view>
+    <view class="confusion-list">
+      <block wx:for="{{confusions}}" wx:key="id">
+        <view class="confusion-card card">
+          <view class="confusion-title">{{item.title}}</view>
+          <view class="confusion-vs">
+            <view class="vs-left">
+              <view class="vs-label">{{item.left_label}}</view>
+              <rich-text class="vs-content" nodes="{{item.left_content}}"></rich-text>
+            </view>
+            <view class="vs-divider">VS</view>
+            <view class="vs-right">
+              <view class="vs-label">{{item.right_label}}</view>
+              <rich-text class="vs-content" nodes="{{item.right_content}}"></rich-text>
+            </view>
+          </view>
+          <view class="confusion-diff">
+            <view class="title-md">💡 关键差异</view>
+            <text>{{item.diff}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block>
+</view>

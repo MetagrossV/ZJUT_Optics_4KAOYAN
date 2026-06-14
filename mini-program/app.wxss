@@ -1,0 +1,187 @@
+/* app.wxss */
+page {
+  --primary: #4a69bd;
+  --primary-light: #6a89cc;
+  --primary-dark: #3c5aa6;
+  --secondary: #f6b93b;
+  --danger: #e55039;
+  --success: #78e08f;
+  --warning: #fa8231;
+  --bg: #f5f6fa;
+  --card-bg: #ffffff;
+  --text: #2d3436;
+  --text-light: #636e72;
+  --border: #dfe6e9;
+  --shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+
+.container {
+  padding: 30rpx;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  box-shadow: var(--shadow);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border-radius: 40rpx;
+  padding: 20rpx 40rpx;
+  font-size: 28rpx;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:active {
+  opacity: 0.85;
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: white;
+  border-radius: 40rpx;
+  padding: 20rpx 40rpx;
+  font-size: 28rpx;
+  border: none;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2rpx solid var(--primary);
+  border-radius: 40rpx;
+  padding: 18rpx 38rpx;
+  font-size: 28rpx;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6rpx 16rpx;
+  border-radius: 20rpx;
+  font-size: 22rpx;
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.tag-geo { background: #e3f2fd; color: #1976d2; }
+.tag-phy { background: #f3e5f5; color: #7b1fa2; }
+.tag-easy { background: #e8f5e9; color: #388e3c; }
+.tag-medium { background: #fff3e0; color: #f57c00; }
+.tag-hard { background: #ffebee; color: #d32f2f; }
+
+.title-lg {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 20rpx;
+}
+
+.title-md {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16rpx;
+}
+
+.text-sm {
+  font-size: 24rpx;
+  color: var(--text-light);
+}
+
+.divider {
+  height: 2rpx;
+  background: var(--border);
+  margin: 20rpx 0;
+}
+
+.formula-latex {
+  font-size: 32rpx;
+  text-align: center;
+  padding: 20rpx 0;
+  color: var(--primary-dark);
+  font-weight: 500;
+}
+
+/* LaTeX 公式渲染 */
+.latex-render {
+  display: inline;
+  font-size: 30rpx;
+  line-height: 1.8;
+  color: var(--text);
+  word-break: break-word;
+}
+
+.latex-render .formula-box {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 4rpx;
+}
+
+.latex-render .formula-num {
+  display: block;
+  border-bottom: 1rpx solid currentColor;
+  padding-bottom: 2rpx;
+  margin-bottom: 2rpx;
+}
+
+.latex-render .formula-den {
+  display: block;
+}
+
+.latex-render sup,
+.latex-render .latex-sup {
+  font-size: 0.7em;
+  vertical-align: super;
+  line-height: 0;
+}
+
+.latex-render sub,
+.latex-render .latex-sub {
+  font-size: 0.7em;
+  vertical-align: sub;
+  line-height: 0;
+}
+
+.latex-render .latex-sqrt {
+  font-size: 1.1em;
+}
+
+.latex-render .latex-overline {
+  text-decoration: overline;
+}
+
+.latex-render .latex-underline {
+  text-decoration: underline;
+}
+
+/* 动画 */
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20rpx); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}

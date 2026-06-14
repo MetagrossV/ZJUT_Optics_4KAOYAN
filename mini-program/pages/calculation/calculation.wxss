@@ -1,0 +1,268 @@
+/* pages/calculation/calculation.wxss */
+.calc-list {
+  padding-bottom: 40rpx;
+}
+
+.calc-card {
+  margin-bottom: 20rpx;
+}
+
+.calc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.calc-tags {
+  display: flex;
+  gap: 10rpx;
+}
+
+.calc-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 12rpx;
+}
+
+.calc-desc {
+  font-size: 26rpx;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 16rpx;
+}
+
+.calc-steps-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16rpx;
+  border-top: 2rpx solid var(--border);
+}
+
+/* 答题界面 */
+.calc-progress {
+  margin-bottom: 24rpx;
+}
+
+.calc-progress text {
+  font-size: 26rpx;
+  color: var(--text-light);
+  margin-bottom: 12rpx;
+  display: block;
+}
+
+.progress-bar {
+  height: 8rpx;
+  background: var(--border);
+  border-radius: 4rpx;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 4rpx;
+  transition: width 0.3s ease;
+}
+
+.question-desc {
+  margin-bottom: 20rpx;
+}
+
+.given-conditions {
+  margin: 20rpx 0;
+}
+
+.title-sm {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 12rpx;
+}
+
+.condition-item {
+  display: flex;
+  align-items: center;
+  padding: 12rpx 16rpx;
+  background: var(--bg);
+  border-radius: 8rpx;
+  margin-bottom: 10rpx;
+}
+
+.condition-symbol {
+  font-weight: 600;
+  color: var(--primary);
+  margin-right: 8rpx;
+  font-family: 'Courier New', monospace;
+}
+
+.condition-value {
+  color: var(--text);
+  margin-right: 8rpx;
+}
+
+.condition-desc {
+  font-size: 24rpx;
+  color: var(--text-light);
+}
+
+.asked-target {
+  padding: 16rpx;
+  background: #e8f0fe;
+  border-radius: 8rpx;
+  margin-top: 16rpx;
+}
+
+/* 步骤卡片 */
+.step-card {
+  margin-bottom: 20rpx;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  margin-bottom: 16rpx;
+}
+
+.step-number {
+  background: var(--primary);
+  color: white;
+  padding: 8rpx 16rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.step-name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+}
+
+.step-desc {
+  font-size: 28rpx;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 24rpx;
+}
+
+.input-area {
+  margin-bottom: 24rpx;
+}
+
+.step-input {
+  width: 100%;
+  min-height: 80rpx;
+  padding: 24rpx 28rpx;
+  border: 2rpx solid var(--border);
+  border-radius: 16rpx;
+  font-size: 32rpx;
+  color: var(--text);
+  background: var(--bg);
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+.choice-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.choice-opt {
+  padding: 24rpx 20rpx;
+  background: var(--bg);
+  border-radius: 12rpx;
+  border: 2rpx solid transparent;
+  font-size: 28rpx;
+  color: var(--text);
+  text-align: center;
+}
+
+.choice-opt.selected {
+  border-color: var(--primary);
+  background: #e8f0fe;
+}
+
+.btn-primary.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* 验证结果 */
+.verify-result {
+  margin-bottom: 20rpx;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.verify-result.correct {
+  background: #e8f5e9;
+  border-left: 6rpx solid var(--success);
+}
+
+.verify-result.wrong {
+  background: #ffebee;
+  border-left: 6rpx solid var(--danger);
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  margin-bottom: 16rpx;
+}
+
+.result-icon {
+  font-size: 40rpx;
+}
+
+.result-title {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.verify-result.correct .result-title {
+  color: var(--success);
+}
+
+.verify-result.wrong .result-title {
+  color: var(--danger);
+}
+
+.result-message {
+  font-size: 28rpx;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 16rpx;
+}
+
+.result-detail, .result-hint, .result-scaffold {
+  margin-top: 16rpx;
+  padding-top: 16rpx;
+  border-top: 2rpx solid rgba(0,0,0,0.05);
+}
+
+.result-detail text, .result-hint text, .result-scaffold text {
+  font-size: 26rpx;
+  color: var(--text);
+  line-height: 1.6;
+  display: block;
+  margin-top: 8rpx;
+}
+
+/* 操作按钮 */
+.calc-actions {
+  display: flex;
+  gap: 20rpx;
+  margin-top: 20rpx;
+}
+
+.calc-actions .btn-primary,
+.calc-actions .btn-outline,
+.calc-actions .btn-secondary {
+  flex: 1;
+}

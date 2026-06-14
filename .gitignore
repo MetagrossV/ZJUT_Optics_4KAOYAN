@@ -1,0 +1,20 @@
+# Git backup of nested mini-program repository
+mini-program/.git-backup/
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dependencies
+node_modules/
+
+# Secrets
+.env
+.env.local
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo

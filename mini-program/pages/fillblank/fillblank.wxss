@@ -1,0 +1,260 @@
+/* pages/fillblank/fillblank.wxss */
+/* 复用 quiz.wxss 中的分类标签和筛选样式 */
+.category-tabs {
+  display: flex;
+  gap: 16rpx;
+  margin-bottom: 20rpx;
+}
+
+.tab {
+  padding: 12rpx 24rpx;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  color: var(--text-light);
+  background: var(--card-bg);
+  border: 2rpx solid var(--border);
+}
+
+.tab.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.difficulty-filter {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  margin-bottom: 20rpx;
+}
+
+.filter-label {
+  font-size: 26rpx;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
+.filter-options {
+  display: flex;
+  gap: 12rpx;
+  flex-wrap: wrap;
+}
+
+.filter-opt {
+  padding: 8rpx 20rpx;
+  border-radius: 24rpx;
+  font-size: 24rpx;
+  color: var(--text-light);
+  background: var(--card-bg);
+  border: 2rpx solid var(--border);
+}
+
+.filter-opt.active {
+  background: var(--secondary);
+  color: white;
+  border-color: var(--secondary);
+}
+
+/* 题目列表 */
+.question-card {
+  margin-bottom: 20rpx;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.question-tags {
+  display: flex;
+  gap: 10rpx;
+}
+
+.question-topic {
+  font-size: 22rpx;
+  color: var(--text-light);
+}
+
+.question-text {
+  font-size: 28rpx;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 16rpx;
+}
+
+.question-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16rpx;
+  border-top: 2rpx solid var(--border);
+}
+
+/* 答题界面 */
+.answer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+  padding: 0 10rpx;
+}
+
+.back-btn {
+  font-size: 28rpx;
+  color: var(--primary);
+  padding: 10rpx 20rpx;
+  background: var(--card-bg);
+  border-radius: 30rpx;
+  border: 2rpx solid var(--primary);
+}
+
+.back-btn:active {
+  opacity: 0.8;
+  background: var(--primary);
+  color: white;
+}
+
+.answer-progress {
+  font-size: 26rpx;
+  color: var(--text-light);
+}
+
+.answer-card {
+  margin-bottom: 20rpx;
+}
+
+.answer-question {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.6;
+  margin: 24rpx 0;
+}
+
+.input-area {
+  margin: 24rpx 0;
+}
+
+.fill-input {
+  width: 100%;
+  min-height: 88rpx;
+  padding: 24rpx 28rpx;
+  border: 2rpx solid var(--border);
+  border-radius: 16rpx;
+  font-size: 32rpx;
+  color: var(--text);
+  background: var(--bg);
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+.fill-input.correct-input {
+  border-color: var(--success);
+  background: #e8f5e9;
+}
+
+.fill-input.wrong-input {
+  border-color: var(--danger);
+  background: #ffebee;
+}
+
+/* 结果面板 */
+.result-panel {
+  margin-bottom: 20rpx;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.result-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  padding: 16rpx 0;
+  margin-bottom: 16rpx;
+  border-bottom: 2rpx solid var(--border);
+}
+
+.correct-title {
+  color: var(--success);
+}
+
+.wrong-title {
+  color: var(--danger);
+}
+
+/* 关键词标签 */
+.keywords-section {
+  margin-bottom: 20rpx;
+}
+
+.keywords-label {
+  font-size: 26rpx;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 12rpx;
+}
+
+.keywords-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+}
+
+.keyword-tag {
+  padding: 10rpx 20rpx;
+  border-radius: 24rpx;
+  font-size: 26rpx;
+  font-weight: 500;
+}
+
+.keyword-tag.correct {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.keyword-tag.wrong {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+/* 提示和答案 */
+.hint-section,
+.answer-reveal {
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+  border-top: 2rpx dashed var(--border);
+}
+
+.hint-text {
+  font-size: 28rpx;
+  color: var(--text-light);
+  line-height: 1.6;
+  display: block;
+  margin-top: 12rpx;
+}
+
+.answer-text {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.6;
+  display: block;
+  margin-top: 12rpx;
+}
+
+/* 操作按钮 */
+.answer-actions {
+  display: flex;
+  gap: 20rpx;
+  margin-top: 20rpx;
+}
+
+.answer-actions .btn-outline,
+.answer-actions .btn-primary {
+  flex: 1;
+}
+
+.btn-primary.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

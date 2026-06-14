@@ -1,0 +1,103 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <!-- 搜索栏 -->
+  <view class="search-bar">
+    <input 
+      class="search-input" 
+      placeholder="搜索公式、知识点..." 
+      value="{{searchKeyword}}"
+      bindinput="onSearchInput"
+      bindconfirm="onSearch"
+    />
+    <view class="search-btn" bindtap="onSearch">
+      <text>🔍</text>
+    </view>
+  </view>
+
+  <!-- 快捷入口 -->
+  <view class="quick-access card">
+    <view class="title-md">快捷入口</view>
+    <view class="quick-grid">
+      <view class="quick-item" bindtap="goToHighFreq">
+        <view class="quick-icon">🔥</view>
+        <text class="quick-text">高频公式</text>
+      </view>
+      <view class="quick-item" bindtap="goToConfusions">
+        <view class="quick-icon">⚖️</view>
+        <text class="quick-text">易混淆对比</text>
+      </view>
+      <view class="quick-item" bindtap="goToCards">
+        <view class="quick-icon">🃏</view>
+        <text class="quick-text">记忆卡片</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 思维导图 -->
+  <view class="mindmap card">
+    <view class="title-md">📖 公式手册</view>
+    <view class="mindmap-tree">
+      <block wx:for="{{mindmap.children}}" wx:key="id">
+        <view class="branch">
+          <view class="branch-header" bindtap="toggleBranch" data-id="{{item.id}}">
+            <text class="branch-icon">{{item.expanded ? '▼' : '▶'}}</text>
+            <text class="branch-name">{{item.name}}</text>
+            <text class="branch-count">({{item.childCount}})</text>
+          </view>
+          <view class="branch-children" wx:if="{{item.expanded}}">
+            <block wx:for="{{item.children}}" wx:for-item="section" wx:key="id">
+              <view class="section">
+                <view class="section-header" bindtap="toggleSection" data-id="{{section.id}}">
+                  <text class="section-icon">{{section.expanded ? '▼' : '▶'}}</text>
+                  <text class="section-name">{{section.name}}</text>
+                </view>
+                <view class="section-children" wx:if="{{section.expanded}}">
+                  <block wx:for="{{section.children}}" wx:for-item="topic" wx:key="id">
+                    <view class="topic-item" bindtap="toggleTopic" data-id="{{topic.id}}">
+                      <text class="topic-icon">{{topic.expanded ? '▼' : '▶'}}</text>
+                      <text class="topic-name">{{topic.name}}</text>
+                    </view>
+                    <view class="topic-children" wx:if="{{topic.expanded}}">
+                      <block wx:for="{{topic.children}}" wx:for-item="leaf" wx:key="id">
+                        <view class="leaf-item {{leaf.type}}" bindtap="onLeafTap" data-item="{{leaf}}">
+                          <text wx:if="{{leaf.type === 'formula'}}" class="leaf-tag formula-tag">∑</text>
+                          <text wx:if="{{leaf.type === 'knowledge'}}" class="leaf-tag knowledge-tag">💡</text>
+                          <text class="leaf-name">{{leaf.name}}</text>
+                        </view>
+                      </block>
+                    </view>
+                  </block>
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<!-- 搜索结果弹窗 -->
+<view class="search-overlay" wx:if="{{showSearchResult}}" bindtap="closeSearch">
+  <view class="search-panel" catchtap="preventBubble">
+    <view class="search-panel-header">
+      <text class="title-md">搜索结果</text>
+      <text class="close-btn" bindtap="closeSearch">✕</text>
+    </view>
+    <scroll-view class="search-result" scroll-y>
+      <block wx:if="{{searchResults.length === 0}}">
+        <view class="empty-state">未找到相关结果</view>
+      </block>
+      <block wx:for="{{searchResults}}" wx:key="id">
+        <view class="search-item {{item.type}}" bindtap="onSearchResultTap" data-item="{{item}}">
+          <view class="search-item-type">
+            <text wx:if="{{item.type === 'formula'}}" class="type-badge formula">公式</text>
+            <text wx:if="{{item.type === 'knowledge'}}" class="type-badge knowledge">知识点</text>
+          </view>
+          <view class="search-item-name">{{item.name}}</view>
+          <view wx:if="{{item.latex}}" class="search-item-latex">{{item.latex}}</view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

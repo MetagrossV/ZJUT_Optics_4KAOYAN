@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/quiz/quiz",
+    "pages/fillblank/fillblank",
+    "pages/calculation/calculation",
+    "pages/mistakes/mistakes",
+    "pages/profile/profile",
+    "pages/formula-detail/formula-detail",
+    "pages/card-memory/card-memory"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1a1a2e",
+    "navigationBarTitleText": "浙工大光学考研",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f6fa"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#4a69bd",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "公式手册"
+      },
+      {
+        "pagePath": "pages/quiz/quiz",
+        "text": "刷题"
+      },
+      {
+        "pagePath": "pages/mistakes/mistakes",
+        "text": "错题本"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

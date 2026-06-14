@@ -1,0 +1,127 @@
+<!-- pages/calculation/calculation.wxml -->
+<view class="container">
+  <!-- 题目列表 -->
+  <view class="calc-list" wx:if="{{!isAnswering}}">
+    <view class="title-lg">📐 计算题步骤填空</view>
+    <view class="text-sm" style="margin-bottom: 24rpx;">每道题拆分为3-4个步骤，逐步验证，答错即时诊断</view>
+    <block wx:for="{{questions}}" wx:key="id">
+      <view class="calc-card card" bindtap="startQuestion" data-index="{{index}}">
+        <view class="calc-header">
+          <view class="calc-tags">
+            <text class="tag {{item.topic === '几何光学' ? 'tag-geo' : 'tag-phy'}}">{{item.topic}}</text>
+            <text class="tag tag-{{item.difficulty === 1 || item.difficulty === 2 ? 'easy' : item.difficulty === 3 ? 'medium' : 'hard'}}">
+              {{item.difficulty === 1 ? '⭐' : item.difficulty === 2 ? '⭐⭐' : item.difficulty === 3 ? '⭐⭐⭐' : '⭐⭐⭐⭐'}}
+            </text>
+          </view>
+          <text class="text-sm">{{item.subtopic}}</text>
+        </view>
+        <view class="calc-title">{{item.title}}</view>
+        <view class="calc-desc">{{item.problem_statement}}</view>
+        <view class="calc-steps-info">
+          <text class="text-sm">共 {{item.steps.length}} 个步骤</text>
+          <text class="arrow">›</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 答题界面 -->
+  <view class="calc-answer" wx:if="{{isAnswering}}">
+    <view class="calc-progress">
+      <text>步骤 {{currentStepIndex + 1}} / {{currentQuestion.steps.length}}</text>
+      <view class="progress-bar">
+        <view class="progress-fill" style="width: {{(currentStepIndex + 1) / currentQuestion.steps.length * 100}}%"></view>
+      </view>
+    </view>
+
+    <!-- 题目描述 -->
+    <view class="question-desc card" wx:if="{{currentStepIndex === 0}}">
+      <view class="title-md">{{currentQuestion.title}}</view>
+      <view class="given-conditions">
+        <view class="title-sm">已知条件：</view>
+        <block wx:for="{{currentQuestion.given_conditions}}" wx:key="symbol">
+          <view class="condition-item">
+            <text class="condition-symbol">{{item.symbol}}</text>
+            <text class="condition-value">= {{item.value}} {{item.unit}}</text>
+            <text class="condition-desc" wx:if="{{item.description}}">({{item.description}})</text>
+          </view>
+        </block>
+      </view>
+      <view class="asked-target">
+        <text class="title-sm">求解：{{currentQuestion.asked}}</text>
+      </view>
+    </view>
+
+    <!-- 当前步骤 -->
+    <view class="step-card card">
+      <view class="step-header">
+        <view class="step-number">步骤 {{currentStepIndex + 1}}</view>
+        <view class="step-name">{{currentStep.step_name}}</view>
+      </view>
+      <view class="step-desc">{{currentStep.step_description}}</view>
+      
+      <view class="input-area">
+        <block wx:if="{{currentStep.input_type === 'formula'}}">
+          <input 
+            class="step-input" 
+            placeholder="输入公式（如: 1/f = 1/l' - 1/l）"
+            value="{{stepInput}}"
+            bindinput="onInputChange"
+          />
+        </block>
+        <block wx:if="{{currentStep.input_type === 'numerical'}}">
+          <input 
+            class="step-input" 
+            placeholder="输入数值（单位: {{currentStep.expected_input.unit}}）"
+            type="digit"
+            value="{{stepInput}}"
+            bindinput="onInputChange"
+          />
+        </block>
+        <block wx:if="{{currentStep.input_type === 'choice'}}">
+          <view class="choice-options">
+            <block wx:for="{{currentStep.expected_input.options}}" wx:for-index="optIdx" wx:key="*this">
+              <view class="choice-opt {{stepInput === item ? 'selected' : ''}}" bindtap="onChoiceSelect" data-value="{{item}}">
+                {{item}}
+              </view>
+            </block>
+          </view>
+        </block>
+      </view>
+
+      <button class="btn-primary {{stepInput ? '' : 'disabled'}}" bindtap="submitStep">提交验证</button>
+    </view>
+
+    <!-- 验证结果 -->
+    <view class="verify-result card {{verifyResult.type}}" wx:if="{{verifyResult}}">
+      <view class="result-header">
+        <text wx:if="{{verifyResult.type === 'correct'}}" class="result-icon">✅</text>
+        <text wx:if="{{verifyResult.type === 'wrong'}}" class="result-icon">❌</text>
+        <text class="result-title">{{verifyResult.title}}</text>
+      </view>
+      <view class="result-message">{{verifyResult.message}}</view>
+      <view class="result-detail" wx:if="{{verifyResult.detail}}">
+        <view class="title-sm">🔍 诊断</view>
+        <text>{{verifyResult.detail}}</text>
+      </view>
+      <view class="result-hint" wx:if="{{verifyResult.hint}}">
+        <view class="title-sm">💡 提示</view>
+        <text>{{verifyResult.hint}}</text>
+      </view>
+      <view class="result-scaffold" wx:if="{{verifyResult.scaffold}}">
+        <view class="title-sm">📚 辅助材料</view>
+        <text>{{verifyResult.scaffold}}</text>
+        <button class="btn-outline" bindtap="goToFormulaRef" wx:if="{{verifyResult.formulaRef}}">查看公式参考</button>
+      </view>
+    </view>
+
+    <!-- 操作按钮 -->
+    <view class="calc-actions" wx:if="{{verifyResult}}">
+      <button class="btn-primary" wx:if="{{verifyResult.type === 'correct'}}" bindtap="nextStep">
+        {{currentStepIndex < currentQuestion.steps.length - 1 ? '下一步' : '完成本题'}}
+      </button>
+      <button class="btn-outline" wx:if="{{verifyResult.type === 'wrong'}}" bindtap="retryStep">重新作答</button>
+      <button class="btn-secondary" wx:if="{{verifyResult.type === 'wrong' && errorCount >= 2}}" bindtap="showHint">显示提示</button>
+    </view>
+  </view>
+</view>

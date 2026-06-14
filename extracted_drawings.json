@@ -1,0 +1,224 @@
+{
+  "analysis_summary": {
+    "total_pdfs": 2,
+    "analysis_date": "2026-06-14",
+    "tool": "pdfplumber + page rendering",
+    "note": "PDFs are scanned/image-based documents with optical geometry drawing exercises. Text extraction is poor due to scanned nature, but visual rendering successful."
+  },
+  "pdfs": {
+    "画图合集(1).pdf": {
+      "file_name": "画图合集(1).pdf",
+      "total_pages": 9,
+      "overall_type": "扫描件/图像型PDF (前6页为教材截图，后3页为手写总结)",
+      "pages": [
+        {
+          "page_number": 1,
+          "page_type": "mixed",
+          "description": "教材扫描页，包含多道理想光组成图题及解答。主要内容：图1-15物体AB成像、图1-14组合系统像方焦点F'和像方主面H'的画法、图1-7/1-8利用焦面/物方焦面特性作图、图1-13/1-12组合系统光路。",
+          "drawing_topics": ["理想光组成像", "组合系统焦点", "主面作图", "焦面特性应用"],
+          "width": 418.9091,
+          "height": 534.5455,
+          "rendered_image": "画图合集(1)_page_1.png"
+        },
+        {
+          "page_number": 2,
+          "page_type": "image",
+          "description": "教材扫描页，包含多道作图题。主要内容：图1-11由物像关系求焦点F/F'、节点作图法、图1-10求虚像点A'的物点A、图1-9求AB的像A'B'、物BC的像。",
+          "drawing_topics": ["求焦点位置", "节点标注", "已知像求物", "物像关系作图"],
+          "width": 418.9091,
+          "height": 534.5455,
+          "rendered_image": "画图合集(1)_page_2.png"
+        },
+        {
+          "page_number": 3,
+          "page_type": "image",
+          "description": "教材扫描页，包含多道作图题。主要内容：已知AB的像A'B'求CD的像、垂轴实物/虚物成像、图1-6利用焦点性质作图求像A'、图1-5入射光线PQ的共轭出射光线。",
+          "drawing_topics": ["已知物像求第三物像", "垂轴实物成像", "垂轴虚物成像", "焦点性质作图", "共轭光线"],
+          "width": 418.9091,
+          "height": 534.5455,
+          "rendered_image": "画图合集(1)_page_3.png"
+        },
+        {
+          "page_number": 4,
+          "page_type": "image",
+          "description": "教材扫描页，包含多道作图题。主要内容：线段AB的共轭线段、求系统主面和物AB的像（图1-3）、图1-2、利用主面/焦点性质作图。含详细文字解答步骤。",
+          "drawing_topics": ["共轭线段", "主面作图", "系统成像", "虚像判断"],
+          "width": 418.9091,
+          "height": 534.5455,
+          "rendered_image": "画图合集(1)_page_4.png"
+        },
+        {
+          "page_number": 5,
+          "page_type": "image",
+          "description": "教材扫描页，主要是作图题部分。主要内容：画出物AB的像（理想光组）、作图法求虚物AB经理想光组所成的像A'B'（图1-1）、含详细解答步骤。",
+          "drawing_topics": ["理想光组成像", "虚物成像", "焦点性质作图"],
+          "width": 418.9091,
+          "height": 534.5455,
+          "rendered_image": "画图合集(1)_page_5.png"
+        },
+        {
+          "page_number": 6,
+          "page_type": "image",
+          "description": "电子版/打印版页面，蓝色线条画图。包含6小题：(1)作轴上实物点A的像A'、(2)作轴上虚物点A的像A'、(3)作垂轴实物AB的像A'B'、(4)作垂轴虚物AB的像A'B'、(5)(6)画出焦点F、F'的位置。",
+          "drawing_topics": ["轴上实物点成像", "轴上虚物点成像", "垂轴实物成像", "垂轴虚物成像", "焦点位置标注"],
+          "width": 418.9091,
+          "height": 534.5455,
+          "rendered_image": "画图合集(1)_page_6.png"
+        },
+        {
+          "page_number": 7,
+          "page_type": "text",
+          "description": "手写总结页（横版），高分辨率。包含不同物距l下的理想光组成像规律汇总：l=-∞, -2f, -f, -f/2, 0, f/2, f, 2f, ∞。分三行展示，每行5个图，共15个光路图。标记F,H,H',F',A,A'等。",
+          "drawing_topics": ["物距变化规律", "理想光组成像汇总", "实物成像", "虚物成像"],
+          "width": 1224,
+          "height": 792,
+          "rendered_image": "画图合集(1)_page_7.png"
+        },
+        {
+          "page_number": 8,
+          "page_type": "text",
+          "description": "手写总结页（横版）。内容同page_7的下半部分或变体，继续展示不同物距下的成像光路。",
+          "drawing_topics": ["物距变化规律", "理想光组成像汇总"],
+          "width": 1224,
+          "height": 792,
+          "rendered_image": "画图合集(1)_page_8.png"
+        },
+        {
+          "page_number": 9,
+          "page_type": "text",
+          "description": "手写总结页（横版）。内容同page_7/8，展示不同物距下的成像光路。",
+          "drawing_topics": ["物距变化规律", "理想光组成像汇总"],
+          "width": 1224,
+          "height": 792,
+          "rendered_image": "画图合集(1)_page_9.png"
+        }
+      ]
+    },
+    "Copy of 画图合集（练习）(1).pdf": {
+      "file_name": "Copy of 画图合集（练习）(1).pdf",
+      "total_pages": 9,
+      "overall_type": "扫描件/图像型PDF (与画图合集(1).pdf内容高度一致，是副本)",
+      "note": "两个PDF内容基本相同，此副本的前6页图像内容几乎完全相同，后3页文本页内容相同。",
+      "pages": [
+        {
+          "page_number": 1,
+          "page_type": "image",
+          "description": "与画图合集(1).pdf第1页相同：教材扫描页，理想光组成图题及解答。",
+          "drawing_topics": ["理想光组成像", "组合系统焦点", "主面作图", "焦面特性应用"],
+          "width": 418.9091,
+          "height": 534.5455,
+          "rendered_image": "Copy of 画图合集（练习）(1)_page_1.png"
+        },
+        {
+          "page_number": 2,
+          "page_type": "image",
+          "description": "与画图合集(1).pdf第2页相同：教材扫描页，求焦点、节点、已知像求物等。",
+          "drawing_topics": ["求焦点位置", "节点标注", "已知像求物", "物像关系作图"],
+          "width": 418.9091,
+          "height": 534.5455,
+          "rendered_image": "Copy of 画图合集（练习）(1)_page_2.png"
+        },
+        {
+          "page_number": 3,
+          "page_type": "image",
+          "description": "与画图合集(1).pdf第3页相同：教材扫描页，已知AB像求CD像、焦点性质作图等。",
+          "drawing_topics": ["已知物像求第三物像", "垂轴实物成像", "垂轴虚物成像", "焦点性质作图", "共轭光线"],
+          "width": 418.9091,
+          "height": 534.5455,
+          "rendered_image": "Copy of 画图合集（练习）(1)_page_3.png"
+        },
+        {
+          "page_number": 4,
+          "page_type": "image",
+          "description": "与画图合集(1).pdf第4页相同：教材扫描页，共轭线段、主面作图、系统成像。",
+          "drawing_topics": ["共轭线段", "主面作图", "系统成像", "虚像判断"],
+          "width": 418.9091,
+          "height": 534.5455,
+          "rendered_image": "Copy of 画图合集（练习）(1)_page_4.png"
+        },
+        {
+          "page_number": 5,
+          "page_type": "image",
+          "description": "与画图合集(1).pdf第5页相同：教材扫描页，理想光组成像、虚物成像。",
+          "drawing_topics": ["理想光组成像", "虚物成像", "焦点性质作图"],
+          "width": 418.9091,
+          "height": 534.5455,
+          "rendered_image": "Copy of 画图合集（练习）(1)_page_5.png"
+        },
+        {
+          "page_number": 6,
+          "page_type": "image",
+          "description": "与画图合集(1).pdf第6页相同：电子版/打印版，6小题作图题。",
+          "drawing_topics": ["轴上实物点成像", "轴上虚物点成像", "垂轴实物成像", "垂轴虚物成像", "焦点位置标注"],
+          "width": 418.9091,
+          "height": 534.5455,
+          "rendered_image": "Copy of 画图合集（练习）(1)_page_6.png"
+        },
+        {
+          "page_number": 7,
+          "page_type": "text",
+          "description": "与画图合集(1).pdf第7页相同：手写总结页，不同物距下理想光组成像规律。",
+          "drawing_topics": ["物距变化规律", "理想光组成像汇总", "实物成像", "虚物成像"],
+          "width": 1224,
+          "height": 792,
+          "rendered_image": "Copy of 画图合集（练习）(1)_page_7.png"
+        },
+        {
+          "page_number": 8,
+          "page_type": "text",
+          "description": "与画图合集(1).pdf第8页相同：手写总结页。",
+          "drawing_topics": ["物距变化规律", "理想光组成像汇总"],
+          "width": 1224,
+          "height": 792,
+          "rendered_image": "Copy of 画图合集（练习）(1)_page_8.png"
+        },
+        {
+          "page_number": 9,
+          "page_type": "text",
+          "description": "与画图合集(1).pdf第9页相同：手写总结页。",
+          "drawing_topics": ["物距变化规律", "理想光组成像汇总"],
+          "width": 1224,
+          "height": 792,
+          "rendered_image": "Copy of 画图合集（练习）(1)_page_9.png"
+        }
+      ]
+    }
+  },
+  "drawing_content_catalog": {
+    "ideal_optical_system_drawing": {
+      "description": "理想光组（理想光学系统）的成像作图题，是主要内容",
+      "topics": [
+        "利用焦点性质作图",
+        "利用主面性质作图",
+        "利用焦面特性作图",
+        "利用节点性质作图",
+        "组合系统的焦点与主面作图"
+      ]
+    },
+    "object_image_relationships": {
+      "description": "物与像的位置关系作图",
+      "topics": [
+        "已知物AB求像A'B'",
+        "已知像A'B'求物AB",
+        "已知AB的像求CD的像",
+        "轴上实物点的像",
+        "轴上虚物点的像",
+        "垂轴实物AB的像",
+        "垂轴虚物AB的像"
+      ]
+    },
+    "special_positions_summary": {
+      "description": "第7-9页手写总结的各物距成像规律",
+      "positions": ["l=-∞", "l=-2f", "l=-f", "l=-f/2", "l=0", "l=f/2", "l=f", "l=2f", "l=∞"],
+      "note": "高分辨率手写图，可直接用于小程序中的参考图或题库素材"
+    }
+  },
+  "recommendations_for_app": {
+    "high_value_pages": [
+      "画图合集(1)_page_6.png — 6道标准作图题，排版清晰，适合作为小程序题库模板",
+      "画图合集(1)_page_7.png — 高分辨率手写总结，15个光路图覆盖全部物距情况，适合作为参考图",
+      "画图合集(1)_page_2.png — 节点、焦点、已知像求物等经典题型"
+    ],
+    "note": "这些PDF是扫描/拍照件，不适合直接提取矢量图形。建议：1) 将渲染出的PNG作为素材人工处理；2) 参考图中题目设计，用Canvas/SVG重新绘制交互式光路图；3) 第6页的蓝色线条图最清晰，优先参考。"
+  }
+}

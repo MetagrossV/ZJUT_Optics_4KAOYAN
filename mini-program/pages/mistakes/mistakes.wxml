@@ -1,0 +1,91 @@
+<!-- pages/mistakes/mistakes.wxml -->
+<view class="container">
+  <!-- 统计概览 -->
+  <view class="stats-overview card">
+    <view class="stats-row">
+      <view class="stat-item">
+        <view class="stat-number">{{stats.totalAnswered}}</view>
+        <view class="stat-label">总答题</view>
+      </view>
+      <view class="stat-item">
+        <view class="stat-number" style="color: var(--success)">{{stats.correctCount}}</view>
+        <view class="stat-label">正确</view>
+      </view>
+      <view class="stat-item">
+        <view class="stat-number" style="color: var(--danger)">{{stats.wrongCount}}</view>
+        <view class="stat-label">错误</view>
+      </view>
+      <view class="stat-item">
+        <view class="stat-number" style="color: var(--primary)">{{accuracy}}%</view>
+        <view class="stat-label">正确率</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 薄弱点报告 -->
+  <view class="weak-points card" wx:if="{{weakPointsList.length > 0}}">
+    <view class="title-md">⚠️ 薄弱点分析</view>
+    <view class="text-sm" style="margin-bottom: 20rpx;">根据你的错题类型分析</view>
+    <view class="weak-list">
+      <block wx:for="{{weakPointsList}}" wx:key="type">
+        <view class="weak-item">
+          <view class="weak-info">
+            <view class="weak-type">{{item.type}}</view>
+            <view class="weak-bar">
+              <view class="weak-fill" style="width: {{item.percentage}}%; background: {{item.color}}"></view>
+            </view>
+          </view>
+          <view class="weak-count">{{item.count}}次</view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 章节进度 -->
+  <view class="chapter-progress card">
+    <view class="title-md">📊 章节进度</view>
+    <view class="progress-list">
+      <block wx:for="{{chapterProgressList}}" wx:key="chapter">
+        <view class="progress-item">
+          <view class="progress-info">
+            <text class="progress-chapter">{{item.chapter}}</text>
+            <text class="progress-rate">{{item.correct}}/{{item.answered}} ({{item.rate}}%)</text>
+          </view>
+          <view class="progress-bar-bg">
+            <view class="progress-bar-green" style="width: {{item.rate}}%"></view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 错题列表 -->
+  <view class="mistakes-section">
+    <view class="title-md">📝 错题记录</view>
+    <view class="mistakes-list" wx:if="{{mistakesList.length > 0}}">
+      <block wx:for="{{mistakesList}}" wx:key="questionId">
+        <view class="mistake-card card">
+          <view class="mistake-header">
+            <view class="mistake-tags">
+              <text class="tag {{item.chapter === '几何光学' ? 'tag-geo' : 'tag-phy'}}">{{item.chapter}}</text>
+              <text class="tag tag-hard">{{item.errorType}}</text>
+            </view>
+            <text class="mistake-date">{{item.date}}</text>
+          </view>
+          <view class="mistake-question">{{item.question}}</view>
+          <view class="mistake-answer">
+            <text>正确答案: {{item.answer}}</text>
+          </view>
+          <view class="mistake-actions">
+            <button class="btn-outline" bindtap="reviewQuestion" data-id="{{item.questionId}}">再次练习</button>
+            <button class="btn-outline" bindtap="goToKnowledge" data-id="{{item.questionId}}">查看知识点</button>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="empty-state" wx:if="{{mistakesList.length === 0}}">
+      <text class="empty-icon">🎉</text>
+      <text class="empty-text">还没有错题记录，快去刷题吧！</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,78 @@
+<!-- pages/card-memory/card-memory.wxml -->
+<view class="container">
+  <view class="card-mode-tabs">
+    <view class="tab {{mode === 'flip' ? 'active' : ''}}" bindtap="switchMode" data-mode="flip">翻转卡片</view>
+    <view class="tab {{mode === 'fill' ? 'active' : ''}}" bindtap="switchMode" data-mode="fill">填空记忆</view>
+  </view>
+
+  <!-- 翻转卡片模式 -->
+  <view class="flip-mode" wx:if="{{mode === 'flip'}}">
+    <view class="card-counter">
+      <text>{{currentIndex + 1}} / {{cards.length}}</text>
+    </view>
+    <view class="flip-card-container">
+      <view class="flip-card {{flipped ? 'flipped' : ''}}" bindtap="flipCard">
+        <view class="flip-card-front">
+          <view class="flip-card-content">
+            <view class="flip-tag">{{currentCard.chapter}}</view>
+            <view class="flip-title">{{currentCard.title}}</view>
+            <view class="flip-hint">点击翻转查看内容</view>
+          </view>
+        </view>
+        <view class="flip-card-back">
+          <view class="flip-card-content">
+            <view class="flip-back-title">{{currentCard.title}}</view>
+            <view class="flip-back-content">{{currentCard.content}}</view>
+            <view class="flip-back-formula" wx:if="{{currentCard.latex}}">
+              <view class="formula-latex">{{currentCard.latex}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="card-actions">
+      <button class="btn-outline" bindtap="prevCard">上一张</button>
+      <button class="btn-outline {{isFavorite ? 'favorited' : ''}}" bindtap="toggleFavorite">
+        {{isFavorite ? '❤️' : '🤍'}}
+      </button>
+      <button class="btn-primary" bindtap="nextCard">下一张</button>
+    </view>
+  </view>
+
+  <!-- 填空记忆模式 -->
+  <view class="fill-mode" wx:if="{{mode === 'fill'}}">
+    <view class="card-counter">
+      <text>{{currentIndex + 1}} / {{cards.length}}</text>
+    </view>
+    <view class="fill-card card">
+      <view class="fill-tag">{{currentCard.chapter}}</view>
+      <view class="fill-title">{{currentCard.title}}</view>
+      <view class="fill-question">
+        <text>{{currentCard.fillQuestion}}</text>
+      </view>
+      <view class="fill-blank">
+        <input 
+          class="fill-input" 
+          placeholder="填写空白处..."
+          value="{{fillInput}}"
+          bindinput="onFillInput"
+        />
+      </view>
+      <view class="fill-actions">
+        <button class="btn-primary {{fillInput ? '' : 'disabled'}}" bindtap="checkFill">提交</button>
+      </view>
+      <view class="fill-result" wx:if="{{fillResult}}">
+        <view class="fill-result {{fillResult.correct ? 'correct' : 'wrong'}}">
+          {{fillResult.correct ? '✅ 正确' : '❌ 错误'}}
+        </view>
+        <view class="fill-answer" wx:if="{{!fillResult.correct}}">
+          正确答案: {{fillResult.answer}}
+        </view>
+      </view>
+    </view>
+    <view class="card-actions">
+      <button class="btn-outline" bindtap="prevCard">上一张</button>
+      <button class="btn-primary" bindtap="nextCard">下一张</button>
+    </view>
+  </view>
+</view>

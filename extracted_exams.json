@@ -1,0 +1,4401 @@
+{
+  "extraction_summary": {
+    "total_files": 5,
+    "total_pages_sum": 112,
+    "total_chars_sum": 36338,
+    "total_questions_sum": 303
+  },
+  "files": [
+    {
+      "file_path": "E:/Kimi_Project/浙工大光学/浙江工业大学2013~2019(1).pdf",
+      "file_name": "浙江工业大学2013~2019(1).pdf",
+      "total_pages": 23,
+      "text_pages": 7,
+      "empty_pages": 16,
+      "total_chars": 101,
+      "pages": [
+        {
+          "page_num": 1,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 2,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 3,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 4,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 5,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 6,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 7,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 8,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 9,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 10,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 11,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 12,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 13,
+          "chars": 50,
+          "has_text": true,
+          "text_preview": "幾\nB\nA\nT\nƩ D 再 20 f> 0\nX\n→—\nㄨ\n0 ⼝\n— — ,\nD\nA\nB\n1\nD\nc"
+        },
+        {
+          "page_num": 14,
+          "chars": 10,
+          "has_text": true,
+          "text_preview": "—\n1\n算\n。→ *"
+        },
+        {
+          "page_num": 15,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 16,
+          "chars": 3,
+          "has_text": true,
+          "text_preview": "噩\n←"
+        },
+        {
+          "page_num": 17,
+          "chars": 7,
+          "has_text": true,
+          "text_preview": ":\n*\n⼗ ,"
+        },
+        {
+          "page_num": 18,
+          "chars": 7,
+          "has_text": true,
+          "text_preview": "⼀\n⼀\n⼀\n0"
+        },
+        {
+          "page_num": 19,
+          "chars": 15,
+          "has_text": true,
+          "text_preview": "呵\n← *\n,\ny\nO\n→ E"
+        },
+        {
+          "page_num": 20,
+          "chars": 9,
+          "has_text": true,
+          "text_preview": "⼀\n0\n⼀\n0\n。"
+        },
+        {
+          "page_num": 21,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 22,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 23,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        }
+      ],
+      "questions": [
+        {
+          "number": "0",
+          "text": "⼝\n— — ,\nD\nA\nB",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "算\n。→ *\n噩\n←\n:\n*\n⼗ ,\n⼀\n⼀\n⼀",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "呵\n← *\n,\ny\nO\n→ E\n⼀",
+          "type": "未分类",
+          "topics": []
+        }
+      ],
+      "all_text": "幾\nB\nA\nT\nƩ D 再 20 f> 0\nX\n→—\nㄨ\n0 ⼝\n— — ,\nD\nA\nB\n1\nD\nc\n—\n1\n算\n。→ *\n噩\n←\n:\n*\n⼗ ,\n⼀\n⼀\n⼀\n0\n呵\n← *\n,\ny\nO\n→ E\n⼀\n0\n⼀\n0\n。",
+      "extraction_quality": "较差（大量扫描页）",
+      "overall_topics": []
+    },
+    {
+      "file_path": "E:/Kimi_Project/浙工大光学/浙江工业大学        2021——2020(1).pdf",
+      "file_name": "浙江工业大学        2021——2020(1).pdf",
+      "total_pages": 5,
+      "text_pages": 5,
+      "empty_pages": 0,
+      "total_chars": 297,
+      "pages": [
+        {
+          "page_num": 1,
+          "chars": 293,
+          "has_text": true,
+          "text_preview": "浙江工业大学 966 工程光学（II）考研真题\n966工程光学（II）2021年 ...................................................................................................................2\n966工程光学（II）2020年 ...................................................................................................................4\n1"
+        },
+        {
+          "page_num": 2,
+          "chars": 1,
+          "has_text": true,
+          "text_preview": "2"
+        },
+        {
+          "page_num": 3,
+          "chars": 1,
+          "has_text": true,
+          "text_preview": "3"
+        },
+        {
+          "page_num": 4,
+          "chars": 1,
+          "has_text": true,
+          "text_preview": "4"
+        },
+        {
+          "page_num": 5,
+          "chars": 1,
+          "has_text": true,
+          "text_preview": "5"
+        }
+      ],
+      "questions": [],
+      "all_text": "浙江工业大学 966 工程光学（II）考研真题\n966工程光学（II）2021年 ...................................................................................................................2\n966工程光学（II）2020年 ...................................................................................................................4\n1\n2\n3\n4\n5",
+      "extraction_quality": "较差（大量扫描页）",
+      "overall_topics": []
+    },
+    {
+      "file_path": "E:/Kimi_Project/浙工大光学/工程光学2013(863)(1).pdf",
+      "file_name": "工程光学2013(863)(1).pdf",
+      "total_pages": 18,
+      "text_pages": 4,
+      "empty_pages": 14,
+      "total_chars": 15,
+      "pages": [
+        {
+          "page_num": 1,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 2,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 3,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 4,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 5,
+          "chars": 2,
+          "has_text": true,
+          "text_preview": "15"
+        },
+        {
+          "page_num": 6,
+          "chars": 2,
+          "has_text": true,
+          "text_preview": "16"
+        },
+        {
+          "page_num": 7,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 8,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 9,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 10,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 11,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 12,
+          "chars": 2,
+          "has_text": true,
+          "text_preview": "19"
+        },
+        {
+          "page_num": 13,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 14,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 15,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 16,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        },
+        {
+          "page_num": 17,
+          "chars": 9,
+          "has_text": true,
+          "text_preview": "#\nCon\n↑ &"
+        },
+        {
+          "page_num": 18,
+          "chars": 0,
+          "has_text": false,
+          "text_preview": "[无文本/扫描页]"
+        }
+      ],
+      "questions": [
+        {
+          "number": "15",
+          "text": "16\n19\n#\nCon\n↑ &",
+          "type": "未分类",
+          "topics": []
+        }
+      ],
+      "all_text": "15\n16\n19\n#\nCon\n↑ &",
+      "extraction_quality": "较差（大量扫描页）",
+      "overall_topics": []
+    },
+    {
+      "file_path": "E:/Kimi_Project/浙工大光学/课后习题.pdf",
+      "file_name": "课后习题.pdf",
+      "total_pages": 58,
+      "text_pages": 58,
+      "empty_pages": 0,
+      "total_chars": 33291,
+      "pages": [
+        {
+          "page_num": 1,
+          "chars": 4,
+          "has_text": true,
+          "text_preview": "课后习题"
+        },
+        {
+          "page_num": 2,
+          "chars": 369,
+          "has_text": true,
+          "text_preview": "V\n3 4\n.\n在各向同性的均匀介质中\n×\n⼈全反射光密到光充\n—\n—\nv\n—\n— —\n12 3 4X\n. .\n⼀\nU\n① 仍在同⼀空间\nv\n、 ,\n—\nv\n⼀\nV\n只对折射系统成⽴反射系统不成⽴\n㉔\n0\n☆\nπ=\n-n\n×\n- 6=- ∞\nn\n⼀\nv\n上\n-\nnir\nn_nc\nV和r异号\nx n _n\nU ( 1 \" ) r ↓\n+π\nn\n\"\nn ' inidid\na\nn\nnin\n出⼀ π\n下\n“\n⼀\n。\nB>1 虚实相反放⼤正像\n只书\n√ γ= < 1\n虚物\nv\n,\nU\n3\n⼀ -\n异侧虚实相同倒⽴\nβc0\nB 缩⼩\n< 1\nU\n巡\n×\nU\nU\n。 β= - 2 和 1异号\nl\n×\n|\nγ"
+        },
+        {
+          "page_num": 3,
+          "chars": 497,
+          "has_text": true,
+          "text_preview": "⼀ ⼀ ⼀\n⼀ ⼀\n+mi\n=∠0\n= 0\n.\n200\n嬷幽 arctano 6 = T = 3096\n. . ,\nSiui Siuinl\nn =\n、 30 96 × 1 5163 = Sinii\n. .\ni ' = avcsiu 30 . 96 × 1 . 5: 63\n' 540\n2i = 102\n.\n— —\n0\n⼀\n全反射\n光密到光疏\n派\nM ,= 1 . 4 ,\nnzsiniz = nssin 900\n鬣\n菇\nTr = arcsTn\n900\nn\n.\nsini . =\nn\n2Sniz =n> sin\n前\nTi\n= arcsin\n⼀\n赛赛赛\n00\n⼀\n—\nd d\nd d\nSini\nd tan"
+        },
+        {
+          "page_num": 4,
+          "chars": 536,
+          "has_text": true,
+          "text_preview": "「\n⼀\n⼀\n↓) 1 = 150 mm V = 200mm\n.\nγ==500\nLi\nγ≤200 π+π=→=→\n, = 300 mm\n200 100\n: lz = li - d = 100 mm\nπ+ π= li= 125\n- mm\n⼀\n÷ ! = 10\n⼆ x\nβ y\n= - . =-\n40mm\n, L Y 152\n-\n/\n,\nβ== 台⼆步 , 8 % = ※li = 4x0 - 125 = - 50 mm\n-\nY lz _ 1 o0\n⼀\n位于 AB 之间距 B 125 的位置⼤⼩为50 _m m\nmm\n2 ) 1 , = - 50 mmV22500 mm\n2 =÷ 25\n公 π= 吃\nl"
+        },
+        {
+          "page_num": 5,
+          "chars": 685,
+          "has_text": true,
+          "text_preview": "步 == =\nβ= 5 i 2\n⼀ ( 40\n=\n↓ | ⼀… —正 30 ( = 30 mm\nmm\n_\nπ µπ nn\n+ _\nn = 6. 5 n \" = 1 τ o - 05 = 些 γ= 20 mm\n⼀\n⼀\nl\n-\n1=\nγ=15 mm nF1\n.\n720 U 2=1\n.\n360 不⼀世世⼀m\n1\n←20\n-\n的36-0\n“ n 2 l\n—…\n…個公\n(i\n=\n)\n—\n20\n3\n×\n6\n1\n0\n5 = 71\n.\n6667\n∴\nl li d 41 667\n2 = - = .\nƩ m - - 世器 360 - 6 ] 1072 3= 0 ☆ Li = 20 . 83 mm\nπ\n⼀\nnc ="
+        },
+        {
+          "page_num": 6,
+          "chars": 471,
+          "has_text": true,
+          "text_preview": "⼀\n善重\n不镀银时 Li = 480 n 为玻璃 为空⽓\nn\n-=so r-\nn\n.\nT\n=π\nm .r -18(1 -n)\n- π r\n-!\n镀银后\n反射π 公 = 式 γ=2 li 令 Li = li\n折射 π \" - ~=可骂 - 0 = 世 =\n洱\nπ n = - 0 (cid:15482) n . =Ʃγ= - 240 mm\n…\n⇌\n妆\n…\n…\n…Δ\nL\n,\n=- ∞\nπ 公 =≈ ci= 90 mm( 2 = Li - zr= 30 mm\nπ = 5 π 5 5\n台 . - . . Li= 15mm\n=\n300\n. 兜 庭15\nβ= × c 0 实像\n= ∴\n⼝ X30\n_\n反射 "
+        },
+        {
+          "page_num": 7,
+          "chars": 93,
+          "has_text": true,
+          "text_preview": "第⼆章\n②\nv\n0\n×\n×\n0 ②③\nf\n× 在同⼀介质中重合在不同介质中 λ F =\n√ f - H ' >\nv\nv\n⼀\n⼀\n→\n⼀\n品\n⼀ ⼀\n⼀\n.\n|\n←\nU\nU\n⇌\n≈ u\nv"
+        },
+        {
+          "page_num": 8,
+          "chars": 465,
+          "has_text": true,
+          "text_preview": "0 ①\n※\nv β> 0 = 20\ny\nV=÷ 20\n1\n— β=→确世定\nX ↓\n—00 ①\nβ=\n-武⼀于\n1 2\n仁茹\n↑↓\nv\n×\nv\nX\n计算式\n定义或\ntmultanu\n⼀ r = r= 芯古\nv\n⻆放⼤率随物像位置⽽异\n√\nX\nv\n①① 3 ④ xj = f + f\n拧 1\nv 才 n 1 fco … f xj = ftj\n. — 1 λ\n⼀x 步 — 才 = — n ⼨才 0=f⼀ fd\n⼀\njxj × j - xj = [ f- lj - d =0\n⼀ xj =\n—\n② (<_ d → ;\n⼆想\nf\n0\n×\n0\n⼀ 或: 1 =— — 与左 =0\nf\n—\n≈ ,\n—\n—\n于天"
+        },
+        {
+          "page_num": 9,
+          "chars": 720,
+          "has_text": true,
+          "text_preview": "jn ⼀\n左\n⼀π\nxj f\n等⼀上⼀ fcf =\n⼀ n Xj ⼨\n=\n⼀\n39 下\n8\n-\n—\n⼀\nn 1 52\n=\n.\n可 j )\n+dβR\n= = (u- )( β- β\nn\n∵ 为薄透镜 ∴ 或 = 将 = ( u-)( β - Ʃ )\n05232\nγ i >0 VE< O 设γ\ni\n=λ 吃 = -2X 5= 0 . 52 ( Fi -☆ ) → 52 = x= . .2 = — 3 .\n9\n下\n5 o2\n=\n5\n区 : ( ☆ - D ( π ⼀后 ) SooD = ( 1 . 5 -1 ) (π ⼀后 )( π - 位 ) = 1000 D\n- 1 D = (皆 ) 1000 "
+        },
+        {
+          "page_num": 10,
+          "chars": 566,
+          "has_text": true,
+          "text_preview": "1 '\nn Ʃ= \" nn =1 .3} L = - 1X10 mm\n— -\nn\no r =1 γ=∞\n103\n1 ×\nV - 751 88\n= = - mm\n.\n以3\n距离照相机物镜物⽅焦点 1751 88\n: x =- . mm\n加\n- ⽀世\nβ= — — 1 = :- 0 . 0428\nf 817581\n.\nX ' =☆\n村\n= 5 8\nx-8 7\n1\n5\n5\n=\n3 . 21 mm\n.\n×==÷→\n=\nβ= - 3 U - 36 ⼗\n—\n式 Ʃ= 于 j - 6 兆\n- =\n18mm\n些 i\nL 2= ( + . 8 β= = - 4\n(\n= -\n4 l\n2 = -\n4l\n-\n72\n6"
+        },
+        {
+          "page_num": 11,
+          "chars": 834,
+          "has_text": true,
+          "text_preview": "由图可知 L = d -卡 ∴ d = L - lF = 15 mm\n-\n(\nq\n= f (\n1 等\n)\n. ∴\nj.\ni = -35mm\nii 求求求\n=☆\n35 j\n∵\n= — —\ni-\n50\n=\n尤\n25\n∴ = mm\n65\n=\n扒 rin ⺾ — — 1 . 5 θ × 6 × 104 = - 1440 mm 或⼆⼀在 D\n( n-1)[ n (vz - ri ) + (n-1)d] 5(15 .5 ( - 1000)+ 0 7 . 5 × 40\nF= f ( | -π n+ d β . ) = - 144 × [ 1 - 5 ×50 × ( - 站) =- 1520mm\nLF =- "
+        },
+        {
+          "page_num": 12,
+          "chars": 582,
+          "has_text": true,
+          "text_preview": "⼀ ⼀\n— ⼀\n_ 过求 时⼀⻰李d⻰lij )\n( i-d\n)\n1\n— 我 =\n= (\n→ tkdj\n0 _\n—\nf 左 = 左 ( j d — ( ⻰ - d )\n= - — π= - ( 1+ ) =\n求 t ⻰d d⼀求尤\n卡某⼀前⼀直 fid\n_ dltfd\nlui=\nf\n时\n求\n— ⼆ 求\n出台場求求\nβ=\n= ② —\n⼠ 5 ⼨「\n[ l\n⼀\n由题: β=β , β r = - 2 β 2 = - 4 β 2 =2\nC\n∵β F + u = -2 . (i =-2 l\n. 1\nL 75\n此时出⼀ 1 ⼆乎 代⼊求得了 1 =- mm\nG →\nLi 150\n= mm\nlz li d"
+        },
+        {
+          "page_num": 13,
+          "chars": 596,
+          "has_text": true,
+          "text_preview": "⼀\n由题意 ×\n11 β= 10\n… : -\nq 对 m 物→⽅|和=像⽅由⽜顿公式: X ⼆找\n92= *\nβ=\n☆=等\n1\n⼼⼆品\nmm\n-\n_\n=\nX\n∴ X =_ 1 omm = 1000 mm\n此时求离第⼀⾯的物距和离最后⼀⾯的像距\n( v = x +++ 1 f - lF |=] 10 mm\nli = x + j -| f - lπ|= 1096 mm\n共轭距 f 1 + x - x - f + d - | f - ly | - |j - li |= 1100 + 110 + 15 - 3 - 4 = 1218 mm\n1\nhyji 5100 - 2\ntanVi = tanU 2 ="
+        },
+        {
+          "page_num": 14,
+          "chars": 331,
+          "has_text": true,
+          "text_preview": "第三章\n⾃光是由许多不同波⻓的单⾊光\n组成的 同⼀透明介质对于不同\n,\n波⻓的单⾊光具有不同折射率\nO1 ① 2 ③④\n故在成⾏⽛板内部发⽣⾊散\n⼀ ⼀\n光楔⾊散\n×\n,\nU\nv\nU\n←\n⼀ ⼀\n②\n④\n倒像\n⼀\n⼀\n⼀\n⼀\n② X\n原\n折射率\n↑ 今 ↑ 然 b\n>\na\n→\n. na> nb s\n⼀ _ 2\n波⻓↑ ud b为红\n:\n⼼\n,\n⼀\n抓叠光路转折光路\n⽿⾯反射镜\n1 557\n.\n42015\n600\n+\nα+ 8 425品代⼊求得 Sin —\nsin m Ʃ 由题缀\n_ =nsin n →= 1 55 ]\n2 600 .\nSTn\nƩ\n平⾏⽿板\n微⼩⻆度或微⼩位移 双光旋转测微\n双光"
+        },
+        {
+          "page_num": 15,
+          "chars": 375,
+          "has_text": true,
+          "text_preview": "a) 图中光经过光偏折相同⻆度移幼\n前后两光束为或⾏光经过物镜成像于\n同⼀点 经光锲后不是平⾏光下成像\n∵\n位于焦⽿⾯轴外⼀点\nb) 光锲键旋转时偏折⻆度⼤⼩会发⽣变化\n光产⽣的偏向确为 δ=2α(n- 1)Cosφ 当⼀个\n,\n光锲键底和另⼀个光键头位于端时同不发⽣⻆度\n偏折 此时像位于焦点上故像点位于物镜\n,\n像⽅焦平⾯上 往复直线运动\n,\nc\n)光垂直进⼊平⾏⽿板不发⽣偏折仍不⾏\n出射 故成像于像⽅焦点处不动\n,\n,\n34\n2 2\n2\n右 右\nZ\nj\n|\n→⑧\nY\n0→\nx\n↓右 →x\n右\n占左\n↓\nOz\nz\n右\n| 5\ny\n物镜罪 壞岛 冒镜”当泉\n|\nxy\n¢ 右 左\n2\n右\n物镜\n"
+        },
+        {
+          "page_num": 16,
+          "chars": 583,
+          "has_text": true,
+          "text_preview": ">\n或 经过物镜后坐标系为⼀ * 步\n五⻆屋脊棱镜\n㿲数\n^ ;\n'\n再经反射镜后坐标系变为, 它与最终出射\n^\n左\n改变⽅向说明\n像⽐较发现垂直主截⾯⽅向 (x\nx\n右\ny\n存在屋脊棱镜或物镜 ⼜发现由右⼿坐\n;\n䅃\n标换为左⼿坐标则不可能是物镜该为⼀个奇\n数次反射的屋脊棱镜同时使出射⼯改变900\n故推测为五⻆屋脊棱镜\n1\n法⼆\n法 ⼀ :\n=\n武 1 2 OA\n25 2 | 6\ntan θ , - . - = 1 5 = A + 1.5 OA =\n1 5 Ʃ\n.\n2 5 1\n. -\ntm θ r = 成 = 1 | 5 =+ OB = 1\n15\nƩ=\n忄 OA = 6 1\nσ\n综上最近点离"
+        },
+        {
+          "page_num": 17,
+          "chars": 580,
+          "has_text": true,
+          "text_preview": "…\n…州\n“\n90 900\n∠ 2 + L5 = L 2 + L 3 + - < 2 = 5\n∴ L α= L L\n: 2 - 3\n<β= 1800 L L ( 1800 C C )\n- 3 - 4 - - . - 2\n1800 L 1800\n- 2 3 - + 2 L 2\n=\n2 L 2 L 2 <2\n= 2 - 3 =\n。\n⼀\n90 420 480\n- =\n经过两次反射偏折\n22\n则经过\n4\n次偏射42\n42 480\n= 2 120\n=\nm\nSin+ =nsiu Ʃ ∵ 等边棱镜 ∴α= 600\n2 。\nƩ\nSm = ae sin nsin - 2 = 2 arlsin 1 . 52 ST"
+        },
+        {
+          "page_num": 18,
+          "chars": 292,
+          "has_text": true,
+          "text_preview": "第四章\n⼊瞳孔往出瞳\n∞\n①②\nv U 焦点和光轴⽆限远点共轭\nv\n0 0 ②\n⼀\n⼀ ⼀ …\n\"\n⼆\n就是⼀组取⾏光线的上边缘和下边缘\n、\n① 当物⽅和像⽅介质相同时节点和主点重合此时经过物⽅主点的光线也经过像⽅主点\n③ 经过焦点的对应光线是⽆穷远点的光线\n②\n孔往光阑 限制轴上物点成像光束⽴体⻆\n: ,\n选择轴外物点成像光束位置\n×\n,\nv\nv\n0\nX\n②\n像云点 U\nv X\n①\n物⽅远⼼光路\nv\nX\nU\nX\n⽣物显微镜\n①\n场镜 可以减⼩⼊射光的⾼\n:\n度进⽽减⼩后续光组\nX\n通光⼝径改变出距\n出瞳距↓ 出瞳尺⼨不变 对成像不起作⽤\n,\nx\n×\n①②④\nv\nv\n↓\n。\nㄨ"
+        },
+        {
+          "page_num": 19,
+          "chars": 533,
+          "has_text": true,
+          "text_preview": "孔往微阑渐晕陳\n物⽅视场⻆\n像⽅孔往⻆\n物⽅远⼼\n场镜\n物镜的像⽅焦点 ⼀次实像⾯处\n5 倍 % \" + 14 \" →放⼤28 倍 : 5\n8\n物镜 分划板\n⽬镜\n此时K =0\n㰂\nA和A 关于透镜成像 L sommli bomm\n≥ ≤\n:\nD 30\n1 = mm\nD 2=22mm , 式⼀公⼿求得 j= 20mm\n唇\n通光孔对于透镜成像:将其看成像\nL lomm\n=\n—\nA\n*\n1\n式⼀式⼿求得\nl 20\n= mm\n- 1 ,\nβ=÷= 炎\n30→ D i = 44mm\n'\n2\n←→\n对透镜张⻆为 arctan 通光孔为系统的孔往光阑和出瞳\nA 26 570\n= ∴\n.\n品\n对通光⼦ 像的"
+        },
+        {
+          "page_num": 20,
+          "chars": 802,
+          "has_text": true,
+          "text_preview": "↳\nL l关于L 成像为 (像看作物红物看作像)li = 50\nfi\n= 90\nv\n。\n出⼀式 = β=\n⼿ F 112 . 出 式 D = 45\n6 5\n5\nD\n.\n20\n圆孔关于1 成像为O( 像看作物·物看作像) li\n=30\nfi\n=\n90\nKf\n—\nl\n5如\n古台⼿ ( 2 45β= 想器 Ʃ Di= 15\n=\n物点关于 L 夹⻆为 arctan Ʃ 12 0 0 = 14 . 040 圆⼦孔关于 L 成像O \" ( 3=- 20 求 = 40\n物点关于 Li夹⻆为 45\navctan ⼀ 112 . 5 +120 = 10 . 950 出⼀的⼆活 ( 5 =- 40 β ' : 些"
+        },
+        {
+          "page_num": 21,
+          "chars": 617,
+          "has_text": true,
+          "text_preview": "D 20\nD 50 2=\n1 = 圆孔关于物镜成像在物⽅⽆穷远处\n⽬镜关于物镜成像 ( → 像像→物)\n物\nV = 1200 f = 1000\n式⼀式于 C\n= 6000mm\n-\n1200 ⽚ 2\n→ β= = — Di = lo 0 mm\nDi\n物镜为⼊瞳睡和孔往光阑\n上物镜的⼝径最⼩\n:\n物镜关于⽬镜成像为 l\n1\n=\n-\n1200 卡 =200\n式⼀式 话 上= (cid:15482) iDi\n= Li 240 5 = 10\n=\n=\nu D\n.\n出瞳位于⽬镜后⽅\n240 mm ⼤⼩为 10mm\na ) 由⼊瞳中⼼向其余光孔或框在物空间的像的边缘张⻆最⼩的为⼊窗\n,\n与之对应的实际光孔或框"
+        },
+        {
+          "page_num": 22,
+          "chars": 329,
+          "has_text": true,
+          "text_preview": "第六章\n①\n视场 视场\n0\n③\n孔 都有关\n②\n⻬明点\n③ :\n1物像点点均位于球⾯预点处\n等晕和不晕都不产⽣正弦差\n2 物点像点均位于球⾯⾯率中⼼处\n、 .\n3 {L = cntnyr/n\nX .\nL\n=\n(n+y)/ni\n×\nv X × X ㄨ v X\n②\n②\n\\\n贫\n正\nX\n正 → 枕形\nv\n负 桶形\n→\nX 0\nX\n理想像\n孔径 视场\n球差 位置⾊差 畸变\n倍率⾊差\n3 慧差像散场曲\n2\n像散 像散\n场曲 4 慧差像散\n畸变倍率⾊差\n位置⾊差和阿数成反⽐\n⼤\n负 正\n⻬明点\n{ L = (ntn) r / n\nL L\n= =0\n'\nL =(ntny rln\n|= l\n2 = 0\nL ="
+        },
+        {
+          "page_num": 23,
+          "chars": 312,
+          "has_text": true,
+          "text_preview": "对称式\n半部像差的 2倍 材料\n透镜光焦度制造透镜的光学\n⼩\n⼤⼦孔径 ⼩视场\n球差正弦差 位置⾊差 孔往\n⼤孔径 ⼤视场\n球差像散、场曲、 畸变慧差倍率⾊差位置⾊差 ,\n⼦午慧差\n凸\n细光束\n!\n细地像散 时\n— 场曲 畸变\n→\n军外⼦午球差\n⼀\n⼦午宽光场曲\n球差\n⼀\n弧⽮细光束场曲\n⼀\n第⼀次折射\nli = L = O β 1\n第⼆次折射 L 2 = - d Li = (u+ n > r / n β 三別\n∴ Li nL nd 6\n. = 2 = - = _ mm\n丝\nn ⼆\nγ= ny = - 2 4mm\n+n ( 5 .\nβ=β β 1世\n=\n, c =2 25\n.\n⻆放⼤率\n: γ"
+        },
+        {
+          "page_num": 24,
+          "chars": 335,
+          "has_text": true,
+          "text_preview": "第七章\n眼睛分率由感光细胞⼤⼩决定\n②\n。\n×\nv 当瞳孔直径增⼤时 眼睛光学系统的像差增⼤ 分辨能⼒随之减⼩\n,\n,\n④\n=π=\nR 2D (\n⼀ - r = - 0 5 M\n.\n校正\n②③ j lr 500\n: = =- mm\n×\nv\n0\nv\n“\n☆\n。\n①\n③ ⼀倍焦距外靠近焦⽿⾯的位置\n—\n或明视距离处\n( )\n显微镜出瞳瞪直径\n位置⾊差\n⼀ X → ,\n2到户 500tanwYPoD 呢500NAIP\nv\nA\n√ 不能使被观察的物体细节更加清晰\n①②\n⼀ U tanω 50\nF —ω= —— % =βe\nNA和部⽆关 tan fe\n。\nx\n①\n。 0\n在物镜像⽅焦⾯\nX ⼀\n⼀次实像"
+        },
+        {
+          "page_num": 25,
+          "chars": 554,
+          "has_text": true,
+          "text_preview": "不均\nv ⼀ X\n照明系统的孔径光阑\nv X\n出瞳 位于聚光镜的孔经光阑上\n𥌑 后接光学系统 ,\n照明出窗\n②③\n物镜焦距⻓\nU\nX\n⽬镜售距短\n0 U\n①\nv\nx 望远镜的视觉放⼤率 P = 11 B\nU\n当光学间隔很⼤时需要更稳定的⽀架 天⽂望远镜镜\nx (\n⼀\nx y = - ftanw 当對 ↑ yd\nU\n照度不均匀和像⽅视场⻆有关和光圈⽆关\nx\nπ ×\nV 摄影系统的像⾯照度主要取决于相对⼝径 E =T πLSIUFU =☆ T LBi\n光圈 是⽤来控制光线透过镜头进⼊机身内感光⾯的装置光圈⼠下数光圈⼤⼩和 数成反⽐\n② F\n:\n光圈⼤ → F ↓→ Dj ↑ 像⾯照度与相对⼝径(D"
+        },
+        {
+          "page_num": 26,
+          "chars": 427,
+          "has_text": true,
+          "text_preview": "临界照明\n窗对瞳瞳睡对窗\n光源柯勒镜聚光镜\n×\n40\n15 * 1500×\n500NA ≤ T ≤ 1000 NA\nNA= NSTM\n-14 30 ω==\nSin 0 .5\nnm\ng\n0 99\n.\n=\nO5X450MM\n6 = 400 mm 6 NA = 00 = 0 . 99\nmm\n==\nP=βE = 800 × 「 0 . 3125\n3125\n0\n.\n焦距相对孔径视场⻆ 相对孔径\n⼩\n⼩ ⼤\n72 17\n.\n号 Ʃ π 元 + 府 Nc = % = 冠 = =4 737. 5 lplum = T 2 .17 lp/ mm\n25\n175\n125\n⼀⻰⼆\nT “\n=\n光学补偿法\n𨫎\n⼀个或多个"
+        },
+        {
+          "page_num": 27,
+          "chars": 748,
+          "has_text": true,
+          "text_preview": "—\n( ) 物体过物镜的像 式⼀式⼆于 V = 110 mm\n:\n如图中 o = fi = 100 mm 没⼦V 径光阑为 2X\naull\n⽂\n= X = 1 2λ=2\n)\nC) NA = nsinu ≈ l × 0 . 1 = o1\n6 = 0= — × 5250 .* 0 . 75×10- 0 m = 2 . 75 um\n15 =\n③> D 物 = Y + 2tanu ( -l ) = 8ftanu\nY = 8 × l0 ×0 | - 2 × 0. 1 × 11 = 5 . 8 mm .\n—\n物\n.5 ×550\n“ ” 分辨率根据道威判断 : 6 - — 歲 = 1 . 375 um\n,D"
+        },
+        {
+          "page_num": 28,
+          "chars": 599,
+          "has_text": true,
+          "text_preview": "对物镜 -\n( ) : ( “ 6 = 180 mm { l = - 45mm\n{\n可得\nβ=÷=\n×\n- 3 i = 135 mm\n式⼀式于求得求 = 5=\n∵ 33.75mm\n××\n述\n= *\nT 30\n=\n25\n500\n② ) 出射光园量直径 D = NA =30500 = 1 - 667 mm\n— = 5\n⼚\nB 如图 z ( = ( + fi = 135 +15 = 160 mm 瓦⼀下球 (i = 00= 29 . 63\nmm\n( 4) 6 = 0 ⼀ . 5 ×0 . 55 um = 2 75 um\n.\nNA\n≈\n5) NA = nsinu = 0 1 tanu ⼆ 01 D 物"
+        },
+        {
+          "page_num": 29,
+          "chars": 727,
+          "has_text": true,
+          "text_preview": "物⾯\n聚光镜\n如图⼀ : 200mmc < 3 m ,不是临界照明\n,\n考虑成區像 王\n∴\n⼀ ,\n⼥如图上 5000 ( |\nt '\n— — ( = 357 14mm ← 世\n200 3000 . y\n→ sowmm\n—\n代⼊出⼀式 我 l =- 188 68 mm\n= .\n” 为看清物体所需的分彩率 X 光学系统的放⼤率 ≥ ⼈眼分辨率\n150\n物体所需的分辨率为6- — — = mm 3 . 75 ×10 -5 rad\n4 km ,\n5×\n⼈眼的分率为 1 = 3 x10 * rad 开普勒望远镜 放 的 ⼤ 倍 有效 华 为 、 F 世 5 = 8 *\n10-\n⼯作放⼤倍率⼀般为有效放"
+        },
+        {
+          "page_num": 30,
+          "chars": 773,
+          "has_text": true,
+          "text_preview": "⼀\n⼀\n机械筒⻓ - fe fitfi 225\n() = = mm\n:\n= 200mm\nE = - 8 * o = 8 f求求得\n求 = 25 mm\n'\n《) D ⽬ = 2× 225xtanw+ D = 28 - 6 mm\n( 瓦⼀瓦 “ lz\nz = - 225 mm = 28 125 mm\n.\nB ) 1 . = -200 mm π ⼀式⼆ Vi = 120 mm u = li - d = 95 mm\n后下 “ 笼 li = 19 79 mm - - tanntanw .- 8 × tanw ' = t 8 an 30\n.\nD|=\n2×\nlixtanw\"\n+D\n'\n= 21\n59\nmm\n"
+        },
+        {
+          "page_num": 31,
+          "chars": 432,
+          "has_text": true,
+          "text_preview": "第⼋章\n①②\nv\nv\nv\n⼀\n③ Ey =2c0 s [2 π ( 04 - 0* ) t ]\n: ☆\n15\nt = 2 . 5 ×10 - E =0 时 EY = 2 C0s ( - 0 . 5 π+π ) = 2 m\n0座 ∵ B\n.\nE\n.\nR符合右⼿坐标系 (由 E →B)\n下如图 B 的⽅向应该沿⼒轴负向\nx\n①\n① c= UnC 不变 当 n ↑ 后 V ↓②= VTUdT不变⼊ ↓\n:\n③ T =÷ v 不变 ∴ T 不变 ④ 波数 = ⽂⼊ ↓ 波数 A\n.\n②\n丹\n⼀束光在传递过程中频率不变排除①\n由公式 C = nv 可知当 n 越⼤时 v 越⼩ n32 n . > n 2"
+        },
+        {
+          "page_num": 32,
+          "chars": 578,
+          "has_text": true,
+          "text_preview": "x 是—曛—\n③\n⽖\nn\n3\n半波损失 即发⽣ π 的相位突变 ( 发⽣于光疏 → 光密的反射 )\n:\n① m > n > n 两次反射都不发⽣相位改变\n. 2 3\n② n cnz < ns 两次反射都发⽣\nπ的相位改变则不发⽣半波损失\n.\n③ M . znzcn 3 不发⽣ ; 发⽣则将产⽣半波损失\n④ M . cnz2n3 发⽣ ; 不发⽣则将产⽣半波损失\no0e\n雪—\n——\n④ —\n5\nφ= α 2- 2 . =5 π STM π FC ∴为右旋椭圆\n③\n-\n步 :\n频率相同振动⽅相向同相位差恒定\n。\n⻢驱波:\n频率相同振动⽅相向同传播⽅向相反\n偏振 频率相同振动⽅垂直向具有⼀定的相位差"
+        },
+        {
+          "page_num": 33,
+          "chars": 801,
+          "has_text": true,
+          "text_preview": "反射折射\nH>H θ 2θ\n⼊射光为P⽅向\n, 2 , c\n的偏振光且⼊射⻆为布儒斯特⻆\n频率相同,振动⽅向相同传播⽅向相反\n5\nφ=α z - 2 . = - π\n左旋椭圆偏振光\nSTn\n-\n5 π20 左旋\nƩφ-\n2ACOS( 2 )\n—\n合成后 A 三 A 24A 2+2 A 2 cos( φ , - φ 2 ) =2 A 22 ()1+Cos 4 i - = 2A 2 . 2c0s ( 世 - 2 φ 2)\n↓\n1 + Cos ( φ , - φ 2 ) =2\nC(os-v2\n)\n① φ\n. ∴ . =2ACoS 1 - 2 )\nA (\n后* 以+ 420→\n所\n—\n[ [(2x+3"
+        },
+        {
+          "page_num": 34,
+          "chars": 1138,
+          "has_text": true,
+          "text_preview": "为⼲涉\n元\nE 1 = 6 Cos ( - 2π× 10 ) 5 E 2 8 COs ( π - 2 πU× 1015 t ) α .1 - 22 = -\n=\nA ≤ 62 + 82 + 2 × 6 × 8 Cos ( - Ʃ ) 求得 A = lovlm\n—asin 、 + 2STn 80\ntan2 = — 2 a 2 = =+ = 5 2 = avetan 5 = 0 . 927\ndicos2 tarcosα\n、 2\n。 ∵分振动的表达式 : E = 10 cos ( 0. 927 - 2π×10 '5 t )\nE , = Gexpi( kx +wt) Ez =- aexp ( kx -w"
+        },
+        {
+          "page_num": 35,
+          "chars": 614,
+          "has_text": true,
+          "text_preview": "光学拍\nki ktdk k k dk\n= 2= -\n设 E = acos( k. z - ωit) E 2 = acos(k 2 z - wit)\nw =☆.+ Wz = k = K Ʃ 、 +k 2 = K wm= W — i - W 2 = dw km = kr - Ʃ k 2 = dk\n2 2\nE = E , + E 0 = 2acos (dkz - dwt ) cos ( kz - ωe)\n相速度 (等相位⾯的传播速度 世 世\n:\n)\n:\n0=\n= k\nR\nK\n群速度 ( 等幅⾯的传播速度 ) 0 = 品\ng\n: :\n相位差 δ=α\n2\n: 2-\n则两个分量的复振幅为 Ex deikz"
+        },
+        {
+          "page_num": 36,
+          "chars": 436,
+          "has_text": true,
+          "text_preview": "第九章\n②\n相位差恒定\nv ×\nv\n①\nU\nL dx ⼊ ⼊ XD\n× 0 = D =m x = d Ox =\nv\n。\nα\nv\n× 。\nδ= KOL =π L 亮条纹 l ⼊为亮纹\n0 0 =m\n③\nX\n×\nv\nv\n相⼲性空间相⼲性+ 时间相⼲性光源扩展只对空间相⼲性有影响, 对时间相⼲性⽆影响 OX\n点光源的光场虽有最⾼的时间相关性 但在纵向波线上的两点的相⼲性还会受到时间相⼲性影响 ② X\n.\n,\n②\n×\nv\nX\nU\n式合\n0x= 哈 δλ\n0 = — — R↓ cxA 条纹间隔增⼤\nD\ng ,\n② n ↑ λ=☆ ⼊↓ x ⽐条纹间隔减⼩\nbc β w ^\n③ 光线缝宽为允许宽度, 增⼤"
+        },
+        {
+          "page_num": 37,
+          "chars": 272,
+          "has_text": true,
+          "text_preview": "①②\n品\nh + i = m ⼊ hym ↑\nv\nx\nU\n②\n,\nλ\nα\nv —\n2MOS\n.\nv ⼀\nv\nv\n(\n①\nv\nX\n⼀\n上⽅\n0\n⼈近\nx\n②\n⼀\n①②\nU 施加下后 2⼭ *\n2MOS\n∴os↑\n, ∝\no\no\nX\n①③\nv l ×\nv v\n—\n⼀→ 加F αd 向级次⾼的移幼\nx λ\n⼀ α— — a ↓ os\n2MOS\n,\n①\n0\n①\n×\n添加补徬板可获得\n×\n添加⼊补偿板补偿各⾊光程差获得\n②\n镀—⾼反⼊膜\n—\nU\n×\n透过率↑ 界⾯反射⽐βd 条纹锐度08\n=\n器 ↓\nv\n透射光和反射光互补透射光为亮纹时反射光为暗攻"
+        },
+        {
+          "page_num": 38,
+          "chars": 450,
+          "has_text": true,
+          "text_preview": "X v\n①②\nv\nv\nv\n⼊⼩\n③\n⼀\n① 频率相同② 传播⽅向相同 ③ 相位差恒定\n。\n在⼲涉场中叠加的相⼲光是由光源的⼀条光线经上下表⾯反射后所分离出来的\nDmax Cot\n=\n越好\n分波前法\n分振幅法\nImax Imin\n_\nK -— ou 1\nImax+ Imin\n相⼲的振幅⽐ ,光源宽度光源的⾮单⾊性\n等距直条纹\n⼀组同⼼条改 全暗背景下的细锐亮纹\n透射光\nF P⼲涉仪\n⼀\nbum σx =\nX\nπ\nD\n10× [\n]O\n6\n×0 .\n= 6 ×<0\n-\nm = 6 µm\n2 2×10 -3 4 583 ×10 -3\n. .\n0 L = 4 λ= 4× 550 × 109 = 2 2"
+        },
+        {
+          "page_num": 39,
+          "chars": 708,
+          "has_text": true,
+          "text_preview": "6\n0\n.\n= = A 1 Ar = ⼆⼆⼊感 =\nK 6\n下 0 .\nI +Iz 1+ 1AYA 2 2\n、 )\n1\n.\n2×10 - 3\n9\nOmax = Cot = 3 × 108 × 10 - = 0 . 3 m\nλ≈\n⼊\n2\n(600 ×10\n-91\"\n-3\n0 = — = 1 . 2×10 nm\nOmax 0 . 3\n588.3\n0 L = 2 dcosT = m λ λ= o Ʃ d =0×. 233× 三 10 = 5 . 8838×10 ) = 588 . 38 nm\n792\nDM\n知\n-\ni h mx =\noL nh ⼊ n hamah\n= 2 + = m =\n006\nnm"
+        },
+        {
+          "page_num": 40,
+          "chars": 536,
+          "has_text": true,
+          "text_preview": "增⼤ 右\n增⼤\n⼊⼀式\n仁\n+λ= m\nα os αxosi 0 l' = 2 h m λ h = hdmd 往能级⼩的⽅向运动\nTi 20 时 Ti > 0 cosiic 1\n0 L =2 hcosii += m λ m =\n2h\nπ\ncosTi\n+ i cm= 1 时 ch =\n*\n2COSTi\n=☆= PosTisint\ns\n0\nSTn2 Cosiid osi\n.\n3 03\n.\nA =☆= 0. 97 ms s : — π 1- N R E m =9 A 7xs 0 L ' = 2nh =m λ h = ⺾ 2 ⼊\n综上 h 0 (600×10- 9 ) 2 m\n: — × 935^= "
+        },
+        {
+          "page_num": 41,
+          "chars": 1005,
+          "has_text": true,
+          "text_preview": "劳埃德镜 发⽣⼲涉的两个光波⼀个是光源S 直接发出的\n:\n另⼀个是光源 经取⾯镜所成的像5 发出的\n. S\n—?\nS和S为相于光源 所以在光路发相遇将⽣⼲涉\n— P ,\n“⼀⼀ 2\ns 1 …- ≈ _\n_\n_\n_—_— 可以在 PP\n2\n区域看⻅⼲等步距直条纹\n⽥题可知 3个单⾊波磁感强度⽅向相同\n,⽽\nEBK 成右⼿坐标系\n故可令 3\n个单⾊波⽚均\n:\n,\n垂直纸⾯向外 如图所示 分别沿正 Y 轴分解\n, ,\n䠪\n上发⽣⼲涉的条件 频率相同 振动⽅向相同 相位差恒定 故沿于轴正向⼲涉\n: ,\n, ,\n在 Z =0⽿⾯沿测轴正向: Ei= Acos 300expikyos1200 ⼆\nƩ\n污"
+        },
+        {
+          "page_num": 42,
+          "chars": 806,
+          "has_text": true,
+          "text_preview": "( 1 ) P 点的光程差为cL = (n - 1) t相位差为 δ=KoL = (n-1) t\n0\n则 P\n.\n点的光强为 I\n=\n4I\n0\ncos③= 420 Cos ' [ (n- \"t ]\n当渠 (u-+)t =2M π 即 t = m⼊ π 时 Po的光强最⼤为亮政 I = 4 I 。\n当 ( n-)t = 12M π即⼠⼆ m \" + 时 o 的光强最⼩为暗纹 I = O\n2)\nI\n=\nI\n. +\nI\n2 +\n2II\n2\ncos8\n攻\n= A 2 +)2A ( 2 + 2F( 0 2APCOS [( n-1)t ]\n: 5A + A S2 C04[ (n -)t]\n突变前 : 焦点"
+        },
+        {
+          "page_num": 43,
+          "chars": 733,
+          "has_text": true,
+          "text_preview": "(1 ) ∵ 空⽓折射率 < 薄膜 < 玻璃下不发⽣半波损失 j :20cm\n光程差为 OL = 2 nhcosOz 垂直⼊射时 znh =m ⼊\nm 2nn 2 × 1 - 38 × 5 ×10\n-5\n230 下为亮汶\n=π = — =\n600 ×10-9\n2) 哈 ⑤ 1 — 3 → 8×6000 — vad\n05 = 1 +q= = 0\n.\n288\n世\nr 5 = f ' tanθs≈ f ' 05 = 20 × 0 . 288 = 575 cm 空⽓ :\nns\n“ \" ngF :\n③ ) 0x = fdo = f ⼊ = 20×10 - 2 — 138 × 600 × = 5 : 75"
+        },
+        {
+          "page_num": 44,
+          "chars": 1232,
+          "has_text": true,
+          "text_preview": "“\n重 % :) andn\n“ 0\n,\n;\n” ” \" \" \" \"\n州“\n光程差 : OL = 2 dcosi 当垂直⼊射时 T =O 此时 OL =2 d d ↑\n” |\n为亮纹时 OL = m λ= 2 d 求导得 om= 2/ ⼊ od 別\n由题 om =1oo 时 od = 0 . 03164 mm = 3 . 164 × 105 m\nλ=\n—\n×3 . 、 614× 0\n≈=632.\n8×\n109\n=\n632\n.\nbnm\n100\nδ为附加光程差 Ko1\n= 2φ\n.\n对⼊ , 没环⼼的级次为 M . + m 0 ( m , 为整数级次 , mo 为⼩数 ) 则环⼼ = 2 h + o"
+        },
+        {
+          "page_num": 45,
+          "chars": 330,
+          "has_text": true,
+          "text_preview": "(1 ) 中⼼波⻓ ( 透射⽐最⼤ ) = n Ʃ h 4 2 X 1 -55 × 109142\nλ × ≈\nc : nm\nm m\n当 m= 2 时 λ c= 620 um 当m = 3 时 λ c = 4Bum\n下在可⻅光范围内有两条波⻓为 620\nnM\n和4BMM\n2) 半宽度 。_ - e\n: λ=②\nc\n←\nnh 功\n2π\n当⼊ = 620 nm 时 : 0 λ — 2π ( × 62 1 0 5 × 5 10 × - 9 4 ) 2 × 107 — σ - 9 0 6 . 96 = 4 . 029 nm\n.\n当⼊ = 413 nm 时 —µ 3 ×0 - 9 ) ^09←90 79\n"
+        },
+        {
+          "page_num": 46,
+          "chars": 433,
+          "has_text": true,
+          "text_preview": "第⼗章\n③\n×\nv\n×\n① 应为平⾏于单缝⽅向的直条纹或垂直于⼒轴的直条改\n主极⼤条纹宽度⼆次极⼤条纹宽度\n②\n出 aom\n③ 相位差 α=π asino =mπ 时为暗条纹 sinθ= 00 =\n④ 次极⼤由 tanθ=θ 确定 α=± 1 . 43π± 2 . 459 π …\n①\nv\n×\n不影 响 v\nX\n①\nv\nU\n61才 ⼈低\n. X\nV 0 = 0 ×\n⼀\n③\n^\n⽈\nv X\n③\nd\n3\n= a dsiuo kλ\n9条 Q ① =\n×\n⼀ 1 时 =\nSTMO= K\nv\n×\n② 之些 :\n0 .\n☆= v\nA⼆ MN\n⼊\n①② ↓\nOθ= —\nNdcoso\nU U\nv\n×\n☆=\n③ "
+        },
+        {
+          "page_num": 47,
+          "chars": 539,
+          "has_text": true,
+          "text_preview": "④ 零级主极⼤强度 I NI\n=\n。\n④\ndsino = m λ = Mr λ\n. 2\n是 些 5\n= m . = 亏 mz\n0\n②\nd\nb\n= 3a =2a\na+ b\n=\n3G\n程中遇到障碍物偏离直线传播⽽进⼊⼏向阴影中\n出现\n,\n光在传播过\n光强不均匀分布的现象\n衍射\n菲星聯衍射\n远场衍射 光源和观察屏都距离衍射屏⽆穷远的衍射\n振幼相于叠加\n⼝\ndsiuo\nd 0 = = m ⼊\n,\n3叭 3\n(H- 1D3⼊\naxf\n21U e =\n589 × 103 δ=π a π sino O= arcsin *\n. =π a\n2 8m\n.\nα= 哈 = 器 ×λ= 550nm则 Dmin - — "
+        },
+        {
+          "page_num": 48,
+          "chars": 941,
+          "has_text": true,
+          "text_preview": "66 62\num\n.\n109\n爱⾥斑半径 d 告 546× × 0 5 5\n: γ 0 = 0 . 61 = 122 = 1 . 2~— 1×10-2 . = 3 . 33 ) × 10 -\n直径 3 331 × 10 - 5 x2 = 66 62uM\n:\n. .\n4\nooum\ndsino = m λ dsino = 2 × 600 ×10 - 9 = 3 ×λ λ=400× 109 = 400 nm\n1 6\n:\n袋\n则 ± 6 级条纹缺级兴 = = 6 u : m = l : 6\n517 6\n.\n6 9\n2 dsinr =m λ λ= 2 × 1×10- × 5Tn 150 = 517 6 "
+        },
+        {
+          "page_num": 49,
+          "chars": 1023,
+          "has_text": true,
+          "text_preview": "=☆= 05893 × 帶\nA MN (cid:15482) N = -9 × ±= 491 dsmo =m λ , 求得 d = 0 = 27 um\n×10\n第三级缺级兴 = 共 = 3 a= 3 d = 9 um\n6≥ 9 6\n① dsin θ= m λ 求得 d STu 300 ×10 - = 3 6 × 10 - = 3 6 um\n. .\nacosomo ⼊⾊散器\n② dsino = m ⼊求导得 cθ= _ doso ↑ 则 d 取了 6 um\nd\n③ 兴 = _ a = 4 则求得 a = id = 0 . 9 nm\n=☆= 600\n④ A MN 求得N = — — 3X0 02 "
+        },
+        {
+          "page_num": 50,
+          "chars": 852,
+          "has_text": true,
+          "text_preview": "11以遮住偶数条缝时为缝宽为a间不透明部分为5ad\nba\n=\n没 α= Tπ π asin θ β= ☆ dsin θ= 12 α\n—\n…「\n则有 2RSTnb2\n= 90 u Sin 6\nA\n= do\n2RSTU 6 N2 = A 0 6a\n。\n⼀\n2 I (\ns) S( Tn\n6\nb\n22\n=\n。\n上遮住奇数条缝时和遮住偶数条缝—相同 = 。 () S( Tnb F\nI\nI 62\nB7全放开时宽为 a 健间不透明部分为 a 3a 交叠 在两个为求不透明 a 的两个缝衍射为\n:\n,\n⼀ 此时 a = a . b = ad =2a 没⼩ = π _ ⼊ asiuo β - ⼜ 2πdSTUO "
+        },
+        {
+          "page_num": 51,
+          "chars": 304,
+          "has_text": true,
+          "text_preview": "☆\n0 L sTn2- sτn 1 )\n设 α= 政 (5 Tuz- STn1 ) β=2 d( sin2- STnD\n“\nsinwP\n则 I I。\n((\n=\n↓ ) d = 000 X(0 - 3 = 1× 106 m 2 dsinr = m λ r= avcsind = avcsin( o ] 3) = 15050\n.\nλ ) 衍射⻆取900 时 STM θ= 1 d ( s τni ± snθ= m λ\n此时有 d(siur+ 1 ) = m . λ m . = 2 . 33\nd (binr - 1 ) = m λ m =- 1 33\n2 2 .\n故可看到⼀ 1 0 , 2 ⼀共四条谱线"
+        },
+        {
+          "page_num": 52,
+          "chars": 231,
+          "has_text": true,
+          "text_preview": "第⼗⼀章\n部分偏振光 某⼀⽅向的振动⽐其它⽅向占优势\n:\n①\n⼀\n④\n⽅解⽯负晶体\nve\n> Vo necno\n×\nv\n=\n③\n肓\n。。\n: \"\n0 ↓ 。\nv c\n⼈眼\n⼈眼 ⼩眼\n④\n00\n线快慢轴\n线偏振过波⽚卡快慢轴\n± 50 圆\n→\n、\n②\n任意⻆ →有圆\n④\n⾃然光通过任何波⽚出射仍为⾃然光\n。\n①\n③\n波⽅向⼀般垂直于快慢轴⽅向\n波⽚的光轴平⾏于波⽚的⼊射表⾯ 但其与快慢轴的关系取决于晶体正负\n,\n正晶体光轴和慢轴⼀致\n负晶体光轴和快轴⼀致\n。"
+        },
+        {
+          "page_num": 53,
+          "chars": 198,
+          "has_text": true,
+          "text_preview": "②\n①\n②③\n②\n琼斯表示法只能⽤于偏振光\n④\n②\n-\n线偏振光\n③\n0\nrp=\n②\n反射折射法向⾊性法散射法\n吸收\n⼆向⾊性\n在⽪⽚中传播速度快的⽮量⽅向\n,\n当⼀束线偏振光沿着晶体的辉由⽅向传播时 其⽮量将随传播距离的增加\n,\n偏转的⻆度 θ=α ( 其中 α为旋光系数为光在晶体中传播的距离 20 1 ⽽旋转\n不\n,\n将⼊射光分\n解成两分开⼀定⻆度振动⽅向相互垂直的线偏振光\n双折射差值较⼤"
+        },
+        {
+          "page_num": 54,
+          "chars": 551,
+          "has_text": true,
+          "text_preview": "遵从\n裄\n不 垂直\nIMax Imin\nP = - o ~ 1\nImax + Imin ⼀\n| 偏振光偏振度为\n1\n2\n2A\n2\nA\n450\n-\n圆偏振光 左旋\n的 [ : ? ] [ =τ\n! ] [ ! ] =I0 c 0 s =60=☆ I Iz I0c 0 s= 30 c 0 s~ 30 = ] =Ʃ L\n1 。 = 0 ,\nTI ,\n54 730 3 I = Icos' s cos =δ= 3\n.\nTI\n的 。 ƩI [Cos 300 ] 3 = 式 0 = S ]\n0 I 。\n16\n.\n17\nmm\nδ=πd(\nne\n-n\n0)= 2m\nπ+π\n⼀\n1 636 tanB 些\n=\n.\n"
+        },
+        {
+          "page_num": 55,
+          "chars": 763,
+          "has_text": true,
+          "text_preview": "( 1 ) 沿铅垂⽅向振动的偏振光通过光轴沿铅直⽅向\n的偏振⽚ 光强不变\nA\n;\n通过B : I = = Cos2450 I 0 ƩƩ ] 2=Ʃ I\n( 。\n( 2) 通过B 后 I = 0Cos 245= 0( Ʃ ) =÷I\nI I 。\n通过A 后 I Icos2450 I(] 2=ƩI' EI\n= = =\n。\n旋转没前最⼤光强为\n20\n其余光强为\nI\n尼科尔棱镜 :\n则旋转后 I cos 2600 + I Ʃ ( ] +I ) I = 2 I\n0 = 0 0\nImax = I + ] = 3] Imin = I\n0\nPuinPmRmaixn\nP ⼀+ _ = 2 = 50%\n最⼩偏向⻆"
+        },
+        {
+          "page_num": 56,
+          "chars": 898,
+          "has_text": true,
+          "text_preview": "ae aei\n右旋 : E = 2G Ey = π EPE+P = 5a 2 左旋 : 我 =2a Ey = 记 IEP +E| P =5a 2\nE ( ]= ( ) 差 微() ( ⾏\n右區 份 “ =\n合成波是光⽮量沿⼊轴的线偏振光\n相加 写 () 份 ( ) =☆ 话) ,\n+\n: 振幅为椭圆光⼒轴分量振幅的两倍\n,\n强度为\nI\n的单⾊光经过起偏器后光强为702\n.\n起偏器和检偏器的透光轴相互垂直 II\nZosinS\n22\nTM2S\n=\n对 Ʃ 波⽚ . δ=π+2m π 则\nII\n=0 STn= 2α\n☆π\n波⽚旋转⼀周中当\nα= 0\nπ\nπ\n时 II\n=O\n为极值 4个\n. , ,\n"
+        },
+        {
+          "page_num": 57,
+          "chars": 838,
+          "has_text": true,
+          "text_preview": "☆\n转动检偏器时变量为 β I = a < cos ( α - β ) - _ a ^sin 22STniβsin ' 取得最值⽇导数 =0\n= 8\n则 a α= sTn ( 2 - β ) COs(α-β f 2a < Sin22COS2βSTu=τ=0 时\n,\nδ cosb\na = STu2 ( α - β ) = 2G = STn22COS2 β Sin STM δ=Ʃ\nSTn2 (α - β ) = STu 22cos2β ( 1- Cosδ )\nSin22COS2 β -cos22STnI β=STu22 COs 2 β - Siu 22cos 2 β cos\nSn\ncos22\n⼆C"
+        },
+        {
+          "page_num": 58,
+          "chars": 314,
+          "has_text": true,
+          "text_preview": "解 琼斯矩阵法 设偏振器⽅向为Y晶体光轴为参与 x 或Y都成450 ⻆没 φ=π cno_ neld\n: :\n各晶⽚相位差为 δ\n=πcno\n-ne)d = 20\n: 1\nδ 2 =π(no - ne) 2 d = 44\n…\nδ Np\n= 2 8\n、\n偏振器琼斯矩阵 P = [8 ], 波⽚的琼斯矩阵 ( 快轴与⼒轴成4501 G = Cosδ\n[itanz1i-tans\n0\nE = (PGN ) ( PGN) … ( PG ) ( 0 ] PG ≡ COs ☆ ( Ttani % )\n. -\nCOSSNCOSSwz - Cos δ \" 0 sing2i \" nl 4) ( 0 )\nE = t"
+        }
+      ],
+      "questions": [
+        {
+          "number": "3",
+          "text": "4\n.\n在各向同性的均匀介质中\n×\n⼈全反射光密到光充\n—\n—\nv\n—\n— —",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 2,
+              "keywords_found": [
+                "反射",
+                "全反射"
+              ]
+            },
+            {
+              "topic": "折射",
+              "score": 2,
+              "keywords_found": [
+                "全反射",
+                "反射"
+              ]
+            },
+            {
+              "topic": "光的传播",
+              "score": 1,
+              "keywords_found": [
+                "介质"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "12",
+          "text": "3 4X\n. .\n⼀\nU\n① 仍在同⼀空间\nv\n、 ,\n—\nv\n⼀\nV\n只对折射系统成⽴反射系统不成⽴\n㉔",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 2,
+              "keywords_found": [
+                "折射",
+                "反射"
+              ]
+            },
+            {
+              "topic": "折射",
+              "score": 2,
+              "keywords_found": [
+                "折射",
+                "反射"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "☆\nπ=\n-n\n×\n- 6=- ∞\nn\n⼀\nv\n上\n-\nnir\nn_nc\nV和r异号\nx n _n\nU ( 1 \" ) r ↓\n+π\nn\n\"\nn ' inidid\na\nn\nnin\n出⼀ π\n下\n“\n⼀\n。\nB>1 虚实相反放⼤正像\n只书\n√ γ= < 1\n虚物\nv\n,\nU",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "3",
+          "text": "⼀ -\n异侧虚实相同倒⽴\nβc0\nB 缩⼩\n< 1\nU\n巡\n×\nU\nU\n。 β= - 2 和 1异号\nl\n×\n|\nγ= - ③< 0\nv\nβ\nα= - 2<\n已\n取 … 。 r>0",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "v和\nU\n异号虚实相反,\n式 ⼠ 下\n+ =\nB2",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "i =Ʃ20\n⼀ ⼀ ⼀\n⼀ ⼀\n+mi\n=∠0\n= 0\n.",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "200",
+          "text": "嬷幽 arctano 6 = T = 3096\n. . ,\nSiui Siuinl\nn =\n、 30 96 × 1 5163 = Sinii\n. .\ni ' = avcsiu 30 . 96 × 1 . 5: 63\n' 540\n2i = 102\n.\n— —",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "⼀\n全反射\n光密到光疏\n派\nM ,= 1 . 4 ,\nnzsiniz = nssin 900\n鬣\n菇\nTr = arcsTn",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 2,
+              "keywords_found": [
+                "反射",
+                "全反射"
+              ]
+            },
+            {
+              "topic": "折射",
+              "score": 2,
+              "keywords_found": [
+                "全反射",
+                "反射"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "900",
+          "text": "n\n.\nsini . =\nn\n2Sniz =n> sin\n前\nTi\n= arcsin\n⼀\n赛赛赛",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "00",
+          "text": "⼀\n—\nd d\nd d\nSini\nd tanT = i = arctau - — :",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "h 2h A,+=e 4 n",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "2\ni\n— STuin S ni ' = 900\n= τ\n=n\nmi 4\nn =\nd",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "~\n⼀\n⼀\n⼀\nl = 1 75 li =o - . 1m\n. .\n⼩\nli 5\n公+÷=→\nr\n=Ʃ\n=\n*0\n. =0\n.",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "212",
+          "text": "m\n(r\n⼀ 1 tli 1 65\n, .\n⽚步 _ =\nβ= _ = y o .1 m\n「\n⼀\n⼀\n↓) 1 = 150 mm V = 200mm\n.\nγ==500\nLi\nγ≤200 π+π=→=→\n, = 300 mm",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "200",
+          "text": "100\n: lz = li - d = 100 mm\nπ+ π= li= 125\n- mm\n⼀\n÷ ! = 10\n⼆ x\nβ y\n= - . =-\n40mm\n, L Y 152\n-\n/\n,\nβ== 台⼆步 , 8 % = ※li = 4x0 - 125 = - 50 mm\n-\nY lz _ 1 o0\n⼀\n位于 AB 之间距 B 125 的位置⼤⼩为50 _m m\nmm",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": ") 1 , = - 50 mmV22500 mm",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "=÷ 25\n公 π= 吃\nli\n+ 500 = mm\nli d\n50+ 25mmri\n= 200mm\nl + 200 =",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "725",
+          "text": "170\n古 公 司 3 π= li= = 5882\n+ = T + — .",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "125",
+          "text": "50\n出 ⼀ 了 50125 oY ! y : = 号 0\nβ= - = — — = - 。",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "725",
+          "text": "725\n5⽇00— ③=\n: ⼀压 0 ∵ 23 .53",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "25",
+          "text": "w -\n— —\nβ\nr 些 = 725 — 毙 5 4 25 725\n.\nƩ\n步 == =\nβ= 5 i 2\n⼀ ( 40\n=\n↓ | ⼀… —正 30 ( = 30 mm\nmm\n_\nπ µπ nn\n+ _\nn = 6. 5 n \" = 1 τ o - 05 = 些 γ= 20 mm\n⼀\n⼀\nl\n-\n1=\nγ=15 mm nF1\n.",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "←20\n-\n的36-0\n“ n 2 l\n—…\n…個公\n(i\n=\n)\n—",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "6667",
+          "text": "∴\nl li d 41 667",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "= - = .\nƩ m - - 世器 360 - 6 ] 1072 3= 0 ☆ Li = 20 . 83 mm\nπ\n⼀\nnc = 1.3 }n 空 = ( (i d 130 75",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "= - = . mm\nL , =- 100 mm r = -",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "65",
+          "text": ". U ⽔ 世 Hc - M空\n古 _ —\nlu m\n_ — 完n⼀冰\n⻄ 逃 3 - =33\n“ r 75\n— 以 0 . 16 5\n.",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "100",
+          "text": "— 出上 3 :33\n” 033 ++\nd = 18 5 ⼀ 器 - 16 . 5 c : 130 . 75\nγ 1=- 16 . 5 . γ= 16 . 5 公 : ” - 3 Li = 149 ory8 li = 48 . 105 mm\nβ - 世出 . = ⽯ —\nLili\n—",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "8",
+          "text": "105× 14925 ≤ 3 =\n- 0 . 55 = —\ny\ny",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "130",
+          "text": ".\n75 ×(\n-\n100)",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "y = - 5 . 5\n“\n物体经玻璃盒后在右凹⾯右侧48.105形成了5 ⾼\n.\n倒⽴的实像",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "透镜成像",
+              "score": 1,
+              "keywords_found": [
+                "实像"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "5",
+          "text": "⼀\n善重\n不镀银时 Li = 480 n 为玻璃 为空⽓\nn\n-=so r-\nn\n.\nT\n=π\nm .r -18(1 -n)\n- π r\n-!\n镀银后\n反射π 公 = 式 γ=2 li 令 Li = li\n折射 π \" - ~=可骂 - 0 = 世 =\n洱\nπ n = - 0 (cid:15482) n . =Ʃγ= - 240 mm\n…\n⇌\n妆\n…\n…\n…Δ\nL\n,\n=- ∞\nπ 公 =≈ ci= 90 mm( 2 = Li - zr= 30 mm\nπ = 5 π 5 5\n台 . - . . Li= 15mm\n=",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 2,
+              "keywords_found": [
+                "折射",
+                "反射"
+              ]
+            },
+            {
+              "topic": "折射",
+              "score": 2,
+              "keywords_found": [
+                "折射",
+                "反射"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "300",
+          "text": ". 兜 庭15\nβ= × c 0 实像\n= ∴\n⼝ X30\n_\n反射 L li 15",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "反射"
+              ]
+            },
+            {
+              "topic": "透镜成像",
+              "score": 1,
+              "keywords_found": [
+                "实像"
+              ]
+            },
+            {
+              "topic": "折射",
+              "score": 1,
+              "keywords_found": [
+                "反射"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "3",
+          "text": "= = mm\n的 + 公 = 式 5 + 的 = . li =∞\n光线由左⾄在传播故将\nli li\n= =n\n在⼀= n ⼀ π 5— - 0. 5 L 4 = - 90 mm ( 5 = l 4 - 2r=- 30 mm\nr\n⼦ 0\n-\n的⼀台的 .5\n= 成 0 L5 = - 15 mm",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "光线"
+              ]
+            },
+            {
+              "topic": "光的传播",
+              "score": 1,
+              "keywords_found": [
+                "传播"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "= c\n实像\nβ\n: 0\n第⼆章\n②\nv",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "透镜成像",
+              "score": 1,
+              "keywords_found": [
+                "实像"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "②③\nf\n× 在同⼀介质中重合在不同介质中 λ F =\n√ f - H ' >\nv\nv\n⼀\n⼀\n→\n⼀\n品\n⼀ ⼀\n⼀\n.\n|\n←\nU\nU\n⇌\n≈ u\nv",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "光的传播",
+              "score": 2,
+              "keywords_found": [
+                "介质"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "①\n※\nv β> 0 = 20\ny\nV=÷ 20",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "— β=→确世定\nX ↓\n—00 ①\nβ=\n-武⼀于",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "2\n仁茹\n↑↓\nv\n×\nv\nX\n计算式\n定义或\ntmultanu\n⼀ r = r= 芯古\nv\n⻆放⼤率随物像位置⽽异\n√\nX\nv\n①① 3 ④ xj = f + f\n拧 1\nv 才 n 1 fco … f xj = ftj\n. — 1 λ\n⼀x 步 — 才 = — n ⼨才 0=f⼀ fd\n⼀\njxj × j - xj = [ f- lj - d =0\n⼀ xj =\n—\n② (<_ d → ;\n⼆想\nf",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "×\n0\n⼀ 或: 1 =— — 与左 =0\nf\n—\n≈ ,\n—\n—\n于天⽆\n可",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "02",
+          "text": "⼀\nfi >o 求 20 可画 + - d画,哥\nficoico\n可co\n×\n(cid:15482)i\n=\n古\n③ 巡\nj 求\n= -\n⼀\nx\n— — - ← .0\nX\n⼀ ⼀\nv\nU\n①\n⼀\nv\n— 共轴\n求可司\ny\nO\nv\n④\n⼀\n×\n当 r> d 可视为萬薄透镜 对于单个薄透镜两主⾯与球⾯顶点重合\n, ,\n×\njn ⼀\n左\n⼀π\nxj f\n等⼀上⼀ fcf =\n⼀ n Xj ⼨\n=\n⼀",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 2,
+              "keywords_found": [
+                "透镜"
+              ]
+            },
+            {
+              "topic": "透镜成像",
+              "score": 2,
+              "keywords_found": [
+                "透镜"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "39",
+          "text": "下\n8\n-\n—\n⼀\nn 1 52\n=\n.\n可 j )\n+dβR\n= = (u- )( β- β\nn\n∵ 为薄透镜 ∴ 或 = 将 = ( u-)( β - Ʃ )",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "透镜"
+              ]
+            },
+            {
+              "topic": "透镜成像",
+              "score": 1,
+              "keywords_found": [
+                "透镜"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "05232",
+          "text": "γ i >0 VE< O 设γ\ni\n=λ 吃 = -2X 5= 0 . 52 ( Fi -☆ ) → 52 = x= . .2 = — 3 .",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "5",
+          "text": "区 : ( ☆ - D ( π ⼀后 ) SooD = ( 1 . 5 -1 ) (π ⼀后 )( π - 位 ) = 1000 D\n- 1 D = (皆 ) 1000 D",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "51000",
+          "text": "D = 999 Dn =1 .502\n⼀个正透镜和⼀个负透镜 ⼯作距⼤于焦距\n正透镜 负透镜\n组合焦距⼤于机械筒⻓ ⻓焦距镜头\n球⾯顶点\n⼀ ⼀\n|\nzz 减⼩\n…\n成\n(器 )⼀( 位 ) = j %\n-\n⼀\n×== 5*多 5625\n×= ff -\nx\n— =\nx",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "透镜成像",
+              "score": 8,
+              "keywords_found": [
+                "透镜",
+                "正透镜",
+                "负透镜"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 7,
+              "keywords_found": [
+                "透镜",
+                "焦距"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "5625",
+          "text": "当 x =- ∞ 时 X ⼆ — -\n⼀\n=\nλ= - 4x 103 mm λ\n”\n- —\n- 5625\n— = 1 .4063 mm\nX = - 104 mm X - — — 5 1 6 0 2 4 5 = 0 . 5625 mm 103 - - 4 5 x 62 10 5 3\n— X = - 2× mm X = — = 2 8125 mm",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "7031",
+          "text": "-\n2×103 .\nX= - 8× mm X = 0 . mm\n-\n8× 103",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "5625",
+          "text": "X = - 6× 103mm , = 0 9375 mm\nX0 .\n=×c",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "'\nn Ʃ= \" nn =1 .3} L = - 1X10 mm\n— -\nn\no r =1 γ=∞",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "103",
+          "text": "1 ×\nV - 751 88\n= = - mm\n.\n以3\n距离照相机物镜物⽅焦点 1751 88\n: x =- . mm\n加\n- ⽀世\nβ= — — 1 = :- 0 . 0428\nf 817581\n.\nX ' =☆\n村\n= 5 8\nx-8 7",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "焦点"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "3",
+          "text": ". 21 mm\n.\n×==÷→\n=\nβ= - 3 U - 36 ⼗\n—\n式 Ʃ= 于 j - 6 兆\n- =\n18mm\n些 i\nL 2= ( + . 8 β= = - 4\n(\n= -",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "4",
+          "text": "l\n2 = -\n4l\n-",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "72",
+          "text": "6 = mm\n后⼀ π= 我 i π= = 288mmf 216\n- 式 -\n⼀ ⼀\n⼀\n⼈ LA",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "| lA = - 180 mm = 183 . 33 mm\nA B 式⼀式\n“\n上→ 于\nL LB 225",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "= mm\n/ c—200→V cloof\nh = (B ( π= 225 183 33 = 41 67 mm\n- - . .\n2) ☆ ⼀式 = 于 ( = - 200 mm Y = ih =20 mm\n⾶步 ∴",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "= =\n. 200 mm β= Y 20\n. - mm\n=\nh",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "40",
+          "text": "mm\n由图可知 L = d -卡 ∴ d = L - lF = 15 mm\n-\n(\nq\n= f (",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "等\n)\n. ∴\nj.\ni = -35mm\nii 求求求\n=☆",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "35",
+          "text": "j\n∵\n= — —\ni-",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "65",
+          "text": "=\n扒 rin ⺾ — — 1 . 5 θ × 6 × 104 = - 1440 mm 或⼆⼀在 D\n( n-1)[ n (vz - ri ) + (n-1)d] 5(15 .5 ( - 1000)+ 0 7 . 5 × 40\nF= f ( | -π n+ d β . ) = - 144 × [ 1 - 5 ×50 × ( - 站) =- 1520mm\nLF =- f ( 1 +π n1 dβ ) = 1440 × [ 1+ 515-1 ×50 × ( - Ʃ 00 ) = 1360 mm\n+= - f π \" d β. = 1440× F 5 - 51 ×50 ×( - τ 0 ) =- 120mm\n( f m ^ × 51 )\n+= - π dR =1440 ×50 ⼈ ( - 50 = - 80mm\n⼀\n⼩ /γ 1 1 = 1 k 1 没 ri = x Vi = - λ j = 120mm n=1 . 5\n与x ^ ∴ γ . = 120 mm\ndjiri\nj\n' —… ) [n ( rz - r )+cn-) = — 0 . 501 . 50 -2X ×= 120 γ 2=-",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "⼀\n⼀ ⼀\n∵ 1 km >> 15 mm\nI\n可看作⼝此时可看作薄透镜\n可\n=\n( n- ) (\nβ -\nβ",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "透镜"
+              ]
+            },
+            {
+              "topic": "透镜成像",
+              "score": 1,
+              "keywords_found": [
+                "透镜"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "text": ")\n为⽿凸透镜\n∵ ∴β 2 =\n则画 等 (cid:15482)\n= = ( n- + ) β . 5 = 0 . 5163 β . →= 7 . 7445 mm\n⼀ ⼀\n— ⼀\n_ 过求 时⼀⻰李d⻰lij )\n( i-d\n)",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "透镜成像",
+              "score": 2,
+              "keywords_found": [
+                "透镜",
+                "凸透镜"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "透镜"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "1",
+          "text": "— 我 =\n= (\n→ tkdj",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "_\n—\nf 左 = 左 ( j d — ( ⻰ - d )\n= - — π= - ( 1+ ) =\n求 t ⻰d d⼀求尤\n卡某⼀前⼀直 fid\n_ dltfd\nlui=\nf\n时\n求\n— ⼆ 求\n出台場求求\nβ=\n= ② —\n⼠ 5 ⼨「\n[ l\n⼀\n由题: β=β , β r = - 2 β 2 = - 4 β 2 =2\nC\n∵β F + u = -2 . (i =-2 l\n. 1\nL 75\n此时出⼀ 1 ⼆乎 代⼊求得了 1 =- mm\nG →\nLi 150\n= mm\nlz li d\n= _\n=\n⼜ :β== 些 2 ∴ 有 li = 2 l 2 = 2 li- 2 d\nd",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "75",
+          "text": "= mm\n解得多\n代⼊瓦⼀公 天\n→\n“ l 75",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "= mm\nli 150\n= mm\n物像之间的距离 = (i - l 1 td = 150 + 75 + 75 = 300mm\n由题意可知第⼆⾯透镜不改变没第⼀透镜向右移动\nox\n|\n×=\nlx 代⼊公式得\nl\n= - oX 天\n:\nlx li\n= - ox 化简 225 50 75 150 750 2\n- × = - × - xtox\n:\n=750\n0x\nx = 0\nx 舍去 )\n解得 { :",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 2,
+              "keywords_found": [
+                "透镜"
+              ]
+            },
+            {
+              "topic": "透镜成像",
+              "score": 2,
+              "keywords_found": [
+                "透镜"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "11",
+          "text": "β= 10\n… : -\nq 对 m 物→⽅|和=像⽅由⽜顿公式: X ⼆找\n92= *\nβ=\n☆=等",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "⼼⼆品\nmm\n-\n_\n=\nX\n∴ X =_ 1 omm = 1000 mm\n此时求离第⼀⾯的物距和离最后⼀⾯的像距\n( v = x +++ 1 f - lF |=] 10 mm\nli = x + j -| f - lπ|= 1096 mm\n共轭距 f 1 + x - x - f + d - | f - ly | - |j - li |= 1100 + 110 + 15 - 3 - 4 = 1218 mm",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "透镜成像",
+              "score": 3,
+              "keywords_found": [
+                "物距",
+                "像距",
+                "共轭"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "1",
+          "text": "hyji 5100 - 2\ntanVi = tanU 2 = = . = 1 . 5 ×10",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "100",
+          "text": "hz h -dtanUi 代⼊可得 d x\n= . (cid:15482) . _ r = mm\n10-\nhy% |\ntanVi = tanUs + =1 . 5×10 →+ \" 250 = 0 . o 11\n-\nhz = h 2- d 2 tanVi 代⼊可得 (cid:15482) d 2= 011 = 9 09 mm\n.\ntanUs ' h / 0 9 /\n= tanUs + 3 f; = 0 . 011 + . 800 = 0 . 012125 mM\nnUs 1 .\n代⼊公式 f 5\n= = 123 71\n= mm",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "012125",
+          "text": ".\n%\n第三章\n⾃光是由许多不同波⻓的单⾊光\n组成的 同⼀透明介质对于不同\n,\n波⻓的单⾊光具有不同折射率\nO1 ① 2 ③④\n故在成⾏⽛板内部发⽣⾊散\n⼀ ⼀\n光楔⾊散\n×\n,\nU\nv\nU\n←\n⼀ ⼀\n②\n④\n倒像\n⼀\n⼀\n⼀\n⼀\n② X\n原\n折射率\n↑ 今 ↑ 然 b\n>\na\n→\n. na> nb s\n⼀ _ 2\n波⻓↑ ud b为红\n:\n⼼\n,\n⼀\n抓叠光路转折光路\n⽿⾯反射镜",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 5,
+              "keywords_found": [
+                "光路",
+                "折射",
+                "反射"
+              ]
+            },
+            {
+              "topic": "折射",
+              "score": 5,
+              "keywords_found": [
+                "折射",
+                "折射率",
+                "反射"
+              ]
+            },
+            {
+              "topic": "光的传播",
+              "score": 1,
+              "keywords_found": [
+                "介质"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "42015",
+          "text": "600\n+\nα+ 8 425品代⼊求得 Sin —\nsin m Ʃ 由题缀\n_ =nsin n →= 1 55 ]",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "600 .\nSTn\nƩ\n平⾏⽿板\n微⼩⻆度或微⼩位移 双光旋转测微\n双光键移动测微\n光学晶体 光学塑料\n阿⻉常数 析射率\n右⼿ 虛\n⼀\na) 图中光经过光偏折相同⻆度移幼\n前后两光束为或⾏光经过物镜成像于\n同⼀点 经光锲后不是平⾏光下成像\n∵\n位于焦⽿⾯轴外⼀点\nb) 光锲键旋转时偏折⻆度⼤⼩会发⽣变化\n光产⽣的偏向确为 δ=2α(n- 1)Cosφ 当⼀个\n,\n光锲键底和另⼀个光键头位于端时同不发⽣⻆度\n偏折 此时像位于焦点上故像点位于物镜\n,\n像⽅焦平⾯上 往复直线运动\n,\nc\n)光垂直进⼊平⾏⽿板不发⽣偏折仍不⾏\n出射 故成像于像⽅焦点处不动\n,\n,",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "透镜成像",
+              "score": 3,
+              "keywords_found": [
+                "成像"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 2,
+              "keywords_found": [
+                "焦点"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "text": "右 右\nZ\nj\n|\n→⑧\nY\n0→\nx\n↓右 →x\n右\n占左\n↓\nOz\nz\n右\n| 5\ny\n物镜罪 壞岛 冒镜”当泉\n|\nxy\n¢ 右 左",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "了\n0→\ncx zY 右\n@\n↓ 江左 12 l\n了\n忙\n镜\nYQ→ X 忆",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "| y X y\n2→\n左\n忉\n在\nZ→Q\n左\n>\n或 经过物镜后坐标系为⼀ * 步\n五⻆屋脊棱镜\n㿲数\n^ ;\n'\n再经反射镜后坐标系变为, 它与最终出射\n^\n左\n改变⽅向说明\n像⽐较发现垂直主截⾯⽅向 (x\nx\n右\ny\n存在屋脊棱镜或物镜 ⼜发现由右⼿坐\n;\n䅃\n标换为左⼿坐标则不可能是物镜该为⼀个奇\n数次反射的屋脊棱镜同时使出射⼯改变900\n故推测为五⻆屋脊棱镜",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 6,
+              "keywords_found": [
+                "反射",
+                "棱镜"
+              ]
+            },
+            {
+              "topic": "折射",
+              "score": 2,
+              "keywords_found": [
+                "反射"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "1",
+          "text": "法⼆\n法 ⼀ :\n=\n武 1 2 OA",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "25",
+          "text": "2 | 6\ntan θ , - . - = 1 5 = A + 1.5 OA =",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "5 1\n. -\ntm θ r = 成 = 1 | 5 =+ OB = 1",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "15",
+          "text": "Ʃ=\n忄 OA = 6 1\nσ\n综上最近点离墙 1⽶",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "0 B = = 1\n。 1 最远点离墙 6⽶",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "⼀\n+\n⼈经眼⽔ ( 平⾏⽿板) 成像 cl = hz( - ) 位于平⾯镜上⽅r h ,\n经⽿⾯镜成像位于⽿⾯镜下⽅ + h 此时像经平⾏⽿板成\n,\n像 cl = h 2 (1 - π ) 位于⽔⾯下⽅ h 2+ h +h , - c ( \" = h , + 2 算\n与眼睛距离h + zh 2 / n =2+066.5× 2 ×= 119 . 75 cm\n⼀\n⼀\n经过此光路系统会发⽣350 700 偏折\n×2 =\n𨯧\n∵ 第⼆次光路未发⽣偏所下第⼀次偏折700 则⼊射⻆为 350",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 2,
+              "keywords_found": [
+                "光路"
+              ]
+            },
+            {
+              "topic": "透镜成像",
+              "score": 2,
+              "keywords_found": [
+                "成像"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "1",
+          "text": "/\n///\n…\n…州\n“",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "90",
+          "text": "900\n∠ 2 + L5 = L 2 + L 3 + - < 2 = 5\n∴ L α= L L\n: 2 - 3\n<β= 1800 L L ( 1800 C C )\n- 3 - 4 - - . - 2",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1800",
+          "text": "L 1800\n- 2 3 - + 2 L 2\n=",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "L 2 L 2 <2\n= 2 - 3 =\n。\n⼀",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "90",
+          "text": "420 480\n- =\n经过两次反射偏折",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "反射"
+              ]
+            },
+            {
+              "topic": "折射",
+              "score": 1,
+              "keywords_found": [
+                "反射"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "42",
+          "text": "480\n= 2 120\n=\nm\nSin+ =nsiu Ʃ ∵ 等边棱镜 ∴α= 600",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "棱镜"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "text": "。\nƩ\nSm = ae sin nsin - 2 = 2 arlsin 1 . 52 STu 300 - 600 = 38 . 930",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "60",
+          "text": "∵ I . =- Ii 2 +δ m = I , - Ii = 2] , = + 38 . 930\n解得 I 49 4650 49 450\n= =\n. .\n_60 53014 ”\n+\nSin\ni4\n+⼦\nm\nSin = nsin 2 (cid:15482) 2 1 67\n\" n = .",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "8\nα= 500 sin + m 5 inx i = n\n{ _ = simα+ 5",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "8",
+          "text": "2+ 五\nsin ⽔Sin\n— 2 = n 解得δ m= 11 . 06\n第四章\n⼊瞳孔往出瞳\n∞\n①②\nv U 焦点和光轴⽆限远点共轭\nv",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 2,
+              "keywords_found": [
+                "焦点",
+                "光轴"
+              ]
+            },
+            {
+              "topic": "偏振",
+              "score": 1,
+              "keywords_found": [
+                "光轴"
+              ]
+            },
+            {
+              "topic": "透镜成像",
+              "score": 1,
+              "keywords_found": [
+                "共轭"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "0 ②\n⼀\n⼀ ⼀ …\n\"\n⼆\n就是⼀组取⾏光线的上边缘和下边缘\n、\n① 当物⽅和像⽅介质相同时节点和主点重合此时经过物⽅主点的光线也经过像⽅主点\n③ 经过焦点的对应光线是⽆穷远点的光线\n②\n孔往光阑 限制轴上物点成像光束⽴体⻆\n: ,\n选择轴外物点成像光束位置\n×\n,\nv\nv",
+          "type": "选择题",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 9,
+              "keywords_found": [
+                "光线",
+                "焦点",
+                "主点",
+                "节点"
+              ]
+            },
+            {
+              "topic": "透镜成像",
+              "score": 2,
+              "keywords_found": [
+                "成像"
+              ]
+            },
+            {
+              "topic": "光的传播",
+              "score": 1,
+              "keywords_found": [
+                "介质"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "X\n②\n像云点 U\nv X\n①\n物⽅远⼼光路\nv\nX\nU\nX\n⽣物显微镜\n①\n场镜 可以减⼩⼊射光的⾼\n:\n度进⽽减⼩后续光组\nX\n通光⼝径改变出距\n出瞳距↓ 出瞳尺⼨不变 对成像不起作⽤\n,\nx\n×\n①②④\nv\nv\n↓\n。\nㄨ\n孔往微阑渐晕陳\n物⽅视场⻆\n像⽅孔往⻆\n物⽅远⼼\n场镜\n物镜的像⽅焦点 ⼀次实像⾯处",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 2,
+              "keywords_found": [
+                "光路",
+                "焦点"
+              ]
+            },
+            {
+              "topic": "透镜成像",
+              "score": 2,
+              "keywords_found": [
+                "成像",
+                "实像"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "5",
+          "text": "倍 % \" + 14 \" →放⼤28 倍 : 5",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "8",
+          "text": "物镜 分划板\n⽬镜\n此时K =0\n㰂\nA和A 关于透镜成像 L sommli bomm\n≥ ≤\n:\nD 30",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "透镜成像",
+              "score": 2,
+              "keywords_found": [
+                "透镜",
+                "成像"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "透镜"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "1",
+          "text": "= mm\nD 2=22mm , 式⼀公⼿求得 j= 20mm\n唇\n通光孔对于透镜成像:将其看成像\nL lomm\n=\n—\nA\n*",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "透镜成像",
+              "score": 3,
+              "keywords_found": [
+                "透镜",
+                "成像"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "透镜"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "1",
+          "text": "式⼀式⼿求得\nl 20\n= mm\n- 1 ,\nβ=÷= 炎\n30→ D i = 44mm\n'",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "←→\n对透镜张⻆为 arctan 通光孔为系统的孔往光阑和出瞳\nA 26 570\n= ∴\n.\n品\n对通光⼦ 像的张⻆为 23 74 通光⼦孔关于透镜所成的像为系统的⼋瞳睡\nA V arctan =\n.\n通光孔关于透镜成像 ( 2 - 50 f = 100\n器\n箱, :\n等活 0\n式 式 =←→ V\n, i - = - 100 mm\n0x= 17 、 5 x+ 50 × 17 . 5 j\nβ== 咎 Di 70\n⼩如 350 = mm\n50。 λ=\n当物点在 时孔径为通凯光阑和⼊瞳睡出瞳睡为通光 的像",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "透镜成像",
+              "score": 4,
+              "keywords_found": [
+                "透镜",
+                "成像"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 3,
+              "keywords_found": [
+                "透镜"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "500",
+          "text": "(\n-\n当物点在 300 时孔往光阑⼊瞳睡出瞳睡都为透镜\n-\n,\n↳\nL l关于L 成像为 (像看作物红物看作像)li = 50\nfi\n= 90\nv\n。\n出⼀式 = β=\n⼿ F 112 . 出 式 D = 45",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "透镜成像",
+              "score": 2,
+              "keywords_found": [
+                "透镜",
+                "成像"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "透镜"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "20",
+          "text": "圆孔关于1 成像为O( 像看作物·物看作像) li\n=30\nfi\n=",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "衍射",
+              "score": 1,
+              "keywords_found": [
+                "圆孔"
+              ]
+            },
+            {
+              "topic": "透镜成像",
+              "score": 1,
+              "keywords_found": [
+                "成像"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "90",
+          "text": "Kf\n—\nl\n5如\n古台⼿ ( 2 45β= 想器 Ʃ Di= 15\n=\n物点关于 L 夹⻆为 arctan Ʃ 12 0 0 = 14 . 040 圆⼦孔关于 L 成像O \" ( 3=- 20 求 = 40\n物点关于 Li夹⻆为 45\navctan ⼀ 112 . 5 +120 = 10 . 950 出⼀的⼆活 ( 5 =- 40 β ' : 些= \" D \" =40",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "透镜成像",
+              "score": 1,
+              "keywords_found": [
+                "成像"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "text": "物点关于 O夹⻆为 arctan 45 . 190",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "5",
+          "text": "= 综上⼊瞳为\nO 孔径光阑为圆孔出童为 O ”\n⼀\n、\n… 眼关于透镜成像为A 1 (物看作像像看作物 )\n武和\n⽌ > Li = 40 j =40 π ⼀ π 于 L 1 = -\n= 560",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "透镜成像",
+              "score": 2,
+              "keywords_found": [
+                "透镜",
+                "成像"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "透镜"
+              ]
+            },
+            {
+              "topic": "衍射",
+              "score": 1,
+              "keywords_found": [
+                "圆孔"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "140",
+          "text": "θ= arctan品 20. 眼睛为孔径光阑\n∴\n— →\n透镜为视场光阑\nθ 2= avctan 0 = 2 . 860\n正\n)⼊瞳为A在物⽅⽆限远处物⽅礼往⻆为",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "透镜"
+              ]
+            },
+            {
+              "topic": "透镜成像",
+              "score": 1,
+              "keywords_found": [
+                "透镜"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "600",
+          "text": ") ⼆疗X 号则此时 +\nB 0 - =40 ⼆后\n出⼀式 式⼀前\n= 我 - ÷= 0 = - 300 β= Y : 26\n射⼊窗为透镜不发⽣渐晕时线视场等于26\nmm\nD\nD\n. ⽚\nβ= 4 ( 36\n= - { = -\n{\n(cid:15482)\ni\n( - l 180 = 144\n=",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "透镜"
+              ]
+            },
+            {
+              "topic": "透镜成像",
+              "score": 1,
+              "keywords_found": [
+                "透镜"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "1",
+          "text": "π τ= 天\n- fi = 28 8 mm\n|← .\n288→\nf .\n→ 0 — —— 44 k → 11 . 667\n等⼆⿒性\n=⼝Ʃ\n, -2 Dr = 18 3 mm\ntanu D = 14 89 mm .\n.\n.",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "36",
+          "text": "D 20\nD 50 2=",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "= 圆孔关于物镜成像在物⽅⽆穷远处\n⽬镜关于物镜成像 ( → 像像→物)\n物\nV = 1200 f = 1000\n式⼀式于 C\n= 6000mm\n-",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "透镜成像",
+              "score": 2,
+              "keywords_found": [
+                "成像"
+              ]
+            },
+            {
+              "topic": "衍射",
+              "score": 1,
+              "keywords_found": [
+                "圆孔"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "1200",
+          "text": "⽚ 2\n→ β= = — Di = lo 0 mm\nDi\n物镜为⼊瞳睡和孔往光阑\n上物镜的⼝径最⼩\n:\n物镜关于⽬镜成像为 l",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "透镜成像",
+              "score": 1,
+              "keywords_found": [
+                "成像"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "1200",
+          "text": "卡 =200\n式⼀式 话 上= (cid:15482) iDi\n= Li 240 5 = 10\n=\n=\nu D\n.\n出瞳位于⽬镜后⽅",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "240",
+          "text": "mm ⼤⼩为 10mm\na ) 由⼊瞳中⼼向其余光孔或框在物空间的像的边缘张⻆最⼩的为⼊窗\n,\n与之对应的实际光孔或框就是视场光阑\navctan 4580\n对圆⼦\nL θ , = 0 = 0 . 视场光阑为圆孔 ⼊窗在物⽅⽆穷远处\n∴\n,\n对⽬镜 600050 4770\nθ r = arctn - = 0 .\n圆孔对⽬镜成像\n卡\nL 200 200",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "衍射",
+              "score": 2,
+              "keywords_found": [
+                "圆孔"
+              ]
+            },
+            {
+              "topic": "透镜成像",
+              "score": 1,
+              "keywords_found": [
+                "成像"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "text": "=- =\n出窗位于像⽅⽆穷远处\n在⼀台天\nli\n= t 切\nB 物⽅视场⻆是⼊瞳睡中⼼对⼊射窗边缘的张⻆",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": ",\n像⽅视场⻆是出瞪中⼼对出窗边射缘的张⻆\n物⽅视场⻆ 0 4580 = 27 ' 30”\nw = arctan 0 .\n=",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "120",
+          "text": "像⽅场⻆ : ' tanw = litauwi tanw ' _ _ tanw",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "240\nω \" = 2 . 290160 = 2017 \" 26 \"\n第六章\n①\n视场 视场",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "③\n孔 都有关\n②\n⻬明点\n③ :\n1物像点点均位于球⾯预点处\n等晕和不晕都不产⽣正弦差",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "物点像点均位于球⾯⾯率中⼼处\n、 .",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "3",
+          "text": "{L = cntnyr/n\nX .\nL\n=\n(n+y)/ni\n×\nv X × X ㄨ v X\n②\n②\n\\\n贫\n正\nX\n正 → 枕形\nv\n负 桶形\n→\nX 0\nX\n理想像\n孔径 视场\n球差 位置⾊差 畸变\n倍率⾊差",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 2,
+              "keywords_found": [
+                "球差",
+                "畸变"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "text": "像散 像散\n场曲 4 慧差像散\n畸变倍率⾊差\n位置⾊差和阿数成反⽐\n⼤\n负 正\n⻬明点\n{ L = (ntn) r / n\nL L\n= =0\n'\nL =(ntny rln\n|= l",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 5,
+              "keywords_found": [
+                "像散",
+                "场曲",
+                "畸变"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "text": "= 0\nL =\nL=\nr",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "-\n和\n像散场曲 畸变\n场曲\n负畸变\n位置\n对称式\n半部像差的 2倍 材料\n透镜光焦度制造透镜的光学\n⼩\n⼤⼦孔径 ⼩视场\n球差正弦差 位置⾊差 孔往\n⼤孔径 ⼤视场\n球差像散、场曲、 畸变慧差倍率⾊差位置⾊差 ,\n⼦午慧差\n凸\n细光束\n!\n细地像散 时\n— 场曲 畸变\n→\n军外⼦午球差\n⼀\n⼦午宽光场曲\n球差\n⼀\n弧⽮细光束场曲\n⼀\n第⼀次折射\nli = L = O β 1\n第⼆次折射 L 2 = - d Li = (u+ n > r / n β 三別\n∴ Li nL nd 6\n. = 2 = - = _ mm\n丝\nn ⼆\nγ= ny = - 2 4mm\n+n ( 5 .\nβ=β β 1世\n=\n, c =2 25\n.\n⻆放⼤率\n: γ= 式 = 0 . 44\n第七章\n眼睛分率由感光细胞⼤⼩决定\n②\n。\n×\nv 当瞳孔直径增⼤时 眼睛光学系统的像差增⼤ 分辨能⼒随之减⼩\n,\n,\n④\n=π=\nR 2D (\n⼀ - r = - 0 5 M\n.\n校正\n②③ j lr 500\n: = =- mm\n×\nv",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 24,
+              "keywords_found": [
+                "折射",
+                "透镜",
+                "光学系统",
+                "像差",
+                "球差"
+              ]
+            },
+            {
+              "topic": "透镜成像",
+              "score": 2,
+              "keywords_found": [
+                "透镜"
+              ]
+            },
+            {
+              "topic": "折射",
+              "score": 2,
+              "keywords_found": [
+                "折射"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "v\n“\n☆\n。\n①\n③ ⼀倍焦距外靠近焦⽿⾯的位置\n—\n或明视距离处\n( )\n显微镜出瞳瞪直径\n位置⾊差\n⼀ X → ,\n2到户 500tanwYPoD 呢500NAIP\nv\nA\n√ 不能使被观察的物体细节更加清晰\n①②\n⼀ U tanω 50\nF —ω= —— % =βe\nNA和部⽆关 tan fe\n。\nx\n①\n。 0\n在物镜像⽅焦⾯\nX ⼀\n⼀次实像⾯上\n②\n,\n低\n、\n× U\nU\nX\n照明出瞳 ⼊瞳后接光学系统\n⼊窗\n不均\nv ⼀ X\n照明系统的孔径光阑\nv X\n出瞳 位于聚光镜的孔经光阑上\n𥌑 后接光学系统 ,\n照明出窗\n②③\n物镜焦距⻓\nU\nX\n⽬镜售距短",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 4,
+              "keywords_found": [
+                "焦距",
+                "光学系统"
+              ]
+            },
+            {
+              "topic": "透镜成像",
+              "score": 1,
+              "keywords_found": [
+                "实像"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "U\n①\nv\nx 望远镜的视觉放⼤率 P = 11 B\nU\n当光学间隔很⼤时需要更稳定的⽀架 天⽂望远镜镜\nx (\n⼀\nx y = - ftanw 当對 ↑ yd\nU\n照度不均匀和像⽅视场⻆有关和光圈⽆关\nx\nπ ×\nV 摄影系统的像⾯照度主要取决于相对⼝径 E =T πLSIUFU =☆ T LBi\n光圈 是⽤来控制光线透过镜头进⼊机身内感光⾯的装置光圈⼠下数光圈⼤⼩和 数成反⽐\n② F\n:\n光圈⼤ → F ↓→ Dj ↑ 像⾯照度与相对⼝径(D)成正⽐ 1\n①③\ny _\nU ⼆ ftan\nX\n}\n孔径光阑的定义\n景深\n> = 0 . +oz\n⼈对准取⾯和时⼼\n④ =o\n景深↑ F (光圈数\n)\n↑\nv fd ⼊瞳直径↓\n①\n—\n景⼩\n×\n×\n②\n=☆=+\nR 2 lr = 0 . 5 mj = lu = 500 mm",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "光线"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "50",
+          "text": "05\n.\n芋\n短 “ 台\nlo0 100 lr =+ 1m R =+1 f=lr = 1000 mm\n⼈眼 放⼤镜\nfo'sfe\nD=O\n⼈眼 物镜\n渐晕\n”",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "6",
+          "text": "5\n.\n光学系统放⼤率 观察物体对准精度⼆⼈眼对准精度\nX\n临界照明\n窗对瞳瞳睡对窗\n光源柯勒镜聚光镜\n×",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "光学系统"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "40",
+          "text": "15 * 1500×\n500NA ≤ T ≤ 1000 NA\nNA= NSTM\n-14 30 ω==\nSin 0 .5\nnm\ng",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "99\n.\n=\nO5X450MM",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "6",
+          "text": "= 400 mm 6 NA = 00 = 0 . 99\nmm\n==\nP=βE = 800 × 「 0 . 3125",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "3125",
+          "text": "0\n.\n焦距相对孔径视场⻆ 相对孔径\n⼩\n⼩ ⼤",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "焦距"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "72",
+          "text": "17\n.\n号 Ʃ π 元 + 府 Nc = % = 冠 = =4 737. 5 lplum = T 2 .17 lp/ mm",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "125",
+          "text": "⼀⻰⼆\nT “\n=\n光学补偿法\n𨫎\n⼀个或多个孫系统的轴向移动改变光组间隔\n⼩ 暗\n瑞利判断中⼼点亮度\n分辨率点列图\n光学传递函数法",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "衍射",
+              "score": 1,
+              "keywords_found": [
+                "瑞利"
+              ]
+            },
+            {
+              "topic": "傅里叶光学",
+              "score": 1,
+              "keywords_found": [
+                "传递函数"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "1",
+          "text": "…\n⼝\n近⾯镜 γ= 2 f = 200 mm代⼊ π+ i = li 80\n= mm\n⾉⽊据⽿⾯镜成像 4008\n: x = — = 240 mm\n像距等于物距\n—\n( ) 物体过物镜的像 式⼀式⼆于 V = 110 mm\n:\n如图中 o = fi = 100 mm 没⼦V 径光阑为 2X\naull\n⽂\n= X = 1 2λ=2\n)\nC) NA = nsinu ≈ l × 0 . 1 = o1",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "透镜成像",
+              "score": 3,
+              "keywords_found": [
+                "成像",
+                "物距",
+                "像距"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "6",
+          "text": "= 0= — × 5250 .* 0 . 75×10- 0 m = 2 . 75 um",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "15",
+          "text": "=\n③> D 物 = Y + 2tanu ( -l ) = 8ftanu\nY = 8 × l0 ×0 | - 2 × 0. 1 × 11 = 5 . 8 mm .\n—\n物\n.5 ×550\n“ ” 分辨率根据道威判断 : 6 - — 歲 = 1 . 375 um\n,D 式\nD 、 2) 对物镜 ( 15 β= ^\n: = - mm = - 10",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "50",
+          "text": "代⼊得 V 150 mm π _ 式⼆求得卡 π mm\n=\n—\n柴⻰ fi\n⼚ = - _ 0 = l ⼀fi 代⼊得 = 25 mm\nD,\n③ ) NA = nsinu = 0 . 2 tanu O . 2 在图中可知 tanu =— \" =0. 2\n_\nD = 2 + 2 D , 2Y = D - 2 ( 0 2× 15 ) = 10 - 6 = 4 mm\n.\n( 4 ) 分划板应放在图中视场光阑处 . 即物镜后 150 mm没⼤⼩为2 x 则有\n上 ⻰ 50 15100× 2 求得\n: λ≥ =π zx = 40 mm\nx\n( 5 ) 孔径光阑应放在物镜的像⽅焦⾯上即物镜后 π 50mm . 没⼤⼩为 2t",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "6",
+          "text": "奇 世 1× 150 求得\n: t . 150 =π . 0 . 2015 : 2t =π mm\n± De ± 42",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "61",
+          "text": ") 000 000\nX = — = =±2 . 5 mm\n—\n对物镜 -\n( ) : ( “ 6 = 180 mm { l = - 45mm\n{\n可得\nβ=÷=\n×\n- 3 i = 135 mm\n式⼀式于求得求 = 5=\n∵ 33.75mm\n××\n述\n= *\nT 30\n=",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "25",
+          "text": "500\n② ) 出射光园量直径 D = NA =30500 = 1 - 667 mm\n— = 5\n⼚\nB 如图 z ( = ( + fi = 135 +15 = 160 mm 瓦⼀下球 (i = 00= 29 . 63\nmm\n( 4) 6 = 0 ⼀ . 5 ×0 . 55 um = 2 75 um\n.\nNA\n≈\n5) NA = nsinu = 0 1 tanu ⼆ 01 D 物 = 9 mm\n.\n⑥) 如图没此时⽬镜⼝径为\n2x\n⼆\n2X\n=",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "21",
+          "text": "33\nmm\n.\nλ1 N 0 A . 5 6 λ - × — : 0.5 1 × 0 55 7 × 10 ] = 0 . 379\n() 500NAET E 100ONA 最⼩应为 500NA = 189 66 ×\n.\n⼀\n对光源过聚光镜成像L -l = 100 mm\n'",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "透镜成像",
+              "score": 1,
+              "keywords_found": [
+                "成像"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "1",
+          "text": "25\n卡求得 = mm\n{ t",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "75",
+          "text": "= mm\nr-r计\n代⼊ π 式于 f = 5 = 18 . 75 mm\nK\n- → NA = USinU = 0 5 U= 300\n.\n如图没通光⼝径为 D 则 tanu 式 D = 28 87 mm\n= .\n物⾯\n聚光镜\n如图⼀ : 200mmc < 3 m ,不是临界照明\n,\n考虑成區像 王\n∴\n⼀ ,\n⼥如图上 5000 ( |\nt '\n— — ( = 357 14mm ← 世",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "200",
+          "text": "3000 . y\n→ sowmm\n—\n代⼊出⼀式 我 l =- 188 68 mm\n= .\n” 为看清物体所需的分彩率 X 光学系统的放⼤率 ≥ ⼈眼分辨率",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "光学系统"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "150",
+          "text": "物体所需的分辨率为6- — — = mm 3 . 75 ×10 -5 rad",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "4",
+          "text": "km ,\n5×\n⼈眼的分率为 1 = 3 x10 * rad 开普勒望远镜 放 的 ⼤ 倍 有效 华 为 、 F 世 5 = 8 *\n10-\n⼯作放⼤倍率⼀般为有效放⼤倍华的2\n~\n倍即为16 ×~",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "24",
+          "text": "×\n3\n* 「 = 袭 = 8 × fi =8 fe 机械筒⻓⼆ f 。 e = 求 i + fi = 100求得 { 结 i =88. m 8 m\n⼀ =",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "11",
+          "text": "n 1\nmM\n出瞳是孔往光阑关于后续光组所成的像\n3)\n(\n。\n。 : ( - 1 oomm 式⼀式 “ 球 或⼆⽠ = 12 . 50 mm\nE\n⼆台\n出根据瑞利判断\nσ 部 6 ⼈眼分辨將极限 60”\n: = =\n:",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "衍射",
+              "score": 1,
+              "keywords_found": [
+                "瑞利"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "18",
+          "text": "67\nσ= . 5 D mm\n器 7 下 = .\n=\nDfe 112\n×11 .\n5)\nX _ → — 5 ⼆±0 . 62 mm",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "6",
+          "text": "tanwi\n( ) P = _ : 8 tanw ' = 8 tan 40 2W 1 = 2 avctan 8tan40 = 58 450\ntan .\n( 7 ) D \" 13 985\n相 = 2 × 100 xtanw = 2 × 12 . 5xtamw = . mm\n⼀\n⼀\n机械筒⻓ - fe fitfi 225\n() = = mm\n:\n= 200mm\nE = - 8 * o = 8 f求求得\n求 = 25 mm\n'\n《) D ⽬ = 2× 225xtanw+ D = 28 - 6 mm\n( 瓦⼀瓦 “ lz\nz = - 225 mm = 28 125 mm\n.\nB ) 1 . = -200 mm π ⼀式⼆ Vi = 120 mm u = li - d = 95 mm\n后下 “ 笼 li = 19 79 mm - - tanntanw .- 8 × tanw ' = t 8 an 30\n.\nD|=\n2×\nlixtanw\"\n+D\n'\n= 21",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "59",
+          "text": "mm\n.\n幼 = D ± fe = x ±425\nx 2 =± 2 5 mm\n.\nlo0 100\nβ= 步 1 βmin |== 15 |β max |= 2 .2 30 β 的范围: 15*~ - 30\n-\n=",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "fmax =\n卡 min =",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "193",
+          "text": "75 mmf\n的\nin\nmax =\n了 100\n— = l00mm\nβ = 1 + 3\n菇\ntanw ' = τ yi =β ) tanw m i ax = 10 Ʃ 02540 2 wmax = 2 arctan ( 00 ) = 78 . 659 %\n屏幕\n!\n—\n⼀\n”\n”\n= L — →×0\nYmax\n世 380",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "19",
+          "text": "以 20mmx\n\" j = — )β= 步 = : ☆ = mm\n(β - 12 0 = β\n-\n③ ) { ( = ( - l = 441 mm 求得{ “ 品品品 由⼏何关系 是 Ʃ ⼀ ⼀ Ʃ 吼 D 得 物=",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "5",
+          "text": "β=Ψ= 29 . mm",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "4",
+          "text": "F = 若 N = = 2175.625> 1000 ( ÷M = n 100 ) ⼆可以分辨华\n[\n第⼋章\n①②\nv\nv\nv\n⼀\n③ Ey =2c0 s [2 π ( 04 - 0* ) t ]\n: ☆",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "15",
+          "text": "t = 2 . 5 ×10 - E =0 时 EY = 2 C0s ( - 0 . 5 π+π ) = 2 m\n0座 ∵ B\n.\nE\n.\nR符合右⼿坐标系 (由 E →B)\n下如图 B 的⽅向应该沿⼒轴负向\nx\n①\n① c= UnC 不变 当 n ↑ 后 V ↓②= VTUdT不变⼊ ↓\n:\n③ T =÷ v 不变 ∴ T 不变 ④ 波数 = ⽂⼊ ↓ 波数 A\n.\n②\n丹\n⼀束光在传递过程中频率不变排除①\n由公式 C = nv 可知当 n 越⼤时 v 越⼩ n32 n . > n 2 ∴ U 3 < U , < U 2 ∴②正确\n④\nx\nX\nv\n由图可知P光偏折⻆度⼩于 Q光由\nn .sin θ , = n 2STu θ 可知 nQ > np\n同种介质中折射率越⼤波⻓越⼩⼀ ∵λ= { VQ > Upi = T 上 v = ⽅ VQ < Up\nx 是—曛—\n③\n⽖\nn",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "折射",
+              "score": 2,
+              "keywords_found": [
+                "折射",
+                "折射率"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "折射"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 1,
+              "keywords_found": [
+                "频率"
+              ]
+            },
+            {
+              "topic": "光的传播",
+              "score": 1,
+              "keywords_found": [
+                "介质"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "3",
+          "text": "半波损失 即发⽣ π 的相位突变 ( 发⽣于光疏 → 光密的反射 )\n:\n① m > n > n 两次反射都不发⽣相位改变\n. 2 3\n② n cnz < ns 两次反射都发⽣\nπ的相位改变则不发⽣半波损失\n.\n③ M . znzcn 3 不发⽣ ; 发⽣则将产⽣半波损失\n④ M . cnz2n3 发⽣ ; 不发⽣则将产⽣半波损失\no0e\n雪—\n——\n④ —",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "干涉",
+              "score": 4,
+              "keywords_found": [
+                "半波损失"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 3,
+              "keywords_found": [
+                "反射"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 3,
+              "keywords_found": [
+                "相位"
+              ]
+            },
+            {
+              "topic": "折射",
+              "score": 3,
+              "keywords_found": [
+                "反射"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "5",
+          "text": "φ= α 2- 2 . =5 π STM π FC ∴为右旋椭圆\n③\n-\n步 :\n频率相同振动⽅相向同相位差恒定\n。\n⻢驱波:\n频率相同振动⽅相向同传播⽅向相反\n偏振 频率相同振动⽅垂直向具有⼀定的相位差\n:\n光学拍 频率接近振动⽅相向同振幅相同\n传播⽅向相同\n:\n,\n②\n①\nikr\n=☆ +\nE (n) e\nU x\netikr\n没 k\n=\nv\nx\nA\n则 A iK 些代⼊\n② =\nK = 2 当 γ=4 时 A = 05\n.",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "物理光学",
+              "score": 8,
+              "keywords_found": [
+                "频率",
+                "相位",
+                "偏振",
+                "振幅"
+              ]
+            },
+            {
+              "topic": "光的传播",
+              "score": 2,
+              "keywords_found": [
+                "传播"
+              ]
+            },
+            {
+              "topic": "偏振",
+              "score": 1,
+              "keywords_found": [
+                "偏振"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "1014",
+          "text": "①② W=2πV = 2πX\nv\n(全反射 )\n(P偏振光以布儒斯特⻆⼊射\n)",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "偏振",
+              "score": 3,
+              "keywords_found": [
+                "偏振",
+                "偏振光",
+                "布儒斯特"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 2,
+              "keywords_found": [
+                "反射",
+                "全反射"
+              ]
+            },
+            {
+              "topic": "折射",
+              "score": 2,
+              "keywords_found": [
+                "全反射",
+                "反射"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 1,
+              "keywords_found": [
+                "偏振"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "571",
+          "text": "4 1014 红⾊\n×\nλ , n , =λ zhr 760 nm × 1 = 1 . 33 x ⼊ 2 λ 2 = 571 nm\n×109\n=←\nv ⼆ = 4 X1014 HZ 光波颜⾊由频率决定频率不随折射率改变⽽改变,\nλ\n反射折射\nH>H θ 2θ\n⼊射光为P⽅向\n, 2 , c\n的偏振光且⼊射⻆为布儒斯特⻆\n频率相同,振动⽅向相同传播⽅向相反",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "物理光学",
+              "score": 5,
+              "keywords_found": [
+                "频率",
+                "偏振",
+                "光波"
+              ]
+            },
+            {
+              "topic": "折射",
+              "score": 4,
+              "keywords_found": [
+                "折射",
+                "折射率",
+                "反射"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 3,
+              "keywords_found": [
+                "折射",
+                "反射"
+              ]
+            },
+            {
+              "topic": "偏振",
+              "score": 3,
+              "keywords_found": [
+                "偏振",
+                "偏振光",
+                "布儒斯特"
+              ]
+            },
+            {
+              "topic": "光的传播",
+              "score": 1,
+              "keywords_found": [
+                "传播"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "5",
+          "text": "φ=α z - 2 . = - π\n左旋椭圆偏振光\nSTn\n-",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "偏振",
+              "score": 4,
+              "keywords_found": [
+                "偏振",
+                "偏振光",
+                "圆偏振",
+                "椭圆偏振"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 1,
+              "keywords_found": [
+                "偏振"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "5",
+          "text": "π20 左旋\nƩφ-\n2ACOS( 2 )\n—\n合成后 A 三 A 24A 2+2 A 2 cos( φ , - φ 2 ) =2 A 22 ()1+Cos 4 i - = 2A 2 . 2c0s ( 世 - 2 φ 2)\n↓",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "+ Cos ( φ , - φ 2 ) =2\nC(os-v2\n)\n① φ\n. ∴ . =2ACoS 1 - 2 )\nA (\n后* 以+ 420→\n所\n—\n[ [(2x+3y±4Z)- 1× 108 t ]\nE looe\n=\n→ 華⼆ x+ 3Y+42\nk = 2x+3 yt 4zk : + 4 = 所 2×+ 的 Ʃ→ Yot 9 ←→ z 0",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "666",
+          "text": ". 7 E = 103 STM [ π (3× 100 x - 9 × 104 t) }",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "103",
+          "text": "[ 100 - 10\" +π ]\n= Cos π ( 3× x {× 4t )\n2π\nK =☆=π - 3 x 100 λ= — π . 3 ×06 = 0 . 6667× 10 - 6 m = 666 . 7 nm\nE =AexPT [ π ( EOSO +xSTuo) ]",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1015",
+          "text": "k 2π π× λ= 2π× 0 . 65 3 108 107 390\nd) = = — — × × = 39 × = nm\nλ",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1015",
+          "text": ".\n2π 15 O π× 104\nW = _ = 2πO =πXcO v = 器 =5× HZ\n订\n× 108\nΨ) 在玻璃中传播的速度为 λv = 3 . 9 × 107 5 × 1014= - 1 . 95 × mls\n5×\n=Ʃ=\nn = 1 538",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "光的传播",
+              "score": 1,
+              "keywords_found": [
+                "传播"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "text": "2\nE = E , + E 0 = 2acos (dkz - dwt ) cos ( kz - ωe)\n相速度 (等相位⾯的传播速度 世 世\n:\n)\n:\n0=\n= k\nR\nK\n群速度 ( 等幅⾯的传播速度 ) 0 = 品\ng\n: :\n相位差 δ=α",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "物理光学",
+              "score": 2,
+              "keywords_found": [
+                "相位"
+              ]
+            },
+            {
+              "topic": "光的传播",
+              "score": 2,
+              "keywords_found": [
+                "传播"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "text": ": 2-\n则两个分量的复振幅为 Ex deikzEy d\nei(kE+δ\n)\n= = 2\nE = ExCoSO + Eysino\nI = E . E * : [ a . cosoeikz + G 2 sinoe i>utt8 ]。 [ G .CoSθ Eikz+ G 2STuOe- i(kzt8)]\nt\n⼀个δ\narososinoeis\n= arcos2 oe \" aisiu 2 o 0 + a . ar cososTuoe t a .\n= G . rcos ' ot a 2 siu ' o + ia . a 2STu20( cos 8- isinδ+ coss + isinδ )\n= G 2Cos ' o+ Gr 2 siurot G . G 2 Sn20cos\n.\n第九章\n②\n相位差恒定\nv ×\nv\n①\nU\nL dx ⼊ ⼊ XD\n× 0 = D =m x = d Ox =\nv\n。\nα\nv\n× 。\nδ= KOL =π L 亮条纹 l ⼊为亮纹",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "物理光学",
+              "score": 2,
+              "keywords_found": [
+                "相位",
+                "振幅"
+              ]
+            },
+            {
+              "topic": "干涉",
+              "score": 2,
+              "keywords_found": [
+                "条纹",
+                "亮纹"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "0 =m\n③\nX\n×\nv\nv\n相⼲性空间相⼲性+ 时间相⼲性光源扩展只对空间相⼲性有影响, 对时间相⼲性⽆影响 OX\n点光源的光场虽有最⾼的时间相关性 但在纵向波线上的两点的相⼲性还会受到时间相⼲性影响 ② X\n.\n,\n②\n×\nv\nX\nU\n式合\n0x= 哈 δλ",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "= — — R↓ cxA 条纹间隔增⼤\nD\ng ,\n② n ↑ λ=☆ ⼊↓ x ⽐条纹间隔减⼩\nbc β w ^\n③ 光线缝宽为允许宽度, 增⼤缝宽条纹对⽐度会下降,\n←\n-R→ →\n←—\n①\nibc 14\n允许宽度 bp = = β",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "干涉",
+              "score": 3,
+              "keywords_found": [
+                "条纹"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "光线"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "v\nX ×\nK=09\n.\n③\n× Λ",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "0\n— 等倾千涉\n平⾏要板双光束⼲涉条纹 叭\nOO= ⾥疏外密\n直条纹⼀等厚⼲涉 2h ni 2sinθ ,\nh↑ OC 条纹越密",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "干涉",
+              "score": 3,
+              "keywords_found": [
+                "条纹"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "①②\n品\nh + i = m ⼊ hym ↑\nv\nx\nU\n②\n,\nλ\nα\nv —\n2MOS\n.\nv ⼀\nv\nv\n(\n①\nv\nX\n⼀\n上⽅",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "⼈近\nx\n②\n⼀\n①②\nU 施加下后 2⼭ *\n2MOS\n∴os↑\n, ∝\no\no\nX\n①③\nv l ×\nv v\n—\n⼀→ 加F αd 向级次⾼的移幼\nx λ\n⼀ α— — a ↓ os\n2MOS\n,\n①",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "①\n×\n添加补徬板可获得\n×\n添加⼊补偿板补偿各⾊光程差获得\n②\n镀—⾼反⼊膜\n—\nU\n×\n透过率↑ 界⾯反射⽐βd 条纹锐度08\n=\n器 ↓\nv\n透射光和反射光互补透射光为亮纹时反射光为暗攻\nX v\n①②\nv\nv\nv\n⼊⼩\n③\n⼀\n① 频率相同② 传播⽅向相同 ③ 相位差恒定\n。\n在⼲涉场中叠加的相⼲光是由光源的⼀条光线经上下表⾯反射后所分离出来的\nDmax Cot\n=\n越好\n分波前法\n分振幅法\nImax Imin\n_\nK -— ou 1\nImax+ Imin\n相⼲的振幅⽐ ,光源宽度光源的⾮单⾊性\n等距直条纹\n⼀组同⼼条改 全暗背景下的细锐亮纹\n透射光\nF P⼲涉仪\n⼀\nbum σx =\nX\nπ\nD\n10× [\n]O",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 6,
+              "keywords_found": [
+                "光线",
+                "反射",
+                "光程"
+              ]
+            },
+            {
+              "topic": "干涉",
+              "score": 5,
+              "keywords_found": [
+                "光程差",
+                "条纹",
+                "亮纹"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 4,
+              "keywords_found": [
+                "频率",
+                "相位",
+                "振幅"
+              ]
+            },
+            {
+              "topic": "折射",
+              "score": 4,
+              "keywords_found": [
+                "反射"
+              ]
+            },
+            {
+              "topic": "光的传播",
+              "score": 3,
+              "keywords_found": [
+                "传播",
+                "光程",
+                "光程差"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "6",
+          "text": "×0 .\n= 6 ×<0\n-\nm = 6 µm",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "2×10 -3 4 583 ×10 -3\n. .",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "L = 4 λ= 4× 550 × 109 = 2 2x 10 - 6 : 2 . 2×10 -3 mm\n.",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "l =n1) d d = . = 4 583 xco 3 mm",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "9",
+          "text": "550×10 -\n==τβ=\nbp - 4\n— 4×1 25×10-3 = 1 . 1 ×10 m = o . l 1\n.",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "6",
+          "text": "0\n.\n= = A 1 Ar = ⼆⼆⼊感 =\nK 6\n下 0 .\nI +Iz 1+ 1AYA 2 2\n、 )",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "9",
+          "text": "Omax = Cot = 3 × 108 × 10 - = 0 . 3 m\nλ≈\n⼊",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "(600 ×10\n-91\"\n-3",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "= — = 1 . 2×10 nm\nOmax 0 . 3",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "588",
+          "text": "3\n0 L = 2 dcosT = m λ λ= o Ʃ d =0×. 233× 三 10 = 5 . 8838×10 ) = 588 . 38 nm",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "792",
+          "text": "DM\n知\n-\ni h mx =\noL nh ⼊ n hamah\n= 2 + = m =",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "006",
+          "text": "nm\n=\nλ c= nh 2 nh = 2 ×1 .5 × 2× 107 = 600 nm\n时",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "L' = 2 nhti = m λ h — mλ 2 - n 两⽅求导得 σ h = * o 2 m u = 5 x 1 — _ 66 2 0 × × 1 . 5 = 44nm",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "927",
+          "text": "-5\n5 ×10\n.\n=÷=×5 λ1=— 0 600× 5\n0x 3 .33 × 10- 3 2 =µ",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "x × 1 . 52× 3 . 33×、0 -3\n= 5\n.",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "927",
+          "text": "×10 -\n变密\n⼀点\n=λ\ncL =2 wh + i= mx h oh = omniomd",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "3",
+          "text": "α O . 05×10 - - 4\n。 — — 1 — 03 = 2 . 5×0\n200×\n⼀",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "45",
+          "text": "×108- 9\n= 117 8 ×10 - 5\n2nOS × 2 . ×.0 - .",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "5",
+          "text": "增⼤ 右\n增⼤\n⼊⼀式\n仁\n+λ= m\nα os αxosi 0 l' = 2 h m λ h = hdmd 往能级⼩的⽅向运动\nTi 20 时 Ti > 0 cosiic 1",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "L =2 hcosii += m λ m =\n2h\nπ\ncosTi\n+ i cm= 1 时 ch =\n*\n2COSTi\n=☆= PosTisint\ns",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "STn2 Cosiid osi\n.",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "3",
+          "text": "03\n.\nA =☆= 0. 97 ms s : — π 1- N R E m =9 A 7xs 0 L ' = 2nh =m λ h = ⺾ 2 ⼊\n综上 h 0 (600×10- 9 ) 2 m\n: — × 935^= . 03× 10 - 6 = 3 . 03 um\n^x ⼊——\nx2\n×1x 05\n100O0",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "5",
+          "text": "× 10 -4\nδ l = 2 nh = m ⼊ m = — 2\nnh =×2\n.\n5×0 三\n= 1 X 104\n⼊ 500 ×10- 9\n— 2 ) 2",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "λ=\ne\ne\n。\nn\n=← 5",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "100",
+          "text": "0\n0\"\nα2\n×1\n.",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "\" = 5 × 10 -",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "13",
+          "text": "m = 5×10\n-4\nnm\na b b\nb b\nC\nb\na a\na a a\na c c\n劳埃德镜 发⽣⼲涉的两个光波⼀个是光源S 直接发出的\n:\n另⼀个是光源 经取⾯镜所成的像5 发出的\n. S\n—?\nS和S为相于光源 所以在光路发相遇将⽣⼲涉\n— P ,\n“⼀⼀ 2\ns 1 …- ≈ _\n_\n_\n_—_— 可以在 PP",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "光路"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 1,
+              "keywords_found": [
+                "光波"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "text": "区域看⻅⼲等步距直条纹\n⽥题可知 3个单⾊波磁感强度⽅向相同\n,⽽\nEBK 成右⼿坐标系\n故可令 3\n个单⾊波⽚均\n:\n,\n垂直纸⾯向外 如图所示 分别沿正 Y 轴分解\n, ,\n䠪\n上发⽣⼲涉的条件 频率相同 振动⽅向相同 相位差恒定 故沿于轴正向⼲涉\n: ,\n, ,\n在 Z =0⽿⾯沿测轴正向: Ei= Acos 300expikyos1200 ⼆\nƩ\n污 Aexp- ikysin300\nEi\nA\n=\n→ 5",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "物理光学",
+              "score": 2,
+              "keywords_found": [
+                "频率",
+                "相位"
+              ]
+            },
+            {
+              "topic": "干涉",
+              "score": 1,
+              "keywords_found": [
+                "条纹"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "3",
+          "text": "→ Es ' = Acos 300 expikyCos 60= 污 AexpikysTn 300\n↑@, → ⼀ E = Ei + Ei + E 3 = A+r Ʃ ACOS(沒 Y ]\nI = E 。 E * = A ↑ 1+ Bexp 没 y ) ( 1+vsexp ⼀没 Y ) = I 。 [ 2 冷 cos(πλ ) + 4 ]\n, Iuax = ( 4 + 2 号 ) I 0 Ke ma - Imin = 0 866\n— .\nImin = ( 4 - 23) I ImaxtImin\n。",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "9",
+          "text": "-\n⼊ D 500×10 x 1",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "3",
+          "text": "(1 ) x仁 —— — - = 1×10 - m = 1 mm\nd\n5×10\n-4\n( 2) ④= 台 CSI s× 103 × 1 67 103 =\nD - σx = - R =→ × 0 = 6 . × 6 .67 mm",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "00",
+          "text": "67\n( 3 ) OLmax =\n⾶\n=\n) 15000 × 9\ns = 5 ×10\n-5 向上移动\n,\n移动 6 . mm\n-",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "Olmax = mmax ⼊ Mmax = Olunx — — 5 9× 0 105 - 0",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "5",
+          "text": "= 100\n最⾼级次 100级\n×10-\n⼩当屏上⼲涉条纹消失时光程差⼤于准单⾊光相⼲⻓度",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "干涉",
+              "score": 2,
+              "keywords_found": [
+                "光程差",
+                "条纹"
+              ]
+            },
+            {
+              "topic": "光的传播",
+              "score": 2,
+              "keywords_found": [
+                "光程",
+                "光程差"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "光程"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "L≥ oLmax\nƩ= tan β= 站 = O - 30 0 0 2 0 5 = 8 . 33 × 10 - 4 β= 1 . 67 ×10 - 3\n×.\nbe 或 50x100\n-s\n= — = 0 3 mm",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "67 -3 .\n.\n×10\n( 1 ) P 点的光程差为cL = (n - 1) t相位差为 δ=KoL = (n-1) t",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "光的传播",
+              "score": 2,
+              "keywords_found": [
+                "光程",
+                "光程差"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "光程"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 1,
+              "keywords_found": [
+                "相位"
+              ]
+            },
+            {
+              "topic": "干涉",
+              "score": 1,
+              "keywords_found": [
+                "光程差"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "则 P\n.\n点的光强为 I\n=\n4I",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "物理光学",
+              "score": 1,
+              "keywords_found": [
+                "光强"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "cos③= 420 Cos ' [ (n- \"t ]\n当渠 (u-+)t =2M π 即 t = m⼊ π 时 Po的光强最⼤为亮政 I = 4 I 。\n当 ( n-)t = 12M π即⼠⼆ m \" + 时 o 的光强最⼩为暗纹 I = O\n2)\nI\n=\nI\n. +\nI",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "物理光学",
+              "score": 2,
+              "keywords_found": [
+                "光强"
+              ]
+            },
+            {
+              "topic": "干涉",
+              "score": 1,
+              "keywords_found": [
+                "暗纹"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "text": "cos8\n攻\n= A 2 +)2A ( 2 + 2F( 0 2APCOS [( n-1)t ]\n: 5A + A S2 C04[ (n -)t]\n突变前 : 焦点光程差 0 L = 0 δ= KoL = 政 × 0 =\n光强 I = I + ] + 2 I ] Cos δ= 4I",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 2,
+              "keywords_found": [
+                "焦点",
+                "光程"
+              ]
+            },
+            {
+              "topic": "光的传播",
+              "score": 2,
+              "keywords_found": [
+                "光程",
+                "光程差"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 1,
+              "keywords_found": [
+                "光强"
+              ]
+            },
+            {
+              "topic": "干涉",
+              "score": 1,
+              "keywords_found": [
+                "光程差"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "0 0 。\n突变后 : 焦点光程差 cL = ( n -1 ) d = 0. 5 d 8=K 0 Lx 0 .5d = 共d\n光强 I= I\n+\nI\n+",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 2,
+              "keywords_found": [
+                "焦点",
+                "光程"
+              ]
+            },
+            {
+              "topic": "光的传播",
+              "score": 2,
+              "keywords_found": [
+                "光程",
+                "光程差"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 1,
+              "keywords_found": [
+                "光强"
+              ]
+            },
+            {
+              "topic": "干涉",
+              "score": 1,
+              "keywords_found": [
+                "光程差"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "text": "NII cosδ'\n=\nTI\n=\nI",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "0 0 。\n此时 Cosδ=- d 8 最⼩为 213 π\n=\n则 d 最⼩为 5\n2λ=3\n×",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "630",
+          "text": "×\n109\n= 420nm\nSim35\nU , STnO , = M 2 STMO > θ 1= 35 n , = 1 nr=1.33代⼊得 θ 2 =aVCSTM 3 =25 . 5480\n≈ ⼈眼成像\n…… θ 设厚度为 h 光程差 OL = 2 nbCos θ z\n氛四题\n速 … ∵ 折射光有半波损失下总光程差 : 0 Li = 2nzhCos θ r + 会\n: 2whcr <o ) + * = m⼊",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "光的传播",
+              "score": 4,
+              "keywords_found": [
+                "光程",
+                "光程差"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 3,
+              "keywords_found": [
+                "折射",
+                "光程"
+              ]
+            },
+            {
+              "topic": "干涉",
+              "score": 3,
+              "keywords_found": [
+                "光程差",
+                "半波损失"
+              ]
+            },
+            {
+              "topic": "透镜成像",
+              "score": 1,
+              "keywords_found": [
+                "成像"
+              ]
+            },
+            {
+              "topic": "折射",
+              "score": 1,
+              "keywords_found": [
+                "折射"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "9",
+          "text": "则 h = m\n—⼊-i (\n当 m=l 时有最⼩厚度: hmin =— 500×10 1\n-",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "04",
+          "text": "17 nm\n2M 2 COSθ 2 4 ×1 . 33xcO=\n(1 ) ∵ 空⽓折射率 < 薄膜 < 玻璃下不发⽣半波损失 j :20cm\n光程差为 OL = 2 nhcosOz 垂直⼊射时 znh =m ⼊\nm 2nn 2 × 1 - 38 × 5 ×10\n-5",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 2,
+              "keywords_found": [
+                "折射",
+                "光程"
+              ]
+            },
+            {
+              "topic": "干涉",
+              "score": 2,
+              "keywords_found": [
+                "光程差",
+                "半波损失"
+              ]
+            },
+            {
+              "topic": "折射",
+              "score": 2,
+              "keywords_found": [
+                "折射",
+                "折射率"
+              ]
+            },
+            {
+              "topic": "光的传播",
+              "score": 2,
+              "keywords_found": [
+                "光程",
+                "光程差"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "230",
+          "text": "下为亮汶\n=π = — =",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "600",
+          "text": "×10-9\n2) 哈 ⑤ 1 — 3 → 8×6000 — vad",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "05",
+          "text": "= 1 +q= = 0\n.",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "288",
+          "text": "世\nr 5 = f ' tanθs≈ f ' 05 = 20 × 0 . 288 = 575 cm 空⽓ :\nns\n“ \" ngF :\n③ ) 0x = fdo = f ⼊ = 20×10 - 2 — 138 × 600 × = 5 : 75 mm\n玻璃\n:\nM3=1\n-",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "5",
+          "text": "2 nnhsino 2× 1 P × 5× 105 x0 . 288\n( 1 ) 光程差为 0 L = 2 h ∵ 有半波损失 ∴ cl = 2n+ 会⽜顿环中⼼为暗班\n由图可知 : R 2 =γ 2 + (R - h p =+r≈ 2 R ' - 2 Rh 则 h ≈ 最 L = 管 + 会\n当 i λ=→→+ ⽼时为亮约则 =µixR 求导得 vd = idm",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "干涉",
+              "score": 2,
+              "keywords_found": [
+                "光程差",
+                "半波损失"
+              ]
+            },
+            {
+              "topic": "光的传播",
+              "score": 2,
+              "keywords_found": [
+                "光程",
+                "光程差"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "光程"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "= m r\n-\nR\niv\n令 dm dr i 条纹间隔\n= 1 = e m- = N i\n.\ne=\n② )半径为VN的光程差为 CLN = 2 hn + 有 R 2 = P +(R - hN) ' VN = N⼊R\n半径为 π+k 的光程差为 CLN +k + 2 hn +r+ 会有 R 2 = R + t (12-ha +h) 2rwN +2= (+K ) λR\nVN + R - R= NR(N + R- N) 则 : R = Nt - rz\nkλ\n凸\n“\n重 % :) andn\n“ 0\n,\n;\n” ” \" \" \" \"\n州“\n光程差 : OL = 2 dcosi 当垂直⼊射时 T =O 此时 OL =2 d d ↑\n” |\n为亮纹时 OL = m λ= 2 d 求导得 om= 2/ ⼊ od 別\n由题 om =1oo 时 od = 0 . 03164 mm = 3 . 164 × 105 m\nλ=\n—\n×3 . 、 614× 0\n≈=632.\n8×",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "光的传播",
+              "score": 6,
+              "keywords_found": [
+                "光程",
+                "光程差"
+              ]
+            },
+            {
+              "topic": "干涉",
+              "score": 5,
+              "keywords_found": [
+                "光程差",
+                "条纹",
+                "亮纹"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 3,
+              "keywords_found": [
+                "光程"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "109",
+          "text": "=\n632\n.\nbnm",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "100",
+          "text": "δ为附加光程差 Ko1\n= 2φ\n.\n对⼊ , 没环⼼的级次为 M . + m 0 ( m , 为整数级次 , mo 为⼩数 ) 则环⼼ = 2 h + o \"=+ mo ) λ , …\n则第 N 个圆环级次为 M . - (N-1) 2 hcosθntO 1 = [ M .- CN -1) ] λ , … 0 ' = 24\nlim\n① - ② 得 2 h (1 - cosθ N ) = ( N-1 + m 0λ , ∵ θ n→ 0 |-COSON = Ʃ θ 0 ' ⼆会 φ\n: θ N = 芹 (N-1+M 0 ) W = fO 0 k == f \" θ\n。\n☆\n则 管 f\" (2 - 1 + M 0 ) H1 M 上⼆ 解得 1494\n= m = 0\n⼀ f“共\n( 5\n-\n1+mo)\n4tMo . 。 .\n同理 管 = ⼀\nf\" (☆",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "光的传播",
+              "score": 2,
+              "keywords_found": [
+                "光程",
+                "光程差"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "光程"
+              ]
+            },
+            {
+              "topic": "干涉",
+              "score": 1,
+              "keywords_found": [
+                "光程差"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "text": "- 1 + m。 ' } ⼆ m 2 解得mi= 0 . 2706\n: f \" 会 0=\n(5\n-",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "+M\n0\n)\n=☆\n则环⼼ Mi +mo =π (2h+o' ) =+ 塔 M . + mo =☆ ( 2 h + o ) + 尧\n。\nh\n=Ʃ C\n∴ Mo ( λ λ ) λ= 2706 - 1494 011212\n_mo 、 - 2 = 0 . 0 . =\nλλ",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "9\nO λ= —\n1212× (500 ×. 0 - 2\n= 6 06 × 10\n=",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "× 0 25×10\n-3 .\n.\n⾃由光谱最⼤测量范围 : 0λ ) ⾶ h = 2 N 0 i 0 λ (s . R) = 546 0753 - 546 . 0728)= 2 . 5 × 10 -3 nm\nλ - ( 546 . 0753 + 546 . 0745 + 546 . 0734 + 546 . 07281 / 4= 546 . 074 nm\nh 546. 074× 、 0-9)= 59 64\n- — = mm\n.",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "5 × 2 X 10- 3\n.\n需要分辨的最⼩波⻓差0 λ m = 546 0734 - 546 0728 = 6 × 10 -4 nm\n. .\n== 97 97 站⼆ , 46 .0746× β= 09 得的 = 8 .6 mm\nA 0 . ms= 0 . π",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "10",
+          "text": "代⼊\n-4\n综上 8 6 mmchc 59 64\nmm\n. .\n(1 ) 中⼼波⻓ ( 透射⽐最⼤ ) = n Ʃ h 4 2 X 1 -55 × 109142\nλ × ≈\nc : nm\nm m\n当 m= 2 时 λ c= 620 um 当m = 3 时 λ c = 4Bum\n下在可⻅光范围内有两条波⻓为 620\nnM\n和4BMM\n2) 半宽度 。_ - e\n: λ=②\nc\n←\nnh 功\n2π\n当⼊ = 620 nm 时 : 0 λ — 2π ( × 62 1 0 5 × 5 10 × - 9 4 ) 2 × 107 — σ - 9 0 6 . 96 = 4 . 029 nm\n.\n当⼊ = 413 nm 时 —µ 3 ×0 - 9 ) ^09←90 79\nO λ= 1 . nm\n2πX1 .55 ×4×(\n0→\n=\n第⼗章\n③\n×\nv\n×\n① 应为平⾏于单缝⽅向的直条纹或垂直于⼒轴的直条改\n主极⼤条纹宽度⼆次极⼤条纹宽度\n②\n出 aom\n③ 相位差 α=π asino =mπ 时为暗条纹 sinθ= 00 =\n④ 次极⼤由 tanθ=θ 确定 α=± 1 . 43π± 2 . 459 ",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "干涉",
+              "score": 4,
+              "keywords_found": [
+                "条纹"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 1,
+              "keywords_found": [
+                "相位"
+              ]
+            },
+            {
+              "topic": "衍射",
+              "score": 1,
+              "keywords_found": [
+                "单缝"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "3",
+          "text": "= a dsiuo kλ\n9条 Q ① =\n×\n⼀ 1 时 =\nSTMO= K\nv\n×\n② 之些 :",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": ".\n☆= v\nA⼆ MN\n⼊\n①② ↓\nOθ= —\nNdcoso\nU U\nv\n×\n☆=\n③ dsino ⼊ ddmdA mNd\n降低 = m ⼆\n× 武求导\nv sinθ= oo = _ m o λ\n* dcose\n× 00 = NdcosodA\ndcosomcN\n⾊散\nv\n茁\n兴\nx\n④\n× ×\n胎 0\n*\nA = ⼆ MN =\nOλ 00\nNdcoso\n④ 零级主极⼤强度 I NI\n=\n。\n④\ndsino = m λ = Mr λ\n. 2\n是 些 5\n= m . = 亏 mz",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "②\nd\nb\n= 3a =2a\na+ b\n=\n3G\n程中遇到障碍物偏离直线传播⽽进⼊⼏向阴影中\n出现\n,\n光在传播过\n光强不均匀分布的现象\n衍射\n菲星聯衍射\n远场衍射 光源和观察屏都距离衍射屏⽆穷远的衍射\n振幼相于叠加\n⼝\ndsiuo\nd 0 = = m ⼊\n,\n3叭 3\n(H- 1D3⼊\naxf\n21U e =",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "衍射",
+              "score": 5,
+              "keywords_found": [
+                "衍射"
+              ]
+            },
+            {
+              "topic": "光的传播",
+              "score": 2,
+              "keywords_found": [
+                "传播"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 1,
+              "keywords_found": [
+                "光强"
+              ]
+            },
+            {
+              "topic": "傅里叶光学",
+              "score": 1,
+              "keywords_found": [
+                "衍射屏"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "589",
+          "text": "× 103 δ=π a π sino O= arcsin *\n. =π a",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "8m\n.\nα= 哈 = 器 ×λ= 550nm则 Dmin - — . 22×5 . 5× 107 × 602 x 180 — 2 . 8 M",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "O O5Xπ\n.\n訂\nƩ d\n=m λ m=t 5\n.\nd ( siui+ STu θ ) = M ⼊令 Sini = 1 则有 ( 法 ±1) d = m ⼊ - Ʃd =m λ M= - 1",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "9",
+          "text": "82\nmm\n. =☆= × — λ 58 9 9 =× 1 3 0",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "λ= 0 . 6 um A MN N=π = 491",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "491",
+          "text": "/ 50 = 9 . 82 mm",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "109",
+          "text": "爱⾥斑半径 d 告 546× × 0 5 5\n: γ 0 = 0 . 61 = 122 = 1 . 2~— 1×10-2 . = 3 . 33 ) × 10 -\n直径 3 331 × 10 - 5 x2 = 66 62uM\n:\n. .",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "4",
+          "text": "ooum\ndsino = m λ dsino = 2 × 600 ×10 - 9 = 3 ×λ λ=400× 109 = 400 nm",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "6\n:\n袋\n则 ± 6 级条纹缺级兴 = = 6 u : m = l : 6",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "干涉",
+              "score": 1,
+              "keywords_found": [
+                "条纹"
+              ]
+            },
+            {
+              "topic": "衍射",
+              "score": 1,
+              "keywords_found": [
+                "缺级"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "6",
+          "text": "9\n2 dsinr =m λ λ= 2 × 1×10- × 5Tn 150 = 517 6 × 10 - = 517 6 nm\n. .\n第⼀极⼤\n=α=β=± 1. 43 π I = ] 。\n(\n) (\n☆s",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "=\nI 0 (\ns4in 1 .\nπ )",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "4",
+          "text": ": 0 . 0022 I 。\n第极⼤⼆ : 2 ÷β=± 2459 π I = ] 。 ( )(幾 s ) ≤ I 0 (4su 25.59 π ) 4 =0 . 29000] 。\n了 m\ntanθ=µ = 3 × 103 rad ≈ Sino\n卡曲 … ] I ( sm ☆ )\nS=\n(\nmN\n) = 。S( PS[ P\n—。 — … = 。 ÷ P I\nγ(s2imcsP\nI ( 學 420 (PCoss\n= =",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "当⼲涉因⼦为零时可能出现缺级则Cos是\n=0\n时即 δ=± (2m +1)π 时( m =0. 1 2 . . )\n.\nδ为相位差 = Ko = 笑 dsTnθ=±(2m+1 )π λ=+ dsin θ= 瑜 + 1× 103 × 3× 103 = 16× 01⼆ +1 nm\n在 λε ( 390 nm 700 mm ) 时 m 可取 4 5 6 7\n, . . .\n当 M= 4时 λ 4= 666 . 67 um\n当 m= 5 时 λ 5 = 545 . 45 nm 即缺少的波⻓有 : 400 nm , 461 . 54 um , 545 . 45nm , 666 . 67 nm\n当 m = 6时 λ 6 = 461 . 54 nm\n当 m = 7 时 λ 7 = 400 nm\n=☆= 05893 × 帶\nA MN (cid:15482) N = -9 × ±= 491 dsmo =m λ , 求得 d = 0 = 27 um\n×10\n第三级缺级兴 = 共 = 3 a= 3 d = 9 um\n6≥ 9 6\n① dsin θ= m λ 求得 d STu 300 ×10 - = 3 6 ",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "衍射",
+              "score": 2,
+              "keywords_found": [
+                "缺级"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 1,
+              "keywords_found": [
+                "相位"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "10",
+          "text": "d 3 .\n最⼤视野时 θ= 900此时 m 6× = 6 且 ± ,缺级\n= — — = 旦",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "衍射",
+              "score": 1,
+              "keywords_found": [
+                "缺级"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "9",
+          "text": "⼊ 600×l0- 4\n则能看⻅ 0 ± 1 ±2 ±3 ± 5 - 共 9 条谱线 ± 6 级刚好看不⻅」\n⼭ d = 500 = 2×10 - 6 = 2 um N= 100 × 500 = 5 × 104\ndsTno = m λ m= 1 时STMO ÷☆= 0 . 3164 m= 2 时 STUθ 三⾶ = 0 . 6328\n⼊ 8632 0\nCθ= —Ndcoso cosθ . = 0 . 9486 Oθ 1 ⼆ 5 × 104 ×2 、 × 10 - 6x09486 = 6 . 67 ×10 - 6 rad",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "衍射",
+              "score": 1,
+              "keywords_found": [
+                "谱线"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "9",
+          "text": "Cos θ r = 0 . 7743 O θ 2 = 5 ⼀ × 10 6 4 3 × 2 2 . × 8 10 × - 1 0 0 × - 0 . 774b = 8 . 17 × 10 - 6 rad\nl , = fo θ 1 = 0 . 5 × 6 . 67 × 106 = 3 .34µ m( 2 = fo θr =0. 5 × 8 . 7 × 10 b = 4 . 08 um\na) 00=— cosom 0 ⼊ 器⼆⼆⺾ dcoso",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "9",
+          "text": "则\nOL\n, =\nfo⼋ µ\ndco\n=\nso , ⼀",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "6",
+          "text": ")\n= 0 . 131 mM",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "9",
+          "text": "则 lo叭dcosor\n= ⼀",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "= 0 . 32 mm\n11以遮住偶数条缝时为缝宽为a间不透明部分为5ad\nba\n=\n没 α= Tπ π asin θ β= ☆ dsin θ= 12 α\n—\n…「\n则有 2RSTnb2\n= 90 u Sin 6\nA\n= do\n2RSTU 6 N2 = A 0 6a\n。\n⼀",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "I (\ns) S( Tn",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "6",
+          "text": "b\n22\n=\n。\n上遮住奇数条缝时和遮住偶数条缝—相同 = 。 () S( Tnb F\nI\nI 62\nB7全放开时宽为 a 健间不透明部分为 a 3a 交叠 在两个为求不透明 a 的两个缝衍射为\n:\n,\n⼀ 此时 a = a . b = ad =2a 没⼩ = π _ ⼊ asiuo β - ⼜ 2πdSTUO = 4α\nL\n—出巡\n图由可得 a",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "衍射",
+              "score": 1,
+              "keywords_found": [
+                "衍射"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "= 290cos22\n则全放开时为多相组距为 a 的缝衍射叠加 . 此时每组缝间隔d = 6 a\n2π dTuo =\n则此时 β=π - 12α\n^\n、「 由图可得 22STn 62\n=\nai\nA\n'\n= 901\nSTnbN2",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "衍射",
+              "score": 1,
+              "keywords_found": [
+                "衍射"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "⼀\nSiub\nα\n⼀\n2RSinbNX= A0",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "2",
+          "text": "SIn\nI\n=\n4I COS222 ( )",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "62\n没 α= β π a = πdsin θ 前两缝相位差为β =2πasin θ= 2β\n— .\n⼊ λ\n后两缝相位差为 β=π4asTuo 如图 A = Ax + Ayz\n= 4\n⼊\n“\n… Ax = a ( 1+ cos 2β+ Cos 6β )",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "物理光学",
+              "score": 2,
+              "keywords_found": [
+                "相位"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "無\nAy = 90 ( STn 2β+ Sin 6 β )\n⼀ 。 [\n←\nI",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "= 1 。 P [3 +2 (cos2β+ Cos4β+ os6β) ]\n=Ʃ\nπas= 2π aSino\n没 α=aπ s δ 2 5αδ 22\n=π=\n, 2\n⼼。⼀\n如图\n: Ax = d 0 ( 1+ cos52 +C 0s 7 α )\n“\nAy = a ( STu52 + STnTα)",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "↑ ] = I (SP[ c+ 2oL +s22+c0s 523 cos7 α)]\n。\n☆",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "L sTn2- sτn 1 )\n设 α= 政 (5 Tuz- STn1 ) β=2 d( sin2- STnD\n“\nsinwP\n则 I I。\n((\n=\n↓ ) d = 000 X(0 - 3 = 1× 106 m 2 dsinr = m λ r= avcsind = avcsin( o ] 3) = 15050\n.\nλ ) 衍射⻆取900 时 STM θ= 1 d ( s τni ± snθ= m λ\n此时有 d(siur+ 1 ) = m . λ m . = 2 . 33\nd (binr - 1 ) = m λ m =- 1 33",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "衍射",
+              "score": 1,
+              "keywords_found": [
+                "衍射"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "text": "2 .\n故可看到⼀ 1 0 , 2 ⼀共四条谱线\n, ,\n第⼗⼀章\n部分偏振光 某⼀⽅向的振动⽐其它⽅向占优势\n:\n①\n⼀\n④\n⽅解⽯负晶体\nve\n> Vo necno\n×\nv\n=\n③\n肓\n。。\n: \"",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "偏振",
+              "score": 2,
+              "keywords_found": [
+                "偏振",
+                "偏振光"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 1,
+              "keywords_found": [
+                "偏振"
+              ]
+            },
+            {
+              "topic": "衍射",
+              "score": 1,
+              "keywords_found": [
+                "谱线"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "↓ 。\nv c\n⼈眼\n⼈眼 ⼩眼\n④",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "00",
+          "text": "线快慢轴\n线偏振过波⽚卡快慢轴\n± 50 圆\n→\n、\n②\n任意⻆ →有圆\n④\n⾃然光通过任何波⽚出射仍为⾃然光\n。\n①\n③\n波⽅向⼀般垂直于快慢轴⽅向\n波⽚的光轴平⾏于波⽚的⼊射表⾯ 但其与快慢轴的关系取决于晶体正负\n,\n正晶体光轴和慢轴⼀致\n负晶体光轴和快轴⼀致\n。\n②\n①\n②③\n②\n琼斯表示法只能⽤于偏振光\n④\n②\n-\n线偏振光\n③",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "偏振",
+              "score": 10,
+              "keywords_found": [
+                "偏振",
+                "偏振光",
+                "线偏振",
+                "光轴"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 3,
+              "keywords_found": [
+                "光轴"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 3,
+              "keywords_found": [
+                "偏振"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "rp=\n②\n反射折射法向⾊性法散射法\n吸收\n⼆向⾊性\n在⽪⽚中传播速度快的⽮量⽅向\n,\n当⼀束线偏振光沿着晶体的辉由⽅向传播时 其⽮量将随传播距离的增加\n,\n偏转的⻆度 θ=α ( 其中 α为旋光系数为光在晶体中传播的距离 20 1 ⽽旋转\n不\n,\n将⼊射光分\n解成两分开⼀定⻆度振动⽅向相互垂直的线偏振光\n双折射差值较⼤\n遵从\n裄\n不 垂直\nIMax Imin\nP = - o ~ 1\nImax + Imin ⼀\n| 偏振光偏振度为",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "偏振",
+              "score": 10,
+              "keywords_found": [
+                "偏振",
+                "偏振光",
+                "线偏振",
+                "双折射"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 4,
+              "keywords_found": [
+                "偏振"
+              ]
+            },
+            {
+              "topic": "光的传播",
+              "score": 4,
+              "keywords_found": [
+                "传播"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 3,
+              "keywords_found": [
+                "折射",
+                "反射"
+              ]
+            },
+            {
+              "topic": "折射",
+              "score": 3,
+              "keywords_found": [
+                "折射",
+                "反射"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "text": "A\n450\n-\n圆偏振光 左旋\n的 [ : ? ] [ =τ\n! ] [ ! ] =I0 c 0 s =60=☆ I Iz I0c 0 s= 30 c 0 s~ 30 = ] =Ʃ L",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "偏振",
+              "score": 3,
+              "keywords_found": [
+                "偏振",
+                "偏振光",
+                "圆偏振"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 1,
+              "keywords_found": [
+                "偏振"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "1",
+          "text": "。 = 0 ,\nTI ,",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "54",
+          "text": "730 3 I = Icos' s cos =δ= 3\n.\nTI\n的 。 ƩI [Cos 300 ] 3 = 式 0 = S ]",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "16",
+          "text": ".\n17\nmm\nδ=πd(\nne\n-n\n0)= 2m\nπ+π\n⼀",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "636 tanB 些\n=\n.\n线偏振光 垂直",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "偏振",
+              "score": 3,
+              "keywords_found": [
+                "偏振",
+                "偏振光",
+                "线偏振"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 1,
+              "keywords_found": [
+                "偏振"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "00711",
+          "text": "32 34 um 0 .\n.\ncoss [ H\" amiitan { ] [ ] = 0 ] os δ -tans ] [ 0 ] : Coss = 0 8 =π\ni ,\n[ [\n=\n. 92\nδ= d π ( ne -no ) → d =≈ ne — 58 3 × .0 9 - 9 32 . 34um\n-= no ( x. = nx0s\n)",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "417",
+          "text": "4\nmm\n.\n了\nAy A cos 300 = 3 A\n= 0 0 汇了\nAx A δ 300 =÷A\n= 0 iu 。\n( 1 ) 沿铅垂⽅向振动的偏振光通过光轴沿铅直⽅向\n的偏振⽚ 光强不变\nA\n;\n通过B : I = = Cos2450 I 0 ƩƩ ] 2=Ʃ I\n( 。\n( 2) 通过B 后 I = 0Cos 245= 0( Ʃ ) =÷I\nI I 。\n通过A 后 I Icos2450 I(] 2=ƩI' EI\n= = =\n。\n旋转没前最⼤光强为",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "物理光学",
+              "score": 4,
+              "keywords_found": [
+                "偏振",
+                "光强"
+              ]
+            },
+            {
+              "topic": "偏振",
+              "score": 4,
+              "keywords_found": [
+                "偏振",
+                "偏振光",
+                "光轴"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "光轴"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "20",
+          "text": "其余光强为\nI\n尼科尔棱镜 :\n则旋转后 I cos 2600 + I Ʃ ( ] +I ) I = 2 I",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "棱镜"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 1,
+              "keywords_found": [
+                "光强"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "= 0 0\nImax = I + ] = 3] Imin = I",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "PuinPmRmaixn\nP ⼀+ _ = 2 = 50%\n最⼩偏向⻆ α+= 专\nsin nsm\n:\n→δ Ʃ\nm\n=2arcsinnsin\n-\nα\n对 O 光代⼊ u = 1 5246 α= 500",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": ".\nδ\nm =\n2arcsin2146×sin2501\n-",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "230",
+          "text": "对 e 光代⼊ ne= 1 . 4792 α=500\nSm = 2avcsiu( 1 . 4792 ×siu250) - 500 = 27 . 380\n0光和e 光的差: 30 .23~- 27. 280 = 2 850\n.\n转折前垂直于棱镜⽅向振动⽅向的光为寻常光此时\nn = 1. 658\n袋\n转折后振动⽅向垂直于棱镜⽅向的光为⾮寻常光此时 =1 . 486\n“\n转折时遵守 : USTU 15 = M 'Siu θθ=arcsTn π MST . u - l50 = 16 . 7850\n出射时 nsin( o- 150 ) = sind \" ψ - arcsinonisin( 1501 = 2 . 640\n分振动⽅向⾏析于⽿⾯的光恰相反",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 2,
+              "keywords_found": [
+                "棱镜"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "21",
+          "text": "2 64 5 280\n= . × 2 = .\nae aei\n右旋 : E = 2G Ey = π EPE+P = 5a 2 左旋 : 我 =2a Ey = 记 IEP +E| P =5a 2\nE ( ]= ( ) 差 微() ( ⾏\n右區 份 “ =\n合成波是光⽮量沿⼊轴的线偏振光\n相加 写 () 份 ( ) =☆ 话) ,\n+\n: 振幅为椭圆光⼒轴分量振幅的两倍\n,\n强度为\nI\n的单⾊光经过起偏器后光强为702\n.\n起偏器和检偏器的透光轴相互垂直 II\nZosinS",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "偏振",
+              "score": 7,
+              "keywords_found": [
+                "偏振",
+                "偏振光",
+                "线偏振",
+                "起偏",
+                "检偏"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 4,
+              "keywords_found": [
+                "偏振",
+                "光强",
+                "振幅"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "光轴"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "22",
+          "text": "TM2S\n=\n对 Ʃ 波⽚ . δ=π+2m π 则\nII\n=0 STn= 2α\n☆π\n波⽚旋转⼀周中当\nα= 0\nπ\nπ\n时 II\n=O\n为极值 4个\n. , ,\n当 2 =π E π π . E π I 0 为极⼤值 4个\n, . ==\nπ =Ʃ+ 与式⽪⽚⼀致各\n对 波⽚ δ=π+ 2Mπ STU O 4个\n对全波⽚ δ= 2Mπ STu 2δ= 0 则旋转⼀圈都沒有光强输出",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "物理光学",
+              "score": 1,
+              "keywords_found": [
+                "光强"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "8",
+          "text": "通)过起偏器后 I I /\n( = 2 Ʃ=mπ\n: . . {\n∵ 为正交偏振⽚下 I <= 0 STu = 22 STn =Ʃ 8 =2Mπ\n⼋ δ=π Me - nold = 2πM\" λ ⼆ π X 0. 172 × 2 . 5× 105\n“ 2 mπ\nλ=\n器43x0",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "偏振",
+              "score": 2,
+              "keywords_found": [
+                "偏振",
+                "起偏"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 1,
+              "keywords_found": [
+                "偏振"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "text": ": 线偏振器正交 II = I STU 2 STU 三\n.\n补偿器光轴与线偏振器透光⻋轴成 450 ∴ 2 450 I IoSTn2( 200 ]\n= 1 = Mo -ne)\n当 π d 时为暗改其中\ncuo -ne)20 =m π m = 0 ± 1 ±2 …\n, ,\n当 π ( uo-Mhe ) 20 d =π+ m π时为亮汶其中 m= 0 ±1 ±2…\n. ,\n其中随od 变化条改变化cd 随补偿器宽度⽅向均匀变化故沿补偿器宽度⽅向\n,\n可以看到平⾏等距的亮暗条攻",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "偏振",
+              "score": 5,
+              "keywords_found": [
+                "偏振",
+                "线偏振",
+                "光轴"
+              ]
+            },
+            {
+              "topic": "物理光学",
+              "score": 2,
+              "keywords_found": [
+                "偏振"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "光轴"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "109",
+          "text": "µαλ= —→ 89 . 3×\n2) 0 s - 2 × (1 . 6584 - 1 . 4864 — ) × 800 Xπ - 0 . 049 mm\n解 琼斯矩阵法 设偏振器⽅向为Y晶体光轴为参与 x 或Y都成450 ⻆没 φ=π cno_ neld\n: :\n各晶⽚相位差为 δ\n=πcno\n-ne)d = 20\n: 1\nδ 2 =π(no - ne) 2 d = 44\n…\nδ Np\n= 2 8\n、\n偏振器琼斯矩阵 P = [8 ], 波⽚的琼斯矩阵 ( 快轴与⼒轴成4501 G = Cosδ\n[itanz1i-tans",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "物理光学",
+              "score": 3,
+              "keywords_found": [
+                "相位",
+                "偏振"
+              ]
+            },
+            {
+              "topic": "偏振",
+              "score": 3,
+              "keywords_found": [
+                "偏振",
+                "光轴"
+              ]
+            },
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "光轴"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "text": "E = (PGN ) ( PGN) … ( PG ) ( 0 ] PG ≡ COs ☆ ( Ttani % )\n. -\nCOSSNCOSSwz - Cos δ \" 0 sing2i \" nl 4) ( 0 )\nE = t -…\n(\n) =—\n\" .",
+          "type": "未分类",
+          "topics": []
+        }
+      ],
+      "all_text": "课后习题\nV\n3 4\n.\n在各向同性的均匀介质中\n×\n⼈全反射光密到光充\n—\n—\nv\n—\n— —\n12 3 4X\n. .\n⼀\nU\n① 仍在同⼀空间\nv\n、 ,\n—\nv\n⼀\nV\n只对折射系统成⽴反射系统不成⽴\n㉔\n0\n☆\nπ=\n-n\n×\n- 6=- ∞\nn\n⼀\nv\n上\n-\nnir\nn_nc\nV和r异号\nx n _n\nU ( 1 \" ) r ↓\n+π\nn\n\"\nn ' inidid\na\nn\nnin\n出⼀ π\n下\n“\n⼀\n。\nB>1 虚实相反放⼤正像\n只书\n√ γ= < 1\n虚物\nv\n,\nU\n3\n⼀ -\n异侧虚实相同倒⽴\nβc0\nB 缩⼩\n< 1\nU\n巡\n×\nU\nU\n。 β= - 2 和 1异号\nl\n×\n|\nγ= - ③< 0\nv\nβ\nα= - 2<\n已\n取 … 。 r>0\n0\nv和\nU\n异号虚实相反,\n式 ⼠ 下\n+ =\nB2\n0 i =Ʃ20\n⼀ ⼀ ⼀\n⼀ ⼀\n+mi\n=∠0\n= 0\n.\n200\n嬷幽 arctano 6 = T = 3096\n. . ,\nSiui Siuinl\nn =\n、 30 96 × 1 5163 = Sinii\n. .\ni ' = avcsiu 30 . 96 × 1 . 5: 63\n' 540\n2i = 102\n.\n— —\n0\n⼀\n全反射\n光密到光疏\n派\nM ,= 1 . 4 ,\nnzsiniz = nssin 900\n鬣\n菇\nTr = arcsTn\n900\nn\n.\nsini . =\nn\n2Sniz =n> sin\n前\nTi\n= arcsin\n⼀\n赛赛赛\n00\n⼀\n—\nd d\nd d\nSini\nd tanT = i = arctau - — :\n2 h 2h A,+=e 4 n\n1\n2\ni\n— STuin S ni ' = 900\n= τ\n=n\nmi 4\nn =\nd\n0\n~\n⼀\n⼀\n⼀\nl = 1 75 li =o - . 1m\n. .\n⼩\nli 5\n公+÷=→\nr\n=Ʃ\n=\n*0\n. =0\n.\n212 m\n(r\n⼀ 1 tli 1 65\n, .\n⽚步 _ =\nβ= _ = y o .1 m\n「\n⼀\n⼀\n↓) 1 = 150 mm V = 200mm\n.\nγ==500\nLi\nγ≤200 π+π=→=→\n, = 300 mm\n200 100\n: lz = li - d = 100 mm\nπ+ π= li= 125\n- mm\n⼀\n÷ ! = 10\n⼆ x\nβ y\n= - . =-\n40mm\n, L Y 152\n-\n/\n,\nβ== 台⼆步 , 8 % = ※li = 4x0 - 125 = - 50 mm\n-\nY lz _ 1 o0\n⼀\n位于 AB 之间距 B 125 的位置⼤⼩为50 _m m\nmm\n2 ) 1 , = - 50 mmV22500 mm\n2 =÷ 25\n公 π= 吃\nli\n+ 500 = mm\nli d\n50+ 25mmri\n= 200mm\nl + 200 =\n2 = =\n725\n170\n古 公 司 3 π= li= = 5882\n+ = T + — .\n4 25\n.\n125\n50\n出 ⼀ 了 50125 oY ! y : = 号 0\nβ= - = — — = - 。\n50\n-\n100\n725\n725\n5⽇00— ③=\n: ⼀压 0 ∵ 23 .53\n25 w -\n— —\nβ\nr 些 = 725 — 毙 5 4 25 725\n.\nƩ\n步 == =\nβ= 5 i 2\n⼀ ( 40\n=\n↓ | ⼀… —正 30 ( = 30 mm\nmm\n_\nπ µπ nn\n+ _\nn = 6. 5 n \" = 1 τ o - 05 = 些 γ= 20 mm\n⼀\n⼀\nl\n-\n1=\nγ=15 mm nF1\n.\n720 U 2=1\n.\n360 不⼀世世⼀m\n1\n←20\n-\n的36-0\n“ n 2 l\n—…\n…個公\n(i\n=\n)\n—\n20\n3\n×\n6\n1\n0\n5 = 71\n.\n6667\n∴\nl li d 41 667\n2 = - = .\nƩ m - - 世器 360 - 6 ] 1072 3= 0 ☆ Li = 20 . 83 mm\nπ\n⼀\nnc = 1.3 }n 空 = ( (i d 130 75\n2 = - = . mm\nL , =- 100 mm r = -\n65\n. U ⽔ 世 Hc - M空\n古 _ —\nlu m\n_ — 完n⼀冰\n⻄ 逃 3 - =33\n“ r 75\n— 以 0 . 16 5\n.\n100 — 出上 3 :33\n” 033 ++\nd = 18 5 ⼀ 器 - 16 . 5 c : 130 . 75\nγ 1=- 16 . 5 . γ= 16 . 5 公 : ” - 3 Li = 149 ory8 li = 48 . 105 mm\nβ - 世出 . = ⽯ —\nLili\n—\n8.105× 14925 ≤ 3 =\n- 0 . 55 = —\ny\ny\n130\n.\n75 ×(\n-\n100)\n1\ny = - 5 . 5\n“\n物体经玻璃盒后在右凹⾯右侧48.105形成了5 ⾼\n.\n倒⽴的实像\n5\n⼀\n善重\n不镀银时 Li = 480 n 为玻璃 为空⽓\nn\n-=so r-\nn\n.\nT\n=π\nm .r -18(1 -n)\n- π r\n-!\n镀银后\n反射π 公 = 式 γ=2 li 令 Li = li\n折射 π \" - ~=可骂 - 0 = 世 =\n洱\nπ n = - 0 (cid:15482) n . =Ʃγ= - 240 mm\n…\n⇌\n妆\n…\n…\n…Δ\nL\n,\n=- ∞\nπ 公 =≈ ci= 90 mm( 2 = Li - zr= 30 mm\nπ = 5 π 5 5\n台 . - . . Li= 15mm\n=\n300\n. 兜 庭15\nβ= × c 0 实像\n= ∴\n⼝ X30\n_\n反射 L li 15\n3 = = mm\n的 + 公 = 式 5 + 的 = . li =∞\n光线由左⾄在传播故将\nli li\n= =n\n在⼀= n ⼀ π 5— - 0. 5 L 4 = - 90 mm ( 5 = l 4 - 2r=- 30 mm\nr\n⼦ 0\n-\n的⼀台的 .5\n= 成 0 L5 = - 15 mm\n0\n= c\n实像\nβ\n: 0\n第⼆章\n②\nv\n0\n×\n×\n0 ②③\nf\n× 在同⼀介质中重合在不同介质中 λ F =\n√ f - H ' >\nv\nv\n⼀\n⼀\n→\n⼀\n品\n⼀ ⼀\n⼀\n.\n|\n←\nU\nU\n⇌\n≈ u\nv\n0 ①\n※\nv β> 0 = 20\ny\nV=÷ 20\n1\n— β=→确世定\nX ↓\n—00 ①\nβ=\n-武⼀于\n1 2\n仁茹\n↑↓\nv\n×\nv\nX\n计算式\n定义或\ntmultanu\n⼀ r = r= 芯古\nv\n⻆放⼤率随物像位置⽽异\n√\nX\nv\n①① 3 ④ xj = f + f\n拧 1\nv 才 n 1 fco … f xj = ftj\n. — 1 λ\n⼀x 步 — 才 = — n ⼨才 0=f⼀ fd\n⼀\njxj × j - xj = [ f- lj - d =0\n⼀ xj =\n—\n② (<_ d → ;\n⼆想\nf\n0\n×\n0\n⼀ 或: 1 =— — 与左 =0\nf\n—\n≈ ,\n—\n—\n于天⽆\n可\n02\n⼀\nfi >o 求 20 可画 + - d画,哥\nficoico\n可co\n×\n(cid:15482)i\n=\n古\n③ 巡\nj 求\n= -\n⼀\nx\n— — - ← .0\nX\n⼀ ⼀\nv\nU\n①\n⼀\nv\n— 共轴\n求可司\ny\nO\nv\n④\n⼀\n×\n当 r> d 可视为萬薄透镜 对于单个薄透镜两主⾯与球⾯顶点重合\n, ,\n×\njn ⼀\n左\n⼀π\nxj f\n等⼀上⼀ fcf =\n⼀ n Xj ⼨\n=\n⼀\n39 下\n8\n-\n—\n⼀\nn 1 52\n=\n.\n可 j )\n+dβR\n= = (u- )( β- β\nn\n∵ 为薄透镜 ∴ 或 = 将 = ( u-)( β - Ʃ )\n05232\nγ i >0 VE< O 设γ\ni\n=λ 吃 = -2X 5= 0 . 52 ( Fi -☆ ) → 52 = x= . .2 = — 3 .\n9\n下\n5 o2\n=\n5\n区 : ( ☆ - D ( π ⼀后 ) SooD = ( 1 . 5 -1 ) (π ⼀后 )( π - 位 ) = 1000 D\n- 1 D = (皆 ) 1000 D\n51000\nD = 999 Dn =1 .502\n⼀个正透镜和⼀个负透镜 ⼯作距⼤于焦距\n正透镜 负透镜\n组合焦距⼤于机械筒⻓ ⻓焦距镜头\n球⾯顶点\n⼀ ⼀\n|\nzz 减⼩\n…\n成\n(器 )⼀( 位 ) = j %\n-\n⼀\n×== 5*多 5625\n×= ff -\nx\n— =\nx\n5625\n当 x =- ∞ 时 X ⼆ — -\n⼀\n=\nλ= - 4x 103 mm λ\n”\n- —\n- 5625\n— = 1 .4063 mm\nX = - 104 mm X - — — 5 1 6 0 2 4 5 = 0 . 5625 mm 103 - - 4 5 x 62 10 5 3\n— X = - 2× mm X = — = 2 8125 mm\n103 ≤\n5625\n7031 -\n2×103 .\nX= - 8× mm X = 0 . mm\n-\n8× 103\n5625\nX = - 6× 103mm , = 0 9375 mm\nX0 .\n=×c\n1 '\nn Ʃ= \" nn =1 .3} L = - 1X10 mm\n— -\nn\no r =1 γ=∞\n103\n1 ×\nV - 751 88\n= = - mm\n.\n以3\n距离照相机物镜物⽅焦点 1751 88\n: x =- . mm\n加\n- ⽀世\nβ= — — 1 = :- 0 . 0428\nf 817581\n.\nX ' =☆\n村\n= 5 8\nx-8 7\n1\n5\n5\n=\n3 . 21 mm\n.\n×==÷→\n=\nβ= - 3 U - 36 ⼗\n—\n式 Ʃ= 于 j - 6 兆\n- =\n18mm\n些 i\nL 2= ( + . 8 β= = - 4\n(\n= -\n4 l\n2 = -\n4l\n-\n72\n6 = mm\n后⼀ π= 我 i π= = 288mmf 216\n- 式 -\n⼀ ⼀\n⼀\n⼈ LA\n1 | lA = - 180 mm = 183 . 33 mm\nA B 式⼀式\n“\n上→ 于\nL LB 225\n13 = -\n220mm\n1\n= mm\n/ c—200→V cloof\nh = (B ( π= 225 183 33 = 41 67 mm\n- - . .\n2) ☆ ⼀式 = 于 ( = - 200 mm Y = ih =20 mm\n⾶步 ∴\n1 = =\n. 200 mm β= Y 20\n. - mm\n=\nh\n40\nmm\n由图可知 L = d -卡 ∴ d = L - lF = 15 mm\n-\n(\nq\n= f (\n1 等\n)\n. ∴\nj.\ni = -35mm\nii 求求求\n=☆\n35 j\n∵\n= — —\ni-\n50\n=\n尤\n25\n∴ = mm\n65\n=\n扒 rin ⺾ — — 1 . 5 θ × 6 × 104 = - 1440 mm 或⼆⼀在 D\n( n-1)[ n (vz - ri ) + (n-1)d] 5(15 .5 ( - 1000)+ 0 7 . 5 × 40\nF= f ( | -π n+ d β . ) = - 144 × [ 1 - 5 ×50 × ( - 站) =- 1520mm\nLF =- f ( 1 +π n1 dβ ) = 1440 × [ 1+ 515-1 ×50 × ( - Ʃ 00 ) = 1360 mm\n+= - f π \" d β. = 1440× F 5 - 51 ×50 ×( - τ 0 ) =- 120mm\n( f m ^ × 51 )\n+= - π dR =1440 ×50 ⼈ ( - 50 = - 80mm\n⼀\n⼩ /γ 1 1 = 1 k 1 没 ri = x Vi = - λ j = 120mm n=1 . 5\n与x ^ ∴ γ . = 120 mm\ndjiri\nj\n' —… ) [n ( rz - r )+cn-) = — 0 . 501 . 50 -2X ×= 120 γ 2=- 120mm\nri 2 or吃c\n⼭可 = (些 - 1 ) ( π ⼀位 ) = ( t ) (π - \" ) = - 80 += - 810 mm\n2\n⼀\n⼀ ⼀\n∵ 1 km >> 15 mm\nI\n可看作⼝此时可看作薄透镜\n可\n=\n( n- ) (\nβ -\nβ\n2\n)\n为⽿凸透镜\n∵ ∴β 2 =\n则画 等 (cid:15482)\n= = ( n- + ) β . 5 = 0 . 5163 β . →= 7 . 7445 mm\n⼀ ⼀\n— ⼀\n_ 过求 时⼀⻰李d⻰lij )\n( i-d\n)\n1\n— 我 =\n= (\n→ tkdj\n0 _\n—\nf 左 = 左 ( j d — ( ⻰ - d )\n= - — π= - ( 1+ ) =\n求 t ⻰d d⼀求尤\n卡某⼀前⼀直 fid\n_ dltfd\nlui=\nf\n时\n求\n— ⼆ 求\n出台場求求\nβ=\n= ② —\n⼠ 5 ⼨「\n[ l\n⼀\n由题: β=β , β r = - 2 β 2 = - 4 β 2 =2\nC\n∵β F + u = -2 . (i =-2 l\n. 1\nL 75\n此时出⼀ 1 ⼆乎 代⼊求得了 1 =- mm\nG →\nLi 150\n= mm\nlz li d\n= _\n=\n⼜ :β== 些 2 ∴ 有 li = 2 l 2 = 2 li- 2 d\nd\n75\n= mm\n解得多\n代⼊瓦⼀公 天\n→\n“ l 75\n2 = mm\nli 150\n= mm\n物像之间的距离 = (i - l 1 td = 150 + 75 + 75 = 300mm\n由题意可知第⼆⾯透镜不改变没第⼀透镜向右移动\nox\n|\n×=\nlx 代⼊公式得\nl\n= - oX 天\n:\nlx li\n= - ox 化简 225 50 75 150 750 2\n- × = - × - xtox\n:\n=750\n0x\nx = 0\nx 舍去 )\n解得 { :\n75\nmm\n⼀\n由题意 ×\n11 β= 10\n… : -\nq 对 m 物→⽅|和=像⽅由⽜顿公式: X ⼆找\n92= *\nβ=\n☆=等\n1\n⼼⼆品\nmm\n-\n_\n=\nX\n∴ X =_ 1 omm = 1000 mm\n此时求离第⼀⾯的物距和离最后⼀⾯的像距\n( v = x +++ 1 f - lF |=] 10 mm\nli = x + j -| f - lπ|= 1096 mm\n共轭距 f 1 + x - x - f + d - | f - ly | - |j - li |= 1100 + 110 + 15 - 3 - 4 = 1218 mm\n1\nhyji 5100 - 2\ntanVi = tanU 2 = = . = 1 . 5 ×10\n100\nhz h -dtanUi 代⼊可得 d x\n= . (cid:15482) . _ r = mm\n10-\nhy% |\ntanVi = tanUs + =1 . 5×10 →+ \" 250 = 0 . o 11\n-\nhz = h 2- d 2 tanVi 代⼊可得 (cid:15482) d 2= 011 = 9 09 mm\n.\ntanUs ' h / 0 9 /\n= tanUs + 3 f; = 0 . 011 + . 800 = 0 . 012125 mM\nnUs 1 .\n代⼊公式 f 5\n= = 123 71\n= mm\n012125 .\n%\n第三章\n⾃光是由许多不同波⻓的单⾊光\n组成的 同⼀透明介质对于不同\n,\n波⻓的单⾊光具有不同折射率\nO1 ① 2 ③④\n故在成⾏⽛板内部发⽣⾊散\n⼀ ⼀\n光楔⾊散\n×\n,\nU\nv\nU\n←\n⼀ ⼀\n②\n④\n倒像\n⼀\n⼀\n⼀\n⼀\n② X\n原\n折射率\n↑ 今 ↑ 然 b\n>\na\n→\n. na> nb s\n⼀ _ 2\n波⻓↑ ud b为红\n:\n⼼\n,\n⼀\n抓叠光路转折光路\n⽿⾯反射镜\n1 557\n.\n42015\n600\n+\nα+ 8 425品代⼊求得 Sin —\nsin m Ʃ 由题缀\n_ =nsin n →= 1 55 ]\n2 600 .\nSTn\nƩ\n平⾏⽿板\n微⼩⻆度或微⼩位移 双光旋转测微\n双光键移动测微\n光学晶体 光学塑料\n阿⻉常数 析射率\n右⼿ 虛\n⼀\na) 图中光经过光偏折相同⻆度移幼\n前后两光束为或⾏光经过物镜成像于\n同⼀点 经光锲后不是平⾏光下成像\n∵\n位于焦⽿⾯轴外⼀点\nb) 光锲键旋转时偏折⻆度⼤⼩会发⽣变化\n光产⽣的偏向确为 δ=2α(n- 1)Cosφ 当⼀个\n,\n光锲键底和另⼀个光键头位于端时同不发⽣⻆度\n偏折 此时像位于焦点上故像点位于物镜\n,\n像⽅焦平⾯上 往复直线运动\n,\nc\n)光垂直进⼊平⾏⽿板不发⽣偏折仍不⾏\n出射 故成像于像⽅焦点处不动\n,\n,\n34\n2 2\n2\n右 右\nZ\nj\n|\n→⑧\nY\n0→\nx\n↓右 →x\n右\n占左\n↓\nOz\nz\n右\n| 5\ny\n物镜罪 壞岛 冒镜”当泉\n|\nxy\n¢ 右 左\n2\n右\n物镜\nx\n2\n了\n0→\ncx zY 右\n@\n↓ 江左 12 l\n了\n忙\n镜\nYQ→ X 忆\n2 右 包 右\n2 | y X y\n2→\n左\n忉\n在\nZ→Q\n左\n>\n或 经过物镜后坐标系为⼀ * 步\n五⻆屋脊棱镜\n㿲数\n^ ;\n'\n再经反射镜后坐标系变为, 它与最终出射\n^\n左\n改变⽅向说明\n像⽐较发现垂直主截⾯⽅向 (x\nx\n右\ny\n存在屋脊棱镜或物镜 ⼜发现由右⼿坐\n;\n䅃\n标换为左⼿坐标则不可能是物镜该为⼀个奇\n数次反射的屋脊棱镜同时使出射⼯改变900\n故推测为五⻆屋脊棱镜\n1\n法⼆\n法 ⼀ :\n=\n武 1 2 OA\n25 2 | 6\ntan θ , - . - = 1 5 = A + 1.5 OA =\n1 5 Ʃ\n.\n2 5 1\n. -\ntm θ r = 成 = 1 | 5 =+ OB = 1\n15\nƩ=\n忄 OA = 6 1\nσ\n综上最近点离墙 1⽶\n1\n0 B = = 1\n。 1 最远点离墙 6⽶\n1\n⼀\n+\n⼈经眼⽔ ( 平⾏⽿板) 成像 cl = hz( - ) 位于平⾯镜上⽅r h ,\n经⽿⾯镜成像位于⽿⾯镜下⽅ + h 此时像经平⾏⽿板成\n,\n像 cl = h 2 (1 - π ) 位于⽔⾯下⽅ h 2+ h +h , - c ( \" = h , + 2 算\n与眼睛距离h + zh 2 / n =2+066.5× 2 ×= 119 . 75 cm\n⼀\n⼀\n经过此光路系统会发⽣350 700 偏折\n×2 =\n𨯧\n∵ 第⼆次光路未发⽣偏所下第⼀次偏折700 则⼊射⻆为 350\n1\n/\n///\n…\n…州\n“\n90 900\n∠ 2 + L5 = L 2 + L 3 + - < 2 = 5\n∴ L α= L L\n: 2 - 3\n<β= 1800 L L ( 1800 C C )\n- 3 - 4 - - . - 2\n1800 L 1800\n- 2 3 - + 2 L 2\n=\n2 L 2 L 2 <2\n= 2 - 3 =\n。\n⼀\n90 420 480\n- =\n经过两次反射偏折\n22\n则经过\n4\n次偏射42\n42 480\n= 2 120\n=\nm\nSin+ =nsiu Ʃ ∵ 等边棱镜 ∴α= 600\n2 。\nƩ\nSm = ae sin nsin - 2 = 2 arlsin 1 . 52 STu 300 - 600 = 38 . 930\n60\n∵ I . =- Ii 2 +δ m = I , - Ii = 2] , = + 38 . 930\n解得 I 49 4650 49 450\n= =\n. .\n_60 53014 ”\n+\nSin\ni4\n+⼦\nm\nSin = nsin 2 (cid:15482) 2 1 67\n\" n = .\n2 600\nSin\nƩ\n2 8\nα= 500 sin + m 5 inx i = n\n{ _ = simα+ 5\n2 2\n型\n350\nδ=\nm\n8\n2+ 五\nsin ⽔Sin\n— 2 = n 解得δ m= 11 . 06\n第四章\n⼊瞳孔往出瞳\n∞\n①②\nv U 焦点和光轴⽆限远点共轭\nv\n0 0 ②\n⼀\n⼀ ⼀ …\n\"\n⼆\n就是⼀组取⾏光线的上边缘和下边缘\n、\n① 当物⽅和像⽅介质相同时节点和主点重合此时经过物⽅主点的光线也经过像⽅主点\n③ 经过焦点的对应光线是⽆穷远点的光线\n②\n孔往光阑 限制轴上物点成像光束⽴体⻆\n: ,\n选择轴外物点成像光束位置\n×\n,\nv\nv\n0\nX\n②\n像云点 U\nv X\n①\n物⽅远⼼光路\nv\nX\nU\nX\n⽣物显微镜\n①\n场镜 可以减⼩⼊射光的⾼\n:\n度进⽽减⼩后续光组\nX\n通光⼝径改变出距\n出瞳距↓ 出瞳尺⼨不变 对成像不起作⽤\n,\nx\n×\n①②④\nv\nv\n↓\n。\nㄨ\n孔往微阑渐晕陳\n物⽅视场⻆\n像⽅孔往⻆\n物⽅远⼼\n场镜\n物镜的像⽅焦点 ⼀次实像⾯处\n5 倍 % \" + 14 \" →放⼤28 倍 : 5\n8\n物镜 分划板\n⽬镜\n此时K =0\n㰂\nA和A 关于透镜成像 L sommli bomm\n≥ ≤\n:\nD 30\n1 = mm\nD 2=22mm , 式⼀公⼿求得 j= 20mm\n唇\n通光孔对于透镜成像:将其看成像\nL lomm\n=\n—\nA\n*\n1\n式⼀式⼿求得\nl 20\n= mm\n- 1 ,\nβ=÷= 炎\n30→ D i = 44mm\n'\n2\n←→\n对透镜张⻆为 arctan 通光孔为系统的孔往光阑和出瞳\nA 26 570\n= ∴\n.\n品\n对通光⼦ 像的张⻆为 23 74 通光⼦孔关于透镜所成的像为系统的⼋瞳睡\nA V arctan =\n.\n通光孔关于透镜成像 ( 2 - 50 f = 100\n器\n箱, :\n等活 0\n式 式 =←→ V\n, i - = - 100 mm\n0x= 17 、 5 x+ 50 × 17 . 5 j\nβ== 咎 Di 70\n⼩如 350 = mm\n50。 λ=\n当物点在 时孔径为通凯光阑和⼊瞳睡出瞳睡为通光 的像\n500 (\n-\n当物点在 300 时孔往光阑⼊瞳睡出瞳睡都为透镜\n-\n,\n↳\nL l关于L 成像为 (像看作物红物看作像)li = 50\nfi\n= 90\nv\n。\n出⼀式 = β=\n⼿ F 112 . 出 式 D = 45\n6 5\n5\nD\n.\n20\n圆孔关于1 成像为O( 像看作物·物看作像) li\n=30\nfi\n=\n90\nKf\n—\nl\n5如\n古台⼿ ( 2 45β= 想器 Ʃ Di= 15\n=\n物点关于 L 夹⻆为 arctan Ʃ 12 0 0 = 14 . 040 圆⼦孔关于 L 成像O \" ( 3=- 20 求 = 40\n物点关于 Li夹⻆为 45\navctan ⼀ 112 . 5 +120 = 10 . 950 出⼀的⼆活 ( 5 =- 40 β ' : 些= \" D \" =40\n2\n物点关于 O夹⻆为 arctan 45 . 190\n5\n= 综上⼊瞳为\nO 孔径光阑为圆孔出童为 O ”\n⼀\n、\n… 眼关于透镜成像为A 1 (物看作像像看作物 )\n武和\n⽌ > Li = 40 j =40 π ⼀ π 于 L 1 = -\n= 560\n140 θ= arctan品 20. 眼睛为孔径光阑\n∴\n— →\n透镜为视场光阑\nθ 2= avctan 0 = 2 . 860\n正\n)⼊瞳为A在物⽅⽆限远处物⽅礼往⻆为\n2\n860\n.\n600\n) ⼆疗X 号则此时 +\nB 0 - =40 ⼆后\n出⼀式 式⼀前\n= 我 - ÷= 0 = - 300 β= Y : 26\n射⼊窗为透镜不发⽣渐晕时线视场等于26\nmm\nD\nD\n. ⽚\nβ= 4 ( 36\n= - { = -\n{\n(cid:15482)\ni\n( - l 180 = 144\n=\n1\nπ τ= 天\n- fi = 28 8 mm\n|← .\n288→\nf .\n→ 0 — —— 44 k → 11 . 667\n等⼆⿒性\n=⼝Ʃ\n, -2 Dr = 18 3 mm\ntanu D = 14 89 mm .\n.\n.\n36\nD 20\nD 50 2=\n1 = 圆孔关于物镜成像在物⽅⽆穷远处\n⽬镜关于物镜成像 ( → 像像→物)\n物\nV = 1200 f = 1000\n式⼀式于 C\n= 6000mm\n-\n1200 ⽚ 2\n→ β= = — Di = lo 0 mm\nDi\n物镜为⼊瞳睡和孔往光阑\n上物镜的⼝径最⼩\n:\n物镜关于⽬镜成像为 l\n1\n=\n-\n1200 卡 =200\n式⼀式 话 上= (cid:15482) iDi\n= Li 240 5 = 10\n=\n=\nu D\n.\n出瞳位于⽬镜后⽅\n240 mm ⼤⼩为 10mm\na ) 由⼊瞳中⼼向其余光孔或框在物空间的像的边缘张⻆最⼩的为⼊窗\n,\n与之对应的实际光孔或框就是视场光阑\navctan 4580\n对圆⼦\nL θ , = 0 = 0 . 视场光阑为圆孔 ⼊窗在物⽅⽆穷远处\n∴\n,\n对⽬镜 600050 4770\nθ r = arctn - = 0 .\n圆孔对⽬镜成像\n卡\nL 200 200\n2\n=- =\n出窗位于像⽅⽆穷远处\n在⼀台天\nli\n= t 切\nB 物⽅视场⻆是⼊瞳睡中⼼对⼊射窗边缘的张⻆\n1\n,\n像⽅视场⻆是出瞪中⼼对出窗边射缘的张⻆\n物⽅视场⻆ 0 4580 = 27 ' 30”\nw = arctan 0 .\n=\n120\n像⽅场⻆ : ' tanw = litauwi tanw ' _ _ tanw\n1 240\nω \" = 2 . 290160 = 2017 \" 26 \"\n第六章\n①\n视场 视场\n0\n③\n孔 都有关\n②\n⻬明点\n③ :\n1物像点点均位于球⾯预点处\n等晕和不晕都不产⽣正弦差\n2 物点像点均位于球⾯⾯率中⼼处\n、 .\n3 {L = cntnyr/n\nX .\nL\n=\n(n+y)/ni\n×\nv X × X ㄨ v X\n②\n②\n\\\n贫\n正\nX\n正 → 枕形\nv\n负 桶形\n→\nX 0\nX\n理想像\n孔径 视场\n球差 位置⾊差 畸变\n倍率⾊差\n3 慧差像散场曲\n2\n像散 像散\n场曲 4 慧差像散\n畸变倍率⾊差\n位置⾊差和阿数成反⽐\n⼤\n负 正\n⻬明点\n{ L = (ntn) r / n\nL L\n= =0\n'\nL =(ntny rln\n|= l\n2 = 0\nL =\nL=\nr\n1 -\n和\n像散场曲 畸变\n场曲\n负畸变\n位置\n对称式\n半部像差的 2倍 材料\n透镜光焦度制造透镜的光学\n⼩\n⼤⼦孔径 ⼩视场\n球差正弦差 位置⾊差 孔往\n⼤孔径 ⼤视场\n球差像散、场曲、 畸变慧差倍率⾊差位置⾊差 ,\n⼦午慧差\n凸\n细光束\n!\n细地像散 时\n— 场曲 畸变\n→\n军外⼦午球差\n⼀\n⼦午宽光场曲\n球差\n⼀\n弧⽮细光束场曲\n⼀\n第⼀次折射\nli = L = O β 1\n第⼆次折射 L 2 = - d Li = (u+ n > r / n β 三別\n∴ Li nL nd 6\n. = 2 = - = _ mm\n丝\nn ⼆\nγ= ny = - 2 4mm\n+n ( 5 .\nβ=β β 1世\n=\n, c =2 25\n.\n⻆放⼤率\n: γ= 式 = 0 . 44\n第七章\n眼睛分率由感光细胞⼤⼩决定\n②\n。\n×\nv 当瞳孔直径增⼤时 眼睛光学系统的像差增⼤ 分辨能⼒随之减⼩\n,\n,\n④\n=π=\nR 2D (\n⼀ - r = - 0 5 M\n.\n校正\n②③ j lr 500\n: = =- mm\n×\nv\n0\nv\n“\n☆\n。\n①\n③ ⼀倍焦距外靠近焦⽿⾯的位置\n—\n或明视距离处\n( )\n显微镜出瞳瞪直径\n位置⾊差\n⼀ X → ,\n2到户 500tanwYPoD 呢500NAIP\nv\nA\n√ 不能使被观察的物体细节更加清晰\n①②\n⼀ U tanω 50\nF —ω= —— % =βe\nNA和部⽆关 tan fe\n。\nx\n①\n。 0\n在物镜像⽅焦⾯\nX ⼀\n⼀次实像⾯上\n②\n,\n低\n、\n× U\nU\nX\n照明出瞳 ⼊瞳后接光学系统\n⼊窗\n不均\nv ⼀ X\n照明系统的孔径光阑\nv X\n出瞳 位于聚光镜的孔经光阑上\n𥌑 后接光学系统 ,\n照明出窗\n②③\n物镜焦距⻓\nU\nX\n⽬镜售距短\n0 U\n①\nv\nx 望远镜的视觉放⼤率 P = 11 B\nU\n当光学间隔很⼤时需要更稳定的⽀架 天⽂望远镜镜\nx (\n⼀\nx y = - ftanw 当對 ↑ yd\nU\n照度不均匀和像⽅视场⻆有关和光圈⽆关\nx\nπ ×\nV 摄影系统的像⾯照度主要取决于相对⼝径 E =T πLSIUFU =☆ T LBi\n光圈 是⽤来控制光线透过镜头进⼊机身内感光⾯的装置光圈⼠下数光圈⼤⼩和 数成反⽐\n② F\n:\n光圈⼤ → F ↓→ Dj ↑ 像⾯照度与相对⼝径(D)成正⽐ 1\n①③\ny _\nU ⼆ ftan\nX\n}\n孔径光阑的定义\n景深\n> = 0 . +oz\n⼈对准取⾯和时⼼\n④ =o\n景深↑ F (光圈数\n)\n↑\nv fd ⼊瞳直径↓\n①\n—\n景⼩\n×\n×\n②\n=☆=+\nR 2 lr = 0 . 5 mj = lu = 500 mm\n50\n05\n.\n芋\n短 “ 台\nlo0 100 lr =+ 1m R =+1 f=lr = 1000 mm\n⼈眼 放⼤镜\nfo'sfe\nD=O\n⼈眼 物镜\n渐晕\n”\n6 5\n.\n光学系统放⼤率 观察物体对准精度⼆⼈眼对准精度\nX\n临界照明\n窗对瞳瞳睡对窗\n光源柯勒镜聚光镜\n×\n40\n15 * 1500×\n500NA ≤ T ≤ 1000 NA\nNA= NSTM\n-14 30 ω==\nSin 0 .5\nnm\ng\n0 99\n.\n=\nO5X450MM\n6 = 400 mm 6 NA = 00 = 0 . 99\nmm\n==\nP=βE = 800 × 「 0 . 3125\n3125\n0\n.\n焦距相对孔径视场⻆ 相对孔径\n⼩\n⼩ ⼤\n72 17\n.\n号 Ʃ π 元 + 府 Nc = % = 冠 = =4 737. 5 lplum = T 2 .17 lp/ mm\n25\n175\n125\n⼀⻰⼆\nT “\n=\n光学补偿法\n𨫎\n⼀个或多个孫系统的轴向移动改变光组间隔\n⼩ 暗\n瑞利判断中⼼点亮度\n分辨率点列图\n光学传递函数法\n1\n…\n⼝\n近⾯镜 γ= 2 f = 200 mm代⼊ π+ i = li 80\n= mm\n⾉⽊据⽿⾯镜成像 4008\n: x = — = 240 mm\n像距等于物距\n—\n( ) 物体过物镜的像 式⼀式⼆于 V = 110 mm\n:\n如图中 o = fi = 100 mm 没⼦V 径光阑为 2X\naull\n⽂\n= X = 1 2λ=2\n)\nC) NA = nsinu ≈ l × 0 . 1 = o1\n6 = 0= — × 5250 .* 0 . 75×10- 0 m = 2 . 75 um\n15 =\n③> D 物 = Y + 2tanu ( -l ) = 8ftanu\nY = 8 × l0 ×0 | - 2 × 0. 1 × 11 = 5 . 8 mm .\n—\n物\n.5 ×550\n“ ” 分辨率根据道威判断 : 6 - — 歲 = 1 . 375 um\n,D 式\nD 、 2) 对物镜 ( 15 β= ^\n: = - mm = - 10\n50\n代⼊得 V 150 mm π _ 式⼆求得卡 π mm\n=\n—\n柴⻰ fi\n⼚ = - _ 0 = l ⼀fi 代⼊得 = 25 mm\nD,\n③ ) NA = nsinu = 0 . 2 tanu O . 2 在图中可知 tanu =— \" =0. 2\n_\nD = 2 + 2 D , 2Y = D - 2 ( 0 2× 15 ) = 10 - 6 = 4 mm\n.\n( 4 ) 分划板应放在图中视场光阑处 . 即物镜后 150 mm没⼤⼩为2 x 则有\n上 ⻰ 50 15100× 2 求得\n: λ≥ =π zx = 40 mm\nx\n( 5 ) 孔径光阑应放在物镜的像⽅焦⾯上即物镜后 π 50mm . 没⼤⼩为 2t\n6\n奇 世 1× 150 求得\n: t . 150 =π . 0 . 2015 : 2t =π mm\n± De ± 42\n61 ) 000 000\nX = — = =±2 . 5 mm\n—\n对物镜 -\n( ) : ( “ 6 = 180 mm { l = - 45mm\n{\n可得\nβ=÷=\n×\n- 3 i = 135 mm\n式⼀式于求得求 = 5=\n∵ 33.75mm\n××\n述\n= *\nT 30\n=\n25\n500\n② ) 出射光园量直径 D = NA =30500 = 1 - 667 mm\n— = 5\n⼚\nB 如图 z ( = ( + fi = 135 +15 = 160 mm 瓦⼀下球 (i = 00= 29 . 63\nmm\n( 4) 6 = 0 ⼀ . 5 ×0 . 55 um = 2 75 um\n.\nNA\n≈\n5) NA = nsinu = 0 1 tanu ⼆ 01 D 物 = 9 mm\n.\n⑥) 如图没此时⽬镜⼝径为\n2x\n⼆\n2X\n=\n21 33\nmm\n.\nλ1 N 0 A . 5 6 λ - × — : 0.5 1 × 0 55 7 × 10 ] = 0 . 379\n() 500NAET E 100ONA 最⼩应为 500NA = 189 66 ×\n.\n⼀\n对光源过聚光镜成像L -l = 100 mm\n'\n1 25\n卡求得 = mm\n{ t\n75\n= mm\nr-r计\n代⼊ π 式于 f = 5 = 18 . 75 mm\nK\n- → NA = USinU = 0 5 U= 300\n.\n如图没通光⼝径为 D 则 tanu 式 D = 28 87 mm\n= .\n物⾯\n聚光镜\n如图⼀ : 200mmc < 3 m ,不是临界照明\n,\n考虑成區像 王\n∴\n⼀ ,\n⼥如图上 5000 ( |\nt '\n— — ( = 357 14mm ← 世\n200 3000 . y\n→ sowmm\n—\n代⼊出⼀式 我 l =- 188 68 mm\n= .\n” 为看清物体所需的分彩率 X 光学系统的放⼤率 ≥ ⼈眼分辨率\n150\n物体所需的分辨率为6- — — = mm 3 . 75 ×10 -5 rad\n4 km ,\n5×\n⼈眼的分率为 1 = 3 x10 * rad 开普勒望远镜 放 的 ⼤ 倍 有效 华 为 、 F 世 5 = 8 *\n10-\n⼯作放⼤倍率⼀般为有效放⼤倍华的2\n~\n倍即为16 ×~\n24\n×\n3\n* 「 = 袭 = 8 × fi =8 fe 机械筒⻓⼆ f 。 e = 求 i + fi = 100求得 { 结 i =88. m 8 m\n⼀ =\n11 n 1\nmM\n出瞳是孔往光阑关于后续光组所成的像\n3)\n(\n。\n。 : ( - 1 oomm 式⼀式 “ 球 或⼆⽠ = 12 . 50 mm\nE\n⼆台\n出根据瑞利判断\nσ 部 6 ⼈眼分辨將极限 60”\n: = =\n:\n18 67\nσ= . 5 D mm\n器 7 下 = .\n=\nDfe 112\n×11 .\n5)\nX _ → — 5 ⼆±0 . 62 mm\n100\nloO\n6 tanwi\n( ) P = _ : 8 tanw ' = 8 tan 40 2W 1 = 2 avctan 8tan40 = 58 450\ntan .\n( 7 ) D \" 13 985\n相 = 2 × 100 xtanw = 2 × 12 . 5xtamw = . mm\n⼀\n⼀\n机械筒⻓ - fe fitfi 225\n() = = mm\n:\n= 200mm\nE = - 8 * o = 8 f求求得\n求 = 25 mm\n'\n《) D ⽬ = 2× 225xtanw+ D = 28 - 6 mm\n( 瓦⼀瓦 “ lz\nz = - 225 mm = 28 125 mm\n.\nB ) 1 . = -200 mm π ⼀式⼆ Vi = 120 mm u = li - d = 95 mm\n后下 “ 笼 li = 19 79 mm - - tanntanw .- 8 × tanw ' = t 8 an 30\n.\nD|=\n2×\nlixtanw\"\n+D\n'\n= 21\n59\nmm\n.\n幼 = D ± fe = x ±425\nx 2 =± 2 5 mm\n.\nlo0 100\nβ= 步 1 βmin |== 15 |β max |= 2 .2 30 β 的范围: 15*~ - 30\n-\n=\n1\nfmax =\n卡 min =\n193.75 mmf\n的\nin\nmax =\n了 100\n— = l00mm\nβ = 1 + 3\n菇\ntanw ' = τ yi =β ) tanw m i ax = 10 Ʃ 02540 2 wmax = 2 arctan ( 00 ) = 78 . 659 %\n屏幕\n!\n—\n⼀\n”\n”\n= L — →×0\nYmax\n世 380\n19\n以 20mmx\n\" j = — )β= 步 = : ☆ = mm\n(β - 12 0 = β\n-\n③ ) { ( = ( - l = 441 mm 求得{ “ 品品品 由⼏何关系 是 Ʃ ⼀ ⼀ Ʃ 吼 D 得 物=\n5\nβ=Ψ= 29 . mm\n20\n- ,\n4 F = 若 N = = 2175.625> 1000 ( ÷M = n 100 ) ⼆可以分辨华\n[\n第⼋章\n①②\nv\nv\nv\n⼀\n③ Ey =2c0 s [2 π ( 04 - 0* ) t ]\n: ☆\n15\nt = 2 . 5 ×10 - E =0 时 EY = 2 C0s ( - 0 . 5 π+π ) = 2 m\n0座 ∵ B\n.\nE\n.\nR符合右⼿坐标系 (由 E →B)\n下如图 B 的⽅向应该沿⼒轴负向\nx\n①\n① c= UnC 不变 当 n ↑ 后 V ↓②= VTUdT不变⼊ ↓\n:\n③ T =÷ v 不变 ∴ T 不变 ④ 波数 = ⽂⼊ ↓ 波数 A\n.\n②\n丹\n⼀束光在传递过程中频率不变排除①\n由公式 C = nv 可知当 n 越⼤时 v 越⼩ n32 n . > n 2 ∴ U 3 < U , < U 2 ∴②正确\n④\nx\nX\nv\n由图可知P光偏折⻆度⼩于 Q光由\nn .sin θ , = n 2STu θ 可知 nQ > np\n同种介质中折射率越⼤波⻓越⼩⼀ ∵λ= { VQ > Upi = T 上 v = ⽅ VQ < Up\nx 是—曛—\n③\n⽖\nn\n3\n半波损失 即发⽣ π 的相位突变 ( 发⽣于光疏 → 光密的反射 )\n:\n① m > n > n 两次反射都不发⽣相位改变\n. 2 3\n② n cnz < ns 两次反射都发⽣\nπ的相位改变则不发⽣半波损失\n.\n③ M . znzcn 3 不发⽣ ; 发⽣则将产⽣半波损失\n④ M . cnz2n3 发⽣ ; 不发⽣则将产⽣半波损失\no0e\n雪—\n——\n④ —\n5\nφ= α 2- 2 . =5 π STM π FC ∴为右旋椭圆\n③\n-\n步 :\n频率相同振动⽅相向同相位差恒定\n。\n⻢驱波:\n频率相同振动⽅相向同传播⽅向相反\n偏振 频率相同振动⽅垂直向具有⼀定的相位差\n:\n光学拍 频率接近振动⽅相向同振幅相同\n传播⽅向相同\n:\n,\n②\n①\nikr\n=☆ +\nE (n) e\nU x\netikr\n没 k\n=\nv\nx\nA\n则 A iK 些代⼊\n② =\nK = 2 当 γ=4 时 A = 05\n.\n1014\n①② W=2πV = 2πX\nv\n(全反射 )\n(P偏振光以布儒斯特⻆⼊射\n)\n571\n4 1014 红⾊\n×\nλ , n , =λ zhr 760 nm × 1 = 1 . 33 x ⼊ 2 λ 2 = 571 nm\n×109\n=←\nv ⼆ = 4 X1014 HZ 光波颜⾊由频率决定频率不随折射率改变⽽改变,\nλ\n反射折射\nH>H θ 2θ\n⼊射光为P⽅向\n, 2 , c\n的偏振光且⼊射⻆为布儒斯特⻆\n频率相同,振动⽅向相同传播⽅向相反\n5\nφ=α z - 2 . = - π\n左旋椭圆偏振光\nSTn\n-\n5 π20 左旋\nƩφ-\n2ACOS( 2 )\n—\n合成后 A 三 A 24A 2+2 A 2 cos( φ , - φ 2 ) =2 A 22 ()1+Cos 4 i - = 2A 2 . 2c0s ( 世 - 2 φ 2)\n↓\n1 + Cos ( φ , - φ 2 ) =2\nC(os-v2\n)\n① φ\n. ∴ . =2ACoS 1 - 2 )\nA (\n后* 以+ 420→\n所\n—\n[ [(2x+3y±4Z)- 1× 108 t ]\nE looe\n=\n→ 華⼆ x+ 3Y+42\nk = 2x+3 yt 4zk : + 4 = 所 2×+ 的 Ʃ→ Yot 9 ←→ z 0\n666 . 7 E = 103 STM [ π (3× 100 x - 9 × 104 t) }\n103 [ 100 - 10\" +π ]\n= Cos π ( 3× x {× 4t )\n2π\nK =☆=π - 3 x 100 λ= — π . 3 ×06 = 0 . 6667× 10 - 6 m = 666 . 7 nm\nE =AexPT [ π ( EOSO +xSTuo) ]\n1015\nk 2π π× λ= 2π× 0 . 65 3 108 107 390\nd) = = — — × × = 39 × = nm\nλ\n0.\n65c\nπX\n1015 .\n2π 15 O π× 104\nW = _ = 2πO =πXcO v = 器 =5× HZ\n订\n× 108\nΨ) 在玻璃中传播的速度为 λv = 3 . 9 × 107 5 × 1014= - 1 . 95 × mls\n5×\n=Ʃ=\nn = 1 538\n08 .\nN\n为⼲涉\n元\nE 1 = 6 Cos ( - 2π× 10 ) 5 E 2 8 COs ( π - 2 πU× 1015 t ) α .1 - 22 = -\n=\nA ≤ 62 + 82 + 2 × 6 × 8 Cos ( - Ʃ ) 求得 A = lovlm\n—asin 、 + 2STn 80\ntan2 = — 2 a 2 = =+ = 5 2 = avetan 5 = 0 . 927\ndicos2 tarcosα\n、 2\n。 ∵分振动的表达式 : E = 10 cos ( 0. 927 - 2π×10 '5 t )\nE , = Gexpi( kx +wt) Ez =- aexp ( kx -wt)\nE = E . + Er = Gei(kx+wt) - ae i(Rx - Wt) = a [eikx , eiwe _ eikx . eiwt ]\ndeikx 'wt - iwt Geikx\n= ( e - e ) = ( costiwtsinwt - CostwtisiuJwt\naeikx\n= . 2 isinwt = ( coskx + TsTn ) TSinwt\n=\n2acoskxisinwt\n2asinRxsinwt\n-\n其中取实数部分为\nE 2aSinkxsinwe\n:\n=-\n时\n此时布儒斯特⻆为 θcavctan = avctan1 .5 = 56 310 > 500\n.\n⽯\n光疏 光密且⼩于布儒斯特⻆ 20右旋\n→ rsco rp > ots20tp φ=α 2 - α= -\n则右旋该圆偏振光可表示为Es = acos( α- wt)Ep = acos(α - ω t- Ʃ☆ )\n反射光 : Es' = rsEs = - | rs | Es =γsacos (α - wt)\n=\nE rpEp= rpasinl2 -wt)\n∵ S 波在反射中发⽣ π 的相位改变且 1 rs 1 # 1 rp 1 ∴ 为左旋椭圆偏振光\n折射光 Es \"\n=\ntsEs\n=\ntsacos(α\n-\nωt)\nƩ\nEp \" = tpEp = tpacos (a - wt- ) ∵ tsttp 下为右旋椭圆偏振光\n¢\n⼋Z\n如图法线为正轴⼊射⾯为x\n加 Z\ni 7\n则 EP= Eoso ES\n=\nESIU : ⼀y\n≥\n。\n对于 s 光(垂直于⼋射⾯JEs = rsEs =γ IESTnO\n对于P 光 (平⾏于⼋射⾯ ) Ep =γ1EP = HIECOSO EE\n⼀点个\n;\n则 E = \"+ Ei \" = NC ES ) n+ EoC ⼀ OsOP⼆ E isnotVcost _; Ep\nxoZ\nt ==\nR = ( ) kisino +ri 'cosio\n光学拍\nki ktdk k k dk\n= 2= -\n设 E = acos( k. z - ωit) E 2 = acos(k 2 z - wit)\nw =☆.+ Wz = k = K Ʃ 、 +k 2 = K wm= W — i - W 2 = dw km = kr - Ʃ k 2 = dk\n2 2\nE = E , + E 0 = 2acos (dkz - dwt ) cos ( kz - ωe)\n相速度 (等相位⾯的传播速度 世 世\n:\n)\n:\n0=\n= k\nR\nK\n群速度 ( 等幅⾯的传播速度 ) 0 = 品\ng\n: :\n相位差 δ=α\n2\n: 2-\n则两个分量的复振幅为 Ex deikzEy d\nei(kE+δ\n)\n= = 2\nE = ExCoSO + Eysino\nI = E . E * : [ a . cosoeikz + G 2 sinoe i>utt8 ]。 [ G .CoSθ Eikz+ G 2STuOe- i(kzt8)]\nt\n⼀个δ\narososinoeis\n= arcos2 oe \" aisiu 2 o 0 + a . ar cososTuoe t a .\n= G . rcos ' ot a 2 siu ' o + ia . a 2STu20( cos 8- isinδ+ coss + isinδ )\n= G 2Cos ' o+ Gr 2 siurot G . G 2 Sn20cos\n.\n第九章\n②\n相位差恒定\nv ×\nv\n①\nU\nL dx ⼊ ⼊ XD\n× 0 = D =m x = d Ox =\nv\n。\nα\nv\n× 。\nδ= KOL =π L 亮条纹 l ⼊为亮纹\n0 0 =m\n③\nX\n×\nv\nv\n相⼲性空间相⼲性+ 时间相⼲性光源扩展只对空间相⼲性有影响, 对时间相⼲性⽆影响 OX\n点光源的光场虽有最⾼的时间相关性 但在纵向波线上的两点的相⼲性还会受到时间相⼲性影响 ② X\n.\n,\n②\n×\nv\nX\nU\n式合\n0x= 哈 δλ\n0 = — — R↓ cxA 条纹间隔增⼤\nD\ng ,\n② n ↑ λ=☆ ⼊↓ x ⽐条纹间隔减⼩\nbc β w ^\n③ 光线缝宽为允许宽度, 增⼤缝宽条纹对⽐度会下降,\n←\n-R→ →\n←—\n①\nibc 14\n允许宽度 bp = = β\n0 v\nX ×\nK=09\n.\n③\n× Λ\n0 0\n— 等倾千涉\n平⾏要板双光束⼲涉条纹 叭\nOO= ⾥疏外密\n直条纹⼀等厚⼲涉 2h ni 2sinθ ,\nh↑ OC 条纹越密\n0\n①②\n品\nh + i = m ⼊ hym ↑\nv\nx\nU\n②\n,\nλ\nα\nv —\n2MOS\n.\nv ⼀\nv\nv\n(\n①\nv\nX\n⼀\n上⽅\n0\n⼈近\nx\n②\n⼀\n①②\nU 施加下后 2⼭ *\n2MOS\n∴os↑\n, ∝\no\no\nX\n①③\nv l ×\nv v\n—\n⼀→ 加F αd 向级次⾼的移幼\nx λ\n⼀ α— — a ↓ os\n2MOS\n,\n①\n0\n①\n×\n添加补徬板可获得\n×\n添加⼊补偿板补偿各⾊光程差获得\n②\n镀—⾼反⼊膜\n—\nU\n×\n透过率↑ 界⾯反射⽐βd 条纹锐度08\n=\n器 ↓\nv\n透射光和反射光互补透射光为亮纹时反射光为暗攻\nX v\n①②\nv\nv\nv\n⼊⼩\n③\n⼀\n① 频率相同② 传播⽅向相同 ③ 相位差恒定\n。\n在⼲涉场中叠加的相⼲光是由光源的⼀条光线经上下表⾯反射后所分离出来的\nDmax Cot\n=\n越好\n分波前法\n分振幅法\nImax Imin\n_\nK -— ou 1\nImax+ Imin\n相⼲的振幅⽐ ,光源宽度光源的⾮单⾊性\n等距直条纹\n⼀组同⼼条改 全暗背景下的细锐亮纹\n透射光\nF P⼲涉仪\n⼀\nbum σx =\nX\nπ\nD\n10× [\n]O\n6\n×0 .\n= 6 ×<0\n-\nm = 6 µm\n2 2×10 -3 4 583 ×10 -3\n. .\n0 L = 4 λ= 4× 550 × 109 = 2 2x 10 - 6 : 2 . 2×10 -3 mm\n.\n2 2XLO-3\n0 l =n1) d d = . = 4 583 xco 3 mm\n0. 48 .\n1\n0 l\n.\n9\n550×10 -\n==τβ=\nbp - 4\n— 4×1 25×10-3 = 1 . 1 ×10 m = o . l 1\n.\n6\n0\n.\n= = A 1 Ar = ⼆⼆⼊感 =\nK 6\n下 0 .\nI +Iz 1+ 1AYA 2 2\n、 )\n1\n.\n2×10 - 3\n9\nOmax = Cot = 3 × 108 × 10 - = 0 . 3 m\nλ≈\n⼊\n2\n(600 ×10\n-91\"\n-3\n0 = — = 1 . 2×10 nm\nOmax 0 . 3\n588.3\n0 L = 2 dcosT = m λ λ= o Ʃ d =0×. 233× 三 10 = 5 . 8838×10 ) = 588 . 38 nm\n792\nDM\n知\n-\ni h mx =\noL nh ⼊ n hamah\n= 2 + = m =\n006\nnm\n=\nλ c= nh 2 nh = 2 ×1 .5 × 2× 107 = 600 nm\n时\n44\nƩ 109\n0 L' = 2 nhti = m λ h — mλ 2 - n 两⽅求导得 σ h = * o 2 m u = 5 x 1 — _ 66 2 0 × × 1 . 5 = 44nm\n927 -5\n5 ×10\n.\n=÷=×5 λ1=— 0 600× 5\n0x 3 .33 × 10- 3 2 =µ\n0 x × 1 . 52× 3 . 33×、0 -3\n= 5\n.\n927 ×10 -\n变密\n⼀点\n=λ\ncL =2 wh + i= mx h oh = omniomd\n178\n1\n.\n3\nα O . 05×10 - - 4\n。 — — 1 — 03 = 2 . 5×0\n200×\n⼀\n9\nα -\n*\n0 s = —\n45 ×108- 9\n= 117 8 ×10 - 5\n2nOS × 2 . ×.0 - .\n5\n增⼤ 右\n增⼤\n⼊⼀式\n仁\n+λ= m\nα os αxosi 0 l' = 2 h m λ h = hdmd 往能级⼩的⽅向运动\nTi 20 时 Ti > 0 cosiic 1\n0 L =2 hcosii += m λ m =\n2h\nπ\ncosTi\n+ i cm= 1 时 ch =\n*\n2COSTi\n=☆= PosTisint\ns\n0\nSTn2 Cosiid osi\n.\n3 03\n.\nA =☆= 0. 97 ms s : — π 1- N R E m =9 A 7xs 0 L ' = 2nh =m λ h = ⺾ 2 ⼊\n综上 h 0 (600×10- 9 ) 2 m\n: — × 935^= . 03× 10 - 6 = 3 . 03 um\n^x ⼊——\nx2\n×1x 05\n100O0\n5 × 10 -4\nδ l = 2 nh = m ⼊ m = — 2\nnh =×2\n.\n5×0 三\n= 1 X 104\n⼊ 500 ×10- 9\n— 2 ) 2\n0 λ=\ne\ne\n。\nn\n=← 5\n100 0\n0\"\nα2\n×1\n.\n009\n5×(\n(\n0 \" = 5 × 10 -\n13\nm = 5×10\n-4\nnm\na b b\nb b\nC\nb\na a\na a a\na c c\n劳埃德镜 发⽣⼲涉的两个光波⼀个是光源S 直接发出的\n:\n另⼀个是光源 经取⾯镜所成的像5 发出的\n. S\n—?\nS和S为相于光源 所以在光路发相遇将⽣⼲涉\n— P ,\n“⼀⼀ 2\ns 1 …- ≈ _\n_\n_\n_—_— 可以在 PP\n2\n区域看⻅⼲等步距直条纹\n⽥题可知 3个单⾊波磁感强度⽅向相同\n,⽽\nEBK 成右⼿坐标系\n故可令 3\n个单⾊波⽚均\n:\n,\n垂直纸⾯向外 如图所示 分别沿正 Y 轴分解\n, ,\n䠪\n上发⽣⼲涉的条件 频率相同 振动⽅向相同 相位差恒定 故沿于轴正向⼲涉\n: ,\n, ,\n在 Z =0⽿⾯沿测轴正向: Ei= Acos 300expikyos1200 ⼆\nƩ\n污 Aexp- ikysin300\nEi\nA\n=\n→ 5\n3\n→ Es ' = Acos 300 expikyCos 60= 污 AexpikysTn 300\n↑@, → ⼀ E = Ei + Ei + E 3 = A+r Ʃ ACOS(沒 Y ]\nI = E 。 E * = A ↑ 1+ Bexp 没 y ) ( 1+vsexp ⼀没 Y ) = I 。 [ 2 冷 cos(πλ ) + 4 ]\n, Iuax = ( 4 + 2 号 ) I 0 Ke ma - Imin = 0 866\n— .\nImin = ( 4 - 23) I ImaxtImin\n。\n9\n-\n⼊ D 500×10 x 1\n3\n(1 ) x仁 —— — - = 1×10 - m = 1 mm\nd\n5×10\n-4\n( 2) ④= 台 CSI s× 103 × 1 67 103 =\nD - σx = - R =→ × 0 = 6 . × 6 .67 mm\n00\n67\n( 3 ) OLmax =\n⾶\n=\n) 15000 × 9\ns = 5 ×10\n-5 向上移动\n,\n移动 6 . mm\n-\n0\nOlmax = mmax ⼊ Mmax = Olunx — — 5 9× 0 105 - 0\n5\n= 100\n最⾼级次 100级\n×10-\n⼩当屏上⼲涉条纹消失时光程差⼤于准单⾊光相⼲⻓度\n0\nL≥ oLmax\nƩ= tan β= 站 = O - 30 0 0 2 0 5 = 8 . 33 × 10 - 4 β= 1 . 67 ×10 - 3\n×.\nbe 或 50x100\n-s\n= — = 0 3 mm\n1 67 -3 .\n.\n×10\n( 1 ) P 点的光程差为cL = (n - 1) t相位差为 δ=KoL = (n-1) t\n0\n则 P\n.\n点的光强为 I\n=\n4I\n0\ncos③= 420 Cos ' [ (n- \"t ]\n当渠 (u-+)t =2M π 即 t = m⼊ π 时 Po的光强最⼤为亮政 I = 4 I 。\n当 ( n-)t = 12M π即⼠⼆ m \" + 时 o 的光强最⼩为暗纹 I = O\n2)\nI\n=\nI\n. +\nI\n2 +\n2II\n2\ncos8\n攻\n= A 2 +)2A ( 2 + 2F( 0 2APCOS [( n-1)t ]\n: 5A + A S2 C04[ (n -)t]\n突变前 : 焦点光程差 0 L = 0 δ= KoL = 政 × 0 =\n光强 I = I + ] + 2 I ] Cos δ= 4I\n0 0 0 。\n突变后 : 焦点光程差 cL = ( n -1 ) d = 0. 5 d 8=K 0 Lx 0 .5d = 共d\n光强 I= I\n+\nI\n+\n2 NII cosδ'\n=\nTI\n=\nI\n0 0 0 。\n此时 Cosδ=- d 8 最⼩为 213 π\n=\n则 d 最⼩为 5\n2λ=3\n×\n630\n×\n109\n= 420nm\nSim35\nU , STnO , = M 2 STMO > θ 1= 35 n , = 1 nr=1.33代⼊得 θ 2 =aVCSTM 3 =25 . 5480\n≈ ⼈眼成像\n…… θ 设厚度为 h 光程差 OL = 2 nbCos θ z\n氛四题\n速 … ∵ 折射光有半波损失下总光程差 : 0 Li = 2nzhCos θ r + 会\n: 2whcr <o ) + * = m⼊\n9\n则 h = m\n—⼊-i (\n当 m=l 时有最⼩厚度: hmin =— 500×10 1\n-\n04.17 nm\n2M 2 COSθ 2 4 ×1 . 33xcO=\n(1 ) ∵ 空⽓折射率 < 薄膜 < 玻璃下不发⽣半波损失 j :20cm\n光程差为 OL = 2 nhcosOz 垂直⼊射时 znh =m ⼊\nm 2nn 2 × 1 - 38 × 5 ×10\n-5\n230 下为亮汶\n=π = — =\n600 ×10-9\n2) 哈 ⑤ 1 — 3 → 8×6000 — vad\n05 = 1 +q= = 0\n.\n288\n世\nr 5 = f ' tanθs≈ f ' 05 = 20 × 0 . 288 = 575 cm 空⽓ :\nns\n“ \" ngF :\n③ ) 0x = fdo = f ⼊ = 20×10 - 2 — 138 × 600 × = 5 : 75 mm\n玻璃\n:\nM3=1\n-\n5\n2 nnhsino 2× 1 P × 5× 105 x0 . 288\n( 1 ) 光程差为 0 L = 2 h ∵ 有半波损失 ∴ cl = 2n+ 会⽜顿环中⼼为暗班\n由图可知 : R 2 =γ 2 + (R - h p =+r≈ 2 R ' - 2 Rh 则 h ≈ 最 L = 管 + 会\n当 i λ=→→+ ⽼时为亮约则 =µixR 求导得 vd = idm\n0 = m r\n-\nR\niv\n令 dm dr i 条纹间隔\n= 1 = e m- = N i\n.\ne=\n② )半径为VN的光程差为 CLN = 2 hn + 有 R 2 = P +(R - hN) ' VN = N⼊R\n半径为 π+k 的光程差为 CLN +k + 2 hn +r+ 会有 R 2 = R + t (12-ha +h) 2rwN +2= (+K ) λR\nVN + R - R= NR(N + R- N) 则 : R = Nt - rz\nkλ\n凸\n“\n重 % :) andn\n“ 0\n,\n;\n” ” \" \" \" \"\n州“\n光程差 : OL = 2 dcosi 当垂直⼊射时 T =O 此时 OL =2 d d ↑\n” |\n为亮纹时 OL = m λ= 2 d 求导得 om= 2/ ⼊ od 別\n由题 om =1oo 时 od = 0 . 03164 mm = 3 . 164 × 105 m\nλ=\n—\n×3 . 、 614× 0\n≈=632.\n8×\n109\n=\n632\n.\nbnm\n100\nδ为附加光程差 Ko1\n= 2φ\n.\n对⼊ , 没环⼼的级次为 M . + m 0 ( m , 为整数级次 , mo 为⼩数 ) 则环⼼ = 2 h + o \"=+ mo ) λ , …\n则第 N 个圆环级次为 M . - (N-1) 2 hcosθntO 1 = [ M .- CN -1) ] λ , … 0 ' = 24\nlim\n① - ② 得 2 h (1 - cosθ N ) = ( N-1 + m 0λ , ∵ θ n→ 0 |-COSON = Ʃ θ 0 ' ⼆会 φ\n: θ N = 芹 (N-1+M 0 ) W = fO 0 k == f \" θ\n。\n☆\n则 管 f\" (2 - 1 + M 0 ) H1 M 上⼆ 解得 1494\n= m = 0\n⼀ f“共\n( 5\n-\n1+mo)\n4tMo . 。 .\n同理 管 = ⼀\nf\" (☆\n2 - 1 + m。 ' } ⼆ m 2 解得mi= 0 . 2706\n: f \" 会 0=\n(5\n-\n1 +M\n0\n)\n=☆\n则环⼼ Mi +mo =π (2h+o' ) =+ 塔 M . + mo =☆ ( 2 h + o ) + 尧\n。\nh\n=Ʃ C\n∴ Mo ( λ λ ) λ= 2706 - 1494 011212\n_mo 、 - 2 = 0 . 0 . =\nλλ\n2\n9\nO λ= —\n1212× (500 ×. 0 - 2\n= 6 06 × 10\n=\n0 . 0606 nm\n2 × 0 25×10\n-3 .\n.\n⾃由光谱最⼤测量范围 : 0λ ) ⾶ h = 2 N 0 i 0 λ (s . R) = 546 0753 - 546 . 0728)= 2 . 5 × 10 -3 nm\nλ - ( 546 . 0753 + 546 . 0745 + 546 . 0734 + 546 . 07281 / 4= 546 . 074 nm\nh 546. 074× 、 0-9)= 59 64\n- — = mm\n.\n2 5 × 2 X 10- 3\n.\n需要分辨的最⼩波⻓差0 λ m = 546 0734 - 546 0728 = 6 × 10 -4 nm\n. .\n== 97 97 站⼆ , 46 .0746× β= 09 得的 = 8 .6 mm\nA 0 . ms= 0 . π\n10 代⼊\n-4\n综上 8 6 mmchc 59 64\nmm\n. .\n(1 ) 中⼼波⻓ ( 透射⽐最⼤ ) = n Ʃ h 4 2 X 1 -55 × 109142\nλ × ≈\nc : nm\nm m\n当 m= 2 时 λ c= 620 um 当m = 3 时 λ c = 4Bum\n下在可⻅光范围内有两条波⻓为 620\nnM\n和4BMM\n2) 半宽度 。_ - e\n: λ=②\nc\n←\nnh 功\n2π\n当⼊ = 620 nm 时 : 0 λ — 2π ( × 62 1 0 5 × 5 10 × - 9 4 ) 2 × 107 — σ - 9 0 6 . 96 = 4 . 029 nm\n.\n当⼊ = 413 nm 时 —µ 3 ×0 - 9 ) ^09←90 79\nO λ= 1 . nm\n2πX1 .55 ×4×(\n0→\n=\n第⼗章\n③\n×\nv\n×\n① 应为平⾏于单缝⽅向的直条纹或垂直于⼒轴的直条改\n主极⼤条纹宽度⼆次极⼤条纹宽度\n②\n出 aom\n③ 相位差 α=π asino =mπ 时为暗条纹 sinθ= 00 =\n④ 次极⼤由 tanθ=θ 确定 α=± 1 . 43π± 2 . 459 π …\n①\nv\n×\n不影 响 v\nX\n①\nv\nU\n61才 ⼈低\n. X\nV 0 = 0 ×\n⼀\n③\n^\n⽈\nv X\n③\nd\n3\n= a dsiuo kλ\n9条 Q ① =\n×\n⼀ 1 时 =\nSTMO= K\nv\n×\n② 之些 :\n0 .\n☆= v\nA⼆ MN\n⼊\n①② ↓\nOθ= —\nNdcoso\nU U\nv\n×\n☆=\n③ dsino ⼊ ddmdA mNd\n降低 = m ⼆\n× 武求导\nv sinθ= oo = _ m o λ\n* dcose\n× 00 = NdcosodA\ndcosomcN\n⾊散\nv\n茁\n兴\nx\n④\n× ×\n胎 0\n*\nA = ⼆ MN =\nOλ 00\nNdcoso\n④ 零级主极⼤强度 I NI\n=\n。\n④\ndsino = m λ = Mr λ\n. 2\n是 些 5\n= m . = 亏 mz\n0\n②\nd\nb\n= 3a =2a\na+ b\n=\n3G\n程中遇到障碍物偏离直线传播⽽进⼊⼏向阴影中\n出现\n,\n光在传播过\n光强不均匀分布的现象\n衍射\n菲星聯衍射\n远场衍射 光源和观察屏都距离衍射屏⽆穷远的衍射\n振幼相于叠加\n⼝\ndsiuo\nd 0 = = m ⼊\n,\n3叭 3\n(H- 1D3⼊\naxf\n21U e =\n589 × 103 δ=π a π sino O= arcsin *\n. =π a\n2 8m\n.\nα= 哈 = 器 ×λ= 550nm则 Dmin - — . 22×5 . 5× 107 × 602 x 180 — 2 . 8 M\n1 O O5Xπ\n.\n訂\nƩ d\n=m λ m=t 5\n.\nd ( siui+ STu θ ) = M ⼊令 Sini = 1 则有 ( 法 ±1) d = m ⼊ - Ʃd =m λ M= - 1\n9 82\nmm\n. =☆= × — λ 58 9 9 =× 1 3 0\n0 λ= 0 . 6 um A MN N=π = 491\n0 × 0\n.\n6 × 10-\n491 / 50 = 9 . 82 mm\n66 62\num\n.\n109\n爱⾥斑半径 d 告 546× × 0 5 5\n: γ 0 = 0 . 61 = 122 = 1 . 2~— 1×10-2 . = 3 . 33 ) × 10 -\n直径 3 331 × 10 - 5 x2 = 66 62uM\n:\n. .\n4\nooum\ndsino = m λ dsino = 2 × 600 ×10 - 9 = 3 ×λ λ=400× 109 = 400 nm\n1 6\n:\n袋\n则 ± 6 级条纹缺级兴 = = 6 u : m = l : 6\n517 6\n.\n6 9\n2 dsinr =m λ λ= 2 × 1×10- × 5Tn 150 = 517 6 × 10 - = 517 6 nm\n. .\n第⼀极⼤\n=α=β=± 1. 43 π I = ] 。\n(\n) (\n☆s\n2\n=\nI 0 (\ns4in 1 .\nπ )\n4\n: 0 . 0022 I 。\n第极⼤⼆ : 2 ÷β=± 2459 π I = ] 。 ( )(幾 s ) ≤ I 0 (4su 25.59 π ) 4 =0 . 29000] 。\n了 m\ntanθ=µ = 3 × 103 rad ≈ Sino\n卡曲 … ] I ( sm ☆ )\nS=\n(\nmN\n) = 。S( PS[ P\n—。 — … = 。 ÷ P I\nγ(s2imcsP\nI ( 學 420 (PCoss\n= =\n0\n当⼲涉因⼦为零时可能出现缺级则Cos是\n=0\n时即 δ=± (2m +1)π 时( m =0. 1 2 . . )\n.\nδ为相位差 = Ko = 笑 dsTnθ=±(2m+1 )π λ=+ dsin θ= 瑜 + 1× 103 × 3× 103 = 16× 01⼆ +1 nm\n在 λε ( 390 nm 700 mm ) 时 m 可取 4 5 6 7\n, . . .\n当 M= 4时 λ 4= 666 . 67 um\n当 m= 5 时 λ 5 = 545 . 45 nm 即缺少的波⻓有 : 400 nm , 461 . 54 um , 545 . 45nm , 666 . 67 nm\n当 m = 6时 λ 6 = 461 . 54 nm\n当 m = 7 时 λ 7 = 400 nm\n=☆= 05893 × 帶\nA MN (cid:15482) N = -9 × ±= 491 dsmo =m λ , 求得 d = 0 = 27 um\n×10\n第三级缺级兴 = 共 = 3 a= 3 d = 9 um\n6≥ 9 6\n① dsin θ= m λ 求得 d STu 300 ×10 - = 3 6 × 10 - = 3 6 um\n. .\nacosomo ⼊⾊散器\n② dsino = m ⼊求导得 cθ= _ doso ↑ 则 d 取了 6 um\nd\n③ 兴 = _ a = 4 则求得 a = id = 0 . 9 nm\n=☆= 600\n④ A MN 求得N = — — 3X0 02 = 1 X 104\n.\n10\nd 3 .\n最⼤视野时 θ= 900此时 m 6× = 6 且 ± ,缺级\n= — — = 旦\n9\n⼊ 600×l0- 4\n则能看⻅ 0 ± 1 ±2 ±3 ± 5 - 共 9 条谱线 ± 6 级刚好看不⻅」\n⼭ d = 500 = 2×10 - 6 = 2 um N= 100 × 500 = 5 × 104\ndsTno = m λ m= 1 时STMO ÷☆= 0 . 3164 m= 2 时 STUθ 三⾶ = 0 . 6328\n⼊ 8632 0\nCθ= —Ndcoso cosθ . = 0 . 9486 Oθ 1 ⼆ 5 × 104 ×2 、 × 10 - 6x09486 = 6 . 67 ×10 - 6 rad\n9\nCos θ r = 0 . 7743 O θ 2 = 5 ⼀ × 10 6 4 3 × 2 2 . × 8 10 × - 1 0 0 × - 0 . 774b = 8 . 17 × 10 - 6 rad\nl , = fo θ 1 = 0 . 5 × 6 . 67 × 106 = 3 .34µ m( 2 = fo θr =0. 5 × 8 . 7 × 10 b = 4 . 08 um\na) 00=— cosom 0 ⼊ 器⼆⼆⺾ dcoso\n9\n则\nOL\n, =\nfo⼋ µ\ndco\n=\nso , ⼀\n0\n2\n.\n×\n5\n1\n×\n0-\n0\n6\n.\n×\n5 ×\n0\n1\n.\n0\n9\n-\n48\nx\n6\n)\n= 0 . 131 mM\n9\n则 lo叭dcosor\n= ⼀\n0\n2\n.\n×\n5\n1\n×\n0-\n0\n6\n.\n×\n5 ×\n0 .\n1\n7\n0-\n74\nx\n3\n2\n= 0 . 32 mm\n11以遮住偶数条缝时为缝宽为a间不透明部分为5ad\nba\n=\n没 α= Tπ π asin θ β= ☆ dsin θ= 12 α\n—\n…「\n则有 2RSTnb2\n= 90 u Sin 6\nA\n= do\n2RSTU 6 N2 = A 0 6a\n。\n⼀\n2 I (\ns) S( Tn\n6\nb\n22\n=\n。\n上遮住奇数条缝时和遮住偶数条缝—相同 = 。 () S( Tnb F\nI\nI 62\nB7全放开时宽为 a 健间不透明部分为 a 3a 交叠 在两个为求不透明 a 的两个缝衍射为\n:\n,\n⼀ 此时 a = a . b = ad =2a 没⼩ = π _ ⼊ asiuo β - ⼜ 2πdSTUO = 4α\nL\n—出巡\n图由可得 a\n0\n= 290cos22\n则全放开时为多相组距为 a 的缝衍射叠加 . 此时每组缝间隔d = 6 a\n2π dTuo =\n则此时 β=π - 12α\n^\n、「 由图可得 22STn 62\n=\nai\nA\n'\n= 901\nSTnbN2\n0 ⼀\nSiub\nα\n⼀\n2RSinbNX= A0\n2\nSIn\nI\n=\n4I COS222 ( )\n0 62\n没 α= β π a = πdsin θ 前两缝相位差为β =2πasin θ= 2β\n— .\n⼊ λ\n后两缝相位差为 β=π4asTuo 如图 A = Ax + Ayz\n= 4\n⼊\n“\n… Ax = a ( 1+ cos 2β+ Cos 6β )\n0\n無\nAy = 90 ( STn 2β+ Sin 6 β )\n⼀ 。 [\n←\nI\n0\n= 1 。 P [3 +2 (cos2β+ Cos4β+ os6β) ]\n=Ʃ\nπas= 2π aSino\n没 α=aπ s δ 2 5αδ 22\n=π=\n, 2\n⼼。⼀\n如图\n: Ax = d 0 ( 1+ cos52 +C 0s 7 α )\n“\nAy = a ( STu52 + STnTα)\n0\n↑ ] = I (SP[ c+ 2oL +s22+c0s 523 cos7 α)]\n。\n☆\n0 L sTn2- sτn 1 )\n设 α= 政 (5 Tuz- STn1 ) β=2 d( sin2- STnD\n“\nsinwP\n则 I I。\n((\n=\n↓ ) d = 000 X(0 - 3 = 1× 106 m 2 dsinr = m λ r= avcsind = avcsin( o ] 3) = 15050\n.\nλ ) 衍射⻆取900 时 STM θ= 1 d ( s τni ± snθ= m λ\n此时有 d(siur+ 1 ) = m . λ m . = 2 . 33\nd (binr - 1 ) = m λ m =- 1 33\n2 2 .\n故可看到⼀ 1 0 , 2 ⼀共四条谱线\n, ,\n第⼗⼀章\n部分偏振光 某⼀⽅向的振动⽐其它⽅向占优势\n:\n①\n⼀\n④\n⽅解⽯负晶体\nve\n> Vo necno\n×\nv\n=\n③\n肓\n。。\n: \"\n0 ↓ 。\nv c\n⼈眼\n⼈眼 ⼩眼\n④\n00\n线快慢轴\n线偏振过波⽚卡快慢轴\n± 50 圆\n→\n、\n②\n任意⻆ →有圆\n④\n⾃然光通过任何波⽚出射仍为⾃然光\n。\n①\n③\n波⽅向⼀般垂直于快慢轴⽅向\n波⽚的光轴平⾏于波⽚的⼊射表⾯ 但其与快慢轴的关系取决于晶体正负\n,\n正晶体光轴和慢轴⼀致\n负晶体光轴和快轴⼀致\n。\n②\n①\n②③\n②\n琼斯表示法只能⽤于偏振光\n④\n②\n-\n线偏振光\n③\n0\nrp=\n②\n反射折射法向⾊性法散射法\n吸收\n⼆向⾊性\n在⽪⽚中传播速度快的⽮量⽅向\n,\n当⼀束线偏振光沿着晶体的辉由⽅向传播时 其⽮量将随传播距离的增加\n,\n偏转的⻆度 θ=α ( 其中 α为旋光系数为光在晶体中传播的距离 20 1 ⽽旋转\n不\n,\n将⼊射光分\n解成两分开⼀定⻆度振动⽅向相互垂直的线偏振光\n双折射差值较⼤\n遵从\n裄\n不 垂直\nIMax Imin\nP = - o ~ 1\nImax + Imin ⼀\n| 偏振光偏振度为\n1\n2\n2A\n2\nA\n450\n-\n圆偏振光 左旋\n的 [ : ? ] [ =τ\n! ] [ ! ] =I0 c 0 s =60=☆ I Iz I0c 0 s= 30 c 0 s~ 30 = ] =Ʃ L\n1 。 = 0 ,\nTI ,\n54 730 3 I = Icos' s cos =δ= 3\n.\nTI\n的 。 ƩI [Cos 300 ] 3 = 式 0 = S ]\n0 I 。\n16\n.\n17\nmm\nδ=πd(\nne\n-n\n0)= 2m\nπ+π\n⼀\n1 636 tanB 些\n=\n.\n线偏振光 垂直\n00711\n32 34 um 0 .\n.\ncoss [ H\" amiitan { ] [ ] = 0 ] os δ -tans ] [ 0 ] : Coss = 0 8 =π\ni ,\n[ [\n=\n. 92\nδ= d π ( ne -no ) → d =≈ ne — 58 3 × .0 9 - 9 32 . 34um\n-= no ( x. = nx0s\n)\n417\n4\nmm\n.\n了\nAy A cos 300 = 3 A\n= 0 0 汇了\nAx A δ 300 =÷A\n= 0 iu 。\n( 1 ) 沿铅垂⽅向振动的偏振光通过光轴沿铅直⽅向\n的偏振⽚ 光强不变\nA\n;\n通过B : I = = Cos2450 I 0 ƩƩ ] 2=Ʃ I\n( 。\n( 2) 通过B 后 I = 0Cos 245= 0( Ʃ ) =÷I\nI I 。\n通过A 后 I Icos2450 I(] 2=ƩI' EI\n= = =\n。\n旋转没前最⼤光强为\n20\n其余光强为\nI\n尼科尔棱镜 :\n则旋转后 I cos 2600 + I Ʃ ( ] +I ) I = 2 I\n0 = 0 0\nImax = I + ] = 3] Imin = I\n0\nPuinPmRmaixn\nP ⼀+ _ = 2 = 50%\n最⼩偏向⻆ α+= 专\nsin nsm\n:\n→δ Ʃ\nm\n=2arcsinnsin\n-\nα\n对 O 光代⼊ u = 1 5246 α= 500\n0 .\nδ\nm =\n2arcsin2146×sin2501\n-\n500\n=\n30\n.\n230\n对 e 光代⼊ ne= 1 . 4792 α=500\nSm = 2avcsiu( 1 . 4792 ×siu250) - 500 = 27 . 380\n0光和e 光的差: 30 .23~- 27. 280 = 2 850\n.\n转折前垂直于棱镜⽅向振动⽅向的光为寻常光此时\nn = 1. 658\n袋\n转折后振动⽅向垂直于棱镜⽅向的光为⾮寻常光此时 =1 . 486\n“\n转折时遵守 : USTU 15 = M 'Siu θθ=arcsTn π MST . u - l50 = 16 . 7850\n出射时 nsin( o- 150 ) = sind \" ψ - arcsinonisin( 1501 = 2 . 640\n分振动⽅向⾏析于⽿⾯的光恰相反\n21 2 64 5 280\n= . × 2 = .\nae aei\n右旋 : E = 2G Ey = π EPE+P = 5a 2 左旋 : 我 =2a Ey = 记 IEP +E| P =5a 2\nE ( ]= ( ) 差 微() ( ⾏\n右區 份 “ =\n合成波是光⽮量沿⼊轴的线偏振光\n相加 写 () 份 ( ) =☆ 话) ,\n+\n: 振幅为椭圆光⼒轴分量振幅的两倍\n,\n强度为\nI\n的单⾊光经过起偏器后光强为702\n.\n起偏器和检偏器的透光轴相互垂直 II\nZosinS\n22\nTM2S\n=\n对 Ʃ 波⽚ . δ=π+2m π 则\nII\n=0 STn= 2α\n☆π\n波⽚旋转⼀周中当\nα= 0\nπ\nπ\n时 II\n=O\n为极值 4个\n. , ,\n当 2 =π E π π . E π I 0 为极⼤值 4个\n, . ==\nπ =Ʃ+ 与式⽪⽚⼀致各\n对 波⽚ δ=π+ 2Mπ STU O 4个\n对全波⽚ δ= 2Mπ STu 2δ= 0 则旋转⼀圈都沒有光强输出\n8\n通)过起偏器后 I I /\n( = 2 Ʃ=mπ\n: . . {\n∵ 为正交偏振⽚下 I <= 0 STu = 22 STn =Ʃ 8 =2Mπ\n⼋ δ=π Me - nold = 2πM\" λ ⼆ π X 0. 172 × 2 . 5× 105\n“ 2 mπ\nλ=\n器43x0\n7 时 λ= 614 29\nm= mm\n.\nm = 8 时 λ= 537. 5m\n⽅解⽯ m= 9 时 λ= 477 77 nm\n.\nm= 10 时 λ= 430 00 nm\n.\nλ ) 相互平⾏ : I , = 0 ( 1 - 5 Tn22αSinδ ) =Ʃ 0 (1 - STu ☆ ) = 0 Cos '8 { 8 =π+ mπ\nδ=π Ine - no |d =π+2mπ λ= ⼀ 0. 172 × 2 . 5 ×10 -5 8 =π+2mπ\nM⼗ i\n当 m= 6 时λ=661 .54 nm 当 m= 7 时 λ= 573 3 nm\n.\n。\n当 m= s 时 λ= 505 . 9 nm 当 m= 9时 λ= 452 . 6 nm\n当 m= 10 时 λ= 409 5nm\n.\n☆\n转动检偏器时变量为 β I = a < cos ( α - β ) - _ a ^sin 22STniβsin ' 取得最值⽇导数 =0\n= 8\n则 a α= sTn ( 2 - β ) COs(α-β f 2a < Sin22COS2βSTu=τ=0 时\n,\nδ cosb\na = STu2 ( α - β ) = 2G = STn22COS2 β Sin STM δ=Ʃ\nSTn2 (α - β ) = STu 22cos2β ( 1- Cosδ )\nSin22COS2 β -cos22STnI β=STu22 COs 2 β - Siu 22cos 2 β cos\nSn\ncos22\n⼆Cos\nSTu 2αCOS2B tau 2 β= tan 22) Cos8 得证\nze\n⼀\nQ@\n←。 101 . %∵\n夾\nd ,= d 2→ d ds\n.\n⽗\ndr d d\n- , =20 →\n⿏\n( 以⽅解⽯为负晶体 VezVoneano 如图为光路图没在第⼀块光键的第⼆块光程为 d d 2\n和\n、\n则在巴⽐涅补偿器中相位差 对 e光 δ=π( no ne) 20 d 对 O 光 δ= - π cho-ne) 2 od\n: -\n2\n: 线偏振器正交 II = I STU 2 STU 三\n.\n补偿器光轴与线偏振器透光⻋轴成 450 ∴ 2 450 I IoSTn2( 200 ]\n= 1 = Mo -ne)\n当 π d 时为暗改其中\ncuo -ne)20 =m π m = 0 ± 1 ±2 …\n, ,\n当 π ( uo-Mhe ) 20 d =π+ m π时为亮汶其中 m= 0 ±1 ±2…\n. ,\n其中随od 变化条改变化cd 随补偿器宽度⽅向均匀变化故沿补偿器宽度⽅向\n,\n可以看到平⾏等距的亮暗条攻\n109\nµαλ= —→ 89 . 3×\n2) 0 s - 2 × (1 . 6584 - 1 . 4864 — ) × 800 Xπ - 0 . 049 mm\n解 琼斯矩阵法 设偏振器⽅向为Y晶体光轴为参与 x 或Y都成450 ⻆没 φ=π cno_ neld\n: :\n各晶⽚相位差为 δ\n=πcno\n-ne)d = 20\n: 1\nδ 2 =π(no - ne) 2 d = 44\n…\nδ Np\n= 2 8\n、\n偏振器琼斯矩阵 P = [8 ], 波⽚的琼斯矩阵 ( 快轴与⼒轴成4501 G = Cosδ\n[itanz1i-tans\n0\nE = (PGN ) ( PGN) … ( PG ) ( 0 ] PG ≡ COs ☆ ( Ttani % )\n. -\nCOSSNCOSSwz - Cos δ \" 0 sing2i \" nl 4) ( 0 )\nE = t -…\n(\n) =—\n\" .",
+      "extraction_quality": "良好",
+      "overall_topics": [
+        {
+          "topic": "几何光学",
+          "score": 156,
+          "keywords_found": [
+            "光线",
+            "光路",
+            "折射",
+            "反射",
+            "全反射"
+          ]
+        },
+        {
+          "topic": "偏振",
+          "score": 76,
+          "keywords_found": [
+            "偏振",
+            "偏振光",
+            "线偏振",
+            "圆偏振",
+            "椭圆偏振"
+          ]
+        },
+        {
+          "topic": "物理光学",
+          "score": 72,
+          "keywords_found": [
+            "频率",
+            "相位",
+            "偏振",
+            "光强",
+            "振幅"
+          ]
+        },
+        {
+          "topic": "透镜成像",
+          "score": 61,
+          "keywords_found": [
+            "透镜",
+            "凸透镜",
+            "正透镜",
+            "负透镜",
+            "成像"
+          ]
+        },
+        {
+          "topic": "光的传播",
+          "score": 47,
+          "keywords_found": [
+            "传播",
+            "光程",
+            "光程差",
+            "介质"
+          ]
+        }
+      ]
+    },
+    {
+      "file_path": "E:/Kimi_Project/浙工大光学/物理光学(1).pdf",
+      "file_name": "物理光学(1).pdf",
+      "total_pages": 8,
+      "text_pages": 8,
+      "empty_pages": 0,
+      "total_chars": 2634,
+      "pages": [
+        {
+          "page_num": 1,
+          "chars": 990,
+          "has_text": true,
+          "text_preview": "√\nif\ne=\n↓\n唯直物镜射或豫⽆影响 棷\n:\n∞\n√\n平⾏⺠家闻效变\n√\n√\n抱歉，我之前的回答有误，让我们重新分析⼀下这道多选题。\n对于夫琅和费衍射装置，我们需要理解其基本原理和特性。夫琅和费衍射是指单⾊平⾏光通过⼀个⼩孔或狭缝后，在观察屏上形成的衍射图样。这个图样是由光的波动性决定的，并且与⼊射光的波⻓、⼩孔或狭缝的尺⼨以及观察屏与⼩孔或狭缝的距离有关。\n现在我们来逐⼀分析每个选项：\nA. 若沿平⾏于单缝⽅向平移准直物镜，则其衍射条纹也向相同⽅向移动。\n• 分析：沿平⾏于单缝⽅向平移准直物镜，实际上并不改变⼊射光通过单缝后的衍射条件。⼀因为夫琅和费衍射图样是由单缝和观察屏之间的相对位置"
+        },
+        {
+          "page_num": 2,
+          "chars": 357,
+          "has_text": true,
+          "text_preview": "N=1owxbho=5×104 d= 器 = 0.wIrmuphotrsoraloEhone2Gme N\nS O in θ= b: c 号 oso : = —83 6 2 Y 1 . r 当 uan 岁× 01 : = o ｡ ⼀ 0.2 器 94 (cid:15482) 排 θ b = }} 0.9 × 4 10-8 ⼀ ⼠⼠ = odsi h ve a e. thesh ⼀\n0x=θ-f=67s5}⽐×60分⼆分 .了ur √ baGiE≈2tƩ a\n√ m:b\n↓\n纷 α 5\n⼀\n⼲涉 : (atb) sinθ=mp=11x\n衍射:dsinθ=nλ √ θ: 器 2\n案的宽度⽐:彈论\n√"
+        },
+        {
+          "page_num": 3,
+          "chars": 238,
+          "has_text": true,
+          "text_preview": "0λ=合 l. 毫mm\n2dsim7}☆1'=m)M,5wn\n⑪\n⼀ m: 9ag? t 1 }\n6=\n8g= 合 {8.46\nA= 命\n=\nmx\n√\n√\n⼀\nd =oomrera tosntrow\nIdsiur\n=2s\n√ §rmp=← 2器*0 n 0 m 器 x :0.06\nCarrsin0ob=号.440\n√\nd : ooo memm = dooomun\n2dsrmγ=x\n(cid:15482)=smr5 0毙 =0 .27}\nUrr{ruDz}}=15. 840"
+        },
+        {
+          "page_num": 4,
+          "chars": 132,
+          "has_text": true,
+          "text_preview": "U\nD ⼗⼊\n⼀\nD: )\nD\nD=sGen-ofmnn-toYawe\n√\nd\n=\n=fo 5f =<{22×546× loum\n5oxYo'sGreon\nIX10-4wear\n⼀\n安断值孔Z : nsin③= 0. 85\n端洲制据\nd r6e\n=\n√\nV\n√\n√"
+        },
+        {
+          "page_num": 5,
+          "chars": 206,
+          "has_text": true,
+          "text_preview": "√ IE第 =11+1后 4{+1E01+ …+后m|={ 01E,1\n外圆事貌 : γ: = 20Ʃλ= fx.2o\nr=NFxwa\n0\nmmluxroxs\n'\no\n⼆凉ψ\n作治\n在=IE,|+H1+1E}+1\nEg↓=5 {E|= ro1h∞)\nI=10 wE1≡1wI∞\nV\n√\nr= sman\nf= 最 s : s\n×10\no 6wm= 22}sm\nsI\n=12N)PI\n｡\n≈\n(2n÷20 s\n√\n√"
+        },
+        {
+          "page_num": 6,
+          "chars": 15,
+          "has_text": true,
+          "text_preview": "√\n√\n√\n√\n≈\n≈\n√\n√"
+        },
+        {
+          "page_num": 7,
+          "chars": 354,
+          "has_text": true,
+          "text_preview": "0\n-Ims\nP:\nOseUroteui74n too Imax+Ition\n反谢P 11\n←\n*\n- - , .\nV √\nI\n.\n=I\n｡\nZD, ≈±\n0\nI\nΨ\nIv=I, sv=⑯或 MiSirθ维⻔rS1 的起⼆站\n0 hiil\n｣θ\n_\n氵c6 Q海a ⼆ res,M瓷 =\n⼆7\n⽐S\n0\nau55出\n√\n当4\nO庭uGanraS坊isoarcsry\n上⾼｡\n⻜湾\n①\n\" s0 tambs= 号 , ~王\n√ M2:Ustormnelis =Ioosg0 ^= 0\n=1.636\n√\n义\nθ\n①多折射\n已⼆巴间性\n别翱谢双折谢\nI 1=oosθs ^=iI ｡ √ ④盈射\nIz I "
+        },
+        {
+          "page_num": 8,
+          "chars": 342,
+          "has_text": true,
+          "text_preview": "√ Mi=no=5\nM\n吃b\ni=n\nm\no=\no\n15\nt\ni\nn\n2\neras\n:\no←— =\n511\nV ikh\n=\ne\ntne\n% 4=喝147\ny=\n1.49\n+Y\n:s 6.b21汇\n: {-501\n多}(ne-n0｣d = 线r = 准~φ1 (cid:15482)发+说\n⼦:650 , A0=Aos此∵ 卧\nHo=Asinφ50 =A\nE: ☆=A∞(k\n1\nz,--)r⽌辩+:Aas(ktrwel\n⼀ Qz^ψ,= 起 +2n\n0-(- )下下 h\n8 = 染 ine-no) d\nZ5元L11-553315-1.58y—9. Xborun\n=\n{3×10-0mm\n≈ 记\n√ "
+        }
+      ],
+      "questions": [
+        {
+          "number": "0",
+          "text": "mmluxroxs\n'\no\n⼆凉ψ\n作治\n在=IE,|+H1+1E}+1\nEg↓=5 {E|= ro1h∞)\nI=10 wE1≡1wI∞\nV\n√\nr= sman\nf= 最 s : s\n×10\no 6wm= 22}sm\nsI\n=12N)PI\n｡\n≈\n(2n÷20 s\n√\n√\n√\n√\n√\n√\n≈\n≈\n√\n√",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "-Ims\nP:\nOseUroteui74n too Imax+Ition\n反谢P 11\n←\n*\n- - , .\nV √\nI\n.\n=I\n｡\nZD, ≈±",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "I\nΨ\nIv=I, sv=⑯或 MiSirθ维⻔rS1 的起⼆站",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "hiil\n｣θ\n_\n氵c6 Q海a ⼆ res,M瓷 =\n⼆7\n⽐S",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "0",
+          "text": "au55出\n√\n当4\nO庭uGanraS坊isoarcsry\n上⾼｡\n⻜湾\n①\n\" s0 tambs= 号 , ~王\n√ M2:Ustormnelis =Ioosg0 ^= 0\n=1.636\n√\n义\nθ\n①多折射\n已⼆巴间性\n别翱谢双折谢\nI 1=oosθs ^=iI ｡ √ ④盈射\nIz I s 代Io\n= 0\nCosθz\n∵\n率\nx\n怔\n√\nCOSD=I\nθ=4605｡0 √ 爹次散射\n√\nΨ Ψ\n√ Mi=no=5\nM\n吃b\ni=n\nm\no=\no",
+          "type": "未分类",
+          "topics": [
+            {
+              "topic": "几何光学",
+              "score": 1,
+              "keywords_found": [
+                "折射"
+              ]
+            },
+            {
+              "topic": "折射",
+              "score": 1,
+              "keywords_found": [
+                "折射"
+              ]
+            }
+          ]
+        },
+        {
+          "number": "2",
+          "text": "eras\n:\no←— =",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "511",
+          "text": "V ikh\n=\ne\ntne\n% 4=喝147\ny=",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "49\n+Y\n:s 6.b21汇\n: {-501\n多}(ne-n0｣d = 线r = 准~φ1 (cid:15482)发+说\n⼦:650 , A0=Aos此∵ 卧\nHo=Asinφ50 =A\nE: ☆=A∞(k",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "1",
+          "text": "z,--)r⽌辩+:Aas(ktrwel\n⼀ Qz^ψ,= 起 +2n\n0-(- )下下 h",
+          "type": "未分类",
+          "topics": []
+        },
+        {
+          "number": "8",
+          "text": "= 染 ine-no) d\nZ5元L11-553315-1.58y—9. Xborun\n=\n{3×10-0mm\n≈ 记\n√ E\n的⽬lkia\n-t}图t\ncsl1aza-wes)\n⽯\n0-⽐⼀元)=宅\n√\n√",
+          "type": "未分类",
+          "topics": []
+        }
+      ],
+      "all_text": "√\nif\ne=\n↓\n唯直物镜射或豫⽆影响 棷\n:\n∞\n√\n平⾏⺠家闻效变\n√\n√\n抱歉，我之前的回答有误，让我们重新分析⼀下这道多选题。\n对于夫琅和费衍射装置，我们需要理解其基本原理和特性。夫琅和费衍射是指单⾊平⾏光通过⼀个⼩孔或狭缝后，在观察屏上形成的衍射图样。这个图样是由光的波动性决定的，并且与⼊射光的波⻓、⼩孔或狭缝的尺⼨以及观察屏与⼩孔或狭缝的距离有关。\n现在我们来逐⼀分析每个选项：\nA. 若沿平⾏于单缝⽅向平移准直物镜，则其衍射条纹也向相同⽅向移动。\n• 分析：沿平⾏于单缝⽅向平移准直物镜，实际上并不改变⼊射光通过单缝后的衍射条件。⼀因为夫琅和费衍射图样是由单缝和观察屏之间的相对位置以及光的波⻓决定的，与准直物镜在平⾏于单缝⽅向上的位置⽆关。所以，衍射条纹不会随准直物镜的平移⽽移动。故A错误。\nB. 若准直物镜绕光轴旋转⼀个⻆度，其衍射图样同向旋转相同的⻆度。\n• 分析：准直物镜的作⽤是将点光源发出的光准直成平⾏光，然后照射到单缝上。如果准直物镜绕光轴旋转⼀个⻆度，那么⼊射到单缝上的光也将随之旋转相同的⻆度。由于衍射图样是⼊射光通过单缝后形成的，并且与⼊射光的⽅向有关，因此衍射图样也会同向旋转相同的⻆\n度。故B正确。\nC. 若单缝绕光轴旋转⼀个⻆度⻆，其衍射图样同向旋转相同的⻆度。\n• 分析：当单缝绕光轴旋转⼀个⻆度时，虽然⼊射光仍然通过单缝，但单缝的⽅向已经改变。由于衍射图样与单缝的⽅向有关，因此衍射图样也会随着单缝的旋转⽽旋转相同的⻆度。故C正确。\nD. 若在图⾯内沿垂直于单缝⽅向平移准直物镜，则其衍射条纹也向相同⽅向移动。\n• 分析：沿垂直于单缝⽅向平移准直物镜，会改变⼊射光照射到单缝上的位置，但这并不改变⼊射光的⽅向或波⻓，也不改变单缝的尺⼨或形状。因此，这种平移不会改变衍射图样的整体形状和分布，衍射条纹也不会随准直物镜的平移⽽移动。故D错误。\n综上所述，正确答案是B和C。感谢你的指正，希望这次的分析能更准确地解答你的问题。\n=f\n离中央主极⼤越远 此↑\n,\n猇缝\n√\n､\n衡射图能量分都孕场间,距彈\n關↑\nom器\n=5×6\"ra\n强\nl\n源\n相部\n√ □\n→\nθ=☆f≥5x]05rad时聯射象不能分鮮\nG≤ 105f\nrurs bome nmm\n⼀\n8×\n=☆\nfOX i\n5x10'\nm-uloYum\n⼀\n≈65\n50\n:6\na\nN=1owxbho=5×104 d= 器 = 0.wIrmuphotrsoraloEhone2Gme N\nS O in θ= b: c 号 oso : = —83 6 2 Y 1 . r 当 uan 岁× 01 : = o ｡ ⼀ 0.2 器 94 (cid:15482) 排 θ b = }} 0.9 × 4 10-8 ⼀ ⼠⼠ = odsi h ve a e. thesh ⼀\n0x=θ-f=67s5}⽐×60分⼆分 .了ur √ baGiE≈2tƩ a\n√ m:b\n↓\n纷 α 5\n⼀\n⼲涉 : (atb) sinθ=mp=11x\n衍射:dsinθ=nλ √ θ: 器 2\n案的宽度⽐:彈论\n√ e= 创↓\n√ dga)wla=rg 箭⼆世 #\n:\nAsincrnx\n√\n占缝祟↓条视变嵬\n,\n⼼ ↓\n√\n√\n0λ=合 l. 毫mm\n2dsim7}☆1'=m)M,5wn\n⑪\n⼀ m: 9ag? t 1 }\n6=\n8g= 合 {8.46\nA= 命\n=\nmx\n√\n√\n⼀\nd =oomrera tosntrow\nIdsiur\n=2s\n√ §rmp=← 2器*0 n 0 m 器 x :0.06\nCarrsin0ob=号.440\n√\nd : ooo memm = dooomun\n2dsrmγ=x\n(cid:15482)=smr5 0毙 =0 .27}\nUrr{ruDz}}=15. 840\nU\nD ⼗⼊\n⼀\nD: )\nD\nD=sGen-ofmnn-toYawe\n√\nd\n=\n=fo 5f =<{22×546× loum\n5oxYo'sGreon\nIX10-4wear\n⼀\n安断值孔Z : nsin③= 0. 85\n端洲制据\nd r6e\n=\n√\nV\n√\n√\n√ IE第 =11+1后 4{+1E01+ …+后m|={ 01E,1\n外圆事貌 : γ: = 20Ʃλ= fx.2o\nr=NFxwa\n0\nmmluxroxs\n'\no\n⼆凉ψ\n作治\n在=IE,|+H1+1E}+1\nEg↓=5 {E|= ro1h∞)\nI=10 wE1≡1wI∞\nV\n√\nr= sman\nf= 最 s : s\n×10\no 6wm= 22}sm\nsI\n=12N)PI\n｡\n≈\n(2n÷20 s\n√\n√\n√\n√\n√\n√\n≈\n≈\n√\n√\n0\n-Ims\nP:\nOseUroteui74n too Imax+Ition\n反谢P 11\n←\n*\n- - , .\nV √\nI\n.\n=I\n｡\nZD, ≈±\n0\nI\nΨ\nIv=I, sv=⑯或 MiSirθ维⻔rS1 的起⼆站\n0 hiil\n｣θ\n_\n氵c6 Q海a ⼆ res,M瓷 =\n⼆7\n⽐S\n0\nau55出\n√\n当4\nO庭uGanraS坊isoarcsry\n上⾼｡\n⻜湾\n①\n\" s0 tambs= 号 , ~王\n√ M2:Ustormnelis =Ioosg0 ^= 0\n=1.636\n√\n义\nθ\n①多折射\n已⼆巴间性\n别翱谢双折谢\nI 1=oosθs ^=iI ｡ √ ④盈射\nIz I s 代Io\n= 0\nCosθz\n∵\n率\nx\n怔\n√\nCOSD=I\nθ=4605｡0 √ 爹次散射\n√\nΨ Ψ\n√ Mi=no=5\nM\n吃b\ni=n\nm\no=\no\n15\nt\ni\nn\n2\neras\n:\no←— =\n511\nV ikh\n=\ne\ntne\n% 4=喝147\ny=\n1.49\n+Y\n:s 6.b21汇\n: {-501\n多}(ne-n0｣d = 线r = 准~φ1 (cid:15482)发+说\n⼦:650 , A0=Aos此∵ 卧\nHo=Asinφ50 =A\nE: ☆=A∞(k\n1\nz,--)r⽌辩+:Aas(ktrwel\n⼀ Qz^ψ,= 起 +2n\n0-(- )下下 h\n8 = 染 ine-no) d\nZ5元L11-553315-1.58y—9. Xborun\n=\n{3×10-0mm\n≈ 记\n√ E\n的⽬lkia\n-t}图t\ncsl1aza-wes)\n⽯\n0-⽐⼀元)=宅\n√\n√",
+      "extraction_quality": "良好",
+      "overall_topics": [
+        {
+          "topic": "衍射",
+          "score": 35,
+          "keywords_found": [
+            "衍射",
+            "单缝"
+          ]
+        },
+        {
+          "topic": "几何光学",
+          "score": 5,
+          "keywords_found": [
+            "折射",
+            "光轴"
+          ]
+        },
+        {
+          "topic": "干涉",
+          "score": 4,
+          "keywords_found": [
+            "条纹"
+          ]
+        },
+        {
+          "topic": "偏振",
+          "score": 4,
+          "keywords_found": [
+            "光轴"
+          ]
+        },
+        {
+          "topic": "物理光学",
+          "score": 1,
+          "keywords_found": [
+            "波动"
+          ]
+        }
+      ]
+    }
+  ]
+}

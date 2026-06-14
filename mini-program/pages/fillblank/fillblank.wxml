@@ -1,0 +1,118 @@
+<!-- pages/fillblank/fillblank.wxml -->
+<view class="container">
+  <!-- 分类筛选 -->
+  <view class="category-tabs" wx:if="{{!isAnswering}}">
+    <view class="tab {{activeCategory === 'all' ? 'active' : ''}}" bindtap="switchCategory" data-cat="all">全部</view>
+    <view class="tab {{activeCategory === 'geo' ? 'active' : ''}}" bindtap="switchCategory" data-cat="geo">几何光学</view>
+    <view class="tab {{activeCategory === 'phy' ? 'active' : ''}}" bindtap="switchCategory" data-cat="phy">物理光学</view>
+  </view>
+
+  <!-- 难度筛选 -->
+  <view class="difficulty-filter" wx:if="{{!isAnswering}}">
+    <view class="filter-label">难度:</view>
+    <view class="filter-options">
+      <view class="filter-opt {{activeDifficulty === 'all' ? 'active' : ''}}" bindtap="switchDifficulty" data-diff="all">全部</view>
+      <view class="filter-opt {{activeDifficulty === 'easy' ? 'active' : ''}}" bindtap="switchDifficulty" data-diff="easy">简单</view>
+      <view class="filter-opt {{activeDifficulty === 'medium' ? 'active' : ''}}" bindtap="switchDifficulty" data-diff="medium">中等</view>
+      <view class="filter-opt {{activeDifficulty === 'hard' ? 'active' : ''}}" bindtap="switchDifficulty" data-diff="hard">困难</view>
+    </view>
+  </view>
+
+  <!-- 题目列表 -->
+  <view class="question-list" wx:if="{{!isAnswering}}">
+    <view class="title-md" wx:if="{{filteredQuestions.length === 0}}" style="text-align:center;color:var(--text-light);padding:60rpx 0;">
+      暂无符合条件的题目
+    </view>
+    <block wx:for="{{filteredQuestions}}" wx:key="id">
+      <view class="question-card card" bindtap="startAnswer" data-index="{{index}}">
+        <view class="question-header">
+          <view class="question-tags">
+            <text class="tag {{item.chapter === '几何光学' ? 'tag-geo' : 'tag-phy'}}">{{item.chapter}}</text>
+            <text class="tag tag-{{item.difficulty}}">{{item.difficulty === 'easy' ? '简单' : item.difficulty === 'medium' ? '中等' : '困难'}}</text>
+          </view>
+          <view class="question-topic">{{item.topic}}</view>
+        </view>
+        <rich-text class="question-text" nodes="{{item.parsedQuestion}}"></rich-text>
+        <view class="question-footer">
+          <text class="text-sm">点击查看提示</text>
+          <text class="arrow">›</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 答题界面 -->
+  <view class="answer-panel" wx:if="{{isAnswering}}">
+    <view class="answer-header">
+      <view class="back-btn" bindtap="exitAnswer">← 返回</view>
+      <view class="answer-progress">第 {{currentIndex + 1}} / {{filteredQuestions.length}} 题</view>
+    </view>
+
+    <view class="answer-card card">
+      <view class="question-tags">
+        <text class="tag {{currentQuestion.chapter === '几何光学' ? 'tag-geo' : 'tag-phy'}}">{{currentQuestion.chapter}}</text>
+        <text class="tag tag-{{currentQuestion.difficulty}}">{{currentQuestion.difficulty === 'easy' ? '简单' : currentQuestion.difficulty === 'medium' ? '中等' : '困难'}}</text>
+      </view>
+      <rich-text class="answer-question" nodes="{{currentQuestion.parsedQuestion}}"></rich-text>
+      
+      <view class="input-area">
+        <input 
+          class="fill-input {{answered ? (isCorrect ? 'correct-input' : 'wrong-input') : ''}}" 
+          placeholder="在此输入答案..." 
+          value="{{userInput}}"
+          bindinput="onInputChange"
+          disabled="{{answered}}"
+        />
+      </view>
+
+      <button class="btn-primary {{userInput ? '' : 'disabled'}}" bindtap="submitAnswer" wx:if="{{!answered}}">提交答案</button>
+    </view>
+
+    <!-- 结果面板 -->
+    <view class="result-panel card" wx:if="{{answered}}">
+      <view class="result-title {{isCorrect ? 'correct-title' : 'wrong-title'}}">
+        {{isCorrect ? '✅ 回答正确' : '❌ 回答不完整'}}
+      </view>
+      
+      <!-- 已填对的关键词 -->
+      <view class="keywords-section" wx:if="{{matchedKeywords.length > 0}}">
+        <view class="keywords-label">✅ 已答对：</view>
+        <view class="keywords-list">
+          <block wx:for="{{matchedKeywords}}" wx:key="*this">
+            <view class="keyword-tag correct">{{item}}</view>
+          </block>
+        </view>
+      </view>
+
+      <!-- 遗漏的关键词 -->
+      <view class="keywords-section" wx:if="{{missingKeywords.length > 0}}">
+        <view class="keywords-label">❌ 遗漏答案：</view>
+        <view class="keywords-list">
+          <block wx:for="{{missingKeywords}}" wx:key="*this">
+            <view class="keyword-tag wrong">{{item}}</view>
+          </block>
+        </view>
+      </view>
+
+      <!-- 提示 -->
+      <view class="hint-section" wx:if="{{!isCorrect}}">
+        <view class="title-sm">💡 提示</view>
+        <text class="hint-text">{{currentQuestion.hint}}</text>
+      </view>
+
+      <!-- 正确答案 -->
+      <view class="answer-reveal" wx:if="{{!isCorrect}}">
+        <view class="title-sm">📖 标准答案</view>
+        <text class="answer-text">{{currentQuestion.answer}}</text>
+      </view>
+    </view>
+
+    <!-- 操作按钮 -->
+    <view class="answer-actions" wx:if="{{answered}}">
+      <button class="btn-outline" bindtap="collectQuestion">
+        {{isCollected ? '❤️ 已收藏' : '🤍 收藏'}}
+      </button>
+      <button class="btn-primary" bindtap="nextQuestion">{{currentIndex < filteredQuestions.length - 1 ? '下一题' : '完成'}}</button>
+    </view>
+  </view>
+</view>
