@@ -1,0 +1,111 @@
+<!-- pages/study-mode/study-mode.wxml -->
+<view class="container">
+  <!-- 选择章节 -->
+  <view wx:if="{{step === 'select'}}">
+    <view class="title-lg">📚 学习模式</view>
+    <view class="text-sm" style="margin-bottom: 24rpx;">选择章节，从简单到困难，先学资料再刷题</view>
+    
+    <!-- 难度筛选 -->
+    <view class="difficulty-filter">
+      <view class="filter-label">难度:</view>
+      <view class="filter-options">
+        <view class="filter-opt {{selectedDifficulty === 'all' ? 'active' : ''}}" bindtap="selectDifficulty" data-difficulty="all">全部</view>
+        <view class="filter-opt {{selectedDifficulty === 'easy' ? 'active' : ''}}" bindtap="selectDifficulty" data-difficulty="easy">简单</view>
+        <view class="filter-opt {{selectedDifficulty === 'medium' ? 'active' : ''}}" bindtap="selectDifficulty" data-difficulty="medium">中等</view>
+        <view class="filter-opt {{selectedDifficulty === 'hard' ? 'active' : ''}}" bindtap="selectDifficulty" data-difficulty="hard">困难</view>
+      </view>
+    </view>
+    
+    <view class="chapter-list">
+      <block wx:for="{{chapters}}" wx:key="*this">
+        <view class="chapter-card card" bindtap="selectChapter" data-chapter="{{item}}">
+          <view class="chapter-icon">{{item === '几何光学' ? '🔍' : '🔬'}}</view>
+          <view class="chapter-info">
+            <view class="chapter-title">{{item}}</view>
+            <view class="chapter-desc">{{item === '几何光学' ? '近轴光学、理想系统、像差理论' : '干涉、衍射、偏振、傅里叶光学'}}</view>
+          </view>
+          <text class="arrow">›</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 学习资料 -->
+  <view wx:if="{{step === 'learn'}}">
+    <view class="learn-header">
+      <view class="back-btn" bindtap="goBack">← 返回</view>
+      <view class="learn-title">{{selectedChapter}} 学习资料</view>
+    </view>
+    
+    <view class="text-sm" style="margin-bottom: 24rpx;">共 {{learningMaterials.length}} 个公式/知识点</view>
+    
+    <scroll-view scroll-y class="learn-scroll">
+      <block wx:for="{{learningMaterials}}" wx:key="id">
+        <view class="material-card card">
+          <view class="material-header">
+            <text class="material-type {{item.type}}">{{item.type === 'formula' ? '∑ 公式' : '💡 知识点'}}</text>
+            <text class="material-topic">{{item.topic}}</text>
+          </view>
+          <view class="material-title">{{item.name || item.title}}</view>
+          <view wx:if="{{item.type === 'formula'}}" class="formula-box">
+            <rich-text class="formula-latex" nodes="{{item.parsedLatex}}"></rich-text>
+          </view>
+          <view class="material-content">{{item.description || item.content}}</view>
+        </view>
+      </block>
+      <view style="height: 120rpx;"></view>
+    </scroll-view>
+    
+    <view class="learn-actions">
+      <button class="btn-primary" bindtap="startQuiz">开始刷题训练</button>
+    </view>
+  </view>
+
+  <!-- 刷题训练 -->
+  <view wx:if="{{step === 'quiz'}}">
+    <view class="learn-header">
+      <view class="back-btn" bindtap="goBack">← 返回学习</view>
+      <view class="quiz-progress">{{currentQuizIndex + 1}} / {{quizQuestions.length}}</view>
+    </view>
+    
+    <view class="answer-card card">
+      <view class="question-tags">
+        <text class="tag {{currentQuestion.chapter === '几何光学' ? 'tag-geo' : 'tag-phy'}}">{{currentQuestion.chapter}}</text>
+        <text class="tag tag-{{currentQuestion.difficulty}}">{{currentQuestion.difficulty === 'easy' ? '简单' : currentQuestion.difficulty === 'medium' ? '中等' : '困难'}}</text>
+      </view>
+      <rich-text class="answer-question" nodes="{{currentQuestion.parsedQuestion}}"></rich-text>
+      
+      <view class="options-list">
+        <block wx:for="{{currentQuestion.options}}" wx:for-index="optIdx" wx:key="*this">
+          <view class="option {{answered ? (optIdx === correctIndex ? 'correct' : (optIdx === selectedIndex ? 'wrong' : '')) : ''}} {{selectedIndex === optIdx ? 'selected' : ''}}" 
+                bindtap="selectOption" 
+                data-index="{{optIdx}}"
+                hidden="{{answered && optIdx !== selectedIndex && optIdx !== correctIndex}}">
+            <view class="option-letter">{{['A','B','C','D'][optIdx]}}</view>
+            <rich-text class="option-text" nodes="{{currentQuestion.parsedOptions[optIdx]}}"></rich-text>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <view class="explanation-panel card" wx:if="{{answered}}">
+      <view class="explanation-title {{isCorrect ? 'correct-title' : 'wrong-title'}}">
+        {{isCorrect ? '✅ 回答正确' : '❌ 回答错误'}}
+      </view>
+      <view class="explanation-content">
+        <view class="title-md">📖 解析</view>
+        <rich-text nodes="{{currentQuestion.parsedExplanation}}"></rich-text>
+      </view>
+      <view class="explanation-answer">
+        <text class="title-md">✅ 正确答案：{{currentQuestion.answer}}</text>
+      </view>
+    </view>
+
+    <view class="answer-actions" wx:if="{{answered}}">
+      <button class="btn-outline" bindtap="collectQuestion">
+        {{isCollected ? '❤️ 已收藏' : '🤍 收藏'}}
+      </button>
+      <button class="btn-primary" bindtap="nextQuestion">{{currentQuizIndex < quizQuestions.length - 1 ? '下一题' : '完成学习'}}</button>
+    </view>
+  </view>
+</view>

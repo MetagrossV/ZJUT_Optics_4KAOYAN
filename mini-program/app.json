@@ -9,7 +9,8 @@
     "pages/formula-detail/formula-detail",
     "pages/card-memory/card-memory",
     "pages/optical-sim/optical-sim",
-    "pages/drawing-quiz/drawing-quiz"
+    "pages/drawing-quiz/drawing-quiz",
+    "pages/study-mode/study-mode"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -19,7 +19,8 @@ App({
       chapterProgress: {},
       topicProgress: {},
       recentAnswers: [],
-      ignoredChapters: []
+      ignoredChapters: [],
+      ignoredTopics: []
     }
   },
 
@@ -151,5 +152,23 @@ App({
   // 检查章节是否被忽略
   isChapterIgnored(chapter) {
     return this.globalData.userStats.ignoredChapters.includes(chapter);
+  },
+
+  // 忽略/取消忽略知识点（topic级别）
+  toggleIgnoreTopic(topic) {
+    const ignored = this.globalData.userStats.ignoredTopics;
+    const idx = ignored.indexOf(topic);
+    if (idx > -1) {
+      ignored.splice(idx, 1);
+    } else {
+      ignored.push(topic);
+    }
+    this.saveUserStats();
+    return idx === -1;
+  },
+
+  // 检查知识点是否被忽略
+  isTopicIgnored(topic) {
+    return this.globalData.userStats.ignoredTopics.includes(topic);
   }
 });

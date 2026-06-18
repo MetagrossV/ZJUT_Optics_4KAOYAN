@@ -5,10 +5,23 @@
     <view class="quiz-mode {{quizMode === 'choice' ? 'active' : ''}}" bindtap="switchQuizMode" data-mode="choice">选择题</view>
     <view class="quiz-mode {{quizMode === 'fillblank' ? 'active' : ''}}" bindtap="switchQuizMode" data-mode="fillblank">填空题</view>
     <view class="quiz-mode {{quizMode === 'calc' ? 'active' : ''}}" bindtap="switchQuizMode" data-mode="calc">计算题</view>
+    <view class="quiz-mode {{quizMode === 'sim' ? 'active' : ''}}" bindtap="switchQuizMode" data-mode="sim">模拟</view>
   </view>
 
   <!-- 选择题内容 -->
   <view wx:if="{{quizMode === 'choice'}}">
+    <!-- 学习模式入口（非答题状态） -->
+    <view class="smart-mode-entry" wx:if="{{!isAnswering}}">
+      <view class="smart-card card" bindtap="goToStudyMode" style="border-color: var(--success);">
+        <view class="smart-icon">📚</view>
+        <view class="smart-info">
+          <view class="smart-title">学习模式</view>
+          <view class="smart-desc">先学资料再刷题，从简单到困难系统学习</view>
+        </view>
+        <text class="arrow">›</text>
+      </view>
+    </view>
+
     <!-- 智能推荐入口（非答题状态） -->
     <view class="smart-mode-entry" wx:if="{{!isAnswering}}">
       <view class="smart-card card" bindtap="startSmartMode">
@@ -68,19 +81,36 @@
       <view class="settings-header" bindtap="toggleChapterSettings">
         <view class="settings-title">⚙️ 章节设置</view>
         <view class="settings-hint">
-          <text wx:if="{{ignoredChapters.length > 0}}" class="ignored-hint">已忽略 {{ignoredChapters.length}} 个章节</text>
+          <text wx:if="{{ignoredChapters.length > 0 || ignoredTopics.length > 0}}" class="ignored-hint">已忽略 {{ignoredChapters.length}} 章 {{ignoredTopics.length}} 知识点</text>
           <text class="arrow">{{showChapterSettings ? '▾' : '▸'}}</text>
         </view>
       </view>
       <view class="settings-panel" wx:if="{{showChapterSettings}}">
-        <view class="settings-desc">关闭不考的章节，刷题和智能推荐将自动过滤</view>
-        <view class="chapter-grid">
+        <view class="settings-desc">关闭不考的章节或知识点，刷题和智能推荐将自动过滤</view>
+        <!-- Tab切换 -->
+        <view class="settings-tabs">
+          <view class="settings-tab {{settingsTab === 'chapter' ? 'active' : ''}}" bindtap="switchSettingsTab" data-tab="chapter">大章节</view>
+          <view class="settings-tab {{settingsTab === 'topic' ? 'active' : ''}}" bindtap="switchSettingsTab" data-tab="topic">知识点</view>
+        </view>
+        <!-- 大章节 -->
+        <view class="chapter-grid" wx:if="{{settingsTab === 'chapter'}}">
           <view class="chapter-item {{ignoredChapters.includes(item) ? 'ignored' : 'active'}}" 
                 wx:for="{{allChapters}}" 
                 wx:key="*this"
                 bindtap="toggleIgnoreChapter"
                 data-chapter="{{item}}">
             <view class="chapter-status">{{ignoredChapters.includes(item) ? '✕' : '✓'}}</view>
+            <view class="chapter-name">{{item}}</view>
+          </view>
+        </view>
+        <!-- 知识点 -->
+        <view class="chapter-grid" wx:if="{{settingsTab === 'topic'}}">
+          <view class="chapter-item {{ignoredTopics.includes(item) ? 'ignored' : 'active'}}" 
+                wx:for="{{allTopics}}" 
+                wx:key="*this"
+                bindtap="toggleIgnoreTopic"
+                data-topic="{{item}}">
+            <view class="chapter-status">{{ignoredTopics.includes(item) ? '✕' : '✓'}}</view>
             <view class="chapter-name">{{item}}</view>
           </view>
         </view>
@@ -212,6 +242,31 @@
       <view class="calc-entry-info">
         <view class="calc-entry-title">进入计算题训练</view>
         <view class="calc-entry-desc">10道经典计算题，涵盖几何光学和物理光学</view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+  </view>
+
+  <!-- 模拟内容 -->
+  <view wx:if="{{quizMode === 'sim' && !isAnswering}}">
+    <view class="title-md">🔬 光学模拟</view>
+    <view class="text-sm" style="margin-bottom: 24rpx;">交互式光路模拟，实时调整参数观察光路变化</view>
+    <view class="calc-entry-card card" bindtap="goToOpticalSim">
+      <view class="calc-entry-icon">🔬</view>
+      <view class="calc-entry-info">
+        <view class="calc-entry-title">光路模拟引擎</view>
+        <view class="calc-entry-desc">凸透镜/平面镜/三棱镜/凹透镜 4种场景</view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+    
+    <view class="title-md" style="margin-top: 40rpx;">✏️ 绘图题</view>
+    <view class="text-sm" style="margin-bottom: 24rpx;">手绘光路图，系统自动验证评分</view>
+    <view class="calc-entry-card card" bindtap="goToDrawingQuiz">
+      <view class="calc-entry-icon">✏️</view>
+      <view class="calc-entry-info">
+        <view class="calc-entry-title">几何光学绘图题</view>
+        <view class="calc-entry-desc">3道经典绘图题，考察光路作图能力</view>
       </view>
       <text class="arrow">›</text>
     </view>

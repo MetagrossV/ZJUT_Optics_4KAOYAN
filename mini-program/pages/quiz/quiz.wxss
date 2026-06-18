@@ -559,6 +559,30 @@
   font-size: 24rpx;
 }
 
+/* 设置Tab */
+.settings-tabs {
+  display: flex;
+  gap: 16rpx;
+  margin-bottom: 20rpx;
+}
+
+.settings-tab {
+  padding: 10rpx 24rpx;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  color: var(--text-light);
+  background: var(--card-bg);
+  border: 2rpx solid var(--border);
+  text-align: center;
+  flex: 1;
+}
+
+.settings-tab.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
 /* 智能模式答题提示 */
 .smart-banner {
   display: flex;

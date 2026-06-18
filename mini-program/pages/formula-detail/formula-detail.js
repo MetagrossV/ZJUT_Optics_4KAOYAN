@@ -33,7 +33,12 @@ Page({
   /* ========== 公式滑动浏览 ========== */
   loadAllFormulas(targetId) {
     const kb = app.globalData.knowledgeBase;
-    const formulas = (kb?.formulas || []).map(f => {
+    if (!kb || !kb.formulas) {
+      this.setData({ mode: 'formula', allFormulas: [] });
+      wx.showToast({ title: '数据加载失败，请重启小程序', icon: 'none' });
+      return;
+    }
+    const formulas = (kb.formulas || []).map(f => {
       const variableList = Object.entries(f.variables || {}).map(([symbol, desc]) => ({ symbol, desc }));
       const relatedKnowledge = [];
       if (f.related_formulas) {
@@ -55,10 +60,13 @@ Page({
 
     this.setData({
       mode: 'formula',
-      allFormulas: formulas,
-      swiperCurrent: currentIndex
+      allFormulas: formulas
     }, () => {
-      this.updateFormulaAtIndex(currentIndex);
+      setTimeout(() => {
+        this.setData({ swiperCurrent: currentIndex }, () => {
+          this.updateFormulaAtIndex(currentIndex);
+        });
+      }, 50);
     });
   },
 
@@ -75,7 +83,12 @@ Page({
   /* ========== 知识点滑动浏览 ========== */
   loadAllKnowledge(targetId) {
     const kb = app.globalData.knowledgeBase;
-    const knowledgeList = (kb?.knowledge || []).map(k => {
+    if (!kb || !kb.knowledge) {
+      this.setData({ mode: 'knowledge', allKnowledge: [] });
+      wx.showToast({ title: '数据加载失败，请重启小程序', icon: 'none' });
+      return;
+    }
+    const knowledgeList = (kb.knowledge || []).map(k => {
       const relatedFormulas = [];
       if (k.related_formulas) {
         k.related_formulas.forEach(fid => {
@@ -94,10 +107,14 @@ Page({
 
     this.setData({
       mode: 'knowledge',
-      allKnowledge: knowledgeList,
-      swiperCurrent: currentIndex
+      allKnowledge: knowledgeList
     }, () => {
-      this.updateKnowledgeAtIndex(currentIndex);
+      // 延迟设置swiperCurrent，确保swiper已初始化
+      setTimeout(() => {
+        this.setData({ swiperCurrent: currentIndex }, () => {
+          this.updateKnowledgeAtIndex(currentIndex);
+        });
+      }, 50);
     });
   },
 
