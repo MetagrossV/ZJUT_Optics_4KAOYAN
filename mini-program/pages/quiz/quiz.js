@@ -20,11 +20,15 @@ Page({
     isSmartMode: false,
     weakReport: null,
     recommendedQuestions: [],
-    smartSessionCount: 0
+    smartSessionCount: 0,
+    allChapters: [],
+    ignoredChapters: [],
+    showChapterSettings: false
   },
 
   onLoad() {
     this.loadQuestions();
+    this.initChapterSettings();
     const report = this.loadWeakReport();
     this.setData({ weakReport: report });
   },
@@ -33,22 +37,34 @@ Page({
     if (this.data.isAnswering) {
       this.checkCollectionStatus();
     }
+    // 同步忽略的章节状态
+    this.initChapterSettings();
     const report = this.loadWeakReport();
     this.setData({ weakReport: report });
   },
 
   loadQuestions() {
     const data = app.globalData.choiceQuestions;
-    const questions = (data?.questions || []).map(q => ({
-      ...q,
-      parsedQuestion: parseLatex(q.question)
-    }));
-    this.setData({ questions, filteredQuestions: questions });
+    const ignored = app.globalData.userStats.ignoredChapters || [];
+    const questions = (data?.questions || [])
+      .filter(q => !ignored.includes(q.chapter))
+      .map(q => ({
+        ...q,
+        parsedQuestion: parseLatex(q.question)
+      }));
+    this.setData({ questions, filteredQuestions: questions, ignoredChapters: ignored });
+  },
+
+  initChapterSettings() {
+    const data = app.globalData.choiceQuestions;
+    const allChapters = [...new Set((data?.questions || []).map(q => q.chapter))].sort();
+    const ignored = app.globalData.userStats.ignoredChapters || [];
+    this.setData({ allChapters, ignoredChapters: ignored });
   },
 
   filterQuestions() {
-    const { questions, activeCategory, activeDifficulty } = this.data;
-    let filtered = questions;
+    const { questions, activeCategory, activeDifficulty, ignoredChapters } = this.data;
+    let filtered = questions.filter(q => !ignoredChapters.includes(q.chapter));
 
     if (activeCategory !== 'all') {
       const chapter = activeCategory === 'geo' ? '几何光学' : '物理光学';
@@ -74,8 +90,27 @@ Page({
     });
   },
 
+  toggleChapterSettings() {
+    this.setData({ showChapterSettings: !this.data.showChapterSettings });
+  },
+
+  toggleIgnoreChapter(e) {
+    const chapter = e.currentTarget.dataset.chapter;
+    const isIgnored = app.toggleIgnoreChapter(chapter);
+    const ignored = app.globalData.userStats.ignoredChapters || [];
+    this.setData({ ignoredChapters: ignored }, () => {
+      // 重新过滤题目和刷新报告
+      this.loadQuestions();
+      this.filterQuestions();
+      const report = this.loadWeakReport();
+      this.setData({ weakReport: report });
+      wx.showToast({ title: isIgnored ? `已忽略 ${chapter}` : `已恢复 ${chapter}`, icon: 'none' });
+    });
+  },
+
   loadWeakReport() {
     const stats = app.globalData.userStats;
+    const ignored = stats.ignoredChapters || [];
     const chapters = stats.chapterProgress || {};
     const topics = stats.topicProgress || {};
     const mistakes = stats.mistakes || [];
@@ -83,6 +118,7 @@ Page({
 
     const weakChapters = [];
     Object.keys(chapters).forEach(ch => {
+      if (ignored.includes(ch)) return;
       const p = chapters[ch];
       if (p.answered >= 3 && p.correct / p.answered < 0.7) {
         weakChapters.push({ name: ch, correctRate: Math.round(p.correct / p.answered * 100), answered: p.answered, correct: p.correct });
@@ -92,6 +128,7 @@ Page({
     const unstarted = [];
     const allChapters = [...new Set(this.data.questions.map(q => q.chapter))];
     allChapters.forEach(ch => {
+      if (ignored.includes(ch)) return;
       if (!chapters[ch] || chapters[ch].answered < 1) {
         unstarted.push(ch);
       }
@@ -109,8 +146,9 @@ Page({
     const errorList = Object.keys(errorTypes).map(type => ({ type, count: errorTypes[type] })).sort((a, b) => b.count - a.count).slice(0, 5);
 
     const recentCount = recent.length;
-    const recentCorrect = recent.filter(r => r.isCorrect).length;
-    const recentRate = recentCount > 0 ? Math.round(recentCorrect / recentCount * 100) : 0;
+    const recentCorrect = recent.filter(r => r.isCorrect && !ignored.includes(r.chapter)).length;
+    const recentFiltered = recent.filter(r => !ignored.includes(r.chapter));
+    const recentRate = recentFiltered.length > 0 ? Math.round(recentFiltered.filter(r => r.isCorrect).length / recentFiltered.length * 100) : 0;
 
     return { weakChapters, unstartedChapters: unstarted, weakTopics, errorTypeList: errorList, recentRate, totalAnswered: stats.totalAnswered || 0 };
   },
@@ -333,7 +371,8 @@ Page({
     this.setData({ 
       quizMode: mode,
       isAnswering: false,
-      answered: false
+      answered: false,
+      showChapterSettings: false
     });
   },
 

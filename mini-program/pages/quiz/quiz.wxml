@@ -63,6 +63,30 @@
       <view class="smart-banner-exit" bindtap="exitSmartMode">退出</view>
     </view>
 
+    <!-- 章节设置（非答题状态） -->
+    <view class="chapter-settings" wx:if="{{!isAnswering}}">
+      <view class="settings-header" bindtap="toggleChapterSettings">
+        <view class="settings-title">⚙️ 章节设置</view>
+        <view class="settings-hint">
+          <text wx:if="{{ignoredChapters.length > 0}}" class="ignored-hint">已忽略 {{ignoredChapters.length}} 个章节</text>
+          <text class="arrow">{{showChapterSettings ? '▾' : '▸'}}</text>
+        </view>
+      </view>
+      <view class="settings-panel" wx:if="{{showChapterSettings}}">
+        <view class="settings-desc">关闭不考的章节，刷题和智能推荐将自动过滤</view>
+        <view class="chapter-grid">
+          <view class="chapter-item {{ignoredChapters.includes(item) ? 'ignored' : 'active'}}" 
+                wx:for="{{allChapters}}" 
+                wx:key="*this"
+                bindtap="toggleIgnoreChapter"
+                data-chapter="{{item}}">
+            <view class="chapter-status">{{ignoredChapters.includes(item) ? '✕' : '✓'}}</view>
+            <view class="chapter-name">{{item}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
     <!-- 分类标签 -->
     <view class="category-tabs" wx:if="{{!isAnswering}}">
       <view class="tab {{activeCategory === 'all' ? 'active' : ''}}" bindtap="switchCategory" data-cat="all">全部</view>

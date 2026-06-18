@@ -16,7 +16,10 @@ App({
         formulas: [],
         questions: []
       },
-      chapterProgress: {}
+      chapterProgress: {},
+      topicProgress: {},
+      recentAnswers: [],
+      ignoredChapters: []
     }
   },
 
@@ -130,5 +133,23 @@ App({
       favs.push(questionId);
     }
     this.saveUserStats();
+  },
+
+  // 忽略/取消忽略章节
+  toggleIgnoreChapter(chapter) {
+    const ignored = this.globalData.userStats.ignoredChapters;
+    const idx = ignored.indexOf(chapter);
+    if (idx > -1) {
+      ignored.splice(idx, 1);
+    } else {
+      ignored.push(chapter);
+    }
+    this.saveUserStats();
+    return idx === -1; // true表示已忽略，false表示已取消
+  },
+
+  // 检查章节是否被忽略
+  isChapterIgnored(chapter) {
+    return this.globalData.userStats.ignoredChapters.includes(chapter);
   }
 });

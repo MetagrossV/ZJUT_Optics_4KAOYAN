@@ -1740,6 +1740,183 @@ module.exports = {
         "y'": "像高",
         "f'": "像方焦距"
       }
+    },
+    {
+      "id": "formula_126",
+      "name": "单球面物方焦距",
+      "latex": "f = \\frac{nr}{n' - n}",
+      "description": "单球面折射系统的物方焦距，由折射球面公式推导。f>0时物方焦点为实焦点，f<0时为虚焦点。",
+      "chapter": "几何光学",
+      "topic": "近轴光学",
+      "variables": {
+        "f": "物方焦距",
+        "n": "物方折射率",
+        "n'": "像方折射率",
+        "r": "球面曲率半径"
+      }
+    },
+    {
+      "id": "formula_127",
+      "name": "单球面像方焦距",
+      "latex": "f' = \\frac{n'r}{n' - n}",
+      "description": "单球面折射系统的像方焦距。f'与f的关系：f'/f = n'/n。",
+      "chapter": "几何光学",
+      "topic": "近轴光学",
+      "variables": {
+        "f'": "像方焦距",
+        "n": "物方折射率",
+        "n'": "像方折射率",
+        "r": "球面曲率半径"
+      }
+    },
+    {
+      "id": "formula_128",
+      "name": "反射棱镜等效空气厚度",
+      "latex": "d' = \\frac{d}{n}",
+      "description": "反射棱镜展开成等效空气平板的厚度。光通过棱镜的光程等于通过厚度为d'的空气平板的光程。用于计算像面位移和像差。",
+      "chapter": "几何光学",
+      "topic": "平面与平面系统",
+      "variables": {
+        "d'": "等效空气厚度",
+        "d": "棱镜实际厚度（展开后的平板厚度）",
+        "n": "棱镜材料折射率"
+      }
+    },
+    {
+      "id": "formula_129",
+      "name": "二维傅里叶变换",
+      "latex": "F(u,v) = \\iint_{-\\infty}^{+\\infty} f(x,y) e^{-i2\\pi(ux+vy)} dx dy",
+      "description": "光学中用于分析空间频率分布。复振幅分布f(x,y)的傅里叶变换F(u,v)表示其空间频谱。",
+      "chapter": "物理光学",
+      "topic": "傅里叶光学",
+      "variables": {
+        "F(u,v)": "频谱函数",
+        "f(x,y)": "空间域复振幅分布",
+        "u,v": "空间频率（x,y方向）",
+        "x,y": "空间坐标"
+      }
+    },
+    {
+      "id": "formula_130",
+      "name": "透镜傅里叶变换",
+      "latex": "U_f(x',y') = \\frac{1}{i\\lambda f} \\iint U_0(x,y) e^{-i\\frac{2\\pi}{\\lambda f}(xx'+yy')} dx dy",
+      "description": "焦距为f的薄透镜在后焦面上产生的前焦面（或紧贴透镜平面）光场的傅里叶变换。实现相干光学信息处理的基础。",
+      "chapter": "物理光学",
+      "topic": "傅里叶光学",
+      "variables": {
+        "U_f": "后焦面复振幅",
+        "U_0": "前焦面（或物面）复振幅",
+        "\\lambda": "波长",
+        "f": "透镜焦距",
+        "x',y'": "后焦面坐标"
+      }
+    },
+    {
+      "id": "formula_131",
+      "name": "空间频率",
+      "latex": "u = \\frac{x'}{\\lambda f}, \\quad v = \\frac{y'}{\\lambda f}",
+      "description": "透镜后焦面上的坐标与空间频率的对应关系。空间频率的单位是线对/毫米或cycles/mm。",
+      "chapter": "物理光学",
+      "topic": "傅里叶光学",
+      "variables": {
+        "u,v": "空间频率",
+        "x',y'": "透镜后焦面坐标",
+        "\\lambda": "波长",
+        "f": "透镜焦距"
+      }
+    },
+    {
+      "id": "formula_132",
+      "name": "相干传递函数CTF",
+      "latex": "H(u,v) = P(-\\lambda f u, -\\lambda f v)",
+      "description": "相干照明条件下，线性空间不变光学系统的传递函数。CTF就是光瞳函数（Pupil function）的缩放。决定系统能传递的空间频率范围。",
+      "chapter": "物理光学",
+      "topic": "傅里叶光学",
+      "variables": {
+        "H(u,v)": "相干传递函数",
+        "P": "光瞳函数（出瞳处）",
+        "\\lambda": "波长",
+        "f": "透镜焦距"
+      }
+    },
+    {
+      "id": "formula_133",
+      "name": "光学传递函数OTF",
+      "latex": "OTF(u,v) = \\frac{\\iint P(x,y)P^*(x-\\lambda f u, y-\\lambda f v) dx dy}{\\iint |P(x,y)|^2 dx dy}",
+      "description": "非相干照明条件下，光学系统的传递函数。OTF是光瞳函数的自相关。其模值MTF表示对比度传递，辐角PTF表示相位传递。",
+      "chapter": "物理光学",
+      "topic": "傅里叶光学",
+      "variables": {
+        "OTF": "光学传递函数",
+        "P": "光瞳函数",
+        "\\lambda": "波长",
+        "f": "焦距"
+      }
+    },
+    {
+      "id": "formula_134",
+      "name": "调制传递函数MTF",
+      "latex": "MTF(u,v) = |OTF(u,v)| = \\left| \\frac{\\iint P(x,y)P^*(x-\\lambda f u, y-\\lambda f v) dx dy}{\\iint |P(x,y)|^2 dx dy} \\right|",
+      "description": "OTF的模值，表示系统对不同空间频率余弦光栅的对比度传递能力。MTF=1表示完全传递，MTF=0表示该频率被截止。",
+      "chapter": "物理光学",
+      "topic": "傅里叶光学",
+      "variables": {
+        "MTF": "调制传递函数",
+        "OTF": "光学传递函数"
+      }
+    },
+    {
+      "id": "formula_135",
+      "name": "截止频率",
+      "latex": "u_{max} = \\frac{D}{2\\lambda f}",
+      "description": "圆形光瞳系统的相干截止频率。直径为D的出瞳决定系统能传递的最大空间频率。非相干截止频率为相干的两倍：2u_max。",
+      "chapter": "物理光学",
+      "topic": "傅里叶光学",
+      "variables": {
+        "u_{max}": "截止频率",
+        "D": "出瞳直径",
+        "\\lambda": "波长",
+        "f": "焦距"
+      }
+    },
+    {
+      "id": "formula_136",
+      "name": "瑞利判据（空间频率）",
+      "latex": "u_{瑞利} = \\frac{0.61}{\\lambda F}",
+      "description": "圆形孔径非相干成像系统的瑞利分辨率极限对应的空间频率。F=f/D为F数。",
+      "chapter": "物理光学",
+      "topic": "傅里叶光学",
+      "variables": {
+        "u_{瑞利}": "瑞利极限空间频率",
+        "\\lambda": "波长",
+        "F": "F数（光圈数）"
+      }
+    },
+    {
+      "id": "formula_137",
+      "name": "全息术记录",
+      "latex": "I = |R + O|^2 = |R|^2 + |O|^2 + R^*O + RO^*",
+      "description": "全息记录时干涉条纹的强度分布。R为参考光，O为物光。全息图记录了物光的振幅和相位信息（编码在R*O和RO*项中）。",
+      "chapter": "物理光学",
+      "topic": "全息术",
+      "variables": {
+        "I": "干涉强度",
+        "R": "参考光复振幅",
+        "O": "物光复振幅"
+      }
+    },
+    {
+      "id": "formula_138",
+      "name": "全息再现",
+      "latex": "U_{再现} = C \\cdot t_H = C(|R|^2+|O|^2) + C R^*O + CRO^*",
+      "description": "用再现光C照射全息图时，C R*O项重现原始物光波前，形成虚像（原始像）；C R O*项形成共轭实像。",
+      "chapter": "物理光学",
+      "topic": "全息术",
+      "variables": {
+        "U_{再现}": "再现光场",
+        "C": "再现照明光",
+        "t_H": "全息图振幅透过率"
+      }
     }
   ],
   "knowledge": [
@@ -3154,6 +3331,104 @@ module.exports = {
       "topic": "光阑与光束限制",
       "related_formulas": [
         "formula_125"
+      ]
+    },
+    {
+      "id": "knowledge_151",
+      "title": "傅里叶光学",
+      "content": "利用傅里叶变换分析光学系统的成像和信息处理。透镜具有傅里叶变换功能，可将空间域分布转换为空间频率域分布。",
+      "chapter": "物理光学",
+      "topic": "傅里叶光学",
+      "related_formulas": [
+        "formula_129",
+        "formula_130",
+        "formula_131"
+      ]
+    },
+    {
+      "id": "knowledge_152",
+      "title": "空间频率",
+      "content": "描述空间周期分布的疏密程度，单位是线对/毫米或cycles/mm。空间频率越高，细节越精细。光学系统的分辨率由可传递的最高空间频率（截止频率）决定。",
+      "chapter": "物理光学",
+      "topic": "傅里叶光学",
+      "related_formulas": [
+        "formula_131",
+        "formula_135"
+      ]
+    },
+    {
+      "id": "knowledge_153",
+      "title": "相干传递函数CTF",
+      "content": "相干照明下，光学系统的传递函数等于光瞳函数的缩放。CTF限制了系统能传递的空间频率范围，圆形光瞳的CTF是低通滤波器。",
+      "chapter": "物理光学",
+      "topic": "傅里叶光学",
+      "related_formulas": [
+        "formula_132",
+        "formula_135"
+      ]
+    },
+    {
+      "id": "knowledge_154",
+      "title": "光学传递函数OTF",
+      "content": "非相干照明下，系统的传递函数是光瞳函数的自相关。OTF的模MTF表示对比度传递，辐角PTF表示相位传递。OTF在频域中完全描述成像性能。",
+      "chapter": "物理光学",
+      "topic": "傅里叶光学",
+      "related_formulas": [
+        "formula_133",
+        "formula_134"
+      ]
+    },
+    {
+      "id": "knowledge_155",
+      "title": "截止频率与分辨率",
+      "content": "光学系统能传递的最大空间频率。相干截止频率为D/(2λf)，非相干截止频率为D/(λf)。截止频率越高，分辨率越好。瑞利判据与截止频率对应。",
+      "chapter": "物理光学",
+      "topic": "傅里叶光学",
+      "related_formulas": [
+        "formula_135",
+        "formula_136"
+      ]
+    },
+    {
+      "id": "knowledge_156",
+      "title": "全息术",
+      "content": "利用干涉记录物光的振幅和相位，利用衍射再现物光波前。全息图记录的不是像，而是波前。可以再现三维立体像。分为同轴全息和离轴全息。",
+      "chapter": "物理光学",
+      "topic": "全息术",
+      "related_formulas": [
+        "formula_137",
+        "formula_138"
+      ]
+    },
+    {
+      "id": "knowledge_157",
+      "title": "全息再现像",
+      "content": "全息再现时产生两个像：原始像（虚像，由C R*O项再现）和共轭像（实像，由C R O*项再现）。再现光方向不同时，像的位置和虚实可能互换。",
+      "chapter": "物理光学",
+      "topic": "全息术",
+      "related_formulas": [
+        "formula_138"
+      ]
+    },
+    {
+      "id": "knowledge_158",
+      "title": "反射棱镜展开",
+      "content": "将反射棱镜沿光路展开成等效空气平板。等效空气厚度d'=d/n。展开后便于计算像面位移、像差和光瞳位置。反射棱镜不改变光焦度但产生像差。",
+      "chapter": "几何光学",
+      "topic": "平面与平面系统",
+      "related_formulas": [
+        "formula_128"
+      ]
+    },
+    {
+      "id": "knowledge_159",
+      "title": "单球面焦距",
+      "content": "单球面折射系统有两个焦点：物方焦点F和像方焦点F'。焦距公式由折射公式推导。f'/f = n'/n。两焦距符号通常相反。球面反射镜可看作n'=-n的特殊情况。",
+      "chapter": "几何光学",
+      "topic": "近轴光学",
+      "related_formulas": [
+        "formula_126",
+        "formula_127"
       ]
     }
   ]
