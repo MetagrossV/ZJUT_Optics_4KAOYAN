@@ -2,6 +2,10 @@
 <view class="container">
   <!-- 公式滑动浏览模式 -->
   <block wx:if="{{mode === 'formula'}}">
+    <!-- 滑动指引 -->
+    <view class="swipe-hint" wx:if="{{allFormulas.length > 1}}">
+      <text class="swipe-hint-text">← 左右滑动查看更多公式 →</text>
+    </view>
     <swiper class="formula-swiper" current="{{swiperCurrent}}" bindchange="onSwiperChange">
       <swiper-item wx:for="{{allFormulas}}" wx:key="id">
         <scroll-view scroll-y class="formula-scroll">
@@ -41,7 +45,35 @@
                 </block>
               </view>
             </view>
+            <!-- 底部扩展内容 -->
+            <view class="detail-section extra-section">
+              <view class="title-md">🎯 典型应用场景</view>
+              <view class="extra-content">
+                <view class="extra-item" wx:if="{{item.chapter === '几何光学'}}">
+                  <view class="extra-label">常用场景</view>
+                  <text class="extra-text">{{item.topic === '像差理论' ? '光学系统设计与评价、透镜组校正' : (item.topic === '近轴光学' ? '光学成像计算、物像关系分析' : '光学系统分析、光路计算')}}</text>
+                </view>
+                <view class="extra-item" wx:if="{{item.chapter === '物理光学'}}">
+                  <view class="extra-label">常用场景</view>
+                  <text class="extra-text">{{item.topic === '干涉' ? '薄膜测量、精密检测' : (item.topic === '衍射' ? '光学仪器分辨率、光栅光谱' : '偏振器件、光通信')}}</text>
+                </view>
+                <view class="extra-item">
+                  <view class="extra-label">考研频率</view>
+                  <text class="extra-text {{item.topic === '像差理论' || item.topic === '近轴光学' || item.topic === '理想光学系统' ? 'high-freq' : 'medium-freq'}}">
+                    {{item.topic === '像差理论' || item.topic === '近轴光学' || item.topic === '理想光学系统' ? '⭐⭐⭐ 高频考点' : '⭐⭐ 中等频率'}}
+                  </text>
+                </view>
+              </view>
+            </view>
+            <view class="detail-section extra-section">
+              <view class="title-md">💡 记忆口诀</view>
+              <view class="memory-tip">
+                <text>{{item.name.length > 4 ? item.name.substring(0,4) : item.name}} — {{item.description.length > 30 ? item.description.substring(0,30) + '...' : item.description}}</text>
+              </view>
+            </view>
           </view>
+          <!-- 底部占位，避免被操作栏遮挡 -->
+          <view style="height: 120rpx;"></view>
         </scroll-view>
       </swiper-item>
     </swiper>
@@ -56,6 +88,10 @@
 
   <!-- 知识点滑动浏览模式 -->
   <block wx:if="{{mode === 'knowledge'}}">
+    <!-- 滑动指引 -->
+    <view class="swipe-hint" wx:if="{{allKnowledge.length > 1}}">
+      <text class="swipe-hint-text">← 左右滑动查看更多知识点 →</text>
+    </view>
     <swiper class="formula-swiper" current="{{swiperCurrent}}" bindchange="onSwiperChange">
       <swiper-item wx:for="{{allKnowledge}}" wx:key="id">
         <scroll-view scroll-y class="formula-scroll">
@@ -82,7 +118,29 @@
                 </block>
               </view>
             </view>
+            <!-- 底部扩展内容 -->
+            <view class="detail-section extra-section">
+              <view class="title-md">🎯 考研考点</view>
+              <view class="extra-content">
+                <view class="extra-item">
+                  <view class="extra-label">考查形式</view>
+                  <text class="extra-text">{{item.topic === '像差理论' ? '常考概念辨析、判断题' : (item.topic === '近轴光学' ? '计算题必备、公式推导' : '概念填空、选择题')}}</text>
+                </view>
+                <view class="extra-item">
+                  <view class="extra-label">关联章节</view>
+                  <text class="extra-text">{{item.chapter}} → {{item.topic}}</text>
+                </view>
+              </view>
+            </view>
+            <view class="detail-section extra-section">
+              <view class="title-md">💡 易错提示</view>
+              <view class="memory-tip">
+                <text>{{item.content.length > 40 ? item.content.substring(0,40) + '...' : item.content}}</text>
+              </view>
+            </view>
           </view>
+          <!-- 底部占位，避免被操作栏遮挡 -->
+          <view style="height: 120rpx;"></view>
         </scroll-view>
       </swiper-item>
     </swiper>

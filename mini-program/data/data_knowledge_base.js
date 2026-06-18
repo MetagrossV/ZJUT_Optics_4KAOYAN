@@ -1560,6 +1560,92 @@ module.exports = {
         "A_1,A_2": "两方向振幅",
         "\\delta": "相位差"
       }
+    },
+    {
+      "id": "formula_113",
+      "name": "彗差",
+      "latex": "K_T' = \frac{1}{2n'u'} \\sum S_{II}",
+      "description": "弧矢彗差：彗星状拖尾，与孔径和视场都有关。不满足等晕条件时产生。",
+      "chapter": "几何光学",
+      "topic": "像差理论",
+      "variables": {
+        "K_T'": "弧矢彗差",
+        "n'": "像方折射率",
+        "u'": "像方孔径角",
+        "S_{II}": "第二赛德和数"
+      }
+    },
+    {
+      "id": "formula_114",
+      "name": "像散",
+      "latex": "x_{ts}' - x_s' = \frac{1}{n'u'^2} \\sum S_{III}",
+      "description": "子午焦点与弧矢焦点不重合，细光束像差。与视场平方成正比。",
+      "chapter": "几何光学",
+      "topic": "像差理论",
+      "variables": {
+        "x_{ts}'": "子午焦点到高斯像面距离",
+        "x_s'": "弧矢焦点到高斯像面距离",
+        "n'": "像方折射率",
+        "u'": "像方孔径角",
+        "S_{III}": "第三赛德和数"
+      }
+    },
+    {
+      "id": "formula_115",
+      "name": "场曲",
+      "latex": "x_p' = \frac{1}{2n'u'^2} \\sum S_{IV}",
+      "description": "平面物体成弯曲像面（匹兹伐面），与视场平方成正比。",
+      "chapter": "几何光学",
+      "topic": "像差理论",
+      "variables": {
+        "x_p'": "匹兹伐场曲",
+        "n'": "像方折射率",
+        "u'": "像方孔径角",
+        "S_{IV}": "第四赛德和数"
+      }
+    },
+    {
+      "id": "formula_116",
+      "name": "畸变",
+      "latex": "q = \frac{\beta - \beta_0}{\beta_0} \times 100\\%",
+      "description": "放大率随视场变化，形状失真但不改变清晰度。枕形或桶形畸变。",
+      "chapter": "几何光学",
+      "topic": "像差理论",
+      "variables": {
+        "q": "相对畸变",
+        "\beta": "实际放大率",
+        "\beta_0": "近轴放大率"
+      }
+    },
+    {
+      "id": "formula_117",
+      "name": "正弦差",
+      "latex": "OSC = \frac{\\sin U' / \\sin u' - \beta}{\beta}",
+      "description": "不满足正弦条件时，近轴区与边缘区放大率不一致。正弦差为0表示满足等晕条件。",
+      "chapter": "几何光学",
+      "topic": "像差理论",
+      "variables": {
+        "OSC": "正弦差",
+        "U'": "边缘光线像方孔径角",
+        "u'": "近轴光线像方孔径角",
+        "\beta": "垂轴放大率"
+      }
+    },
+    {
+      "id": "formula_118",
+      "name": "倍率色差",
+      "latex": "\\Delta y_{FC}' = y_F' - y_C' = \frac{1}{n'u'} \\sum C_{II}",
+      "description": "F光与C光的垂轴放大率不同，造成不同颜色像的大小差异。",
+      "chapter": "几何光学",
+      "topic": "像差理论",
+      "variables": {
+        "\\Delta y_{FC}'": "倍率色差",
+        "y_F'": "F光像高",
+        "y_C'": "C光像高",
+        "n'": "像方折射率",
+        "u'": "像方孔径角",
+        "C_{II}": "第二色差和数"
+      }
     }
   ],
   "knowledge": [
@@ -2875,6 +2961,26 @@ module.exports = {
       "chapter": "物理光学",
       "topic": "衍射",
       "related_formulas": []
+    },
+    {
+      "id": "knowledge_141",
+      "title": "正弦差",
+      "content": "不满足正弦条件时，近轴区与边缘区放大率不一致。正弦差为0表示满足等晕条件。",
+      "chapter": "几何光学",
+      "topic": "像差理论",
+      "related_formulas": [
+        "formula_117"
+      ]
+    },
+    {
+      "id": "knowledge_142",
+      "title": "倍率色差",
+      "content": "F光与C光的垂轴放大率不同，造成不同颜色像的大小差异。",
+      "chapter": "几何光学",
+      "topic": "像差理论",
+      "related_formulas": [
+        "formula_118"
+      ]
     }
   ]
 };

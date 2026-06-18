@@ -19,6 +19,7 @@ Page({
 
   loadCards() {
     const kb = app.globalData.knowledgeBase;
+    const { parseLatex } = require('../../utils/latexParser.js');
     const cards = [];
     
     // 从公式和知识点生成卡片
@@ -30,6 +31,7 @@ Page({
           title: f.name,
           content: f.description,
           latex: f.latex,
+          parsedLatex: parseLatex(f.latex),
           chapter: f.chapter,
           fillQuestion: `${f.name}的表达式是：______`,
           fillAnswer: f.latex

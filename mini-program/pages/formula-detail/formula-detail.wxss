@@ -257,3 +257,83 @@
   border-color: var(--danger);
   color: var(--danger);
 }
+
+/* 滑动指引 */
+.swipe-hint {
+  text-align: center;
+  padding: 16rpx 0;
+  margin-bottom: 8rpx;
+  background: linear-gradient(90deg, transparent, rgba(74, 105, 189, 0.08), transparent);
+  border-radius: 12rpx;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.swipe-hint-text {
+  font-size: 24rpx;
+  color: var(--primary);
+  font-weight: 500;
+  letter-spacing: 2rpx;
+}
+
+/* 底部扩展内容 */
+.extra-section {
+  background: #f8f9fa;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-top: 24rpx;
+}
+
+.extra-content {
+  margin-top: 12rpx;
+}
+
+.extra-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16rpx;
+}
+
+.extra-item:last-child {
+  margin-bottom: 0;
+}
+
+.extra-label {
+  font-size: 24rpx;
+  font-weight: 600;
+  color: var(--primary);
+  min-width: 120rpx;
+  margin-right: 16rpx;
+  flex-shrink: 0;
+}
+
+.extra-text {
+  font-size: 26rpx;
+  color: var(--text);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.high-freq {
+  color: #e55039;
+  font-weight: 600;
+}
+
+.medium-freq {
+  color: #f6b93b;
+  font-weight: 500;
+}
+
+.memory-tip {
+  background: #fff8e1;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  margin-top: 12rpx;
+  border-left: 4rpx solid var(--secondary);
+}
+
+.memory-tip text {
+  font-size: 26rpx;
+  color: var(--text);
+  line-height: 1.6;
+  display: block;
+}

@@ -24,7 +24,7 @@
             <view class="flip-back-title">{{currentCard.title}}</view>
             <view class="flip-back-content">{{currentCard.content}}</view>
             <view class="flip-back-formula" wx:if="{{currentCard.latex}}">
-              <view class="formula-latex">{{currentCard.latex}}</view>
+              <rich-text class="formula-latex" nodes="{{currentCard.parsedLatex}}"></rich-text>
             </view>
           </view>
         </view>
