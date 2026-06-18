@@ -59,7 +59,7 @@ App({
   },
 
   // 记录答题
-  recordAnswer(questionId, isCorrect, errorType, chapter) {
+  recordAnswer(questionId, isCorrect, errorType, chapter, topic) {
     const stats = this.globalData.userStats;
     stats.totalAnswered++;
     if (isCorrect) {
@@ -72,6 +72,7 @@ App({
           questionId,
           errorType,
           chapter,
+          topic,
           timestamp: Date.now()
         });
       }
@@ -87,6 +88,22 @@ App({
     }
     stats.chapterProgress[chapter].answered++;
     if (isCorrect) stats.chapterProgress[chapter].correct++;
+
+    // 知识点进度（更细的粒度）
+    if (!stats.topicProgress) stats.topicProgress = {};
+    if (!stats.topicProgress[topic]) {
+      stats.topicProgress[topic] = { answered: 0, correct: 0 };
+    }
+    stats.topicProgress[topic].answered++;
+    if (isCorrect) stats.topicProgress[topic].correct++;
+
+    // 最近答题记录（用于分析趋势）
+    if (!stats.recentAnswers) stats.recentAnswers = [];
+    stats.recentAnswers.push({ questionId, isCorrect, errorType, chapter, topic, timestamp: Date.now() });
+    // 只保留最近50条
+    if (stats.recentAnswers.length > 50) {
+      stats.recentAnswers = stats.recentAnswers.slice(-50);
+    }
 
     this.saveUserStats();
   },

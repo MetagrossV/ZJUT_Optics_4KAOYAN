@@ -9,6 +9,60 @@
 
   <!-- 选择题内容 -->
   <view wx:if="{{quizMode === 'choice'}}">
+    <!-- 智能推荐入口（非答题状态） -->
+    <view class="smart-mode-entry" wx:if="{{!isAnswering}}">
+      <view class="smart-card card" bindtap="startSmartMode">
+        <view class="smart-icon">🎯</view>
+        <view class="smart-info">
+          <view class="smart-title">智能推荐刷题</view>
+          <view class="smart-desc">基于你的答题数据，自动推荐薄弱章节</view>
+        </view>
+        <text class="arrow">›</text>
+      </view>
+    </view>
+
+    <!-- 薄弱点报告（非答题状态） -->
+    <view class="weak-report" wx:if="{{!isAnswering && weakReport}}">
+      <view class="report-title">📊 学习报告</view>
+      <view class="report-stats">
+        <view class="stat-item">
+          <view class="stat-value">{{weakReport.totalAnswered}}</view>
+          <view class="stat-label">已答题</view>
+        </view>
+        <view class="stat-item">
+          <view class="stat-value">{{weakReport.recentRate}}%</view>
+          <view class="stat-label">最近正确率</view>
+        </view>
+      </view>
+      <view class="report-weak" wx:if="{{weakReport.weakChapters.length > 0}}">
+        <view class="report-subtitle">⚠️ 薄弱章节</view>
+        <view class="weak-list">
+          <view class="weak-chip" wx:for="{{weakReport.weakChapters}}" wx:key="name">{{item.name}} {{item.correctRate}}%</view>
+        </view>
+      </view>
+      <view class="report-weak" wx:if="{{weakReport.errorTypeList.length > 0}}">
+        <view class="report-subtitle">❌ 常见错误</view>
+        <view class="weak-list">
+          <view class="weak-chip error-chip" wx:for="{{weakReport.errorTypeList}}" wx:key="type">{{item.type}} {{item.count}}次</view>
+        </view>
+      </view>
+      <view class="report-unstarted" wx:if="{{weakReport.unstartedChapters.length > 0}}">
+        <view class="report-subtitle">📚 未开始章节</view>
+        <view class="weak-list">
+          <view class="weak-chip unstarted-chip" wx:for="{{weakReport.unstartedChapters}}" wx:key="*this">{{item}}</view>
+        </view>
+      </view>
+      <view class="report-empty" wx:if="{{weakReport.weakChapters.length === 0 && weakReport.errorTypeList.length === 0 && weakReport.unstartedChapters.length === 0 && weakReport.totalAnswered < 10}}">
+        <view class="text-sm">刷题10道以上即可生成智能推荐～</view>
+      </view>
+    </view>
+
+    <!-- 智能模式答题提示 -->
+    <view class="smart-banner" wx:if="{{isAnswering && isSmartMode}}">
+      <view class="smart-banner-text">🎯 智能推荐 第 {{currentIndex+1}} / {{smartSessionCount}} 题</view>
+      <view class="smart-banner-exit" bindtap="exitSmartMode">退出</view>
+    </view>
+
     <!-- 分类标签 -->
     <view class="category-tabs" wx:if="{{!isAnswering}}">
       <view class="tab {{activeCategory === 'all' ? 'active' : ''}}" bindtap="switchCategory" data-cat="all">全部</view>

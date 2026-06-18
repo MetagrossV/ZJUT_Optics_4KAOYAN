@@ -335,14 +335,161 @@
   justify-content: flex-end;
 }
 
-/* 操作按钮 */
-.answer-actions {
-  display: flex;
-  gap: 20rpx;
-  margin-top: 20rpx;
+/* 智能推荐模式 */
+.smart-mode-entry {
+  margin-bottom: 24rpx;
 }
 
-.answer-actions .btn-outline,
-.answer-actions .btn-primary {
+.smart-card {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  background: #fff;
+  border: 2rpx solid var(--primary);
+  border-radius: 16rpx;
+}
+
+.smart-card:active {
+  background: #e8f0fe;
+}
+
+.smart-icon {
+  font-size: 60rpx;
+  margin-right: 24rpx;
+  flex-shrink: 0;
+}
+
+.smart-info {
   flex: 1;
+}
+
+.smart-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8rpx;
+}
+
+.smart-desc {
+  font-size: 24rpx;
+  color: var(--text-light);
+}
+
+/* 薄弱点报告 */
+.weak-report {
+  margin-bottom: 24rpx;
+  padding: 24rpx;
+  background: var(--card-bg);
+  border-radius: 16rpx;
+  border: 2rpx solid var(--border);
+}
+
+.report-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 20rpx;
+  padding-bottom: 16rpx;
+  border-bottom: 2rpx solid var(--border);
+}
+
+.report-stats {
+  display: flex;
+  gap: 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+  padding: 16rpx;
+  background: var(--bg);
+  border-radius: 12rpx;
+}
+
+.stat-value {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 8rpx;
+}
+
+.stat-label {
+  font-size: 22rpx;
+  color: var(--text-light);
+}
+
+.report-weak {
+  margin-bottom: 16rpx;
+}
+
+.report-subtitle {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 12rpx;
+}
+
+.weak-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+}
+
+.weak-chip {
+  padding: 8rpx 16rpx;
+  border-radius: 24rpx;
+  font-size: 22rpx;
+  background: #ffebee;
+  color: var(--danger);
+  border: 2rpx solid #ffcdd2;
+}
+
+.error-chip {
+  background: #fff8e1;
+  color: #f57c00;
+  border-color: #ffe082;
+}
+
+.unstarted-chip {
+  background: #e8f5e9;
+  color: var(--success);
+  border-color: #c8e6c9;
+}
+
+.report-empty {
+  text-align: center;
+  padding: 20rpx 0;
+  color: var(--text-light);
+  font-size: 26rpx;
+}
+
+/* 智能模式答题提示 */
+.smart-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16rpx 20rpx;
+  background: #e8f0fe;
+  border-radius: 12rpx;
+  margin-bottom: 20rpx;
+  border: 2rpx solid var(--primary);
+}
+
+.smart-banner-text {
+  font-size: 26rpx;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.smart-banner-exit {
+  font-size: 24rpx;
+  color: var(--danger);
+  padding: 6rpx 16rpx;
+  border: 2rpx solid var(--danger);
+  border-radius: 20rpx;
+}
+
+.smart-banner-exit:active {
+  background: #ffebee;
 }

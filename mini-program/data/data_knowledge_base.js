@@ -1646,6 +1646,100 @@ module.exports = {
         "u'": "像方孔径角",
         "C_{II}": "第二色差和数"
       }
+    },
+    {
+      "id": "formula_119",
+      "name": "入瞳直径",
+      "latex": "D_{入} = D_{阑} / |\beta_{前}|",
+      "description": "孔径光阑经前面光学系统所成像的直径，决定轴上点光束孔径",
+      "chapter": "几何光学",
+      "topic": "光阑与光束限制",
+      "variables": {
+        "D_{入}": "入瞳直径",
+        "D_{阑}": "孔径光阑直径",
+        "\beta_{前}": "前面系统垂轴放大率"
+      }
+    },
+    {
+      "id": "formula_120",
+      "name": "出瞳直径",
+      "latex": "D_{出} = D_{阑} \\cdot |\beta_{后}|",
+      "description": "孔径光阑经后面光学系统所成像的直径",
+      "chapter": "几何光学",
+      "topic": "光阑与光束限制",
+      "variables": {
+        "D_{出}": "出瞳直径",
+        "D_{阑}": "孔径光阑直径",
+        "\beta_{后}": "后面系统垂轴放大率"
+      }
+    },
+    {
+      "id": "formula_121",
+      "name": "景深公式",
+      "latex": "\\Delta = \frac{4p^2 \u000barepsilon D_{入}}{D_{入}^2 - 4p^2 \u000barepsilon^2}",
+      "description": "远景与近景距离之差，p为对准距离，ε为弥散斑直径，D入为入瞳直径",
+      "chapter": "几何光学",
+      "topic": "光阑与光束限制",
+      "variables": {
+        "\\Delta": "景深",
+        "p": "对准距离",
+        "\u000barepsilon": "容许弥散斑直径",
+        "D_{入}": "入瞳直径"
+      }
+    },
+    {
+      "id": "formula_122",
+      "name": "焦深公式",
+      "latex": "\\Delta' = \frac{2 \\lambda}{\\sin^2 U_{max}'}",
+      "description": "接收器像面上能成清晰像的沿轴深度，与波长和像方孔径角有关",
+      "chapter": "几何光学",
+      "topic": "光阑与光束限制",
+      "variables": {
+        "\\Delta'": "焦深",
+        "\\lambda": "波长",
+        "U_{max}'": "像方最大孔径角"
+      }
+    },
+    {
+      "id": "formula_123",
+      "name": "渐晕系数",
+      "latex": "K = \\left(\frac{D_{\\omega}}{D_0}\right)^2",
+      "description": "轴外点光束截面积与轴上点光束截面积之比，K=1无渐晕，K=0全渐晕",
+      "chapter": "几何光学",
+      "topic": "光阑与光束限制",
+      "variables": {
+        "K": "渐晕系数",
+        "D_{\\omega}": "轴外点光束直径",
+        "D_0": "轴上点光束直径"
+      }
+    },
+    {
+      "id": "formula_124",
+      "name": "物方远心光路放大率",
+      "latex": "\beta = \frac{y'}{y} = \frac{-f'}{x}",
+      "description": "将孔径光阑置于像方焦平面，物距变化时放大率不变，用于测量",
+      "chapter": "几何光学",
+      "topic": "光阑与光束限制",
+      "variables": {
+        "\beta": "垂轴放大率",
+        "y'": "像高",
+        "y": "物高",
+        "f'": "像方焦距",
+        "x": "物距到物方焦点距离"
+      }
+    },
+    {
+      "id": "formula_125",
+      "name": "像方远心光路主光线",
+      "latex": "\tan U' = \frac{y'}{f'}",
+      "description": "将孔径光阑置于物方焦平面，像距变化时主光线方向不变，用于调焦",
+      "chapter": "几何光学",
+      "topic": "光阑与光束限制",
+      "variables": {
+        "U'": "像方孔径角",
+        "y'": "像高",
+        "f'": "像方焦距"
+      }
     }
   ],
   "knowledge": [
@@ -2980,6 +3074,86 @@ module.exports = {
       "topic": "像差理论",
       "related_formulas": [
         "formula_118"
+      ]
+    },
+    {
+      "id": "knowledge_143",
+      "title": "孔径光阑",
+      "content": "限制轴上点光束口径的光阑。决定了光学系统的入瞳和出瞳，影响像面照度和分辨率。寻找方法：将各光阑经前方光学系统成像，对物面张角最小的像为入瞳。",
+      "chapter": "几何光学",
+      "topic": "光阑与光束限制",
+      "related_formulas": [
+        "formula_119",
+        "formula_120"
+      ]
+    },
+    {
+      "id": "knowledge_144",
+      "title": "视场光阑",
+      "content": "限制物平面或像平面成像范围的光阑。决定了系统的视场大小，通常在实像面或物面处。入窗是视场光阑经前方系统所成的像，出窗是经后方系统所成的像。",
+      "chapter": "几何光学",
+      "topic": "光阑与光束限制",
+      "related_formulas": []
+    },
+    {
+      "id": "knowledge_145",
+      "title": "入瞳与出瞳",
+      "content": "入瞳：孔径光阑经前方光学系统所成的像，是物方光束的入口。出瞳：孔径光阑经后方光学系统所成的像，是像方光束的出口。目视系统出瞳应与眼瞳重合。",
+      "chapter": "几何光学",
+      "topic": "光阑与光束限制",
+      "related_formulas": [
+        "formula_119",
+        "formula_120"
+      ]
+    },
+    {
+      "id": "knowledge_146",
+      "title": "景深",
+      "content": "能在像平面上获得清晰像的物空间深度范围。与入瞳直径、对准距离、容许弥散斑大小有关。入瞳越小景深越大，对准距离越远景深越大。",
+      "chapter": "几何光学",
+      "topic": "光阑与光束限制",
+      "related_formulas": [
+        "formula_121"
+      ]
+    },
+    {
+      "id": "knowledge_147",
+      "title": "焦深",
+      "content": "不改变像质时，像面沿轴可移动的范围。与入瞳直径和波长有关。焦深与景深相对应：焦深是像空间，景深是物空间。",
+      "chapter": "几何光学",
+      "topic": "光阑与光束限制",
+      "related_formulas": [
+        "formula_122"
+      ]
+    },
+    {
+      "id": "knowledge_148",
+      "title": "渐晕",
+      "content": "轴外点光束被系统中某些光阑或框遮挡，导致光束截面减小、像面边缘照度下降的现象。渐晕系数K=1表示无渐晕，K=0表示全渐晕。",
+      "chapter": "几何光学",
+      "topic": "光阑与光束限制",
+      "related_formulas": [
+        "formula_123"
+      ]
+    },
+    {
+      "id": "knowledge_149",
+      "title": "物方远心光路",
+      "content": "将孔径光阑置于像方焦平面上，入瞳在无穷远处。物距变化时主光线平行于光轴，垂轴放大率不变。常用于测量显微镜和投影仪。",
+      "chapter": "几何光学",
+      "topic": "光阑与光束限制",
+      "related_formulas": [
+        "formula_124"
+      ]
+    },
+    {
+      "id": "knowledge_150",
+      "title": "像方远心光路",
+      "content": "将孔径光阑置于物方焦平面上，出瞳在无穷远处。像距变化时主光线平行于光轴，测量精度不受影响。常用于准直系统和调焦系统。",
+      "chapter": "几何光学",
+      "topic": "光阑与光束限制",
+      "related_formulas": [
+        "formula_125"
       ]
     }
   ]
