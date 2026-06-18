@@ -41,7 +41,7 @@ Page({
     }).exec();
   },
 
-  toCanvas(pageX, pageY) {
+  pageToCanvas(pageX, pageY) {
     const offsetX = this.canvasOffsetX || 0;
     const offsetY = this.canvasOffsetY || 0;
     return { x: pageX - offsetX, y: pageY - offsetY };
@@ -133,7 +133,7 @@ Page({
   // ===== 触摸事件 =====
   onCanvasTouchStart(e) {
     const touch = e.touches[0];
-    const canvasPos = this.toCanvas(touch.x, touch.y);
+    const canvasPos = this.pageToCanvas(touch.x, touch.y);
     const phys = this.toPhysics(canvasPos.x, canvasPos.y);
     this.isDrawing = true;
     this.tempStroke = [phys];
@@ -142,7 +142,7 @@ Page({
   onCanvasTouchMove(e) {
     if (!this.isDrawing) return;
     const touch = e.touches[0];
-    const canvasPos = this.toCanvas(touch.x, touch.y);
+    const canvasPos = this.pageToCanvas(touch.x, touch.y);
     const phys = this.toPhysics(canvasPos.x, canvasPos.y);
     this.tempStroke.push(phys);
     // 实时绘制预览

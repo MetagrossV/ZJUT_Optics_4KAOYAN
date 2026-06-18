@@ -53,19 +53,28 @@
                 </view>
                 <view class="section-children" wx:if="{{section.expanded}}">
                   <block wx:for="{{section.children}}" wx:for-item="topic" wx:key="id">
-                    <view class="topic-item" bindtap="toggleTopic" data-id="{{topic.id}}">
-                      <text class="topic-icon">{{topic.expanded ? '▼' : '▶'}}</text>
-                      <text class="topic-name">{{topic.name}}</text>
-                    </view>
-                    <view class="topic-children" wx:if="{{topic.expanded}}">
-                      <block wx:for="{{topic.children}}" wx:for-item="leaf" wx:key="id">
-                        <view class="leaf-item {{leaf.type}}" bindtap="onLeafTap" data-id="{{leaf.id}}" data-type="{{leaf.type}}" data-formula-id="{{leaf.formula_id}}" data-knowledge-id="{{leaf.knowledge_id}}">
-                          <text wx:if="{{leaf.type === 'formula'}}" class="leaf-tag formula-tag">∑</text>
-                          <text wx:if="{{leaf.type === 'knowledge'}}" class="leaf-tag knowledge-tag">💡</text>
-                          <text class="leaf-name">{{leaf.name}}</text>
-                        </view>
-                      </block>
-                    </view>
+                    <block wx:if="{{topic.type === 'category'}}">
+                      <view class="topic-item" bindtap="toggleTopic" data-id="{{topic.id}}">
+                        <text class="topic-icon">{{topic.expanded ? '▼' : '▶'}}</text>
+                        <text class="topic-name">{{topic.name}}</text>
+                      </view>
+                      <view class="topic-children" wx:if="{{topic.expanded}}">
+                        <block wx:for="{{topic.children}}" wx:for-item="leaf" wx:key="id">
+                          <view class="leaf-item {{leaf.type}}" bindtap="onLeafTap" data-id="{{leaf.id}}" data-type="{{leaf.type}}" data-formula-id="{{leaf.formula_id}}" data-knowledge-id="{{leaf.knowledge_id}}">
+                            <text wx:if="{{leaf.type === 'formula'}}" class="leaf-tag formula-tag">∑</text>
+                            <text wx:if="{{leaf.type === 'knowledge'}}" class="leaf-tag knowledge-tag">💡</text>
+                            <text class="leaf-name">{{leaf.name}}</text>
+                          </view>
+                        </block>
+                      </view>
+                    </block>
+                    <block wx:else>
+                      <view class="leaf-item {{topic.type}}" bindtap="onLeafTap" data-id="{{topic.id}}" data-type="{{topic.type}}" data-formula-id="{{topic.formula_id}}" data-knowledge-id="{{topic.knowledge_id}}">
+                        <text wx:if="{{topic.type === 'formula'}}" class="leaf-tag formula-tag">∑</text>
+                        <text wx:if="{{topic.type === 'knowledge'}}" class="leaf-tag knowledge-tag">💡</text>
+                        <text class="leaf-name">{{topic.name}}</text>
+                      </view>
+                    </block>
                   </block>
                 </view>
               </view>

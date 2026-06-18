@@ -4,10 +4,12 @@ const { parseLatex } = require('../../utils/latexParser.js');
 
 Page({
   data: {
-    step: 'select', // 'select' | 'learn' | 'quiz'
+    step: 'select', // 'select' | 'selectTopic' | 'learn' | 'quiz'
     selectedChapter: null,
+    selectedTopic: null,
     selectedDifficulty: 'all',
     chapters: [],
+    topics: [],
     learningMaterials: [],
     quizQuestions: [],
     currentQuizIndex: 0,
@@ -31,44 +33,37 @@ Page({
 
   selectChapter(e) {
     const chapter = e.currentTarget.dataset.chapter;
-    this.setData({ selectedChapter: chapter, step: 'learn' });
-    this.loadLearningMaterials(chapter);
+    const data = app.globalData.choiceQuestions;
+    const topics = [...new Set((data?.questions || []).filter(q => q.chapter === chapter).map(q => q.topic))].sort();
+    this.setData({ selectedChapter: chapter, topics, step: 'selectTopic' });
+  },
+
+  selectTopic(e) {
+    const topic = e.currentTarget.dataset.topic;
+    this.setData({ selectedTopic: topic, step: 'learn' });
+    this.loadLearningMaterials(this.data.selectedChapter, topic);
   },
 
   selectDifficulty(e) {
     const difficulty = e.currentTarget.dataset.difficulty;
     this.setData({ selectedDifficulty: difficulty });
-    if (this.data.selectedChapter) {
-      this.loadLearningMaterials(this.data.selectedChapter);
+    if (this.data.selectedTopic) {
+      this.loadLearningMaterials(this.data.selectedChapter, this.data.selectedTopic);
     }
   },
 
-  loadLearningMaterials(chapter) {
+  loadLearningMaterials(chapter, topic) {
     const kb = app.globalData.knowledgeBase;
     const { selectedDifficulty } = this.data;
     
-    // 获取该章节下的公式
-    let formulas = (kb?.formulas || []).filter(f => f.chapter === chapter);
+    // 获取该单元下的公式和知识点
+    let formulas = (kb?.formulas || []).filter(f => f.topic === topic);
+    let knowledge = (kb?.knowledge || []).filter(k => k.topic === topic);
     
-    // 获取该章节下的知识点
-    let knowledge = (kb?.knowledge || []).filter(k => k.chapter === chapter);
-    
-    // 难度筛选（基于topic）
-    if (selectedDifficulty !== 'all') {
-      const hardTopics = ['像差理论', '傅里叶光学', '全息术'];
-      const mediumTopics = ['近轴光学', '理想光学系统', '平面与平面系统', '光阑与光束限制', '光阑与景深'];
-      
-      formulas = formulas.filter(f => {
-        if (selectedDifficulty === 'hard') return hardTopics.includes(f.topic);
-        if (selectedDifficulty === 'medium') return mediumTopics.includes(f.topic);
-        return !hardTopics.includes(f.topic) && !mediumTopics.includes(f.topic);
-      });
-      
-      knowledge = knowledge.filter(k => {
-        if (selectedDifficulty === 'hard') return hardTopics.includes(k.topic);
-        if (selectedDifficulty === 'medium') return mediumTopics.includes(k.topic);
-        return !hardTopics.includes(k.topic) && !mediumTopics.includes(k.topic);
-      });
+    // 如果该单元下没有数据，尝试从整个章节中获取
+    if (formulas.length === 0 && knowledge.length === 0) {
+      formulas = (kb?.formulas || []).filter(f => f.chapter === chapter);
+      knowledge = (kb?.knowledge || []).filter(k => k.chapter === chapter);
     }
     
     // 解析公式
@@ -90,9 +85,9 @@ Page({
   },
 
   startQuiz() {
-    const { selectedChapter, selectedDifficulty } = this.data;
+    const { selectedChapter, selectedTopic, selectedDifficulty } = this.data;
     const data = app.globalData.choiceQuestions;
-    let questions = (data?.questions || []).filter(q => q.chapter === selectedChapter);
+    let questions = (data?.questions || []).filter(q => q.topic === selectedTopic);
     if (selectedDifficulty !== 'all') {
       questions = questions.filter(q => q.difficulty === selectedDifficulty);
     }
@@ -105,7 +100,7 @@ Page({
     }));
     
     if (questions.length === 0) {
-      wx.showToast({ title: '该条件下暂无题目', icon: 'none' });
+      wx.showToast({ title: '该单元暂无题目，试试其他单元', icon: 'none' });
       return;
     }
     
@@ -160,7 +155,7 @@ Page({
       });
     } else {
       wx.showToast({ title: '学习完成！', icon: 'success' });
-      this.setData({ step: 'select', selectedChapter: null, selectedDifficulty: 'all' });
+      this.setData({ step: 'select', selectedChapter: null, selectedTopic: null, selectedDifficulty: 'all' });
     }
   },
 
@@ -182,7 +177,9 @@ Page({
     if (step === 'quiz') {
       this.setData({ step: 'learn' });
     } else if (step === 'learn') {
-      this.setData({ step: 'select', selectedChapter: null, selectedDifficulty: 'all' });
+      this.setData({ step: 'selectTopic', selectedTopic: null });
+    } else if (step === 'selectTopic') {
+      this.setData({ step: 'select', selectedChapter: null });
     }
   }
 });

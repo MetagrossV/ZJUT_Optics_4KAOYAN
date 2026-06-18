@@ -12,7 +12,8 @@
 
   <!-- Canvas 绘图区 -->
   <view class="canvas-wrapper">
-    <canvas type="2d" id="opticalCanvas" class="optical-canvas" style="width: {{canvasWidth}}rpx; height: {{canvasHeight}}rpx;"></canvas>
+    <canvas type="2d" id="opticalCanvas" class="optical-canvas" style="width: {{canvasWidth}}rpx; height: {{canvasHeight}}rpx;" bindtouchstart="onCanvasTouchStart" bindtouchmove="onCanvasTouchMove" bindtouchend="onCanvasTouchEnd"></canvas>
+    <view class="drag-hint" wx:if="{{!isDragging}}">👆 拖动光学器件调整位置</view>
   </view>
 
   <!-- 参数控制区 -->

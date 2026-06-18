@@ -30,6 +30,26 @@
     </view>
   </view>
 
+  <!-- 选择单元 -->
+  <view wx:if="{{step === 'selectTopic'}}">
+    <view class="learn-header">
+      <view class="back-btn" bindtap="goBack">← 返回</view>
+      <view class="learn-title">{{selectedChapter}} — 选择单元</view>
+    </view>
+    <view class="text-sm" style="margin-bottom: 24rpx;">选择一个单元，学习该单元下的公式和知识点</view>
+    <view class="topic-list">
+      <block wx:for="{{topics}}" wx:key="*this">
+        <view class="topic-card card" bindtap="selectTopic" data-topic="{{item}}">
+          <view class="topic-icon">📖</view>
+          <view class="topic-info">
+            <view class="topic-title">{{item}}</view>
+          </view>
+          <text class="arrow">›</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
   <!-- 学习资料 -->
   <view wx:if="{{step === 'learn'}}">
     <view class="learn-header">
