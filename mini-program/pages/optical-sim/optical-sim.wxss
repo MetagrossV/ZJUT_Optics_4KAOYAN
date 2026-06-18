@@ -57,6 +57,19 @@
   height: 600rpx;
 }
 
+.drag-hint {
+  position: absolute;
+  bottom: 10rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22rpx;
+  color: #6c757d;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 6rpx 16rpx;
+  border-radius: 20rpx;
+  pointer-events: none;
+}
+
 /* 控制区 */
 .controls {
   margin: 0 30rpx 20rpx;

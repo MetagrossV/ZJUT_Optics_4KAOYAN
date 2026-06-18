@@ -31,6 +31,23 @@ Page({
 
   onReady() {
     this.initCanvas();
+    this.getCanvasOffset();
+  },
+
+  getCanvasOffset() {
+    const query = wx.createSelectorQuery().in(this);
+    query.select('#opticalCanvas').boundingClientRect(rect => {
+      if (rect) {
+        this.canvasOffsetX = rect.left;
+        this.canvasOffsetY = rect.top;
+      }
+    }).exec();
+  },
+
+  pageToCanvas(pageX, pageY) {
+    const offsetX = this.canvasOffsetX || 0;
+    const offsetY = this.canvasOffsetY || 0;
+    return { x: pageX - offsetX, y: pageY - offsetY };
   },
 
   onShow() {
@@ -123,6 +140,94 @@ Page({
     const cx = this.data.canvasWidth / 2;
     const cy = this.data.canvasHeight / 2;
     return { x: canvasX - cx, y: cy - canvasY };
+  },
+
+  // ===== 拖动功能 =====
+  isDragging: false,
+  dragTarget: null,
+  lastTouchX: 0,
+
+  onCanvasTouchStart(e) {
+    const touch = e.touches[0];
+    const canvasPos = this.pageToCanvas(touch.x, touch.y);
+    const phys = this.toPhysics(canvasPos.x, canvasPos.y);
+    const { params, currentSceneId } = this.data;
+
+    // 检测可拖动器件
+    let target = null;
+    const threshold = 40; // 拖动阈值
+
+    if (currentSceneId === 'convexLens' || currentSceneId === 'concaveLens') {
+      // 透镜位置
+      const lensX = params.lensX || 250;
+      if (Math.abs(phys.x - lensX) < threshold && Math.abs(phys.y) < 80) {
+        target = { paramId: 'lensX', label: '透镜' };
+      }
+      // 物体位置
+      const objX = params.objectDistance ? (lensX - params.objectDistance) : (lensX - 200);
+      if (Math.abs(phys.x - objX) < threshold && Math.abs(phys.y - (params.objectHeight || 60)) < 40) {
+        target = { paramId: 'objectDistance', label: '物体', lensX: lensX };
+      }
+    } else if (currentSceneId === 'planeMirror') {
+      const mirrorX = params.mirrorX || 250;
+      if (Math.abs(phys.x - mirrorX) < threshold && Math.abs(phys.y) < 80) {
+        target = { paramId: 'mirrorX', label: '平面镜' };
+      }
+      const objX = params.objectX || -150;
+      if (Math.abs(phys.x - objX) < threshold && Math.abs(phys.y - (params.objectHeight || 60)) < 40) {
+        target = { paramId: 'objectX', label: '物体' };
+      }
+    } else if (currentSceneId === 'prismRefraction') {
+      const prismX = params.prismX || 250;
+      if (Math.abs(phys.x - prismX) < threshold && Math.abs(phys.y) < 80) {
+        target = { paramId: 'prismX', label: '棱镜' };
+      }
+    }
+
+    if (target) {
+      this.isDragging = true;
+      this.dragTarget = target;
+      this.lastTouchX = phys.x;
+      wx.showToast({ title: '拖动' + target.label, icon: 'none', duration: 500 });
+    }
+  },
+
+  onCanvasTouchMove(e) {
+    if (!this.isDragging || !this.dragTarget) return;
+    const touch = e.touches[0];
+    const canvasPos = this.pageToCanvas(touch.x, touch.y);
+    const phys = this.toPhysics(canvasPos.x, canvasPos.y);
+    const dx = phys.x - this.lastTouchX;
+    this.lastTouchX = phys.x;
+
+    const { params, paramDefinitions } = this.data;
+    const target = this.dragTarget;
+    const paramId = target.paramId;
+    const oldValue = params[paramId] || 0;
+    let newValue = oldValue + dx;
+
+    // 限制范围
+    const def = paramDefinitions.find(p => p.id === paramId);
+    if (def) {
+      newValue = Math.max(def.min, Math.min(def.max, newValue));
+    }
+
+    // 更新参数
+    const newParams = { ...params, [paramId]: Math.round(newValue) };
+    const newDefinitions = paramDefinitions.map(p =>
+      p.id === paramId ? { ...p, currentValue: Math.round(newValue) } : p
+    );
+
+    this.setData({ params: newParams, paramDefinitions: newDefinitions }, () => {
+      if (this.ctx) this.draw();
+    });
+  },
+
+  onCanvasTouchEnd(e) {
+    if (this.isDragging) {
+      this.isDragging = false;
+      this.dragTarget = null;
+    }
   },
 
   // ===== 绘制主函数 =====
