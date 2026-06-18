@@ -5,12 +5,15 @@ const { parseLatex } = require('../../utils/latexParser.js');
 Page({
   data: {
     mode: 'formula',
-    formula: null,
-    knowledge: null,
+    // 滑动浏览
+    swiperCurrent: 0,
+    allFormulas: [],
+    allKnowledge: [],
+    // 当前显示（用于底部操作栏）
+    currentFormula: null,
+    currentKnowledge: null,
     isFavorite: false,
-    variableList: [],
-    relatedKnowledge: [],
-    relatedFormulas: [],
+    // 列表模式
     highFreqFormulas: [],
     confusions: []
   },
@@ -21,63 +24,126 @@ Page({
     } else if (options.mode === 'confusions') {
       this.loadConfusions();
     } else if (options.type === 'formula') {
-      this.loadFormula(options.id);
+      this.loadAllFormulas(options.id);
     } else if (options.type === 'knowledge') {
-      this.loadKnowledge(options.id);
+      this.loadAllKnowledge(options.id);
     }
   },
 
-  loadFormula(id) {
+  /* ========== 公式滑动浏览 ========== */
+  loadAllFormulas(targetId) {
     const kb = app.globalData.knowledgeBase;
-    const formula = kb?.formulas?.find(f => f.id === id);
-    if (!formula) return;
+    const formulas = (kb?.formulas || []).map(f => {
+      const variableList = Object.entries(f.variables || {}).map(([symbol, desc]) => ({ symbol, desc }));
+      const relatedKnowledge = [];
+      if (f.related_formulas) {
+        f.related_formulas.forEach(rid => {
+          const k = kb?.knowledge?.find(kn => kn.id === rid);
+          if (k) relatedKnowledge.push(k);
+        });
+      }
+      return {
+        ...f,
+        parsedLatex: parseLatex(f.latex),
+        variableList,
+        relatedKnowledge
+      };
+    });
 
-    const isFav = app.globalData.userStats.favorites.formulas.includes(id);
-    
-    // 变量列表
-    const variableList = Object.entries(formula.variables || {}).map(([symbol, desc]) => ({
-      symbol, desc
-    }));
-
-    // 关联知识点
-    const relatedKnowledge = [];
-    if (formula.related_formulas) {
-      formula.related_formulas.forEach(rid => {
-        const k = kb?.knowledge?.find(k => k.id === rid);
-        if (k) relatedKnowledge.push(k);
-      });
-    }
+    const targetIndex = formulas.findIndex(f => f.id === targetId);
+    const currentIndex = targetIndex >= 0 ? targetIndex : 0;
 
     this.setData({
       mode: 'formula',
-      formula: { ...formula, parsedLatex: parseLatex(formula.latex) },
-      isFavorite: isFav,
-      variableList,
-      relatedKnowledge
+      allFormulas: formulas,
+      swiperCurrent: currentIndex
+    }, () => {
+      this.updateFormulaAtIndex(currentIndex);
     });
   },
 
-  loadKnowledge(id) {
-    const kb = app.globalData.knowledgeBase;
-    const knowledge = kb?.knowledge?.find(k => k.id === id);
-    if (!knowledge) return;
+  updateFormulaAtIndex(index) {
+    const formula = this.data.allFormulas[index];
+    if (!formula) return;
+    const isFav = app.globalData.userStats.favorites.formulas.includes(formula.id);
+    this.setData({
+      currentFormula: formula,
+      isFavorite: isFav
+    });
+  },
 
-    // 关联公式
-    const relatedFormulas = [];
-    if (knowledge.related_formulas) {
-      knowledge.related_formulas.forEach(fid => {
-        const f = kb?.formulas?.find(f => f.id === fid);
-        if (f) relatedFormulas.push({ ...f, parsedLatex: parseLatex(f.latex) });
-      });
-    }
+  /* ========== 知识点滑动浏览 ========== */
+  loadAllKnowledge(targetId) {
+    const kb = app.globalData.knowledgeBase;
+    const knowledgeList = (kb?.knowledge || []).map(k => {
+      const relatedFormulas = [];
+      if (k.related_formulas) {
+        k.related_formulas.forEach(fid => {
+          const f = kb?.formulas?.find(fm => fm.id === fid);
+          if (f) relatedFormulas.push({ ...f, parsedLatex: parseLatex(f.latex) });
+        });
+      }
+      return {
+        ...k,
+        relatedFormulas
+      };
+    });
+
+    const targetIndex = knowledgeList.findIndex(k => k.id === targetId);
+    const currentIndex = targetIndex >= 0 ? targetIndex : 0;
 
     this.setData({
       mode: 'knowledge',
-      knowledge,
-      relatedFormulas
+      allKnowledge: knowledgeList,
+      swiperCurrent: currentIndex
+    }, () => {
+      this.updateKnowledgeAtIndex(currentIndex);
     });
   },
 
+  updateKnowledgeAtIndex(index) {
+    const knowledge = this.data.allKnowledge[index];
+    if (!knowledge) return;
+    this.setData({
+      currentKnowledge: knowledge
+    });
+  },
+
+  /* ========== Swiper滑动事件 ========== */
+  onSwiperChange(e) {
+    const index = e.detail.current;
+    this.setData({ swiperCurrent: index });
+    if (this.data.mode === 'formula') {
+      this.updateFormulaAtIndex(index);
+    } else if (this.data.mode === 'knowledge') {
+      this.updateKnowledgeAtIndex(index);
+    }
+  },
+
+  /* ========== 收藏 ========== */
+  toggleFavorite() {
+    const formula = this.data.currentFormula;
+    if (!formula) return;
+    app.toggleFavoriteFormula(formula.id);
+    this.setData({ isFavorite: !this.data.isFavorite });
+  },
+
+  /* ========== 导航 ========== */
+  goToKnowledge(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/formula-detail/formula-detail?id=${id}&type=knowledge`
+    });
+  },
+
+  goToFormula(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/formula-detail/formula-detail?id=${id}&type=formula`
+    });
+  },
+
+  /* ========== 高频公式（列表模式） ========== */
   loadHighFreq() {
     const mindmap = app.globalData.formulaMindmap;
     const highFreq = mindmap?.quick_access?.high_frequency?.items || [];
@@ -94,6 +160,7 @@ Page({
     });
   },
 
+  /* ========== 易混淆对比（列表模式） ========== */
   loadConfusions() {
     const mindmap = app.globalData.formulaMindmap;
     const pairs = mindmap?.quick_access?.confusions?.pairs || [];
@@ -147,26 +214,6 @@ Page({
     this.setData({
       mode: 'confusions',
       confusions: processed
-    });
-  },
-
-  toggleFavorite() {
-    const id = this.data.formula.id;
-    app.toggleFavoriteFormula(id);
-    this.setData({ isFavorite: !this.data.isFavorite });
-  },
-
-  goToKnowledge(e) {
-    const id = e.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: `/pages/formula-detail/formula-detail?id=${id}&type=knowledge`
-    });
-  },
-
-  goToFormula(e) {
-    const id = e.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: `/pages/formula-detail/formula-detail?id=${id}&type=formula`
     });
   }
 });

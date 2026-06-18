@@ -1,80 +1,98 @@
 <!-- pages/formula-detail/formula-detail.wxml -->
 <view class="container">
-  <!-- 公式详情模式 -->
+  <!-- 公式滑动浏览模式 -->
   <block wx:if="{{mode === 'formula'}}">
-    <view class="detail-card card">
-      <view class="detail-header">
-        <view class="tag tag-geo" wx:if="{{formula.chapter === '几何光学'}}">几何光学</view>
-        <view class="tag tag-phy" wx:if="{{formula.chapter === '物理光学'}}">物理光学</view>
-        <view class="tag tag-medium">{{formula.topic}}</view>
-      </view>
-      <view class="title-lg">{{formula.name}}</view>
-      <view class="formula-box">
-        <rich-text class="formula-latex" nodes="{{formula.parsedLatex}}"></rich-text>
-      </view>
-      <view class="detail-section">
-        <view class="title-md">📋 含义</view>
-        <text class="detail-text">{{formula.description}}</text>
-      </view>
-      <view class="detail-section" wx:if="{{formula.variables && Object.keys(formula.variables).length > 0}}">
-        <view class="title-md">🔤 变量说明</view>
-        <view class="variables-list">
-          <block wx:for="{{variableList}}" wx:key="symbol">
-            <view class="variable-item">
-              <view class="variable-symbol">{{item.symbol}}</view>
-              <view class="variable-desc">{{item.desc}}</view>
+    <swiper class="formula-swiper" current="{{swiperCurrent}}" bindchange="onSwiperChange">
+      <swiper-item wx:for="{{allFormulas}}" wx:key="id">
+        <scroll-view scroll-y class="formula-scroll">
+          <view class="detail-card card">
+            <view class="detail-header">
+              <view class="tag tag-geo" wx:if="{{item.chapter === '几何光学'}}">几何光学</view>
+              <view class="tag tag-phy" wx:if="{{item.chapter === '物理光学'}}">物理光学</view>
+              <view class="tag tag-medium">{{item.topic}}</view>
             </view>
-          </block>
-        </view>
-      </view>
-      <view class="detail-section" wx:if="{{relatedKnowledge.length > 0}}">
-        <view class="title-md">🔗 关联知识点</view>
-        <view class="related-list">
-          <block wx:for="{{relatedKnowledge}}" wx:key="id">
-            <view class="related-item" bindtap="goToKnowledge" data-id="{{item.id}}">
-              <text>{{item.title}}</text>
-              <text class="arrow">›</text>
+            <view class="title-lg">{{item.name}}</view>
+            <view class="formula-box">
+              <rich-text class="formula-latex" nodes="{{item.parsedLatex}}"></rich-text>
             </view>
-          </block>
-        </view>
-      </view>
-      <view class="action-bar">
-        <button class="btn-outline {{isFavorite ? 'favorited' : ''}}" bindtap="toggleFavorite">
-          {{isFavorite ? '❤️ 已收藏' : '🤍 收藏'}}
-        </button>
-      </view>
+            <view class="detail-section">
+              <view class="title-md">📋 含义</view>
+              <text class="detail-text">{{item.description}}</text>
+            </view>
+            <view class="detail-section" wx:if="{{item.variableList && item.variableList.length > 0}}">
+              <view class="title-md">🔤 变量说明</view>
+              <view class="variables-list">
+                <block wx:for="{{item.variableList}}" wx:for-item="v" wx:key="symbol">
+                  <view class="variable-item">
+                    <view class="variable-symbol">{{v.symbol}}</view>
+                    <view class="variable-desc">{{v.desc}}</view>
+                  </view>
+                </block>
+              </view>
+            </view>
+            <view class="detail-section" wx:if="{{item.relatedKnowledge && item.relatedKnowledge.length > 0}}">
+              <view class="title-md">🔗 关联知识点</view>
+              <view class="related-list">
+                <block wx:for="{{item.relatedKnowledge}}" wx:for-item="r" wx:key="id">
+                  <view class="related-item" bindtap="goToKnowledge" data-id="{{r.id}}">
+                    <text>{{r.title}}</text>
+                    <text class="arrow">›</text>
+                  </view>
+                </block>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+    <!-- 底部操作栏 -->
+    <view class="swiper-action-bar" wx:if="{{currentFormula}}">
+      <view class="formula-indicator">{{swiperCurrent + 1}} / {{allFormulas.length}}</view>
+      <button class="btn-outline {{isFavorite ? 'favorited' : ''}}" bindtap="toggleFavorite">
+        {{isFavorite ? '❤️ 已收藏' : '🤍 收藏'}}
+      </button>
     </view>
   </block>
 
-  <!-- 知识点详情模式 -->
+  <!-- 知识点滑动浏览模式 -->
   <block wx:if="{{mode === 'knowledge'}}">
-    <view class="detail-card card">
-      <view class="detail-header">
-        <view class="tag tag-geo" wx:if="{{knowledge.chapter === '几何光学'}}">几何光学</view>
-        <view class="tag tag-phy" wx:if="{{knowledge.chapter === '物理光学'}}">物理光学</view>
-        <view class="tag tag-medium">{{knowledge.topic}}</view>
-      </view>
-      <view class="title-lg">{{knowledge.title}}</view>
-      <view class="detail-section">
-        <view class="title-md">📋 内容</view>
-        <text class="detail-text">{{knowledge.content}}</text>
-      </view>
-      <view class="detail-section" wx:if="{{relatedFormulas.length > 0}}">
-        <view class="title-md">🔗 关联公式</view>
-        <view class="related-list">
-          <block wx:for="{{relatedFormulas}}" wx:key="id">
-            <view class="related-item" bindtap="goToFormula" data-id="{{item.id}}">
-              <text>{{item.name}}</text>
-              <view class="latex-mini"><rich-text nodes="{{item.parsedLatex}}"></rich-text></view>
-              <text class="arrow">›</text>
+    <swiper class="formula-swiper" current="{{swiperCurrent}}" bindchange="onSwiperChange">
+      <swiper-item wx:for="{{allKnowledge}}" wx:key="id">
+        <scroll-view scroll-y class="formula-scroll">
+          <view class="detail-card card">
+            <view class="detail-header">
+              <view class="tag tag-geo" wx:if="{{item.chapter === '几何光学'}}">几何光学</view>
+              <view class="tag tag-phy" wx:if="{{item.chapter === '物理光学'}}">物理光学</view>
+              <view class="tag tag-medium">{{item.topic}}</view>
             </view>
-          </block>
-        </view>
-      </view>
+            <view class="title-lg">{{item.title}}</view>
+            <view class="detail-section">
+              <view class="title-md">📋 内容</view>
+              <text class="detail-text">{{item.content}}</text>
+            </view>
+            <view class="detail-section" wx:if="{{item.relatedFormulas && item.relatedFormulas.length > 0}}">
+              <view class="title-md">🔗 关联公式</view>
+              <view class="related-list">
+                <block wx:for="{{item.relatedFormulas}}" wx:for-item="rf" wx:key="id">
+                  <view class="related-item" bindtap="goToFormula" data-id="{{rf.id}}">
+                    <text>{{rf.name}}</text>
+                    <view class="latex-mini"><rich-text nodes="{{rf.parsedLatex}}"></rich-text></view>
+                    <text class="arrow">›</text>
+                  </view>
+                </block>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+    <!-- 底部指示器 -->
+    <view class="swiper-action-bar" wx:if="{{currentKnowledge}}">
+      <view class="formula-indicator">{{swiperCurrent + 1}} / {{allKnowledge.length}}</view>
     </view>
   </block>
 
-  <!-- 高频公式模式 -->
+  <!-- 高频公式模式（列表） -->
   <block wx:if="{{mode === 'highfreq'}}">
     <view class="title-lg">🔥 高频公式</view>
     <view class="highfreq-list">
@@ -88,7 +106,7 @@
     </view>
   </block>
 
-  <!-- 易混淆对比模式 -->
+  <!-- 易混淆对比模式（列表） -->
   <block wx:if="{{mode === 'confusions'}}">
     <view class="title-lg">⚖️ 易混淆对比</view>
     <view class="confusion-list">

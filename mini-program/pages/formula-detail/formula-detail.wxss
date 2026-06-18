@@ -214,3 +214,46 @@
   display: block;
   margin-top: 12rpx;
 }
+
+/* 滑动浏览 */
+.formula-swiper {
+  height: calc(100vh - 160rpx);
+  margin: -30rpx;
+  width: calc(100% + 60rpx);
+}
+
+.formula-scroll {
+  height: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.swiper-action-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  background: var(--card-bg);
+  border-top: 2rpx solid var(--border);
+  z-index: 100;
+}
+
+.formula-indicator {
+  font-size: 28rpx;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.swiper-action-bar .btn-outline {
+  padding: 16rpx 32rpx;
+  font-size: 26rpx;
+}
+
+.swiper-action-bar .btn-outline.favorited {
+  border-color: var(--danger);
+  color: var(--danger);
+}
