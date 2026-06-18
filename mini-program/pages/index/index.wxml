@@ -59,7 +59,7 @@
                     </view>
                     <view class="topic-children" wx:if="{{topic.expanded}}">
                       <block wx:for="{{topic.children}}" wx:for-item="leaf" wx:key="id">
-                        <view class="leaf-item {{leaf.type}}" bindtap="onLeafTap" data-item="{{leaf}}">
+                        <view class="leaf-item {{leaf.type}}" bindtap="onLeafTap" data-id="{{leaf.id}}" data-type="{{leaf.type}}" data-formula-id="{{leaf.formula_id}}" data-knowledge-id="{{leaf.knowledge_id}}">
                           <text wx:if="{{leaf.type === 'formula'}}" class="leaf-tag formula-tag">∑</text>
                           <text wx:if="{{leaf.type === 'knowledge'}}" class="leaf-tag knowledge-tag">💡</text>
                           <text class="leaf-name">{{leaf.name}}</text>
@@ -89,7 +89,7 @@
         <view class="empty-state">未找到相关结果</view>
       </block>
       <block wx:for="{{searchResults}}" wx:key="id">
-        <view class="search-item {{item.type}}" bindtap="onSearchResultTap" data-item="{{item}}">
+        <view class="search-item {{item.type}}" bindtap="onSearchResultTap" data-id="{{item.id}}" data-type="{{item.type}}">
           <view class="search-item-type">
             <text wx:if="{{item.type === 'formula'}}" class="type-badge formula">公式</text>
             <text wx:if="{{item.type === 'knowledge'}}" class="type-badge knowledge">知识点</text>

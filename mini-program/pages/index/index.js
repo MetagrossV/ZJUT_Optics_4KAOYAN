@@ -126,28 +126,28 @@ Page({
 
   // 点击叶子节点
   onLeafTap(e) {
-    const item = e.currentTarget.dataset.item;
-    if (item.type === 'formula') {
+    const { type, formulaId, knowledgeId } = e.currentTarget.dataset;
+    if (type === 'formula' && formulaId) {
       wx.navigateTo({
-        url: `/pages/formula-detail/formula-detail?id=${item.formula_id}&type=formula`
+        url: `/pages/formula-detail/formula-detail?id=${formulaId}&type=formula`
       });
-    } else if (item.type === 'knowledge') {
+    } else if (type === 'knowledge' && knowledgeId) {
       wx.navigateTo({
-        url: `/pages/formula-detail/formula-detail?id=${item.knowledge_id}&type=knowledge`
+        url: `/pages/formula-detail/formula-detail?id=${knowledgeId}&type=knowledge`
       });
     }
   },
 
   onSearchResultTap(e) {
-    const item = e.currentTarget.dataset.item;
+    const { id, type } = e.currentTarget.dataset;
     this.closeSearch();
-    if (item.type === 'formula') {
+    if (type === 'formula') {
       wx.navigateTo({
-        url: `/pages/formula-detail/formula-detail?id=${item.id}&type=formula`
+        url: `/pages/formula-detail/formula-detail?id=${id}&type=formula`
       });
     } else {
       wx.navigateTo({
-        url: `/pages/formula-detail/formula-detail?id=${item.id}&type=knowledge`
+        url: `/pages/formula-detail/formula-detail?id=${id}&type=knowledge`
       });
     }
   },

@@ -1,0 +1,99 @@
+<view class="container">
+  <!-- 题目列表视图 -->
+  <block wx:if="{{!currentQuiz}}">
+    <view class="quiz-header">
+      <view class="quiz-title">光学绘图题</view>
+      <view class="quiz-description">在画布上绘制光路图，验证几何光学规则掌握程度</view>
+    </view>
+    <view class="quiz-list">
+      <block wx:for="{{quizList}}" wx:key="id">
+        <view class="quiz-card" bindtap="selectQuiz" data-quiz-id="{{item.id}}">
+          <view class="quiz-card-title">{{item.title}}</view>
+          <view class="quiz-card-desc">{{item.description}}</view>
+          <view class="quiz-card-meta">
+            <view class="quiz-card-tag">{{item.sceneName}}</view>
+            <view class="quiz-card-score">{{item.scoring.total}}分</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block>
+
+  <!-- 答题视图 -->
+  <block wx:if="{{currentQuiz}}">
+    <view class="quiz-header">
+      <view class="quiz-title">{{currentQuiz.title}}</view>
+      <view class="quiz-description">{{currentQuiz.description}}</view>
+      <view class="quiz-progress">
+        <text class="progress-text">第 {{currentQuizIndex + 1}} / {{quizList.length}} 题</text>
+        <text class="score-badge" wx:if="{{quizScore >= 0}}">得分: {{quizScore}}</text>
+      </view>
+    </view>
+
+    <!-- Canvas 绘图区 -->
+    <view class="canvas-wrapper">
+      <canvas
+        type="2d"
+        id="drawingCanvas"
+        class="drawing-canvas"
+        style="width: {{canvasWidth}}rpx; height: {{canvasHeight}}rpx;"
+        bindtouchstart="onCanvasTouchStart"
+        bindtouchmove="onCanvasTouchMove"
+        bindtouchend="onCanvasTouchEnd"
+      ></canvas>
+    </view>
+
+    <!-- 绘图工具栏 -->
+    <view class="toolbar">
+      <view class="tool-btn {{currentTool === 'ray' ? 'active' : ''}}" bindtap="selectTool" data-tool="ray">
+        <view class="tool-icon" style="background: #e03131; width: 48rpx; height: 48rpx; border-radius: 8rpx;"></view>
+        <text class="tool-label">光线</text>
+      </view>
+      <view class="tool-btn {{currentTool === 'object' ? 'active' : ''}}" bindtap="selectTool" data-tool="object">
+        <view class="tool-icon" style="background: #e03131; width: 48rpx; height: 48rpx; border-radius: 50%;"></view>
+        <text class="tool-label">物体</text>
+      </view>
+      <view class="tool-btn {{currentTool === 'image' ? 'active' : ''}}" bindtap="selectTool" data-tool="image">
+        <view class="tool-icon" style="background: #1971c2; width: 48rpx; height: 48rpx; border-radius: 50%;"></view>
+        <text class="tool-label">像</text>
+      </view>
+      <view class="tool-btn {{currentTool === 'normal' ? 'active' : ''}}" bindtap="selectTool" data-tool="normal">
+        <view class="tool-icon" style="background: #ff6b6b; width: 48rpx; height: 48rpx; border-radius: 8rpx;"></view>
+        <text class="tool-label">法线</text>
+      </view>
+      <view class="tool-btn {{currentTool === 'arrow' ? 'active' : ''}}" bindtap="selectTool" data-tool="arrow">
+        <view class="tool-icon" style="background: #ffa502; width: 48rpx; height: 48rpx; border-radius: 8rpx;"></view>
+        <text class="tool-label">箭头</text>
+      </view>
+      <view class="tool-btn {{currentTool === 'eraser' ? 'active' : ''}}" bindtap="selectTool" data-tool="eraser">
+        <view class="tool-icon" style="background: #6c757d; width: 48rpx; height: 48rpx; border-radius: 8rpx;"></view>
+        <text class="tool-label">橡皮</text>
+      </view>
+    </view>
+
+    <!-- 操作按钮 -->
+    <view class="action-bar">
+      <button class="action-btn btn-secondary" bindtap="clearCanvas">清空</button>
+      <button class="action-btn btn-secondary" bindtap="undoLast">撤销</button>
+      <button class="action-btn btn-primary" bindtap="submitDrawing">提交</button>
+      <button class="action-btn btn-danger" bindtap="quitQuiz">退出</button>
+    </view>
+
+    <!-- 验证结果 -->
+    <view wx:if="{{validationResult}}" class="result-panel {{validationResult.isCorrect ? 'correct' : 'wrong'}}">
+      <view class="result-title">{{validationResult.isCorrect ? '✓ 回答正确' : '✗ 回答有误'}}</view>
+      <view class="result-detail">{{validationResult.message}}</view>
+      <view wx:if="{{validationResult.details}}" class="result-detail">
+        <block wx:for="{{validationResult.details}}" wx:key="index">
+          <view>{{item}}</view>
+        </block>
+      </view>
+    </view>
+
+    <!-- 下一题/返回按钮 -->
+    <view class="action-bar" wx:if="{{validationResult}}">
+      <button class="action-btn btn-success" bindtap="nextQuiz" wx:if="{{currentQuizIndex < quizList.length - 1}}">下一题</button>
+      <button class="action-btn btn-secondary" bindtap="backToList">返回列表</button>
+    </view>
+  </block>
+</view>

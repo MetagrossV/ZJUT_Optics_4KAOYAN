@@ -1,0 +1,65 @@
+<view class="container">
+  <!-- 场景选择器 -->
+  <view class="header">
+    <picker mode="selector" range="{{scenes}}" range-key="name" value="{{currentSceneIndex}}" bindchange="onSceneChange">
+      <view class="scene-picker">
+        <text class="scene-label">当前场景</text>
+        <text class="scene-name">{{currentSceneName}}</text>
+        <text class="arrow">▼</text>
+      </view>
+    </picker>
+  </view>
+
+  <!-- Canvas 绘图区 -->
+  <view class="canvas-wrapper">
+    <canvas type="2d" id="opticalCanvas" class="optical-canvas" style="width: {{canvasWidth}}rpx; height: {{canvasHeight}}rpx;"></canvas>
+  </view>
+
+  <!-- 参数控制区 -->
+  <view class="controls">
+    <view class="controls-title">参数调整</view>
+    <block wx:for="{{paramDefinitions}}" wx:key="id">
+      <view class="param-row">
+        <text class="param-name">{{item.name}} ({{item.unit}})</text>
+        <text class="param-value">{{item.currentValue}}</text>
+      </view>
+      <slider
+        class="param-slider"
+        min="{{item.min}}"
+        max="{{item.max}}"
+        value="{{item.currentValue}}"
+        step="{{item.step}}"
+        bindchange="onParamChange"
+        data-param-id="{{item.id}}"
+        activeColor="#4a69bd"
+        block-color="#4a69bd"
+        show-value="{{false}}"
+      />
+    </block>
+  </view>
+
+  <!-- 图例 -->
+  <view class="legend">
+    <view class="legend-title">图例</view>
+    <view class="legend-item">
+      <view class="legend-color" style="background: #e03131"></view>
+      <text>物体 / 入射光线</text>
+    </view>
+    <view class="legend-item">
+      <view class="legend-color" style="background: #ffa502"></view>
+      <text>折射 / 特征光线</text>
+    </view>
+    <view class="legend-item">
+      <view class="legend-color" style="background: #2f9e44"></view>
+      <text>反射光线</text>
+    </view>
+    <view class="legend-item">
+      <view class="legend-color" style="background: #1971c2"></view>
+      <text>实像</text>
+    </view>
+    <view class="legend-item">
+      <view class="legend-color" style="background: #1971c2; opacity: 0.5"></view>
+      <text>虚像（虚线）</text>
+    </view>
+  </view>
+</view>

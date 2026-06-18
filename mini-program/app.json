@@ -7,7 +7,9 @@
     "pages/mistakes/mistakes",
     "pages/profile/profile",
     "pages/formula-detail/formula-detail",
-    "pages/card-memory/card-memory"
+    "pages/card-memory/card-memory",
+    "pages/optical-sim/optical-sim",
+    "pages/drawing-quiz/drawing-quiz"
   ],
   "window": {
     "backgroundTextStyle": "light",
