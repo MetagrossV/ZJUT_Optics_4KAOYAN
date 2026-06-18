@@ -1,4 +1,4 @@
-/** 绘图题页面样式 **/
+/** 绘图题页面样式 - 交互式光学编辑器 **/
 
 .container {
   display: flex;
@@ -22,9 +22,9 @@
 }
 
 .quiz-description {
-  font-size: 28rpx;
+  font-size: 26rpx;
   color: #495057;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .quiz-progress {
@@ -64,45 +64,123 @@
   background: #f8f9fa;
 }
 
-/* 绘图工具栏 */
-.toolbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 16rpx 30rpx;
-  background: #ffffff;
+.placement-hint {
+  position: absolute;
+  top: 20rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(74, 105, 189, 0.9);
+  color: #ffffff;
+  font-size: 26rpx;
+  padding: 12rpx 30rpx;
+  border-radius: 30rpx;
+  z-index: 10;
+}
+
+/* 工具箱 */
+.toolbox {
   margin: 0 30rpx 20rpx;
+  padding: 20rpx 24rpx;
+  background: #ffffff;
   border-radius: 16rpx;
   box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.06);
 }
 
-.tool-btn {
+.toolbox-title {
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 16rpx;
+}
+
+.toolbox-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.toolbox-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12rpx 20rpx;
+  padding: 16rpx 24rpx;
   border-radius: 12rpx;
   transition: background 0.2s;
+  border: 2rpx solid transparent;
 }
 
-.tool-btn.active {
+.toolbox-item.active {
   background: #e7ecf8;
+  border-color: #4a69bd;
 }
 
-.tool-icon {
-  width: 48rpx;
-  height: 48rpx;
-  margin-bottom: 8rpx;
+.toolbox-icon {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  margin-bottom: 10rpx;
 }
 
-.tool-label {
+.toolbox-name {
   font-size: 24rpx;
   color: #495057;
 }
 
-.tool-btn.active .tool-label {
+.toolbox-item.active .toolbox-name {
   color: #4a69bd;
   font-weight: 600;
+}
+
+/* 参数面板 */
+.param-panel {
+  margin: 0 30rpx 20rpx;
+  padding: 20rpx 24rpx;
+  background: #ffffff;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.06);
+}
+
+.param-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16rpx;
+  padding-bottom: 12rpx;
+  border-bottom: 1rpx solid #e9ecef;
+}
+
+.param-panel-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.param-panel-delete {
+  font-size: 24rpx;
+  color: #ff6b6b;
+  padding: 6rpx 16rpx;
+}
+
+.param-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.param-label {
+  font-size: 26rpx;
+  color: #495057;
+  width: 120rpx;
+  flex-shrink: 0;
+}
+
+.param-slider {
+  flex: 1;
+  margin-left: 16rpx;
 }
 
 /* 操作按钮 */
@@ -114,12 +192,13 @@
 
 .action-btn {
   flex: 1;
-  margin: 0 10rpx;
-  padding: 22rpx 0;
+  margin: 0 8rpx;
+  padding: 20rpx 0;
   border-radius: 12rpx;
-  font-size: 30rpx;
+  font-size: 28rpx;
   text-align: center;
   border: none;
+  line-height: 1.4;
 }
 
 .btn-primary {
@@ -174,10 +253,29 @@
   color: #e03131;
 }
 
+.result-score {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 12rpx;
+}
+
 .result-detail {
   font-size: 26rpx;
   color: #495057;
   line-height: 1.6;
+}
+
+.result-details {
+  margin-top: 12rpx;
+  padding-top: 12rpx;
+  border-top: 1rpx solid rgba(0,0,0,0.06);
+}
+
+.result-detail-item {
+  font-size: 24rpx;
+  color: #495057;
+  line-height: 1.8;
 }
 
 /* 题目列表 */
@@ -204,6 +302,7 @@
   font-size: 26rpx;
   color: #6c757d;
   margin-bottom: 16rpx;
+  line-height: 1.5;
 }
 
 .quiz-card-meta {

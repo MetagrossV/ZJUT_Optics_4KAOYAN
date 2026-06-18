@@ -3,7 +3,7 @@
   <block wx:if="{{!currentQuiz}}">
     <view class="quiz-header">
       <view class="quiz-title">光学绘图题</view>
-      <view class="quiz-description">在画布上绘制光路图，验证几何光学规则掌握程度</view>
+      <view class="quiz-description">从工具箱选择光学器件，放置到画布上构建光路图</view>
     </view>
     <view class="quiz-list">
       <block wx:for="{{quizList}}" wx:key="id">
@@ -30,7 +30,7 @@
       </view>
     </view>
 
-    <!-- Canvas 绘图区 -->
+    <!-- 画布区域 -->
     <view class="canvas-wrapper">
       <canvas
         type="2d"
@@ -41,59 +41,95 @@
         bindtouchmove="onCanvasTouchMove"
         bindtouchend="onCanvasTouchEnd"
       ></canvas>
+      <!-- 放置提示 -->
+      <view wx:if="{{isPlacing && selectedToolName}}" class="placement-hint">
+        <text>点击画布放置 {{selectedToolName}}</text>
+      </view>
     </view>
 
-    <!-- 绘图工具栏 -->
-    <view class="toolbar">
-      <view class="tool-btn {{currentTool === 'ray' ? 'active' : ''}}" bindtap="selectTool" data-tool="ray">
-        <view class="tool-icon" style="background: #e03131; width: 48rpx; height: 48rpx; border-radius: 8rpx;"></view>
-        <text class="tool-label">光线</text>
+    <!-- 工具箱 -->
+    <view class="toolbox">
+      <view class="toolbox-title">工具箱</view>
+      <view class="toolbox-items">
+        <block wx:for="{{toolbox}}" wx:key="id">
+          <view 
+            class="toolbox-item {{selectedTool === item.id ? 'active' : ''}}" 
+            bindtap="selectTool" 
+            data-tool-id="{{item.id}}"
+          >
+            <view class="toolbox-icon" style="background: {{item.color}};">{{item.icon}}</view>
+            <text class="toolbox-name">{{item.name}}</text>
+          </view>
+        </block>
       </view>
-      <view class="tool-btn {{currentTool === 'object' ? 'active' : ''}}" bindtap="selectTool" data-tool="object">
-        <view class="tool-icon" style="background: #e03131; width: 48rpx; height: 48rpx; border-radius: 50%;"></view>
-        <text class="tool-label">物体</text>
+    </view>
+
+    <!-- 参数面板（选中器件时显示） -->
+    <view wx:if="{{paramPanelVisible && selectedElementId}}" class="param-panel">
+      <view class="param-panel-header">
+        <text class="param-panel-title">器件参数</text>
+        <text class="param-panel-delete" bindtap="deleteSelectedElement">删除</text>
       </view>
-      <view class="tool-btn {{currentTool === 'image' ? 'active' : ''}}" bindtap="selectTool" data-tool="image">
-        <view class="tool-icon" style="background: #1971c2; width: 48rpx; height: 48rpx; border-radius: 50%;"></view>
-        <text class="tool-label">像</text>
-      </view>
-      <view class="tool-btn {{currentTool === 'normal' ? 'active' : ''}}" bindtap="selectTool" data-tool="normal">
-        <view class="tool-icon" style="background: #ff6b6b; width: 48rpx; height: 48rpx; border-radius: 8rpx;"></view>
-        <text class="tool-label">法线</text>
-      </view>
-      <view class="tool-btn {{currentTool === 'arrow' ? 'active' : ''}}" bindtap="selectTool" data-tool="arrow">
-        <view class="tool-icon" style="background: #ffa502; width: 48rpx; height: 48rpx; border-radius: 8rpx;"></view>
-        <text class="tool-label">箭头</text>
-      </view>
-      <view class="tool-btn {{currentTool === 'eraser' ? 'active' : ''}}" bindtap="selectTool" data-tool="eraser">
-        <view class="tool-icon" style="background: #6c757d; width: 48rpx; height: 48rpx; border-radius: 8rpx;"></view>
-        <text class="tool-label">橡皮</text>
-      </view>
+      <block wx:for="{{elements}}" wx:key="id">
+        <block wx:if="{{item.id === selectedElementId}}">
+          <!-- 凸透镜/凹透镜参数 -->
+          <block wx:if="{{item.type === 'convex-lens' || item.type === 'concave-lens'}}">
+            <view class="param-row">
+              <text class="param-label">焦距 f</text>
+              <slider class="param-slider" min="-300" max="300" value="{{item.params.focalLength}}" show-value bindchange="onParamChange" data-param-key="focalLength"/>
+            </view>
+            <view class="param-row">
+              <text class="param-label">孔径</text>
+              <slider class="param-slider" min="60" max="200" value="{{item.params.aperture}}" show-value bindchange="onParamChange" data-param-key="aperture"/>
+            </view>
+          </block>
+          <!-- 平面镜参数 -->
+          <block wx:if="{{item.type === 'plane-mirror'}}">
+            <view class="param-row">
+              <text class="param-label">倾斜角</text>
+              <slider class="param-slider" min="-90" max="90" value="{{item.params.angle}}" show-value bindchange="onParamChange" data-param-key="angle"/>
+            </view>
+            <view class="param-row">
+              <text class="param-label">长度</text>
+              <slider class="param-slider" min="60" max="300" value="{{item.params.length}}" show-value bindchange="onParamChange" data-param-key="length"/>
+            </view>
+          </block>
+          <!-- 物体参数 -->
+          <block wx:if="{{item.type === 'object'}}">
+            <view class="param-row">
+              <text class="param-label">高度</text>
+              <slider class="param-slider" min="20" max="150" value="{{item.params.height}}" show-value bindchange="onParamChange" data-param-key="height"/>
+            </view>
+          </block>
+        </block>
+      </block>
     </view>
 
     <!-- 操作按钮 -->
     <view class="action-bar">
-      <button class="action-btn btn-secondary" bindtap="clearCanvas">清空</button>
-      <button class="action-btn btn-secondary" bindtap="undoLast">撤销</button>
-      <button class="action-btn btn-primary" bindtap="submitDrawing">提交</button>
-      <button class="action-btn btn-danger" bindtap="quitQuiz">退出</button>
+      <button class="action-btn btn-secondary" bindtap="addRay">添加光线</button>
+      <button class="action-btn btn-secondary" bindtap="addAuxiliaryLines">辅助线</button>
+      <button class="action-btn btn-primary" bindtap="submitDrawing">验证</button>
+      <button class="action-btn btn-danger" bindtap="clearCanvas">清空</button>
     </view>
 
     <!-- 验证结果 -->
     <view wx:if="{{validationResult}}" class="result-panel {{validationResult.isCorrect ? 'correct' : 'wrong'}}">
       <view class="result-title">{{validationResult.isCorrect ? '✓ 回答正确' : '✗ 回答有误'}}</view>
+      <view class="result-score">得分: {{validationResult.score}} 分</view>
       <view class="result-detail">{{validationResult.message}}</view>
-      <view wx:if="{{validationResult.details}}" class="result-detail">
+      <view wx:if="{{validationResult.details}}" class="result-details">
         <block wx:for="{{validationResult.details}}" wx:key="index">
-          <view>{{item}}</view>
+          <view class="result-detail-item">{{item}}</view>
         </block>
       </view>
     </view>
 
-    <!-- 下一题/返回按钮 -->
+    <!-- 底部导航 -->
     <view class="action-bar" wx:if="{{validationResult}}">
       <button class="action-btn btn-success" bindtap="nextQuiz" wx:if="{{currentQuizIndex < quizList.length - 1}}">下一题</button>
       <button class="action-btn btn-secondary" bindtap="backToList">返回列表</button>
+      <button class="action-btn btn-danger" bindtap="quitQuiz">退出</button>
     </view>
   </block>
 </view>

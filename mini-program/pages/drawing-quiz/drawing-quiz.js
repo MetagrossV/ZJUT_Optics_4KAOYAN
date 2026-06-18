@@ -1,24 +1,54 @@
-// 光学绘图题系统
+// 光学绘图题系统 - 交互式光学编辑器
+// 列表式工具箱：选择器件 → 放置画布 → 拖动调整 → 设置参数 → 添加光线
 const dataScenes = require('../../data/data_optical_scenes.js');
 
 Page({
   data: {
+    // 题目
     quizList: [],
     currentQuiz: null,
     currentQuizIndex: -1,
-    currentTool: 'ray',
+
+    // 画布
     canvasWidth: 750,
     canvasHeight: 600,
     dpr: 1,
+
+    // 器件系统
+    elements: [],          // 放置的器件列表
+    rays: [],              // 光线列表
+    selectedTool: null,    // 当前选择的工具类型
+    selectedElementId: null, // 当前选中的器件ID
+    isPlacing: false,      // 是否正在放置模式
+    isDragging: false,     // 是否正在拖动
+
+    // 拖动状态
+    dragElementId: null,
+    dragOffsetX: 0,
+    dragOffsetY: 0,
+
+    // 验证
     quizScore: -1,
-    validationResult: null
+    validationResult: null,
+
+    // 参数面板
+    paramPanelVisible: false,
+
+    // 工具箱定义
+    toolbox: [
+      { id: 'convex-lens', name: '凸透镜', icon: '🔍', color: '#4a69bd' },
+      { id: 'concave-lens', name: '凹透镜', icon: '🔎', color: '#6c5ce7' },
+      { id: 'plane-mirror', name: '平面镜', icon: '🪞', color: '#00b894' },
+      { id: 'object', name: '物体', icon: '📍', color: '#e03131' }
+    ],
+    selectedToolName: null
   },
 
   canvas: null,
   ctx: null,
-  userDrawings: [], // 用户绘制元素列表
-  isDrawing: false,
-  tempStroke: [], // 当前笔触的物理坐标点
+  canvasOffsetX: 0,
+  canvasOffsetY: 0,
+  elementIdCounter: 0,
 
   onLoad() {
     const dpr = wx.getSystemInfoSync().pixelRatio || 1;
@@ -31,6 +61,12 @@ Page({
     this.getCanvasOffset();
   },
 
+  onShow() {
+    if (this.ctx && this.data.currentQuiz) {
+      this.draw();
+    }
+  },
+
   getCanvasOffset() {
     const query = wx.createSelectorQuery().in(this);
     query.select('#drawingCanvas').boundingClientRect(rect => {
@@ -39,18 +75,6 @@ Page({
         this.canvasOffsetY = rect.top;
       }
     }).exec();
-  },
-
-  pageToCanvas(pageX, pageY) {
-    const offsetX = this.canvasOffsetX || 0;
-    const offsetY = this.canvasOffsetY || 0;
-    return { x: pageX - offsetX, y: pageY - offsetY };
-  },
-
-  onShow() {
-    if (this.ctx && this.data.currentQuiz) {
-      this.draw();
-    }
   },
 
   // ===== Canvas 初始化 =====
@@ -73,6 +97,29 @@ Page({
         this.draw();
       }
     });
+  },
+
+  // ===== 坐标转换 =====
+  // 页面坐标 → Canvas 坐标
+  pageToCanvas(pageX, pageY) {
+    return {
+      x: pageX - (this.canvasOffsetX || 0),
+      y: pageY - (this.canvasOffsetY || 0)
+    };
+  },
+
+  // 物理坐标 → Canvas 坐标（原点画布中心，y向上）
+  toCanvas(physX, physY) {
+    const cx = this.data.canvasWidth / 2;
+    const cy = this.data.canvasHeight / 2;
+    return { x: cx + physX, y: cy - physY };
+  },
+
+  // Canvas 坐标 → 物理坐标
+  toPhysics(canvasX, canvasY) {
+    const cx = this.data.canvasWidth / 2;
+    const cy = this.data.canvasHeight / 2;
+    return { x: canvasX - cx, y: cy - canvasY };
   },
 
   // ===== 加载题目列表 =====
@@ -99,185 +146,380 @@ Page({
 
   loadQuiz(index) {
     const quiz = this.data.quizList[index];
-    this.userDrawings = [];
+    this.elementIdCounter = 0;
     this.setData({
       currentQuiz: quiz,
       currentQuizIndex: index,
-      currentTool: 'ray',
+      elements: [],
+      rays: [],
+      selectedToolName: null,
+      selectedTool: null,
+      isPlacing: false,
+      isDragging: false,
       quizScore: -1,
-      validationResult: null
+      validationResult: null,
+      paramPanelVisible: false
     }, () => {
       if (this.ctx) this.draw();
     });
   },
 
-  // ===== 工具选择 =====
+  // ===== 工具箱选择 =====
   selectTool(e) {
-    const tool = e.currentTarget.dataset.tool;
-    this.setData({ currentTool: tool });
+    const toolId = e.currentTarget.dataset.toolId;
+    const tool = this.data.toolbox.find(t => t.id === toolId);
+    // 点击已选中的工具则取消选择
+    if (this.data.selectedTool === toolId) {
+      this.setData({ selectedTool: null, isPlacing: false, selectedToolName: null });
+    } else {
+      this.setData({ selectedTool: toolId, isPlacing: true, selectedToolName: tool ? tool.name : null, selectedElementId: null, paramPanelVisible: false });
+    }
   },
 
-  // ===== 坐标转换 =====
-  toCanvas(physX, physY) {
-    const cx = this.data.canvasWidth / 2;
-    const cy = this.data.canvasHeight / 2;
-    return { x: cx + physX, y: cy - physY };
-  },
-
-  toPhysics(canvasX, canvasY) {
-    const cx = this.data.canvasWidth / 2;
-    const cy = this.data.canvasHeight / 2;
-    return { x: canvasX - cx, y: cy - canvasY };
-  },
-
-  // ===== 触摸事件 =====
+  // ===== 触摸事件处理 =====
   onCanvasTouchStart(e) {
     const touch = e.touches[0];
     const canvasPos = this.pageToCanvas(touch.x, touch.y);
     const phys = this.toPhysics(canvasPos.x, canvasPos.y);
-    this.isDrawing = true;
-    this.tempStroke = [phys];
+
+    // 放置模式：有选中的工具，点击画布放置器件
+    if (this.data.isPlacing && this.data.selectedTool) {
+      this.placeElement(this.data.selectedTool, phys.x, phys.y);
+      return;
+    }
+
+    // 选择模式：检测是否点击了某个器件
+    const hitElement = this.hitTestElement(phys.x, phys.y);
+    if (hitElement) {
+      // 选中器件，开始拖动
+      const c = this.toCanvas(hitElement.x, hitElement.y);
+      this.setData({
+        selectedElementId: hitElement.id,
+        isDragging: true,
+        dragElementId: hitElement.id,
+        dragOffsetX: canvasPos.x - c.x,
+        dragOffsetY: canvasPos.y - c.y,
+        paramPanelVisible: true
+      });
+    } else {
+      // 点击空白，取消选中
+      this.setData({ selectedElementId: null, paramPanelVisible: false });
+    }
+
+    this.draw();
   },
 
   onCanvasTouchMove(e) {
-    if (!this.isDrawing) return;
+    if (!this.data.isDragging || !this.data.dragElementId) return;
+
     const touch = e.touches[0];
     const canvasPos = this.pageToCanvas(touch.x, touch.y);
-    const phys = this.toPhysics(canvasPos.x, canvasPos.y);
-    this.tempStroke.push(phys);
-    // 实时绘制预览
+    const phys = this.toPhysics(
+      canvasPos.x - this.data.dragOffsetX,
+      canvasPos.y - this.data.dragOffsetY
+    );
+
+    // 更新器件位置
+    const elements = this.data.elements.map(el => {
+      if (el.id === this.data.dragElementId) {
+        return { ...el, x: phys.x, y: phys.y };
+      }
+      return el;
+    });
+
+    this.setData({ elements });
     this.draw();
-    this.drawPreview();
   },
 
   onCanvasTouchEnd(e) {
-    if (!this.isDrawing) return;
-    this.isDrawing = false;
-    if (this.tempStroke.length < 2) {
-      this.tempStroke = [];
-      this.draw();
-      return;
+    if (this.data.isDragging) {
+      this.setData({ isDragging: false, dragElementId: null });
     }
-    // 保存用户绘制
-    this.saveUserStroke();
-    this.tempStroke = [];
+  },
+
+  // ===== 器件放置 =====
+  placeElement(type, x, y) {
+    const id = `el_${++this.elementIdCounter}_${Date.now()}`;
+    let element = {
+      id,
+      type,
+      x,
+      y,
+      params: {}
+    };
+
+    // 根据类型设置默认参数
+    switch (type) {
+      case 'convex-lens':
+        element.params = { focalLength: 100, aperture: 120 };
+        break;
+      case 'concave-lens':
+        element.params = { focalLength: -100, aperture: 120 };
+        break;
+      case 'plane-mirror':
+        element.params = { angle: 0, length: 180 };
+        break;
+      case 'object':
+        element.params = { height: 60 };
+        break;
+    }
+
+    const elements = [...this.data.elements, element];
+    this.setData({
+      elements,
+      selectedTool: null,
+      isPlacing: false,
+      selectedElementId: id,
+      paramPanelVisible: true
+    });
     this.draw();
   },
 
-  // 保存当前笔触为用户绘制元素
-  saveUserStroke() {
-    const tool = this.data.currentTool;
-    const points = [...this.tempStroke];
-    const start = points[0];
-    const end = points[points.length - 1];
+  // ===== 碰撞检测：检测物理坐标是否在某个器件上 =====
+  hitTestElement(physX, physY) {
+    const elements = this.data.elements;
+    // 从后往前检测（后绘制的在上面）
+    for (let i = elements.length - 1; i >= 0; i--) {
+      const el = elements[i];
+      if (this.isPointInElement(physX, physY, el)) {
+        return el;
+      }
+    }
+    return null;
+  },
 
-    let element = null;
-    if (tool === 'ray') {
-      // 光线：简化为从起点到终点的线段
-      element = {
-        type: 'ray',
-        points: points,
-        startPoint: start,
-        endPoint: end,
-        id: `user_ray_${Date.now()}`
-      };
-    } else if (tool === 'object') {
-      // 物体：简化为竖线
-      element = {
-        type: 'object',
-        points: points,
-        startPoint: start,
-        endPoint: end,
-        id: `user_obj_${Date.now()}`
-      };
-    } else if (tool === 'image') {
-      element = {
-        type: 'image',
-        points: points,
-        startPoint: start,
-        endPoint: end,
-        id: `user_img_${Date.now()}`
-      };
-    } else if (tool === 'normal') {
-      element = {
-        type: 'normal',
-        points: points,
-        startPoint: start,
-        endPoint: end,
-        id: `user_norm_${Date.now()}`
-      };
-    } else if (tool === 'arrow') {
-      element = {
-        type: 'arrow',
-        points: points,
-        startPoint: start,
-        endPoint: end,
-        id: `user_arrow_${Date.now()}`
-      };
-    } else if (tool === 'eraser') {
-      // 橡皮擦：删除靠近该笔触的已有元素
-      this.eraseNear(points);
+  isPointInElement(px, py, el) {
+    const dx = px - el.x;
+    const dy = py - el.y;
+    const dist = Math.hypot(dx, dy);
+
+    switch (el.type) {
+      case 'convex-lens':
+      case 'concave-lens':
+        // 透镜热区：中心线附近，垂直方向孔径内，水平方向30px内
+        return Math.abs(dx) < 30 && Math.abs(dy) < (el.params.aperture || 120) / 2 + 10;
+      case 'plane-mirror':
+        // 平面镜热区：线段附近
+        const angle = (el.params.angle || 0) * Math.PI / 180;
+        const halfLen = (el.params.length || 180) / 2;
+        const cosA = Math.cos(angle);
+        const sinA = Math.sin(angle);
+        // 将点转换到镜面局部坐标
+        const lx = dx * cosA + dy * sinA;
+        const ly = -dx * sinA + dy * cosA;
+        return Math.abs(lx) < halfLen + 10 && Math.abs(ly) < 20;
+      case 'object':
+        // 物体热区：竖线附近
+        return Math.abs(dx) < 20 && Math.abs(dy) < (el.params.height || 60) / 2 + 10;
+    }
+    return false;
+  },
+
+  // ===== 参数调整 =====
+  onParamChange(e) {
+    const key = e.currentTarget.dataset.paramKey;
+    const value = parseFloat(e.detail.value);
+    const elementId = this.data.selectedElementId;
+    if (!elementId || isNaN(value)) return;
+
+    const elements = this.data.elements.map(el => {
+      if (el.id === elementId) {
+        return {
+          ...el,
+          params: { ...el.params, [key]: value }
+        };
+      }
+      return el;
+    });
+
+    this.setData({ elements });
+    this.draw();
+  },
+
+  // ===== 删除器件 =====
+  deleteSelectedElement() {
+    const elementId = this.data.selectedElementId;
+    if (!elementId) return;
+
+    const elements = this.data.elements.filter(el => el.id !== elementId);
+    const rays = this.data.rays.filter(r =>
+      r.startElementId !== elementId && r.endElementId !== elementId
+    );
+    this.setData({
+      elements,
+      rays,
+      selectedElementId: null,
+      paramPanelVisible: false
+    });
+    this.draw();
+  },
+
+  // ===== 添加光线 =====
+  addRay() {
+    // 找到物体和透镜
+    const objects = this.data.elements.filter(el => el.type === 'object');
+    const lenses = this.data.elements.filter(el =>
+      el.type === 'convex-lens' || el.type === 'concave-lens'
+    );
+
+    if (objects.length === 0) {
+      wx.showToast({ title: '请先放置物体', icon: 'none' });
+      return;
+    }
+    if (lenses.length === 0) {
+      wx.showToast({ title: '请先放置透镜', icon: 'none' });
       return;
     }
 
-    if (element) {
-      this.userDrawings.push(element);
-    }
-  },
+    const obj = objects[0];
+    const lens = lenses[0];
+    const f = lens.params.focalLength || 100;
+    const objH = obj.params.height || 60;
 
-  // 橡皮擦：删除距离给定笔触较近的绘制元素
-  eraseNear(strokePoints) {
-    if (!strokePoints.length) return;
-    const eraseCenter = strokePoints[Math.floor(strokePoints.length / 2)];
-    const threshold = 40; // 擦除半径
+    // 计算三条特征光线
+    const newRays = [];
 
-    this.userDrawings = this.userDrawings.filter(d => {
-      // 检查元素的起点和终点是否远离擦除中心
-      const s = d.startPoint;
-      const e = d.endPoint;
-      const ds = Math.hypot(s.x - eraseCenter.x, s.y - eraseCenter.y);
-      const de = Math.hypot(e.x - eraseCenter.x, e.y - eraseCenter.y);
-      return ds > threshold && de > threshold;
+    // 光线1：从物体顶点平行于光轴 → 过焦点
+    newRays.push({
+      id: `ray_${Date.now()}_1`,
+      startElementId: obj.id,
+      endElementId: lens.id,
+      type: 'parallel-to-focus',
+      color: '#ffa502',
+      segments: this.calculateRaySegments(obj, lens, 'parallel-to-focus')
     });
-  },
 
-  // 绘制预览（当前笔触）
-  drawPreview() {
-    if (!this.ctx || this.tempStroke.length < 2) return;
-    const ctx = this.ctx;
-    const tool = this.data.currentTool;
+    // 光线2：过光心，方向不变
+    newRays.push({
+      id: `ray_${Date.now()}_2`,
+      startElementId: obj.id,
+      endElementId: lens.id,
+      type: 'through-center',
+      color: '#ff6b6b',
+      segments: this.calculateRaySegments(obj, lens, 'through-center')
+    });
 
-    ctx.save();
-    ctx.globalAlpha = 0.7;
-    ctx.lineWidth = 2;
-
-    const points = this.tempStroke.map(p => this.toCanvas(p.x, p.y));
-
-    if (tool === 'ray') {
-      ctx.strokeStyle = '#ffa502';
-      ctx.beginPath();
-      ctx.moveTo(points[0].x, points[0].y);
-      for (let i = 1; i < points.length; i++) {
-        ctx.lineTo(points[i].x, points[i].y);
-      }
-      ctx.stroke();
-    } else if (tool === 'normal') {
-      ctx.strokeStyle = '#ff6b6b';
-      ctx.setLineDash([4, 4]);
-      ctx.beginPath();
-      ctx.moveTo(points[0].x, points[0].y);
-      ctx.lineTo(points[points.length - 1].x, points[points.length - 1].y);
-      ctx.stroke();
-      ctx.setLineDash([]);
-    } else {
-      ctx.strokeStyle = '#495057';
-      ctx.beginPath();
-      ctx.moveTo(points[0].x, points[0].y);
-      ctx.lineTo(points[points.length - 1].x, points[points.length - 1].y);
-      ctx.stroke();
+    // 光线3：过焦点 → 平行出射
+    if (lens.type === 'convex-lens') {
+      newRays.push({
+        id: `ray_${Date.now()}_3`,
+        startElementId: obj.id,
+        endElementId: lens.id,
+        type: 'through-focus',
+        color: '#00b894',
+        segments: this.calculateRaySegments(obj, lens, 'through-focus')
+      });
     }
 
-    ctx.restore();
+    const rays = [...this.data.rays, ...newRays];
+    this.setData({ rays });
+    this.draw();
+  },
+
+  // 计算光线路径段
+  calculateRaySegments(obj, lens, rayType) {
+    const objX = obj.x;
+    const objY = obj.y;
+    const objH = obj.params.height || 60;
+    const lensX = lens.x;
+    const lensY = lens.y;
+    const f = lens.params.focalLength || 100;
+    const canvasW = this.data.canvasWidth;
+    const canvasH = this.data.canvasHeight;
+    // 物理坐标边界
+    const maxPhysX = canvasW / 2;
+    const minPhysX = -canvasW / 2;
+    const maxPhysY = canvasH / 2;
+
+    const segments = [];
+    const topY = objY + objH / 2; // 物体顶点（物理坐标y向上）
+
+    switch (rayType) {
+      case 'parallel-to-focus': {
+        // 从物体顶点平行入射到透镜，然后过焦点
+        const incidentEnd = { x: lensX, y: topY };
+        segments.push({ from: { x: objX, y: topY }, to: incidentEnd, type: 'incident' });
+
+        // 出射方向：过焦点
+        const focusY = lensY; // 焦点在光轴上（简化：假设光轴y=0）
+        const focusX = lensX + f;
+        const dx = focusX - lensX;
+        const dy = focusY - topY;
+        // 延长出射线到画布边缘
+        const t = (maxPhysX - lensX) / (dx || 1);
+        const exitEnd = { x: maxPhysX, y: topY + dy * t };
+        segments.push({ from: incidentEnd, to: exitEnd, type: 'refracted' });
+        break;
+      }
+      case 'through-center': {
+        // 过光心，直线传播
+        const lensCenter = { x: lensX, y: lensY };
+        segments.push({ from: { x: objX, y: topY }, to: lensCenter, type: 'incident' });
+
+        // 延长线
+        const dx = maxPhysX - lensX;
+        const dy = (topY - lensY) / (objX - lensX) * dx;
+        const exitEnd = { x: maxPhysX, y: lensY + dy };
+        segments.push({ from: lensCenter, to: exitEnd, type: 'refracted' });
+        break;
+      }
+      case 'through-focus': {
+        // 从物体顶点出发，通过透镜左侧焦点，然后平行出射
+        const focusX = lensX - f;
+        const focusY = lensY;
+        // 入射到透镜
+        segments.push({ from: { x: objX, y: topY }, to: { x: lensX, y: topY }, type: 'incident' });
+        // 平行出射
+        segments.push({ from: { x: lensX, y: topY }, to: { x: maxPhysX, y: topY }, type: 'refracted' });
+        break;
+      }
+    }
+
+    return segments;
+  },
+
+  // ===== 添加辅助线 =====
+  addAuxiliaryLines() {
+    const lens = this.data.elements.find(el =>
+      el.type === 'convex-lens' || el.type === 'concave-lens'
+    );
+    if (!lens) {
+      wx.showToast({ title: '请先放置透镜', icon: 'none' });
+      return;
+    }
+
+    const f = lens.params.focalLength || 100;
+    const lensX = lens.x;
+    const lensY = lens.y;
+    const canvasW = this.data.canvasWidth;
+    const canvasH = this.data.canvasHeight;
+
+    // 添加焦点标记作为特殊元素（不可拖动，但可显示/隐藏）
+    const auxElements = [];
+
+    // 焦点 F
+    auxElements.push({
+      id: `focus_f_${Date.now()}`,
+      type: 'focus-point',
+      x: lensX - f,
+      y: lensY,
+      label: 'F',
+      params: {}
+    });
+
+    // 焦点 F'
+    auxElements.push({
+      id: `focus_fp_${Date.now()}`,
+      type: 'focus-point',
+      x: lensX + f,
+      y: lensY,
+      label: "F'",
+      params: {}
+    });
+
+    const elements = [...this.data.elements, ...auxElements];
+    this.setData({ elements });
+    this.draw();
   },
 
   // ===== 绘制主函数 =====
@@ -296,13 +538,28 @@ Page({
     this.drawGrid(ctx, w, h);
     this.drawOpticalAxis(ctx, w, h);
 
-    // 绘制预设场景（作为题目背景）
-    if (this.data.currentQuiz) {
-      this.drawQuizScene(ctx);
+    // 绘制所有器件
+    this.data.elements.forEach(el => {
+      this.drawElement(ctx, el);
+    });
+
+    // 绘制所有光线
+    this.data.rays.forEach(ray => {
+      this.drawRay(ctx, ray);
+    });
+
+    // 绘制选中高亮
+    if (this.data.selectedElementId) {
+      const selected = this.data.elements.find(el => el.id === this.data.selectedElementId);
+      if (selected) {
+        this.drawSelectionHighlight(ctx, selected);
+      }
     }
 
-    // 绘制用户绘制内容
-    this.drawUserContent(ctx);
+    // 绘制放置预览
+    if (this.data.isPlacing && this.data.selectedTool) {
+      // 预览由触摸事件处理，不需要额外绘制
+    }
   },
 
   drawGrid(ctx, w, h) {
@@ -341,160 +598,34 @@ Page({
     ctx.textAlign = 'left';
   },
 
-  // 绘制题目预设场景（仅元件，不画光线答案）
-  drawQuizScene(ctx) {
-    const quiz = this.data.currentQuiz;
-    if (!quiz || !quiz.sceneId) return;
-    const scene = dataScenes.SCENES[quiz.sceneId];
-    if (!scene) return;
-    const params = quiz.sceneParams || {};
-
-    // 绘制场景元件（物体、透镜/镜子等，但不画光线和像）
-    if (scene.elements) {
-      scene.elements.forEach(elem => {
-        // 绘图题中不预先显示像，让用户自己画
-        if (elem.type === 'image') return;
-        // 不预先画光线，让用户自己画
-        if (elem.type === 'normal-line') return;
-        this.drawSceneElement(ctx, elem, params);
-      });
-    }
-  },
-
-  // 绘制场景元件（复用光学模拟的绘制方法）
-  drawSceneElement(ctx, element, params) {
-    const pos = element.getPosition ? element.getPosition(params) : {};
-    switch (element.type) {
+  // ===== 绘制器件 =====
+  drawElement(ctx, el) {
+    switch (el.type) {
+      case 'convex-lens':
+        this.drawConvexLens(ctx, el);
+        break;
+      case 'concave-lens':
+        this.drawConcaveLens(ctx, el);
+        break;
+      case 'plane-mirror':
+        this.drawPlaneMirror(ctx, el);
+        break;
       case 'object':
-        this.drawObjectSymbol(ctx, pos);
+        this.drawObject(ctx, el);
         break;
-      case 'lens-convex':
-        this.drawConvexLensSymbol(ctx, pos);
-        break;
-      case 'lens-concave':
-        this.drawConcaveLensSymbol(ctx, pos);
-        break;
-      case 'mirror-plane':
-        this.drawPlaneMirrorSymbol(ctx, pos);
-        break;
-      case 'prism':
-        this.drawPrismSymbol(ctx, pos);
+      case 'focus-point':
+        this.drawFocusPoint(ctx, el);
         break;
     }
   },
 
-  // ===== 绘制用户内容 =====
-  drawUserContent(ctx) {
-    this.userDrawings.forEach(d => {
-      this.drawUserElement(ctx, d);
-    });
-  },
-
-  drawUserElement(ctx, element) {
-    const s = this.toCanvas(element.startPoint.x, element.startPoint.y);
-    const e = this.toCanvas(element.endPoint.x, element.endPoint.y);
-
-    switch (element.type) {
-      case 'ray':
-        ctx.strokeStyle = '#ffa502';
-        ctx.lineWidth = 2.5;
-        ctx.beginPath();
-        ctx.moveTo(s.x, s.y);
-        ctx.lineTo(e.x, e.y);
-        ctx.stroke();
-        // 箭头
-        ctx.fillStyle = '#ffa502';
-        const angle = Math.atan2(e.y - s.y, e.x - s.x);
-        const mx = (s.x + e.x) / 2;
-        const my = (s.y + e.y) / 2;
-        this.drawArrowHead(ctx, mx, my, angle, 7);
-        break;
-
-      case 'object':
-        ctx.strokeStyle = '#e03131';
-        ctx.lineWidth = 2.5;
-        ctx.beginPath();
-        ctx.moveTo(s.x, s.y);
-        ctx.lineTo(e.x, e.y);
-        ctx.stroke();
-        ctx.fillStyle = '#e03131';
-        // 箭头向上
-        const upAngle = Math.atan2(s.y - e.y, s.x - e.x) - Math.PI / 2;
-        this.drawArrowHead(ctx, s.x, s.y, upAngle, 7);
-        break;
-
-      case 'image':
-        ctx.strokeStyle = '#1971c2';
-        ctx.lineWidth = 2.5;
-        ctx.setLineDash([6, 4]);
-        ctx.beginPath();
-        ctx.moveTo(s.x, s.y);
-        ctx.lineTo(e.x, e.y);
-        ctx.stroke();
-        ctx.setLineDash([]);
-        ctx.fillStyle = '#1971c2';
-        const imgAngle = Math.atan2(s.y - e.y, s.x - e.x) - Math.PI / 2;
-        this.drawArrowHead(ctx, s.x, s.y, imgAngle, 7);
-        break;
-
-      case 'normal':
-        ctx.strokeStyle = '#ff6b6b';
-        ctx.lineWidth = 1.5;
-        ctx.setLineDash([4, 4]);
-        ctx.beginPath();
-        ctx.moveTo(s.x, s.y);
-        ctx.lineTo(e.x, e.y);
-        ctx.stroke();
-        ctx.setLineDash([]);
-        ctx.fillStyle = '#ff6b6b';
-        ctx.font = 'bold 12px sans-serif';
-        ctx.fillText('N', e.x + 4, e.y);
-        break;
-
-      case 'arrow':
-        ctx.fillStyle = '#495057';
-        const arrowAngle = Math.atan2(e.y - s.y, e.x - s.x);
-        this.drawArrowHead(ctx, e.x, e.y, arrowAngle, 10);
-        break;
-    }
-  },
-
-  drawArrowHead(ctx, x, y, angle, size) {
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    ctx.lineTo(x - size * Math.cos(angle - Math.PI / 6), y - size * Math.sin(angle - Math.PI / 6));
-    ctx.lineTo(x - size * Math.cos(angle + Math.PI / 6), y - size * Math.sin(angle + Math.PI / 6));
-    ctx.closePath();
-    ctx.fill();
-  },
-
-  // ===== 场景元件绘制（简化版） =====
-  drawObjectSymbol(ctx, pos) {
-    const { x, y = 0, height = 60 } = pos;
-    const halfH = height / 2;
-    const top = this.toCanvas(x, halfH);
-    const bottom = this.toCanvas(x, -halfH);
-    ctx.strokeStyle = '#e03131';
-    ctx.lineWidth = 2.5;
-    ctx.beginPath();
-    ctx.moveTo(top.x, top.y);
-    ctx.lineTo(bottom.x, bottom.y);
-    ctx.stroke();
-    ctx.fillStyle = '#e03131';
-    this.drawArrowHead(ctx, top.x, top.y, -Math.PI / 2, 8);
-    ctx.fillStyle = '#e03131';
-    ctx.font = 'bold 14px sans-serif';
-    ctx.textAlign = 'right';
-    ctx.fillText('A', top.x - 6, top.y + 4);
-    ctx.fillText('B', bottom.x - 6, bottom.y + 14);
-    ctx.textAlign = 'left';
-  },
-
-  drawConvexLensSymbol(ctx, pos) {
-    const { x, y = 0, focalLength = 100, aperture = 120 } = pos;
+  drawConvexLens(ctx, el) {
+    const { x, y, params } = el;
     const c = this.toCanvas(x, y);
-    const halfA = aperture / 2;
+    const halfA = (params.aperture || 120) / 2;
     const curvature = Math.min(25, halfA * 0.4);
+    const f = params.focalLength || 100;
+
     ctx.strokeStyle = '#495057';
     ctx.lineWidth = 2.5;
     ctx.fillStyle = 'rgba(173, 216, 230, 0.2)';
@@ -508,26 +639,32 @@ Page({
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
+
+    // 中心线
     ctx.strokeStyle = '#495057';
     ctx.lineWidth = 1;
     ctx.beginPath();
     ctx.moveTo(c.x, c.y - halfA - 4);
     ctx.lineTo(c.x, c.y + halfA + 4);
     ctx.stroke();
+
+    // 焦距标注
     ctx.fillStyle = '#495057';
     ctx.font = '12px sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText(`f = ${focalLength}mm`, c.x, c.y + halfA + 22);
+    ctx.fillText(`f=${f}mm`, c.x, c.y + halfA + 22);
     ctx.textAlign = 'left';
   },
 
-  drawConcaveLensSymbol(ctx, pos) {
-    const { x, y = 0, focalLength = -100, aperture = 120 } = pos;
+  drawConcaveLens(ctx, el) {
+    const { x, y, params } = el;
     const c = this.toCanvas(x, y);
-    const halfA = aperture / 2;
-    const absF = Math.abs(focalLength);
+    const halfA = (params.aperture || 120) / 2;
     const curvature = Math.min(20, halfA * 0.3);
-    ctx.strokeStyle = '#495057';
+    const f = params.focalLength || -100;
+    const absF = Math.abs(f);
+
+    ctx.strokeStyle = '#6c5ce7';
     ctx.lineWidth = 2.5;
     ctx.fillStyle = 'rgba(173, 216, 230, 0.15)';
     ctx.beginPath();
@@ -540,20 +677,23 @@ Page({
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
+
     ctx.beginPath();
     ctx.moveTo(c.x, c.y - halfA - 4);
     ctx.lineTo(c.x, c.y + halfA + 4);
     ctx.stroke();
-    ctx.fillStyle = '#495057';
+
+    ctx.fillStyle = '#6c5ce7';
     ctx.font = '12px sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText(`f = -${absF}mm`, c.x, c.y + halfA + 22);
+    ctx.fillText(`f=-${absF}mm`, c.x, c.y + halfA + 22);
     ctx.textAlign = 'left';
   },
 
-  drawPlaneMirrorSymbol(ctx, pos) {
-    const { x, y = 0, angle = 0, length = 180 } = pos;
-    const halfLen = length / 2;
+  drawPlaneMirror(ctx, el) {
+    const { x, y, params } = el;
+    const angle = (params.angle || 0) * Math.PI / 180;
+    const halfLen = (params.length || 180) / 2;
     const cosA = Math.cos(angle);
     const sinA = Math.sin(angle);
     const x1 = x - halfLen * cosA;
@@ -562,12 +702,15 @@ Page({
     const y2 = y + halfLen * sinA;
     const p1 = this.toCanvas(x1, y1);
     const p2 = this.toCanvas(x2, y2);
-    ctx.strokeStyle = '#495057';
+
+    ctx.strokeStyle = '#00b894';
     ctx.lineWidth = 3;
     ctx.beginPath();
     ctx.moveTo(p1.x, p1.y);
     ctx.lineTo(p2.x, p2.y);
     ctx.stroke();
+
+    // 背面短斜线
     const nx = -sinA;
     const ny = cosA;
     const numTicks = 7;
@@ -582,34 +725,143 @@ Page({
     }
   },
 
-  drawPrismSymbol(ctx, pos) {
-    const { vertices } = pos;
-    if (!vertices || vertices.length < 3) return;
-    ctx.strokeStyle = '#495057';
+  drawObject(ctx, el) {
+    const { x, y, params } = el;
+    const height = params.height || 60;
+    const halfH = height / 2;
+    const top = this.toCanvas(x, y + halfH);
+    const bottom = this.toCanvas(x, y - halfH);
+
+    ctx.strokeStyle = '#e03131';
     ctx.lineWidth = 2.5;
-    ctx.fillStyle = 'rgba(173, 216, 230, 0.2)';
     ctx.beginPath();
-    const p0 = this.toCanvas(vertices[0].x, vertices[0].y);
-    ctx.moveTo(p0.x, p0.y);
-    for (let i = 1; i < vertices.length; i++) {
-      const pi = this.toCanvas(vertices[i].x, vertices[i].y);
-      ctx.lineTo(pi.x, pi.y);
-    }
+    ctx.moveTo(top.x, top.y);
+    ctx.lineTo(bottom.x, bottom.y);
+    ctx.stroke();
+
+    // 箭头向上
+    ctx.fillStyle = '#e03131';
+    this.drawArrowHead(ctx, top.x, top.y, -Math.PI / 2, 8);
+
+    // 标注
+    ctx.fillStyle = '#e03131';
+    ctx.font = 'bold 14px sans-serif';
+    ctx.textAlign = 'right';
+    ctx.fillText('A', top.x - 6, top.y + 4);
+    ctx.fillText('B', bottom.x - 6, bottom.y + 14);
+    ctx.textAlign = 'left';
+  },
+
+  drawFocusPoint(ctx, el) {
+    const c = this.toCanvas(el.x, el.y);
+    ctx.fillStyle = '#ff6b6b';
+    ctx.beginPath();
+    ctx.arc(c.x, c.y, 4, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = '#ff6b6b';
+    ctx.font = 'bold 12px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(el.label || 'F', c.x, c.y - 10);
+    ctx.textAlign = 'left';
+  },
+
+  drawArrowHead(ctx, x, y, angle, size) {
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.lineTo(x - size * Math.cos(angle - Math.PI / 6), y - size * Math.sin(angle - Math.PI / 6));
+    ctx.lineTo(x - size * Math.cos(angle + Math.PI / 6), y - size * Math.sin(angle + Math.PI / 6));
     ctx.closePath();
     ctx.fill();
-    ctx.stroke();
+  },
+
+  // ===== 绘制光线 =====
+  drawRay(ctx, ray) {
+    if (!ray.segments || ray.segments.length === 0) return;
+
+    ctx.strokeStyle = ray.color || '#ffa502';
+    ctx.lineWidth = 2;
+    ctx.setLineDash([]);
+
+    ray.segments.forEach((seg, idx) => {
+      const from = this.toCanvas(seg.from.x, seg.from.y);
+      const to = this.toCanvas(seg.to.x, seg.to.y);
+
+      if (seg.type === 'virtual') {
+        ctx.setLineDash([6, 4]);
+      } else {
+        ctx.setLineDash([]);
+      }
+
+      ctx.beginPath();
+      ctx.moveTo(from.x, from.y);
+      ctx.lineTo(to.x, to.y);
+      ctx.stroke();
+
+      // 入射段画箭头
+      if (idx === 0) {
+        const angle = Math.atan2(to.y - from.y, to.x - from.x);
+        const mx = (from.x + to.x) / 2;
+        const my = (from.y + to.y) / 2;
+        ctx.fillStyle = ray.color || '#ffa502';
+        this.drawArrowHead(ctx, mx, my, angle, 6);
+      }
+    });
+
+    ctx.setLineDash([]);
+  },
+
+  // ===== 绘制选中高亮 =====
+  drawSelectionHighlight(ctx, el) {
+    const c = this.toCanvas(el.x, el.y);
+    ctx.strokeStyle = '#4a69bd';
+    ctx.lineWidth = 2;
+    ctx.setLineDash([4, 4]);
+
+    switch (el.type) {
+      case 'convex-lens':
+      case 'concave-lens': {
+        const halfA = (el.params.aperture || 120) / 2;
+        ctx.strokeRect(c.x - 35, c.y - halfA - 10, 70, halfA * 2 + 20);
+        break;
+      }
+      case 'plane-mirror': {
+        const angle = (el.params.angle || 0) * Math.PI / 180;
+        const halfLen = (el.params.length || 180) / 2;
+        const x1 = el.x - halfLen * Math.cos(angle);
+        const y1 = el.y - halfLen * Math.sin(angle);
+        const x2 = el.x + halfLen * Math.cos(angle);
+        const y2 = el.y + halfLen * Math.sin(angle);
+        const p1 = this.toCanvas(x1, y1);
+        const p2 = this.toCanvas(x2, y2);
+        // 简化高亮：以中心为圆
+        ctx.beginPath();
+        ctx.arc(c.x, c.y, halfLen + 10, 0, Math.PI * 2);
+        ctx.stroke();
+        break;
+      }
+      case 'object': {
+        const h = (el.params.height || 60) / 2 + 15;
+        ctx.strokeRect(c.x - 25, c.y - h, 50, h * 2);
+        break;
+      }
+    }
+
+    ctx.setLineDash([]);
   },
 
   // ===== 操作按钮 =====
   clearCanvas() {
-    this.userDrawings = [];
-    this.setData({ validationResult: null, quizScore: -1 });
-    this.draw();
-  },
-
-  undoLast() {
-    this.userDrawings.pop();
-    this.setData({ validationResult: null, quizScore: -1 });
+    this.setData({
+      elements: [],
+      rays: [],
+      selectedElementId: null,
+      selectedTool: null,
+      selectedToolName: null,
+      isPlacing: false,
+      paramPanelVisible: false,
+      validationResult: null,
+      quizScore: -1
+    });
     this.draw();
   },
 
@@ -617,10 +869,16 @@ Page({
     this.setData({
       currentQuiz: null,
       currentQuizIndex: -1,
+      elements: [],
+      rays: [],
+      selectedElementId: null,
+      selectedTool: null,
+      selectedToolName: null,
+      isPlacing: false,
+      paramPanelVisible: false,
       quizScore: -1,
       validationResult: null
     });
-    this.userDrawings = [];
   },
 
   nextQuiz() {
@@ -645,14 +903,12 @@ Page({
       quizScore: result.score
     });
 
-    // 保存成绩到全局
     const app = getApp();
     if (app && app.recordAnswer) {
       app.recordAnswer(quiz.id, result.score >= 60, 'drawing', '光学绘图', quiz.sceneId);
     }
   },
 
-  // ===== 验证主函数 =====
   validateQuiz(quiz) {
     const sceneId = quiz.sceneId;
     const params = quiz.sceneParams || {};
@@ -669,224 +925,205 @@ Page({
     }
   },
 
-  // ===== 凸透镜成像验证 =====
+  // ===== 凸透镜成像验证（基于器件位置） =====
   validateConvexLens(quiz, params) {
     const u = params.objectDistance;
     const f = params.focalLength;
-    const lensX = params.lensX;
-    const objX = lensX - u;
-    const v = (u * f) / (u - f);
-    const imgX = lensX + v;
-    const mag = -v / u;
-    const expectedImgHeight = params.objectHeight * Math.abs(mag);
-    const expectedImgTopY = mag > 0 ? expectedImgHeight / 2 : -expectedImgHeight / 2;
-    const expectedImgBottomY = mag > 0 ? -expectedImgHeight / 2 : expectedImgHeight / 2;
+    const expectedLensX = params.lensX;
+    const expectedObjX = expectedLensX - u;
+    const v = Math.abs(u - f) < 0.5 ? (u > f ? 99999 : -99999) : (u * f) / (u - f);
+    const expectedImgX = expectedLensX + v;
+    const expectedImgHeight = params.objectHeight * Math.abs(-v / u);
 
-    const rays = this.userDrawings.filter(d => d.type === 'ray');
-    const images = this.userDrawings.filter(d => d.type === 'image');
+    const objects = this.data.elements.filter(el => el.type === 'object');
+    const lenses = this.data.elements.filter(el => el.type === 'convex-lens');
+    const rays = this.data.rays;
 
     let details = [];
-    let correctRays = 0;
-    let rayDetails = [];
+    let score = 0;
 
-    // 检查每条光线
-    for (const ray of rays) {
-      // 1. 是否从物体附近出发
-      const startNearObj = Math.abs(ray.startPoint.x - objX) < 50 &&
-        Math.abs(ray.startPoint.y) < params.objectHeight;
-      if (!startNearObj) {
-        rayDetails.push('• 有一条光线未从物体附近出发');
-        continue;
-      }
-
-      // 2. 是否通过透镜附近
-      const passesLens = this.segmentPassesNearPoint(ray, lensX, 0, 35);
-      if (!passesLens) {
-        rayDetails.push('• 有一条光线未通过透镜');
-        continue;
-      }
-
-      // 3. 出射后是否通过像点附近（容差范围内）
-      // 光线从透镜到像点的方向
-      const passesImage = this.segmentPassesNearPoint(ray, imgX, 0, 50);
-      if (passesImage) {
-        correctRays++;
+    // 检查物体位置
+    if (objects.length > 0) {
+      const obj = objects[0];
+      const objDist = Math.abs(obj.x - expectedObjX);
+      if (objDist < 30) {
+        score += 20;
+        details.push('✓ 物体位置正确');
+      } else if (objDist < 60) {
+        score += 10;
+        details.push(`~ 物体位置基本正确（偏差 ${Math.round(objDist)}px）`);
       } else {
-        rayDetails.push('• 有一条光线未到达正确像位置');
+        details.push(`✗ 物体位置偏差较大（偏差 ${Math.round(objDist)}px）`);
       }
-    }
-
-    // 评分
-    const rayScore = Math.min(correctRays, 3) * 25;
-
-    // 检查像的位置
-    let imageScore = 0;
-    let imageMessage = '';
-    if (images.length === 0) {
-      imageMessage = '未画出像的位置';
     } else {
-      const img = images[0];
-      // 检查像的竖线是否接近理论位置
-      const imgXavg = (img.startPoint.x + img.endPoint.x) / 2;
-      const imgDist = Math.abs(imgXavg - imgX);
-      const imgHeight = Math.abs(img.startPoint.y - img.endPoint.y);
-      const heightDiff = Math.abs(imgHeight - expectedImgHeight);
-
-      if (imgDist < 25 && heightDiff < 20) {
-        imageScore = 25;
-        imageMessage = '像的位置和大小完全正确';
-      } else if (imgDist < 50 && heightDiff < 40) {
-        imageScore = 15;
-        imageMessage = `像的位置基本正确（偏差 ${Math.round(imgDist)}px）`;
-      } else if (imgDist < 80) {
-        imageScore = 5;
-        imageMessage = `像的位置偏差较大（偏差 ${Math.round(imgDist)}px）`;
-      } else {
-        imageMessage = `像的位置错误（偏差 ${Math.round(imgDist)}px）`;
-      }
+      details.push('✗ 未放置物体');
     }
 
-    const totalScore = Math.min(rayScore + imageScore, 100);
-    const isCorrect = totalScore >= 60;
+    // 检查透镜位置
+    if (lenses.length > 0) {
+      const lens = lenses[0];
+      const lensDist = Math.abs(lens.x - expectedLensX);
+      if (lensDist < 30) {
+        score += 20;
+        details.push('✓ 透镜位置正确');
+      } else if (lensDist < 60) {
+        score += 10;
+        details.push(`~ 透镜位置基本正确（偏差 ${Math.round(lensDist)}px）`);
+      } else {
+        details.push(`✗ 透镜位置偏差较大（偏差 ${Math.round(lensDist)}px）`);
+      }
 
-    details.push(`检测到 ${rays.length} 条光线，其中 ${correctRays} 条正确`);
-    if (rayDetails.length > 0) details.push(...rayDetails.slice(0, 2));
-    details.push(imageMessage);
+      // 检查焦距
+      const fDiff = Math.abs((lens.params.focalLength || 100) - f);
+      if (fDiff < 15) {
+        score += 10;
+        details.push('✓ 焦距设置正确');
+      } else {
+        details.push(`✗ 焦距设置错误（应为 ${f}mm）`);
+      }
+    } else {
+      details.push('✗ 未放置凸透镜');
+    }
+
+    // 检查光线
+    const hasRays = rays.length >= 2;
+    if (hasRays) {
+      score += 30;
+      details.push(`✓ 已绘制 ${rays.length} 条光线`);
+    } else if (rays.length > 0) {
+      score += 10;
+      details.push(`~ 仅绘制 ${rays.length} 条光线（建议至少2条）`);
+    } else {
+      details.push('✗ 未绘制任何光线');
+    }
+
+    // 检查是否像位置合理
+    const hasImageRay = rays.some(r => r.segments && r.segments.length >= 2);
+    if (hasImageRay) {
+      score += 20;
+      details.push('✓ 光线能够成像');
+    } else {
+      details.push('✗ 光线未正确延伸');
+    }
+
+    const totalScore = Math.min(score, 100);
+    const isCorrect = totalScore >= 60;
 
     return {
       isCorrect,
       score: totalScore,
-      message: isCorrect ? '光路图基本正确，继续加油！' : '光路图有错误，请检查特征光线和像的位置',
+      message: isCorrect ? '光路图基本正确，继续加油！' : '光路图有错误，请检查器件位置和光线',
       details
     };
   },
 
   // ===== 平面镜反射验证 =====
   validatePlaneMirror(quiz, params) {
-    const mirrorX = params.mirrorX;
-    const mirrorAngle = params.mirrorAngle * Math.PI / 180;
+    const expectedMirrorX = params.mirrorX;
+    const expectedMirrorAngle = params.mirrorAngle;
     const incidentAngleDeg = params.incidentAngle;
 
-    const rays = this.userDrawings.filter(d => d.type === 'ray');
-    const normals = this.userDrawings.filter(d => d.type === 'normal');
+    const mirrors = this.data.elements.filter(el => el.type === 'plane-mirror');
+    const rays = this.data.rays;
 
     let details = [];
-    let incidentFound = false;
-    let reflectedFound = false;
-    let normalFound = false;
-    let angleCorrect = false;
+    let score = 0;
 
-    // 检查入射光线和反射光线
-    for (const ray of rays) {
-      const mid = {
-        x: (ray.startPoint.x + ray.endPoint.x) / 2,
-        y: (ray.startPoint.y + ray.endPoint.y) / 2
-      };
-      const nearMirror = this.pointNearMirror(mid, mirrorX, 0, mirrorAngle, 50);
-      if (!nearMirror) continue;
-
-      const dx = ray.endPoint.x - ray.startPoint.x;
-      const dy = ray.endPoint.y - ray.startPoint.y;
-      const rayAngle = Math.atan2(dy, dx); // 光线方向（物理坐标）
-      // 物理坐标中 y 向上，角度正常
-
-      // 入射光：从左侧射向镜面
-      if (dx > 0 && !incidentFound) {
-        incidentFound = true;
+    // 检查平面镜
+    if (mirrors.length > 0) {
+      const mirror = mirrors[0];
+      const mirrorDist = Math.abs(mirror.x - expectedMirrorX);
+      if (mirrorDist < 30) {
+        score += 30;
+        details.push('✓ 平面镜位置正确');
+      } else {
+        details.push(`✗ 平面镜位置偏差（偏差 ${Math.round(mirrorDist)}px）`);
       }
-      // 反射光：从镜面向左侧离开
-      if (dx < 0 && !reflectedFound) {
-        reflectedFound = true;
-      }
+    } else {
+      details.push('✗ 未放置平面镜');
     }
 
-    // 检查法线
-    if (normals.length > 0) {
-      normalFound = true;
-      // 检查法线是否大致垂直于镜面
-      const n = normals[0];
-      const ndx = n.endPoint.x - n.startPoint.x;
-      const ndy = n.endPoint.y - n.startPoint.y;
-      const normalAngle = Math.atan2(ndy, ndx);
-      // 镜面法线角度应为 mirrorAngle + PI/2
-      const expectedNormal = mirrorAngle + Math.PI / 2;
-      const angleDiff = Math.abs(this.normalizeAngle(normalAngle - expectedNormal));
-      if (angleDiff < 15 * Math.PI / 180) {
-        angleCorrect = true;
-      }
+    // 检查光线
+    if (rays.length >= 2) {
+      score += 40;
+      details.push(`✓ 已绘制入射光和反射光（${rays.length} 条）`);
+    } else if (rays.length > 0) {
+      score += 20;
+      details.push('~ 仅绘制一条光线');
+    } else {
+      details.push('✗ 未绘制任何光线');
     }
 
-    const score = (incidentFound ? 30 : 0) + (reflectedFound ? 30 : 0) +
-      (normalFound ? 20 : 0) + (angleCorrect ? 20 : 0);
-    const isCorrect = score >= 60;
+    // 检查是否有法线（通过辅助线或光线判断）
+    const hasNormal = rays.some(r => r.type === 'through-center');
+    if (hasNormal) {
+      score += 30;
+      details.push('✓ 法线已标注');
+    } else {
+      details.push('✗ 建议标注法线');
+    }
 
-    details.push(incidentFound ? '✓ 入射光线正确' : '✗ 缺少入射光线或位置不对');
-    details.push(reflectedFound ? '✓ 反射光线正确' : '✗ 缺少反射光线或位置不对');
-    details.push(normalFound ? '✓ 法线已画出' : '✗ 未画法线');
-    details.push(angleCorrect ? '✓ 法线角度正确' : '✗ 法线角度有误');
+    const totalScore = Math.min(score, 100);
+    const isCorrect = totalScore >= 60;
 
     return {
       isCorrect,
-      score,
-      message: isCorrect ? '反射光路图正确！' : '请检查入射光、反射光和法线的位置',
+      score: totalScore,
+      message: isCorrect ? '反射光路图正确！' : '请检查入射光、反射光和镜面的位置',
       details
     };
   },
 
   // ===== 凹透镜发散验证 =====
   validateConcaveLens(quiz, params) {
-    const f = -params.focalLength;
-    const absF = Math.abs(f);
-    const lensX = params.lensX;
-    const rayOffset = params.rayOffset;
+    const f = params.focalLength;
+    const expectedLensX = params.lensX;
 
-    const rays = this.userDrawings.filter(d => d.type === 'ray');
-    const images = this.userDrawings.filter(d => d.type === 'image');
+    const lenses = this.data.elements.filter(el => el.type === 'concave-lens');
+    const objects = this.data.elements.filter(el => el.type === 'object');
+    const rays = this.data.rays;
 
-    let correctRays = 0;
     let details = [];
+    let score = 0;
 
-    // 凹透镜：平行光入射 -> 发散，反向延长通过焦点（左侧虚焦点）
-    for (const ray of rays) {
-      const startY = ray.startPoint.y;
-      const startX = ray.startPoint.x;
-      // 是否从左侧平行入射（y 接近 rayOffset）
-      const isParallel = Math.abs(startY - rayOffset) < 20 || Math.abs(startY + rayOffset) < 20;
-      const fromLeft = startX < lensX - 50;
-      if (!isParallel || !fromLeft) continue;
-
-      // 是否通过透镜
-      const passesLens = this.segmentPassesNearPoint(ray, lensX, startY, 30);
-      if (!passesLens) continue;
-
-      // 出射后是否发散（y 随 x 增大而增大）
-      const dx = ray.endPoint.x - ray.startPoint.x;
-      const dy = ray.endPoint.y - ray.startPoint.y;
-      // 发散意味着光线远离光轴
-      const diverging = Math.abs(ray.endPoint.y) > Math.abs(startY) + 5;
-      if (diverging) {
-        correctRays++;
+    if (lenses.length > 0) {
+      const lens = lenses[0];
+      const lensDist = Math.abs(lens.x - expectedLensX);
+      if (lensDist < 30) {
+        score += 25;
+        details.push('✓ 凹透镜位置正确');
+      } else {
+        details.push(`✗ 凹透镜位置偏差（偏差 ${Math.round(lensDist)}px）`);
       }
+
+      const fDiff = Math.abs(Math.abs(lens.params.focalLength || -100) - Math.abs(f));
+      if (fDiff < 15) {
+        score += 15;
+        details.push('✓ 焦距设置正确');
+      }
+    } else {
+      details.push('✗ 未放置凹透镜');
     }
 
-    const rayScore = Math.min(correctRays, 2) * 30;
-    let imageScore = 0;
-
-    // 凹透镜成虚像，在物体同侧
-    if (images.length > 0) {
-      const img = images[0];
-      const imgXavg = (img.startPoint.x + img.endPoint.x) / 2;
-      // 虚像应在透镜左侧
-      if (imgXavg < lensX - 20) {
-        imageScore = 20;
-      }
+    if (objects.length > 0) {
+      score += 20;
+      details.push('✓ 已放置物体');
+    } else {
+      details.push('✗ 未放置物体');
     }
 
-    const totalScore = Math.min(rayScore + imageScore + 20, 100); // +20 方向分
+    if (rays.length >= 2) {
+      score += 40;
+      details.push(`✓ 已绘制 ${rays.length} 条发散光线`);
+    } else if (rays.length > 0) {
+      score += 20;
+      details.push('~ 仅绘制一条光线');
+    } else {
+      details.push('✗ 未绘制光线');
+    }
+
+    const totalScore = Math.min(score, 100);
     const isCorrect = totalScore >= 60;
-
-    details.push(`检测到 ${rays.length} 条光线，其中 ${correctRays} 条为发散光线`);
-    details.push(images.length > 0 ? '✓ 已标注虚像位置' : '✗ 未标注虚像位置');
 
     return {
       isCorrect,
@@ -894,44 +1131,5 @@ Page({
       message: isCorrect ? '凹透镜发散光路正确！' : '请检查光线是否从平行入射变为发散',
       details
     };
-  },
-
-  // ===== 几何工具函数 =====
-  segmentPassesNearPoint(segment, px, py, tolerance) {
-    // 检查线段是否靠近某点（点到线段的最短距离）
-    const x1 = segment.startPoint.x, y1 = segment.startPoint.y;
-    const x2 = segment.endPoint.x, y2 = segment.endPoint.y;
-
-    const dx = x2 - x1, dy = y2 - y1;
-    const len2 = dx * dx + dy * dy;
-    if (len2 < 1e-9) {
-      return Math.hypot(x1 - px, y1 - py) < tolerance;
-    }
-
-    let t = ((px - x1) * dx + (py - y1) * dy) / len2;
-    t = Math.max(0, Math.min(1, t));
-    const closestX = x1 + t * dx;
-    const closestY = y1 + t * dy;
-    const dist = Math.hypot(closestX - px, closestY - py);
-    return dist < tolerance;
-  },
-
-  pointNearMirror(point, mx, my, mirrorAngle, tolerance) {
-    // 检查点是否靠近平面镜
-    const cosA = Math.cos(mirrorAngle);
-    const sinA = Math.sin(mirrorAngle);
-    // 将点投影到镜面坐标系
-    const dx = point.x - mx;
-    const dy = point.y - my;
-    const along = dx * cosA + dy * sinA; // 沿镜面方向
-    const across = -dx * sinA + dy * cosA; // 垂直镜面方向
-    return Math.abs(across) < tolerance && Math.abs(along) < 100;
-  },
-
-  normalizeAngle(angle) {
-    // 归一化到 [-PI, PI]
-    while (angle > Math.PI) angle -= 2 * Math.PI;
-    while (angle < -Math.PI) angle += 2 * Math.PI;
-    return angle;
   }
 });
