@@ -127,19 +127,69 @@ Page({
   },
 
   // ===== 坐标转换：物理坐标 -> Canvas坐标 =====
-  // 物理坐标系：原点画布中心，x向右，y向上
-  // Canvas坐标系：原点左上角，x向右，y向下
+  // 支持视图缩放和偏移，让画布自动聚焦关键元素
   toCanvas(physX, physY) {
     const cx = this.data.canvasWidth / 2;
     const cy = this.data.canvasHeight / 2;
-    return { x: cx + physX, y: cy - physY };
+    const scale = this.data.viewScale || 1;
+    const offsetX = this.data.viewOffsetX || 0;
+    return { x: cx + (physX + offsetX) * scale, y: cy - physY * scale };
   },
 
   // Canvas坐标 -> 物理坐标
   toPhysics(canvasX, canvasY) {
     const cx = this.data.canvasWidth / 2;
     const cy = this.data.canvasHeight / 2;
-    return { x: canvasX - cx, y: cy - canvasY };
+    const scale = this.data.viewScale || 1;
+    const offsetX = this.data.viewOffsetX || 0;
+    return { x: (canvasX - cx) / scale - offsetX, y: (cy - canvasY) / scale };
+  },
+
+  // ===== 计算视图参数：自动聚焦关键元素 =====
+  computeViewParams() {
+    const { params, currentSceneId } = this.data;
+    if (!this.sceneData) return { viewScale: 1, viewOffsetX: 0 };
+
+    // 收集关键元素的物理坐标
+    let minX = -300, maxX = 300, keyX = 0;
+
+    if (currentSceneId === 'convexLens' || currentSceneId === 'concaveLens') {
+      const lensX = params.lensX || 250;
+      const u = params.objectDistance || 200;
+      const f = params.focalLength || 100;
+      const v = Math.abs(u - f) < 0.5 ? (u > f ? 99999 : -99999) : (u * f) / (u - f);
+      keyX = lensX;
+      minX = Math.min(lensX - u - 50, lensX + v - 50);
+      maxX = Math.max(lensX + 50, lensX + v + 50, lensX - u + 50);
+    } else if (currentSceneId === 'planeMirror') {
+      const mirrorX = params.mirrorX || 250;
+      const objX = params.objectX || -150;
+      keyX = mirrorX;
+      minX = Math.min(objX, mirrorX) - 50;
+      maxX = Math.max(mirrorX + 150, Math.abs(objX) + 50);
+    } else if (currentSceneId === 'prismRefraction') {
+      const prismX = params.prismX || 250;
+      keyX = prismX;
+      minX = prismX - 200;
+      maxX = prismX + 300;
+    }
+
+    // 限制范围，防止无限大
+    minX = Math.max(minX, -1000);
+    maxX = Math.min(maxX, 1000);
+
+    const rangeX = maxX - minX;
+    const canvasW = this.data.canvasWidth;
+    const padding = 60; // 边距
+    // 缩放比例：确保场景宽度在画布内（留边距）
+    let scale = (canvasW - padding * 2) / Math.max(rangeX, 200);
+    // 限制缩放范围
+    scale = Math.max(0.3, Math.min(scale, 2.0));
+
+    // 偏移：让关键元素（如透镜）在画布中心
+    const offsetX = -keyX;
+
+    return { viewScale: scale, viewOffsetX: offsetX };
   },
 
   // ===== 拖动功能 =====
@@ -237,6 +287,11 @@ Page({
     const w = this.data.canvasWidth;
     const h = this.data.canvasHeight;
 
+    // 计算视图参数（自动聚焦）——直接修改 this.data，避免 setData 触发重渲染循环
+    const viewParams = this.computeViewParams();
+    this.data.viewScale = viewParams.viewScale;
+    this.data.viewOffsetX = viewParams.viewOffsetX;
+
     // 清空背景
     ctx.clearRect(0, 0, w, h);
     ctx.fillStyle = '#f8f9fa';
@@ -253,21 +308,48 @@ Page({
   },
 
   drawGrid(ctx, w, h) {
+    const scale = this.data.viewScale || 1;
+    const offsetX = this.data.viewOffsetX || 0;
     ctx.strokeStyle = '#e9ecef';
     ctx.lineWidth = 0.5;
-    const gridSize = 50;
-    for (let x = 0; x <= w; x += gridSize) {
+    const gridSize = 50 * scale; // 网格随缩放调整
+    // 绘制竖线：以画布中心 + offsetX * scale 为基准
+    const centerX = w / 2 + offsetX * scale;
+    const startX = centerX % gridSize;
+    for (let x = startX; x <= w; x += gridSize) {
       ctx.beginPath();
       ctx.moveTo(x, 0);
       ctx.lineTo(x, h);
       ctx.stroke();
     }
-    for (let y = 0; y <= h; y += gridSize) {
+    for (let x = startX - gridSize; x >= 0; x -= gridSize) {
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, h);
+      ctx.stroke();
+    }
+    // 绘制横线
+    const cy = h / 2;
+    const startY = cy % gridSize;
+    for (let y = startY; y <= h; y += gridSize) {
       ctx.beginPath();
       ctx.moveTo(0, y);
       ctx.lineTo(w, y);
       ctx.stroke();
     }
+    for (let y = startY - gridSize; y >= 0; y -= gridSize) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(w, y);
+      ctx.stroke();
+    }
+    // 绘制光轴附近的水平线
+    ctx.strokeStyle = '#dee2e6';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(0, cy);
+    ctx.lineTo(w, cy);
+    ctx.stroke();
   },
 
   drawOpticalAxis(ctx, w, h) {
