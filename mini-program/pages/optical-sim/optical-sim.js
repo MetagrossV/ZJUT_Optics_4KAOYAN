@@ -156,7 +156,7 @@ Page({
     let minX = -300, maxX = 300, keyX = 0;
 
     if (currentSceneId === 'convexLens' || currentSceneId === 'concaveLens') {
-      const lensX = params.lensX || 250;
+      const lensX = 375; // 透镜始终居中，不可拖动
       const u = params.objectDistance || 200;
       const f = params.focalLength || 100;
       const v = Math.abs(u - f) < 0.5 ? (u > f ? 99999 : -99999) : (u * f) / (u - f);
@@ -210,13 +210,9 @@ Page({
     const threshold = 40; // 拖动阈值
 
     if (currentSceneId === 'convexLens' || currentSceneId === 'concaveLens') {
-      // 透镜位置
-      const lensX = params.lensX || 250;
-      if (Math.abs(phys.x - lensX) < threshold && Math.abs(phys.y) < 80) {
-        target = { paramId: 'lensX', label: '透镜' };
-      }
-      // 物体位置
-      const objX = params.objectDistance ? (lensX - params.objectDistance) : (lensX - 200);
+      // 透镜始终居中，不可拖动，只检测物体
+      const lensX = 375;
+      const objX = lensX - (params.objectDistance || 200);
       if (Math.abs(phys.x - objX) < threshold && Math.abs(phys.y - (params.objectHeight || 60)) < 40) {
         target = { paramId: 'objectDistance', label: '物体', lensX: lensX };
       }
@@ -498,11 +494,13 @@ Page({
     const { x, y = 0, focalLength = 100, aperture = 120 } = pos;
     const c = this.toCanvas(x, y);
     const halfA = aperture / 2;
-    const curvature = Math.min(25, halfA * 0.4);
+    const absF = Math.abs(focalLength);
+    // 曲率半径与焦距相关：R ≈ (n-1)*f，取 n=1.5，R ≈ 0.5*f
+    const curvature = Math.min(halfA * 0.45, absF * 0.2, 40);
 
-    ctx.strokeStyle = '#495057';
-    ctx.lineWidth = 2.5;
-    ctx.fillStyle = 'rgba(173, 216, 230, 0.2)';
+    ctx.strokeStyle = '#2c3e50';
+    ctx.lineWidth = 3;
+    ctx.fillStyle = 'rgba(100, 181, 246, 0.35)';
 
     // 左弧（向外凸）
     ctx.beginPath();
@@ -518,7 +516,7 @@ Page({
     ctx.quadraticCurveTo(c.x + curvature + 12, c.y + halfA * 0.5, c.x + 6, c.y + halfA);
     ctx.stroke();
 
-    // 填充透镜区域（简化）
+    // 填充透镜区域
     ctx.beginPath();
     ctx.moveTo(c.x - 6, c.y - halfA);
     ctx.quadraticCurveTo(c.x - curvature - 12, c.y - halfA * 0.5, c.x - curvature - 6, c.y);
@@ -531,18 +529,18 @@ Page({
     ctx.stroke();
 
     // 中心竖线
-    ctx.strokeStyle = '#495057';
-    ctx.lineWidth = 1;
+    ctx.strokeStyle = '#2c3e50';
+    ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.moveTo(c.x, c.y - halfA - 4);
-    ctx.lineTo(c.x, c.y + halfA + 4);
+    ctx.moveTo(c.x, c.y - halfA - 6);
+    ctx.lineTo(c.x, c.y + halfA + 6);
     ctx.stroke();
 
     // 焦距标注
-    ctx.fillStyle = '#495057';
-    ctx.font = '12px sans-serif';
+    ctx.fillStyle = '#2c3e50';
+    ctx.font = 'bold 12px sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText(`f = ${focalLength}mm`, c.x, c.y + halfA + 22);
+    ctx.fillText(`f = ${focalLength}mm`, c.x, c.y + halfA + 28);
     ctx.textAlign = 'left';
   },
 
@@ -552,11 +550,12 @@ Page({
     const c = this.toCanvas(x, y);
     const halfA = aperture / 2;
     const absF = Math.abs(focalLength);
-    const curvature = Math.min(20, halfA * 0.3);
+    // 曲率半径与焦距相关
+    const curvature = Math.min(halfA * 0.35, absF * 0.15, 30);
 
-    ctx.strokeStyle = '#495057';
-    ctx.lineWidth = 2.5;
-    ctx.fillStyle = 'rgba(173, 216, 230, 0.15)';
+    ctx.strokeStyle = '#6c5ce7';
+    ctx.lineWidth = 3;
+    ctx.fillStyle = 'rgba(179, 157, 219, 0.3)';
 
     // 左弧（向内凹）
     ctx.beginPath();
@@ -585,18 +584,18 @@ Page({
     ctx.stroke();
 
     // 中心竖线
-    ctx.strokeStyle = '#495057';
-    ctx.lineWidth = 1;
+    ctx.strokeStyle = '#6c5ce7';
+    ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.moveTo(c.x, c.y - halfA - 4);
-    ctx.lineTo(c.x, c.y + halfA + 4);
+    ctx.moveTo(c.x, c.y - halfA - 6);
+    ctx.lineTo(c.x, c.y + halfA + 6);
     ctx.stroke();
 
     // 焦距标注
-    ctx.fillStyle = '#495057';
-    ctx.font = '12px sans-serif';
+    ctx.fillStyle = '#6c5ce7';
+    ctx.font = 'bold 12px sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText(`f = -${absF}mm`, c.x, c.y + halfA + 22);
+    ctx.fillText(`f = -${absF}mm`, c.x, c.y + halfA + 28);
     ctx.textAlign = 'left';
   },
 

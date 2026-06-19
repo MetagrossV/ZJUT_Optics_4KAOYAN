@@ -20,10 +20,9 @@ const SCENES = {
     },
     // 可调整参数
     adjustableParams: [
-      { id: 'focalLength', name: '焦距 f', unit: 'mm', min: 50, max: 200, default: 100, step: 10 },
+      { id: 'focalLength', name: '焦距 f', unit: 'mm', min: 50, max: 300, default: 100, step: 10 },
       { id: 'objectDistance', name: '物距 u', unit: 'mm', min: 50, max: 400, default: 150, step: 10 },
-      { id: 'objectHeight', name: '物高 h', unit: 'mm', min: 20, max: 120, default: 60, step: 5 },
-      { id: 'lensX', name: '透镜位置', unit: 'px', min: 200, max: 550, default: 375, step: 10 }
+      { id: 'objectHeight', name: '物高 h', unit: 'mm', min: 20, max: 120, default: 60, step: 5 }
     ],
     // 光学元件定义
     elements: [
@@ -31,10 +30,10 @@ const SCENES = {
         id: 'object',
         type: 'object',
         label: '物体 AB',
-        // 动态位置，根据参数计算
+        // 动态位置，透镜始终居中（x=375）
         getPosition: (params) => ({
-          x: params.lensX - params.objectDistance,
-          y: 0, // 在光轴上
+          x: 375 - params.objectDistance,
+          y: 0,
           height: params.objectHeight
         })
       },
@@ -42,30 +41,29 @@ const SCENES = {
         id: 'convexLens',
         type: 'lens-convex',
         label: '凸透镜',
-        // 动态位置
+        // 透镜始终居中
         getPosition: (params) => ({
-          x: params.lensX,
-          y: 0, // 在光轴上
+          x: 375,
+          y: 0,
           focalLength: params.focalLength,
-          aperture: 120 // 通光孔径
+          aperture: 120
         })
       },
       {
         id: 'image',
         type: 'image',
         label: '像 A\'B\'',
-        // 动态位置，根据透镜公式计算
         getPosition: (params) => {
           const u = params.objectDistance;
           const f = params.focalLength;
-          const v = Math.abs(u - f) < 0.5 ? (u > f ? 99999 : -99999) : (u * f) / (u - f); // 1/f = 1/u + 1/v => v = uf/(u-f)  除零保护：物在焦点时像距趋于无穷
-          const magnification = -v / u; // 放大率 m = -v/u
+          const v = Math.abs(u - f) < 0.5 ? (u > f ? 99999 : -99999) : (u * f) / (u - f);
+          const magnification = -v / u;
           return {
-            x: params.lensX + v,
+            x: 375 + v,
             y: 0,
             height: params.objectHeight * Math.abs(magnification),
-            real: v > 0, // v > 0 为实像，v < 0 为虚像
-            upright: magnification > 0 // m > 0 为正立，m < 0 为倒立
+            real: v > 0,
+            upright: magnification > 0
           };
         }
       }
@@ -75,7 +73,7 @@ const SCENES = {
       const u = params.objectDistance;
       const f = params.focalLength;
       const v = Math.abs(u - f) < 0.5 ? (u > f ? 99999 : -99999) : (u * f) / (u - f);
-      const lensX = params.lensX;
+      const lensX = 375;
       const objX = lensX - u;
       const objH = params.objectHeight;
       const imgX = lensX + v;
@@ -83,15 +81,13 @@ const SCENES = {
       const imgH = objH * Math.abs(mag);
 
       const rays = [];
+      const canvasEdge = 1200; // 最大延伸距离
+      const rightEdge = Math.min(imgX, canvasEdge);
+      const leftEdge = Math.max(objX - 200, -canvasEdge);
 
-      // 确定光线延伸的终点：实像延伸到像平面，虚像延伸到画布边缘
-      const maxExtendX = 1200; // 最大延伸距离
-      const rightEdge = lensX + maxExtendX;
-      const leftEdge = lensX - maxExtendX;
-
-      // 光线1：从物体顶点发出，平行于光轴 -> 通过焦点，延伸到像平面
-      const ray1EndX = (v > 0 && v < maxExtendX) ? imgX : rightEdge;
-      const ray1Slope = -(objH / 2) / f; // 通过焦点 F' 的斜率
+      // 光线1：从物体顶点发出，平行于光轴 -> 通过焦点，延伸到像平面或画布边缘
+      const ray1EndX = (v > 0 && v < canvasEdge) ? rightEdge : Math.min(lensX + canvasEdge, canvasEdge);
+      const ray1Slope = -(objH / 2) / f;
       const ray1EndY = objH / 2 + (ray1EndX - lensX) * ray1Slope;
       rays.push({
         id: 'ray1',
@@ -100,12 +96,12 @@ const SCENES = {
         start: { x: objX, y: objH / 2 },
         segments: [
           { to: { x: lensX, y: objH / 2 }, type: 'incident' },
-          { to: { x: ray1EndX, y: ray1EndY }, type: 'refracted' } // 通过焦点，延伸到像平面
+          { to: { x: ray1EndX, y: ray1EndY }, type: 'refracted' }
         ]
       });
 
-      // 光线2：通过光心，方向不变，延伸到像平面
-      const ray2EndX = (v > 0 && v < maxExtendX) ? imgX : (v < 0 ? leftEdge : rightEdge);
+      // 光线2：通过光心，方向不变，延伸到像平面或画布边缘
+      const ray2EndX = (v > 0 && v < canvasEdge) ? rightEdge : (v < 0 ? leftEdge : Math.min(lensX + canvasEdge, canvasEdge));
       const ray2EndY = (mag > 0 ? imgH / 2 : -imgH / 2);
       rays.push({
         id: 'ray2',
@@ -119,16 +115,16 @@ const SCENES = {
       });
 
       // 光线3：通过焦点 -> 平行于光轴，延伸到像平面或画布边缘
-      const incY3 = objH / 2 * (-f / (u - f)); // 入射到透镜的 y 坐标（通过焦点 F）
-      const ray3EndX = (v > 0 && v < maxExtendX) ? imgX : rightEdge;
+      const incY3 = objH / 2 * (-f / (u - f));
+      const ray3EndX = (v > 0 && v < canvasEdge) ? rightEdge : Math.min(lensX + canvasEdge, canvasEdge);
       rays.push({
         id: 'ray3',
         type: 'special',
         name: '过焦点光线',
         start: { x: objX, y: objH / 2 },
         segments: [
-          { to: { x: lensX, y: incY3 }, type: 'incident' }, // 指向焦点
-          { to: { x: ray3EndX, y: incY3 }, type: 'refracted' } // 平行于光轴出射
+          { to: { x: lensX, y: incY3 }, type: 'incident' },
+          { to: { x: ray3EndX, y: incY3 }, type: 'refracted' }
         ]
       });
 
@@ -385,7 +381,6 @@ const SCENES = {
     },
     adjustableParams: [
       { id: 'focalLength', name: '焦距 |f|', unit: 'mm', min: 50, max: 200, default: 100, step: 10 },
-      { id: 'lensX', name: '透镜位置', unit: 'px', min: 200, max: 550, default: 375, step: 10 },
       { id: 'rayOffset', name: '光线偏移', unit: 'mm', min: 10, max: 80, default: 40, step: 5 }
     ],
     elements: [
@@ -394,7 +389,7 @@ const SCENES = {
         type: 'lens-concave',
         label: '凹透镜',
         getPosition: (params) => ({
-          x: params.lensX,
+          x: 375, // 透镜始终居中
           y: 0,
           focalLength: -params.focalLength, // 负焦距
           aperture: 120
@@ -403,7 +398,7 @@ const SCENES = {
     ],
     generateRays: (params) => {
       const f = -params.focalLength; // 负焦距
-      const lx = params.lensX;
+      const lx = 375; // 透镜始终居中
       const h = params.rayOffset;
 
       // 凹透镜：平行光入射 -> 发散，反向延长线通过焦点
@@ -468,8 +463,7 @@ const DRAWING_QUIZZES = [
     sceneParams: {
       focalLength: 100,
       objectDistance: 150,
-      objectHeight: 60,
-      lensX: 375
+      objectHeight: 60
     },
     // 验证规则
     validation: {
@@ -528,7 +522,6 @@ const DRAWING_QUIZZES = [
     sceneId: 'concaveLens',
     sceneParams: {
       focalLength: 100,
-      lensX: 375,
       rayOffset: 40
     },
     validation: {

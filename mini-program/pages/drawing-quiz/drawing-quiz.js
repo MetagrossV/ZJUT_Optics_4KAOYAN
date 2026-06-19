@@ -88,6 +88,7 @@ Page({
         return;
       }
       const canvas = res[0].node;
+      const size = res[0].size || {};
       const ctx = canvas.getContext('2d');
       const dpr = this.data.dpr;
       canvas.width = this.data.canvasWidth * dpr;
@@ -95,6 +96,10 @@ Page({
       ctx.scale(dpr, dpr);
       this.canvas = canvas;
       this.ctx = ctx;
+      // 保存 Canvas CSS 尺寸用于坐标转换
+      this.canvasCSSWidth = size.width || this.data.canvasWidth;
+      this.canvasCSSHeight = size.height || this.data.canvasHeight;
+      console.log('Canvas init:', 'CSS', this.canvasCSSWidth, 'x', this.canvasCSSHeight, 'logic', this.data.canvasWidth, 'x', this.data.canvasHeight, 'dpr', dpr);
       if (this.data.currentQuiz) {
         this.draw();
       }
@@ -105,8 +110,10 @@ Page({
   // 小程序 Canvas 2D 中，touch.x 是 Canvas 本地 CSS 像素坐标
   // 需要转换为 Canvas 逻辑坐标（与 ctx 坐标系一致）
   pageToCanvas(touchX, touchY) {
-    const scaleX = this.data.canvasWidth / (this.canvasCSSWidth || this.data.canvasWidth);
-    const scaleY = this.data.canvasHeight / (this.canvasCSSHeight || this.data.canvasHeight);
+    const cssW = this.canvasCSSWidth || this.data.canvasWidth;
+    const cssH = this.canvasCSSHeight || this.data.canvasHeight;
+    const scaleX = cssW > 0 ? this.data.canvasWidth / cssW : 1;
+    const scaleY = cssH > 0 ? this.data.canvasHeight / cssH : 1;
     return {
       x: touchX * scaleX,
       y: touchY * scaleY
@@ -214,13 +221,15 @@ Page({
         dragOffsetX: canvasPos.x - c.x,
         dragOffsetY: canvasPos.y - c.y,
         paramPanelVisible: true
+      }, () => {
+        this.draw();
       });
     } else {
       // 点击空白，取消选中
-      this.setData({ selectedElementId: null, paramPanelVisible: false });
+      this.setData({ selectedElementId: null, paramPanelVisible: false }, () => {
+        this.draw();
+      });
     }
-
-    this.draw();
   },
 
   onCanvasTouchMove(e) {
@@ -245,8 +254,9 @@ Page({
       return el;
     });
 
-    this.setData({ elements });
-    this.draw();
+    this.setData({ elements }, () => {
+      this.draw();
+    });
   },
 
   onCanvasTouchEnd(e) {
@@ -292,8 +302,9 @@ Page({
       isPlacing: false,
       selectedElementId: id,
       paramPanelVisible: true
+    }, () => {
+      this.draw();
     });
-    this.draw();
   },
 
   // ===== 碰撞检测：检测物理坐标是否在某个器件上 =====
@@ -353,8 +364,9 @@ Page({
       return el;
     });
 
-    this.setData({ elements });
-    this.draw();
+    this.setData({ elements }, () => {
+      this.draw();
+    });
   },
 
   // ===== 删除器件 =====
@@ -371,8 +383,9 @@ Page({
       rays,
       selectedElementId: null,
       paramPanelVisible: false
+    }, () => {
+      this.draw();
     });
-    this.draw();
   },
 
   // ===== 添加光线 =====
@@ -669,12 +682,16 @@ Page({
     const { x, y, params } = el;
     const c = this.toCanvas(x, y);
     const halfA = (params.aperture || 120) / 2;
-    const curvature = Math.min(25, halfA * 0.4);
     const f = params.focalLength || 100;
+    const absF = Math.abs(f);
+    // 曲率半径与焦距相关：R ≈ (n-1)*f，取 n=1.5，R ≈ 0.5*f
+    // 限制最大曲率为孔径的一半，避免过度弯曲
+    const curvature = Math.min(halfA * 0.45, absF * 0.2, 40);
 
-    ctx.strokeStyle = '#495057';
-    ctx.lineWidth = 2.5;
-    ctx.fillStyle = 'rgba(173, 216, 230, 0.2)';
+    // 更醒目的填充色和描边
+    ctx.strokeStyle = '#2c3e50';
+    ctx.lineWidth = 3;
+    ctx.fillStyle = 'rgba(100, 181, 246, 0.35)';
     ctx.beginPath();
     ctx.moveTo(c.x - 6, c.y - halfA);
     ctx.quadraticCurveTo(c.x - curvature - 12, c.y - halfA * 0.5, c.x - curvature - 6, c.y);
@@ -686,19 +703,19 @@ Page({
     ctx.fill();
     ctx.stroke();
 
-    // 中心线
-    ctx.strokeStyle = '#495057';
-    ctx.lineWidth = 1;
+    // 中心线（更粗更醒目）
+    ctx.strokeStyle = '#2c3e50';
+    ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.moveTo(c.x, c.y - halfA - 4);
-    ctx.lineTo(c.x, c.y + halfA + 4);
+    ctx.moveTo(c.x, c.y - halfA - 6);
+    ctx.lineTo(c.x, c.y + halfA + 6);
     ctx.stroke();
 
     // 焦距标注
-    ctx.fillStyle = '#495057';
-    ctx.font = '12px sans-serif';
+    ctx.fillStyle = '#2c3e50';
+    ctx.font = 'bold 12px sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText(`f=${f}mm`, c.x, c.y + halfA + 22);
+    ctx.fillText(`f=${f}mm`, c.x, c.y + halfA + 28);
     ctx.textAlign = 'left';
   },
 
@@ -706,13 +723,14 @@ Page({
     const { x, y, params } = el;
     const c = this.toCanvas(x, y);
     const halfA = (params.aperture || 120) / 2;
-    const curvature = Math.min(20, halfA * 0.3);
     const f = params.focalLength || -100;
     const absF = Math.abs(f);
+    // 曲率半径与焦距相关
+    const curvature = Math.min(halfA * 0.35, absF * 0.15, 30);
 
     ctx.strokeStyle = '#6c5ce7';
-    ctx.lineWidth = 2.5;
-    ctx.fillStyle = 'rgba(173, 216, 230, 0.15)';
+    ctx.lineWidth = 3;
+    ctx.fillStyle = 'rgba(179, 157, 219, 0.3)';
     ctx.beginPath();
     ctx.moveTo(c.x - 10, c.y - halfA);
     ctx.quadraticCurveTo(c.x + curvature, c.y - halfA * 0.5, c.x - 10, c.y);
@@ -724,15 +742,17 @@ Page({
     ctx.fill();
     ctx.stroke();
 
+    ctx.strokeStyle = '#6c5ce7';
+    ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.moveTo(c.x, c.y - halfA - 4);
-    ctx.lineTo(c.x, c.y + halfA + 4);
+    ctx.moveTo(c.x, c.y - halfA - 6);
+    ctx.lineTo(c.x, c.y + halfA + 6);
     ctx.stroke();
 
     ctx.fillStyle = '#6c5ce7';
-    ctx.font = '12px sans-serif';
+    ctx.font = 'bold 12px sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText(`f=-${absF}mm`, c.x, c.y + halfA + 22);
+    ctx.fillText(`f=-${absF}mm`, c.x, c.y + halfA + 28);
     ctx.textAlign = 'left';
   },
 
