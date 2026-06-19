@@ -84,7 +84,15 @@ const SCENES = {
 
       const rays = [];
 
-      // 光线1：从物体顶点发出，平行于光轴 -> 通过焦点
+      // 确定光线延伸的终点：实像延伸到像平面，虚像延伸到画布边缘
+      const maxExtendX = 1200; // 最大延伸距离
+      const rightEdge = lensX + maxExtendX;
+      const leftEdge = lensX - maxExtendX;
+
+      // 光线1：从物体顶点发出，平行于光轴 -> 通过焦点，延伸到像平面
+      const ray1EndX = (v > 0 && v < maxExtendX) ? imgX : rightEdge;
+      const ray1Slope = -(objH / 2) / f; // 通过焦点 F' 的斜率
+      const ray1EndY = objH / 2 + (ray1EndX - lensX) * ray1Slope;
       rays.push({
         id: 'ray1',
         type: 'special',
@@ -92,11 +100,13 @@ const SCENES = {
         start: { x: objX, y: objH / 2 },
         segments: [
           { to: { x: lensX, y: objH / 2 }, type: 'incident' },
-          { to: { x: lensX + 2.5 * f, y: objH / 2 - 2.5 * f * (objH / 2) / f }, type: 'refracted' } // 通过焦点
+          { to: { x: ray1EndX, y: ray1EndY }, type: 'refracted' } // 通过焦点，延伸到像平面
         ]
       });
 
-      // 光线2：通过光心，方向不变
+      // 光线2：通过光心，方向不变，延伸到像平面
+      const ray2EndX = (v > 0 && v < maxExtendX) ? imgX : (v < 0 ? leftEdge : rightEdge);
+      const ray2EndY = (mag > 0 ? imgH / 2 : -imgH / 2);
       rays.push({
         id: 'ray2',
         type: 'special',
@@ -104,19 +114,21 @@ const SCENES = {
         start: { x: objX, y: objH / 2 },
         segments: [
           { to: { x: lensX, y: 0 }, type: 'incident' },
-          { to: { x: imgX, y: (mag > 0 ? imgH / 2 : -imgH / 2) }, type: 'refracted' }
+          { to: { x: ray2EndX, y: ray2EndY }, type: 'refracted' }
         ]
       });
 
-      // 光线3：通过焦点 -> 平行于光轴
+      // 光线3：通过焦点 -> 平行于光轴，延伸到像平面或画布边缘
+      const incY3 = objH / 2 * (-f / (u - f)); // 入射到透镜的 y 坐标（通过焦点 F）
+      const ray3EndX = (v > 0 && v < maxExtendX) ? imgX : rightEdge;
       rays.push({
         id: 'ray3',
         type: 'special',
         name: '过焦点光线',
         start: { x: objX, y: objH / 2 },
         segments: [
-          { to: { x: lensX, y: 0 - (objH / 2) * (f / u) }, type: 'incident' }, // 指向焦点
-          { to: { x: lensX + 2.5 * f, y: objH / 2 }, type: 'refracted' } // 平行于光轴
+          { to: { x: lensX, y: incY3 }, type: 'incident' }, // 指向焦点
+          { to: { x: ray3EndX, y: incY3 }, type: 'refracted' } // 平行于光轴出射
         ]
       });
 

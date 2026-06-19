@@ -73,6 +73,8 @@ Page({
       if (rect) {
         this.canvasOffsetX = rect.left;
         this.canvasOffsetY = rect.top;
+        this.canvasCSSWidth = rect.width;
+        this.canvasCSSHeight = rect.height;
       }
     }).exec();
   },
@@ -100,11 +102,14 @@ Page({
   },
 
   // ===== 坐标转换 =====
-  // 页面坐标 → Canvas 坐标
-  pageToCanvas(pageX, pageY) {
+  // 小程序 Canvas 2D 中，touch.x 是 Canvas 本地 CSS 像素坐标
+  // 需要转换为 Canvas 逻辑坐标（与 ctx 坐标系一致）
+  pageToCanvas(touchX, touchY) {
+    const scaleX = this.data.canvasWidth / (this.canvasCSSWidth || this.data.canvasWidth);
+    const scaleY = this.data.canvasHeight / (this.canvasCSSHeight || this.data.canvasHeight);
     return {
-      x: pageX - (this.canvasOffsetX || 0),
-      y: pageY - (this.canvasOffsetY || 0)
+      x: touchX * scaleX,
+      y: touchY * scaleY
     };
   },
 
@@ -120,6 +125,15 @@ Page({
     const cx = this.data.canvasWidth / 2;
     const cy = this.data.canvasHeight / 2;
     return { x: canvasX - cx, y: cy - canvasY };
+  },
+
+  // ===== 网格吸附 =====
+  snapToGrid(value, gridSize = 50) {
+    const halfGrid = gridSize / 2;
+    const remainder = ((value % gridSize) + gridSize) % gridSize; // 处理负数
+    if (remainder < 20) return value - remainder;
+    if (remainder > gridSize - 20) return value + (gridSize - remainder);
+    return value;
   },
 
   // ===== 加载题目列表 =====
@@ -219,10 +233,14 @@ Page({
       canvasPos.y - this.data.dragOffsetY
     );
 
+    // 网格吸附
+    const snappedX = this.snapToGrid(phys.x);
+    const snappedY = this.snapToGrid(phys.y);
+
     // 更新器件位置
     const elements = this.data.elements.map(el => {
       if (el.id === this.data.dragElementId) {
-        return { ...el, x: phys.x, y: phys.y };
+        return { ...el, x: snappedX, y: snappedY };
       }
       return el;
     });
@@ -240,11 +258,14 @@ Page({
   // ===== 器件放置 =====
   placeElement(type, x, y) {
     const id = `el_${++this.elementIdCounter}_${Date.now()}`;
+    // 网格吸附
+    const snappedX = this.snapToGrid(x);
+    const snappedY = this.snapToGrid(y);
     let element = {
       id,
       type,
-      x,
-      y,
+      x: snappedX,
+      y: snappedY,
       params: {}
     };
 
@@ -563,9 +584,9 @@ Page({
   },
 
   drawGrid(ctx, w, h) {
+    const gridSize = 50;
     ctx.strokeStyle = '#e9ecef';
     ctx.lineWidth = 0.5;
-    const gridSize = 50;
     for (let x = 0; x <= w; x += gridSize) {
       ctx.beginPath();
       ctx.moveTo(x, 0);
@@ -578,23 +599,48 @@ Page({
       ctx.lineTo(w, y);
       ctx.stroke();
     }
+    // 绘制网格交点（吸附点）
+    ctx.fillStyle = '#dee2e6';
+    for (let x = 0; x <= w; x += gridSize) {
+      for (let y = 0; y <= h; y += gridSize) {
+        ctx.beginPath();
+        ctx.arc(x, y, 2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
   },
 
   drawOpticalAxis(ctx, w, h) {
     const cy = h / 2;
+    const cx = w / 2;
+    // 主光轴（更粗更醒目）
     ctx.strokeStyle = '#adb5bd';
-    ctx.lineWidth = 1;
-    ctx.setLineDash([5, 5]);
+    ctx.lineWidth = 2;
+    ctx.setLineDash([8, 4]);
     ctx.beginPath();
     ctx.moveTo(0, cy);
     ctx.lineTo(w, cy);
     ctx.stroke();
     ctx.setLineDash([]);
-
-    ctx.fillStyle = '#6c757d';
-    ctx.font = '12px sans-serif';
+    // 光轴刻度标记
+    ctx.fillStyle = '#adb5bd';
+    ctx.font = '10px sans-serif';
+    ctx.textAlign = 'center';
+    const gridSize = 50;
+    for (let x = 0; x <= w; x += gridSize) {
+      ctx.beginPath();
+      ctx.moveTo(x, cy - 4);
+      ctx.lineTo(x, cy + 4);
+      ctx.stroke();
+      // 刻度标注（以画布中心为原点）
+      const physX = Math.round((x - cx) / gridSize) * gridSize;
+      if (physX !== 0 && Math.abs(physX) <= 400) {
+        ctx.fillText(String(physX), x, cy + 16);
+      }
+    }
     ctx.textAlign = 'right';
-    ctx.fillText('光轴', w - 10, cy - 8);
+    ctx.font = '12px sans-serif';
+    ctx.fillText('光轴', w - 10, cy - 12);
     ctx.textAlign = 'left';
   },
 

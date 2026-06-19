@@ -40,14 +40,16 @@ Page({
       if (rect) {
         this.canvasOffsetX = rect.left;
         this.canvasOffsetY = rect.top;
+        this.canvasCSSWidth = rect.width;
+        this.canvasCSSHeight = rect.height;
       }
     }).exec();
   },
 
-  pageToCanvas(pageX, pageY) {
-    const offsetX = this.canvasOffsetX || 0;
-    const offsetY = this.canvasOffsetY || 0;
-    return { x: pageX - offsetX, y: pageY - offsetY };
+  pageToCanvas(touchX, touchY) {
+    const scaleX = this.data.canvasWidth / (this.canvasCSSWidth || this.data.canvasWidth);
+    const scaleY = this.data.canvasHeight / (this.canvasCSSHeight || this.data.canvasHeight);
+    return { x: touchX * scaleX, y: touchY * scaleY };
   },
 
   onShow() {
@@ -312,8 +314,7 @@ Page({
     const offsetX = this.data.viewOffsetX || 0;
     ctx.strokeStyle = '#e9ecef';
     ctx.lineWidth = 0.5;
-    const gridSize = 50 * scale; // 网格随缩放调整
-    // 绘制竖线：以画布中心 + offsetX * scale 为基准
+    const gridSize = 50 * scale;
     const centerX = w / 2 + offsetX * scale;
     const startX = centerX % gridSize;
     for (let x = startX; x <= w; x += gridSize) {
@@ -328,7 +329,6 @@ Page({
       ctx.lineTo(x, h);
       ctx.stroke();
     }
-    // 绘制横线
     const cy = h / 2;
     const startY = cy % gridSize;
     for (let y = startY; y <= h; y += gridSize) {
@@ -343,30 +343,51 @@ Page({
       ctx.lineTo(w, y);
       ctx.stroke();
     }
-    // 绘制光轴附近的水平线
-    ctx.strokeStyle = '#dee2e6';
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(0, cy);
-    ctx.lineTo(w, cy);
-    ctx.stroke();
+    // 绘制网格交点（吸附点）
+    ctx.fillStyle = 'rgba(173, 181, 189, 0.3)';
+    for (let x = startX; x <= w; x += gridSize) {
+      for (let y = startY; y <= h; y += gridSize) {
+        ctx.beginPath();
+        ctx.arc(x, y, 2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
   },
 
   drawOpticalAxis(ctx, w, h) {
     const cy = h / 2;
+    const scale = this.data.viewScale || 1;
+    const offsetX = this.data.viewOffsetX || 0;
+    // 主光轴（更粗更醒目）
     ctx.strokeStyle = '#adb5bd';
-    ctx.lineWidth = 1;
-    ctx.setLineDash([5, 5]);
+    ctx.lineWidth = 2;
+    ctx.setLineDash([8, 4]);
     ctx.beginPath();
     ctx.moveTo(0, cy);
     ctx.lineTo(w, cy);
     ctx.stroke();
     ctx.setLineDash([]);
-
-    ctx.fillStyle = '#6c757d';
-    ctx.font = '12px sans-serif';
+    // 光轴刻度标记（随缩放平移）
+    ctx.fillStyle = '#adb5bd';
+    ctx.font = '10px sans-serif';
+    ctx.textAlign = 'center';
+    const gridSize = 50 * scale;
+    const centerX = w / 2 + offsetX * scale;
+    const startX = centerX % gridSize;
+    for (let x = startX; x <= w; x += gridSize) {
+      ctx.beginPath();
+      ctx.moveTo(x, cy - 4);
+      ctx.lineTo(x, cy + 4);
+      ctx.stroke();
+      // 刻度标注（物理坐标）
+      const physX = Math.round((x - w / 2) / scale - offsetX);
+      if (physX !== 0 && Math.abs(physX) % 50 === 0) {
+        ctx.fillText(String(physX), x, cy + 16);
+      }
+    }
     ctx.textAlign = 'right';
-    ctx.fillText('光轴', w - 10, cy - 8);
+    ctx.font = '12px sans-serif';
+    ctx.fillText('光轴', w - 10, cy - 12);
     ctx.textAlign = 'left';
   },
 
